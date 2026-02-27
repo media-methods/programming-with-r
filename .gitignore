@@ -3,8 +3,6 @@
 .gitattributes
 .github
 
-#rendered site
-docs/
 
 #errors
 _freeze
