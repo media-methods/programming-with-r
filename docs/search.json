@@ -24,7 +24,7 @@
     "href": "1-install-r.html#what-are-r-and-r-studio",
     "title": "1 Install R/R Studio",
     "section": "What are R and R Studio?",
-    "text": "What are R and R Studio?\nR is the programming language we’ll use to import, edit, and analyze data. R Studio is a desktop application with a graphical interface that facilitates programming with R. Basically, R Studio makes using R much easier!\n\nInstall/Update R\nI don’t have R on my computer yet!\nPlease use Cran to install the newest version of R (version 4.3.1, “Beagle Scouts”). You’ll have to specify your operation system to download the right version:\n\nR for Windows\nR for Mac, please read the documentation and installation information here\n\n\n\n\n\n\n\nNote\n\n\n\nI have R, but need to update it!\n\n\nIf you already have R installed, you just need to update it to the latest version.\n\nDownload and install the newest R version using the links above. (This won’t usually remove your old version—it installs alongside it.)\nOpen RStudio and go to Tools → Global Options → General.\nUnder R version, select the newest installed version of R.\nRestart RStudio (close and reopen it) so the change takes effect.\n\n\n\nInstall/Update R Studio\nI don’t have R Studio on my computer yet!\nNext, install R Studio. The newest version of R Studio can be downloaded via this link.\nI have R Studio, but need to update it!\nIf you already have R Studio on your computer, simply make sure to update it to the newest version. The easiest way to do this is via: “Help/Check for Updates” in R Studio.",
+    "text": "What are R and R Studio?\nR is the programming language we’ll use to import, edit, and analyze data. R Studio is a desktop application with a graphical interface that facilitates programming with R. Basically, R Studio makes coding with R much easier!\nIn programming, R Studio is called an “integrated development environment (IDE). There are other interfaces or IDEs (e.g., Positron, Visual Studio Code), but we will stick with R Studio for now.\n\nInstall/Update R\nI don’t have R on my computer yet!\nPlease use Cran to install the newest version of R (version 4.3.1, “Beagle Scouts”). You’ll have to specify your operation system to download the right version:\n\nR for Windows\nR for Mac, please read the documentation and installation information here\n\n\n\n\n\n\n\nNote\n\n\n\nI have R, but need to update it!\n\n\nIf you already have R installed, you just need to update it to the latest version.\n\nDownload and install the newest R version using the links above. (This won’t usually remove your old version—it installs alongside it.)\nOpen RStudio and go to Tools → Global Options → General.\nUnder R version, select the newest installed version of R.\nRestart RStudio (close and reopen it) so the change takes effect.\n\n\n\nInstall/Update R Studio\nI don’t have R Studio on my computer yet!\nNext, install R Studio. The newest version of R Studio can be downloaded via this link.\nI have R Studio, but need to update it!\nIf you already have R Studio on your computer, simply make sure to update it to the newest version. The easiest way to do this is via: “Help/Check for Updates” in R Studio.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>1 Install R/R Studio</span>"
     ]
@@ -64,7 +64,7 @@
     "href": "1-install-r.html#take-aways",
     "title": "1 Install R/R Studio",
     "section": "💡 Take-Aways",
-    "text": "💡 Take-Aways\nR is great! 😁",
+    "text": "💡 Take-Aways\nR is great! 🫶",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>1 Install R/R Studio</span>"
     ]
@@ -74,7 +74,7 @@
     "href": "1-install-r.html#more-tutorials-on-this",
     "title": "1 Install R/R Studio",
     "section": "📚 More tutorials on this",
-    "text": "📚 More tutorials on this\nYou still have questions? The following tutorials & papers can help you with that:\n\nYaRrr! The Pirate’s Guide to R by N.D.Phillips, Tutorial 2\nComputational Methods in der politischen Kommunikationsforschung by J. Unkel, Tutorial 1\nContinuing education in R by Lara Kobilke, Tutorial 2\nSICSS Boot Camp by C. Bail, Video 1\nwegweisR by M. Haim, Video 1\nR Cookbook by Long et al., Tutorial 1",
+    "text": "📚 More tutorials on this\nYou still have questions? The following tutorials & papers can help you with that:\n\n“Tutorial 2: Installing & Understanding R”, by L. Kobilke\n“SICSS Boot Camp” by C. Bail, Video 1\n“wegweisR” by M. Haim, Video 1\n“R Cookbook” by Long et al., Tutorial 1\n“Tutorial 2 - Wissen macht R” by B. Fretwurst",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>1 Install R/R Studio</span>"
     ]
@@ -193,6 +193,16 @@
     "text": "What Do We Expect from You?\nTo get the most out of our in-person sessions, you should complete the assigned tutorial before each class. Please check the syllabus to see which tutorial you should prepare for each week. That way, we can use our time together to clarify questions, go through examples, and apply what you have learned.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome</span>"
+    ]
+  },
+  {
+    "objectID": "1-install-r.html#what-should-i-know-about-learning-r",
+    "href": "1-install-r.html#what-should-i-know-about-learning-r",
+    "title": "1 Install R/R Studio",
+    "section": "What should I know about learning R?",
+    "text": "What should I know about learning R?\nLearning R can feel hard—especially at the beginning. You might even think: Why the hell did I pick this course?\nThat’s normal. Once you understand the basics, things start to click. That’s when the fun begins and we can do the cool stuff: building visuals, scraping, and more.\nLearning curve in R\n\nSource: Learning curve illustration originally published on Medium (Konstantin Borimechkov).\nMany students experience a similar learning curve:\n\nFrustration phase: Errors, syntax issues, and unfamiliar concepts make progress feel slow. This stage is normal—you may want to break your keyboard and scream.\nBreakthrough: Core ideas start to make sense. Some setbacks still happen, and you might forget things you thought you already knew.\nConfidence: Tasks get faster, and learning new tools becomes easier. Even if you hit a problem you can’t solve right away, you know you will—it may just take some time. You’ve got it now.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>1 Install R/R Studio</span>"
     ]
   }
 ]

@@ -11,7 +11,9 @@ After working through Tutorial 1, you'll...
 
 ## What are R and R Studio?
 
-R is the programming language we'll use to import, edit, and analyze data. R Studio is a desktop application with a graphical interface that facilitates programming with R. Basically, R Studio makes using R much easier!
+R is the programming language we'll use to import, edit, and analyze data. R Studio is a desktop application with a graphical interface that facilitates programming with R. Basically, R Studio makes coding with R much easier!
+
+In programming, R Studio is called an "integrated development environment (IDE). There are other interfaces or IDEs (e.g., Positron, Visual Studio Code), but we will stick with R Studio for now.
 
 ### Install/Update R {.unlisted}
 
@@ -22,7 +24,7 @@ Please use [Cran](https://cran.r-project.org/) to install the newest version of 
 -   [R for Windows](https://cran.r-project.org/bin/windows/base)
 -   [R for Mac](https://cran.r-project.org/bin/macosx/big-sur-arm64/base/R-4.3.1-arm64.pkg), please read the documentation and installation information [here](https://cran.r-project.org/bin/macosx/)
 
-::: {.callout-note}
+::: callout-note
 I have R, but need to update it!
 :::
 
@@ -58,17 +60,33 @@ There are several reasons why I recommend learning **R** (and similar programmin
 
 4.  **Programming is a valuable job skill.** Knowing R (or Python) can strengthen your applications in areas like academia, market research, data science, and data journalism—because many employers expect applicants to be comfortable working with code.
 
+## What should I know about learning R?
+
+Learning R can feel hard—especially at the beginning. You might even think: *Why the hell did I pick this course?*\
+That’s normal. Once you understand the basics, things start to click. That’s when the fun begins and we can do the cool stuff: building visuals, scraping, and more.
+
+*Learning curve in R*
+
+![](https://miro.medium.com/v2/resize:fit:720/format:webp/1*hgad4Sefmbmvv6P3o9LUYA.jpeg)
+
+*Source: Learning curve illustration originally published on [Medium](https://konstantinmb.medium.com/the-learning-curve-we-all-experience-299643aaa27f) (Konstantin Borimechkov).*
+
+Many students experience a similar learning curve:
+
+-   **Frustration phase:** Errors, syntax issues, and unfamiliar concepts make progress feel slow. This stage is normal—you may want to break your keyboard and scream.
+-   **Breakthrough:** Core ideas start to make sense. Some setbacks still happen, and you might forget things you thought you already knew.
+-   **Confidence:** Tasks get faster, and learning new tools becomes easier. Even if you hit a problem you can’t solve right away, you know you will—it may just take some time. You’ve got it now.
+
 ## 💡 Take-Aways {.unnumbered}
 
-R is great! 😁
+R is great! 🫶
 
 ## 📚 More tutorials on this {.unnumbered}
 
 You still have questions? The following tutorials & papers can help you with that:
 
--   [YaRrr! The Pirate's Guide to R by N.D.Phillips, Tutorial 2](https://bookdown.org/ndphillips/YaRrr/started.html)
--   [Computational Methods in der politischen Kommunikationsforschung by J. Unkel, Tutorial 1](https://bookdown.org/joone/ComputationalMethods/firststeps.html)
--   [Continuing education in R by Lara Kobilke, Tutorial 2](https://lkobilke.github.io/introduction_to_R/tutorial-installing-understanding-rr-studio.html)
--   [SICSS Boot Camp by C. Bail, Video 1](https://sicss.io/boot_camp#install)
--   [wegweisR by M. Haim, Video 1](https://youtu.be/p6f4oq08z48)
--   [R Cookbook by Long et al., Tutorial 1](https://rc2e.com/gettingstarted#recipe-id001)
+-   ["Tutorial 2: Installing & Understanding R", by L. Kobilke](https://lkobilke.github.io/introduction_to_R/tutorial-installing-understanding-rr-studio.html)
+-   ["SICSS Boot Camp" by C. Bail, Video 1](https://sicss.io/boot_camp#install)
+-   ["wegweisR" by M. Haim, Video 1](https://youtu.be/p6f4oq08z48)
+-   ["R Cookbook" by Long et al., Tutorial 1](https://rc2e.com/)
+-   ["Tutorial 2 - Wissen macht R" by B. Fretwurst](https://ikmz.pages.uzh.ch/Wissen-macht-R/01-Basics.html)
