@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.57">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
 <meta name="author" content="Valerie Hase">
+
 <title>1 Install R/R Studio – Programming with R for Social Scientists</title>
 <style>
 code{white-space: pre-wrap;}
@@ -18,41 +21,8 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
+
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
@@ -71,7 +41,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -97,12 +68,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script><link rel="stylesheet" href="files/www/custom.css">
+}</script>
+
+
+<link rel="stylesheet" href="files/www/custom.css">
 </head>
+
 <body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
@@ -113,9 +90,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Programming with R for Social Scientists</a> 
         <div class="sidebar-tools-main">
@@ -130,7 +111,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-<li class="sidebar-item">
+        <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Welcome</span></a>
   </div>
@@ -148,8 +129,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./81-materials.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">🔷 Materials</span></a>
   </div>
@@ -180,26 +161,40 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </li>
       </ul>
-</li>
+  </li>
     </ul>
-</div>
-</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Content</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Content</h2>
    
   <ul>
-<li><a href="#install-r" id="toc-install-r" class="nav-link active" data-scroll-target="#install-r">Install R</a></li>
-  <li><a href="#install-r-studio" id="toc-install-r-studio" class="nav-link" data-scroll-target="#install-r-studio">Install R Studio</a></li>
-  <li><a href="#object--and-function-oriented-programming" id="toc-object--and-function-oriented-programming" class="nav-link" data-scroll-target="#object--and-function-oriented-programming">Object- and function-oriented programming</a></li>
-  <li><a href="#base-r-vs.-tidyverse-coding-style" id="toc-base-r-vs.-tidyverse-coding-style" class="nav-link" data-scroll-target="#base-r-vs.-tidyverse-coding-style">Base-R vs.&nbsp;tidyverse &amp; coding style</a></li>
-  <li><a href="#why-should-i-use-r" id="toc-why-should-i-use-r" class="nav-link" data-scroll-target="#why-should-i-use-r">Why should I use R?</a></li>
+  <li><a href="#learning-goals" id="toc-learning-goals" class="nav-link active" data-scroll-target="#learning-goals">🎯Learning goals</a></li>
+  <li><a href="#what-are-r-and-r-studio" id="toc-what-are-r-and-r-studio" class="nav-link" data-scroll-target="#what-are-r-and-r-studio">1.1 What are R and R Studio?</a></li>
+  <li><a href="#installupdate-r" id="toc-installupdate-r" class="nav-link" data-scroll-target="#installupdate-r">1.1.1 Install/Update R</a>
+  <ul class="collapse">
+  <li><a href="#i-dont-have-r-on-my-computer-yet" id="toc-i-dont-have-r-on-my-computer-yet" class="nav-link" data-scroll-target="#i-dont-have-r-on-my-computer-yet">I don’t have R on my computer yet!</a></li>
+  <li><a href="#i-have-r-but-need-to-update-it" id="toc-i-have-r-but-need-to-update-it" class="nav-link" data-scroll-target="#i-have-r-but-need-to-update-it">I have R, but need to update it!</a></li>
+  </ul></li>
+  <li><a href="#installupdate-r-studio" id="toc-installupdate-r-studio" class="nav-link" data-scroll-target="#installupdate-r-studio">1.1.2 Install/Update R Studio</a>
+  <ul class="collapse">
+  <li><a href="#i-dont-have-r-studio-on-my-computer-yet" id="toc-i-dont-have-r-studio-on-my-computer-yet" class="nav-link" data-scroll-target="#i-dont-have-r-studio-on-my-computer-yet">I don’t have R Studio on my computer yet!</a></li>
+  <li><a href="#i-have-r-studio-but-need-to-update-it" id="toc-i-have-r-studio-but-need-to-update-it" class="nav-link" data-scroll-target="#i-have-r-studio-but-need-to-update-it">I have R Studio, but need to update it!</a></li>
+  </ul></li>
+  <li><a href="#why-should-i-learn-r" id="toc-why-should-i-learn-r" class="nav-link" data-scroll-target="#why-should-i-learn-r">1.2 Why should I learn R?</a></li>
   <li><a href="#take-aways" id="toc-take-aways" class="nav-link" data-scroll-target="#take-aways">💡 Take-Aways</a></li>
   <li><a href="#more-tutorials-on-this" id="toc-more-tutorials-on-this" class="nav-link" data-scroll-target="#more-tutorials-on-this">📚 More tutorials on this</a></li>
-  </ul></nav>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
 <h1 class="title"><span class="chapter-title">1 Install R/R Studio</span></h1>
 </div>
 
@@ -214,62 +209,69 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 
 
-</header><p>After working through Tutorial 1, you’ll…</p>
+</header>
+
+
+<section id="learning-goals" class="level2">
+<h2 class="anchored" data-anchor-id="learning-goals">🎯Learning goals</h2>
+<p>After working through Tutorial 1, you’ll…</p>
 <ul>
 <li>know how to install R and R Studio</li>
 <li>understand the main set-up of R Studio</li>
 </ul>
-<p><strong>Important</strong>: You only have to install R/R Studio on your personal PC - both are already installed at the CIP Pool at the Akademiestr.</p>
-<section id="install-r" class="level2"><h2 class="anchored" data-anchor-id="install-r">Install R</h2>
-<p>R is the programming language we’ll use to import, edit, and analyze data. Please use <a href="https://cran.r-project.org/">Cran</a> to install the newest version of R (version 4.3.1, “Beagle Scouts”). You’ll have to specify your operation system to download the right version:</p>
+</section>
+<section id="what-are-r-and-r-studio" class="level2">
+<h2 class="anchored" data-anchor-id="what-are-r-and-r-studio">1.1 What are R and R Studio?</h2>
+<p>R is the programming language we’ll use to import, edit, and analyze data. R Studio is a desktop application with a graphical interface that facilitates programming with R. Basically, R Studio makes using R much easier!</p>
+</section>
+<section id="installupdate-r" class="level2">
+<h2 class="anchored" data-anchor-id="installupdate-r">1.1.1 Install/Update R</h2>
+<section id="i-dont-have-r-on-my-computer-yet" class="level3">
+<h3 class="anchored" data-anchor-id="i-dont-have-r-on-my-computer-yet">I don’t have R on my computer yet!</h3>
+<p>Please use <a href="https://cran.r-project.org/">Cran</a> to install the newest version of R (version 4.3.1, “Beagle Scouts”). You’ll have to specify your operation system to download the right version:</p>
 <ul>
 <li><a href="https://cran.r-project.org/bin/windows/base">R for Windows</a></li>
-<li>
-<a href="https://cran.r-project.org/bin/macosx/big-sur-arm64/base/R-4.3.1-arm64.pkg">R for Mac</a>, please read the documentation and installation information <a href="https://cran.r-project.org/bin/macosx/">here</a>
-</li>
+<li><a href="https://cran.r-project.org/bin/macosx/big-sur-arm64/base/R-4.3.1-arm64.pkg">R for Mac</a>, please read the documentation and installation information <a href="https://cran.r-project.org/bin/macosx/">here</a></li>
 </ul>
-<p>If you already have R on your computer, simply make sure to update it to the newest version. To do so, simply download and install the latest version from the links above. Then, via <em>“Tools/Global Options/General/R version”</em>, choose the newest version. You may have to close and re-open R for the newer version to take into effect.</p>
-</section><section id="install-r-studio" class="level2"><h2 class="anchored" data-anchor-id="install-r-studio">Install R Studio</h2>
-<p>Next, install R Studio. R Studio is a desktop application with a graphical interface that facilitates programming with R. The newest version of R Studio (2023-09-28) can be downloaded via this <a href="https://www.rstudio.com/products/rstudio/download/#download">Link</a>.</p>
-<p>If you already have R Studio on your computer, simply make sure to update it to the newest version. The easiest way to do this is via: <em>“Help/Check for Updates”</em> in R Studio.</p>
-</section><section id="object--and-function-oriented-programming" class="level2"><h2 class="anchored" data-anchor-id="object--and-function-oriented-programming">Object- and function-oriented programming</h2>
-<p>First things first: R is an object- and function-oriented programming language. Chambers <a href="https://arxiv.org/pdf/1409.3531.pdf">(2014, p.&nbsp;4)</a> has nicely summarized what this means:</p>
-<ul>
-<li>Everything that exists is an object.</li>
-<li>Everything that happens is a function call.</li>
-</ul>
-<p>We assign values (for instance, single numbers/letters, several numbers/letters, or whole data sets) to objects in R to work with them/do computations. For instance, the following command in R would assign the word “hello” to the object <em>word</em> by using the <code>&lt;-</code> sign (a function used for assigning values to objects):</p>
-<div class="cell">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">word</span> <span class="op">&lt;-</span> <span class="st">"hello"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Objects have specific properties that determine which types of calculations can be done with them (and which cannot). For instance, the object <em>word</em> is characterized by the fact that it consists of characters (i.e., a word) - which may, for instance, prohibit you to calculate the mean of this object (which is something only possible for objects consisting of numeric data).</p>
-<p>This already hints towards the second, important aspect of R: It is influenced by functional programming, meaning that everything we <em>do</em> in R is a function call. R uses functions to assign specific values (for instance, a single number or word, several numbers or words, whole data sets) to objects. In short, what you will learn by learning programming in R is how to write functions for making R do the calculations you need.</p>
-<p>Let’s take SPSS - which, I assume, many of you have worked with previously - as a comparison. If you import, edit, or analyze a data set in SPSS, you’ll use the click-and-point menu to change variable values, calculate variables’ means, or export data.</p>
-<p>R works differently: You assign the data set to an object - for instance an object called “word”, as done previously. This assignment enables you to work with the data: You can now call specific functions to work with or change this object. For instance, if you want to add another word to the object <em>word</em>, for instance “and good morning”, you could do that by using a specific function called <code><a href="https://rdrr.io/r/base/paste.html">paste0()</a></code>, which takes the original object <em>word</em> and adds your additional words ” and good morning” to overwrite the old object <em>word</em>:</p>
-<div class="cell">
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">word</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="va">word</span>, <span class="st">" and good morning"</span><span class="op">)</span></span>
-<span><span class="va">word</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] "hello and good morning"</code></pre>
-</div>
-</div>
-<p>Different to using the click-and-point menu in SPSS, you thus <strong>need to write your own code</strong> to import, edit, or analyze any type of data in R. Luckily, R already includes a lot of predefined functions meaning that we do not have write all of these functions ourselves.</p>
-</section><section id="base-r-vs.-tidyverse-coding-style" class="level2"><h2 class="anchored" data-anchor-id="base-r-vs.-tidyverse-coding-style">Base-R vs.&nbsp;tidyverse &amp; coding style</h2>
-<p>There are two “ways” of using R: via Base-R or via the <a href="https://www.tidyverse.org/">tidyverse</a>, <a href="https://towardsdatascience.com/tidyverse-vs-base-r-how-to-choose-the-best-framework-for-you-29b702bdb384">see this overview for a comparison</a>.</p>
-<p>Base-R includes all functions that come with initially installing R. A more recent development is the tidyverse, a collection of additional packages (and coding conventions) that is especially suited for beginners. Tidyverse was developed by Hadley Wickham and his team at RStudio (the interface we use for programming with R).</p>
-<p>Best practice when coding with R is to either stick to Base-R or the tidyverse, as this makes your code more streamlined and readabile. In this class, we will rely on the tidyverse. You will learn a little bit of Base-R in tutorials 2-3 to know how to read this code (e.g., when stumbling across online forums when looking for R-related code solutions). However, we will then rely on tidyverse in subsequent tutorials.</p>
-<p>This also means that I will use the <a href="https://style.tidyverse.org/">tidyverse coding style</a>. With this coding style, we make sure to consistently name things (e.g., with lower letters), use blank spaces, where needed. In short, it makes our code more readable.</p>
-<p>If your’re interested in this, see a nice summary by IfKW scholar Lara Kobilke <a href="https://lkobilke.github.io/introduction_to_R/tutorial-good-coding-style-project-management.html">here</a>.</p>
-</section><section id="why-should-i-use-r" class="level2"><h2 class="anchored" data-anchor-id="why-should-i-use-r">Why should I use R?</h2>
-<p>There are several reasons why I’m an advocate of R (or similar programming languages such as Python) over programs such as SPSS.</p>
+</section>
+<section id="i-have-r-but-need-to-update-it" class="level3">
+<h3 class="anchored" data-anchor-id="i-have-r-but-need-to-update-it">I have R, but need to update it!</h3>
+<p>If you already have R installed, you just need to update it to the latest version.</p>
 <ol type="1">
-<li><p>R is free. Other than most other (statistical) programs, you do not need to buy it (or rely on an university license, that is likely to run out once you leave your department).</p></li>
-<li><p>R is an open source program. Other than most other programs, the source code - i.e., the basis of the program - is freely available. So are the hundred of packages (we’ll get to those later - these are basically additional functions you may need for more specific analyses) on CRAN that you can use to extend R’s base functions.</p></li>
-<li><p>R offers you flexibility. You can work with almost any type of data and rely on a large (!) set of functions to import, edit, or analyze such data. And if the function you need to do so hasn’t been implemented (or simply does not exist yet), you can write it yourself!</p></li>
-<li><p>Learning R increases your chances on the job market. For many jobs (academia, market research, data science, data journalism), applicants should know at least one programming language.</p></li>
-</ol></section><section id="take-aways" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="take-aways">💡 Take-Aways</h2>
+<li><p><strong>Download and install</strong> the newest R version using the links above. (This won’t usually remove your old version—it installs alongside it.)</p></li>
+<li><p>Open <strong>RStudio</strong> and go to <strong>Tools → Global Options → General</strong>.</p></li>
+<li><p>Under <strong>R version</strong>, select the newest installed version of R.</p></li>
+<li><p><strong>Restart RStudio</strong> (close and reopen it) so the change takes effect.</p></li>
+</ol>
+</section>
+</section>
+<section id="installupdate-r-studio" class="level2">
+<h2 class="anchored" data-anchor-id="installupdate-r-studio">1.1.2 Install/Update R Studio</h2>
+<section id="i-dont-have-r-studio-on-my-computer-yet" class="level3">
+<h3 class="anchored" data-anchor-id="i-dont-have-r-studio-on-my-computer-yet">I don’t have R Studio on my computer yet!</h3>
+<p>Next, install R Studio. The newest version of R Studio can be downloaded via this <a href="https://www.rstudio.com/products/rstudio/download/#download">link</a>.</p>
+</section>
+<section id="i-have-r-studio-but-need-to-update-it" class="level3">
+<h3 class="anchored" data-anchor-id="i-have-r-studio-but-need-to-update-it">I have R Studio, but need to update it!</h3>
+<p>If you already have R Studio on your computer, simply make sure to update it to the newest version. The easiest way to do this is via: <em>“Help/Check for Updates”</em> in R Studio.</p>
+</section>
+</section>
+<section id="why-should-i-learn-r" class="level2">
+<h2 class="anchored" data-anchor-id="why-should-i-learn-r">1.2 Why should I learn R?</h2>
+<p>There are several reasons why I recommend learning <strong>R</strong> (and similar programming languages like Python) instead of menu-based programs such as <strong>SPSS</strong>.</p>
+<ol type="1">
+<li><p><strong>R is free.</strong> Unlike many other statistical programs, you don’t have to buy it or depend on a university license—which often expires once you leave.</p></li>
+<li><p><strong>R is open source.</strong> That means the source code (the “blueprint” of the software) is publicly available. On top of that, R has <strong>thousands of add-on packages</strong>—extra tools that provide specialized functions for particular tasks. Most of these packages are available through <strong>CRAN</strong> (the Comprehensive R Archive Network), and you can install them whenever you need them.</p></li>
+<li><p><strong>R is flexible.</strong> You can work with many different types of data and choose from a huge range of functions to import, clean, visualize, and analyze it. And if a function you need doesn’t exist yet, you can often <strong>write your own</strong> (or adapt code someone else has shared).</p></li>
+<li><p><strong>Programming is a valuable job skill.</strong> Knowing R (or Python) can strengthen your applications in areas like academia, market research, data science, and data journalism—because many employers expect applicants to be comfortable working with code.</p></li>
+</ol>
+</section>
+<section id="take-aways" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="take-aways">💡 Take-Aways</h2>
 <p>R is great! 😁</p>
-</section><section id="more-tutorials-on-this" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="more-tutorials-on-this">📚 More tutorials on this</h2>
+</section>
+<section id="more-tutorials-on-this" class="level2 unnumbered">
+<h2 class="unnumbered anchored" data-anchor-id="more-tutorials-on-this">📚 More tutorials on this</h2>
 <p>You still have questions? The following tutorials &amp; papers can help you with that:</p>
 <ul>
 <li><a href="https://bookdown.org/ndphillips/YaRrr/started.html">YaRrr! The Pirate’s Guide to R by N.D.Phillips, Tutorial 2</a></li>
@@ -281,7 +283,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 
 
-</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -700,7 +705,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
       <a href="./index.html" class="pagination-link" aria-label="Welcome">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Welcome</span></span>
       </a>          
@@ -712,7 +719,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer">
+<footer class="footer">
+  <div class="nav-footer">
     <div class="nav-footer-left">
       &nbsp;
     </div>   
@@ -724,6 +732,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
+
+
 
 
 </body></html>

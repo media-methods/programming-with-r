@@ -10,7 +10,7 @@ format:
 Across several tutorials, we will help you build practical computational skills:
 
 1.  **Workflow in R and RStudio**\
-    → setting up the infrastructure, getting help, adressing problems
+    → setting up the infrastructure, getting help, addressing problems
 
 2.  **Data management**\
     → filtering, selecting, transforming data
@@ -18,7 +18,7 @@ Across several tutorials, we will help you build practical computational skills:
 3.  **Data collection & analysis**\
     → visualization, data collection using web scraping, basic statistical analysis
 
-All course materials (code, etc.) are available **here**.
+All course materials (code, etc.) are available [**here**](Materials.qmd)
 
 ## What Can You Expect? {.unnumbered}
 
