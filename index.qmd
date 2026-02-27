@@ -1,0 +1,37 @@
+---
+title: "Welcome"
+format:
+  html:
+    toc: false
+---
+
+## Welcome! 👋 What Is This Compendium For? {.unnumbered}
+
+Across several tutorials, we will help you build practical computational skills:
+
+1.  **Workflow in R and RStudio**\
+    → setting up the infrastructure, getting help, adressing problems
+
+2.  **Data management**\
+    → filtering, selecting, transforming data
+
+3.  **Data collection & analysis**\
+    → visualization, data collection using web scraping, basic statistical analysis
+
+All course materials (code, etc.) are available **here**.
+
+## What Can You Expect? {.unnumbered}
+
+Each tutorial in this compendium includes:
+
+-   Explanations of new R functions and analysis methods (with example code)
+
+-   A short summary of the key takeaways & additional learning resources
+
+-   Practice exercises/quizzes to help you apply your new skills
+
+This tutorial is inspired by [Michael Scharkow](https://stats.ifp.uni-mainz.de/) and [Ben Fretwurst](https://ikmz.pages.uzh.ch/Wissen-macht-R/) who, in the spirit of open science, shared their materials with me. Thanks! 🙌
+
+## What Do We Expect from You? {.unnumbered}
+
+To get the most out of our in-person sessions, you should complete the assigned tutorial *before* each class. Please check the syllabus to see which tutorial you should prepare for each week. That way, we can use our time together to clarify questions, go through examples, and apply what you have learned.

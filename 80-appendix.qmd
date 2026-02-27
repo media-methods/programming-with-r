@@ -1,0 +1,21 @@
+---
+title: "Appendix"
+body-classes: no-chapter-nav
+format:
+  html:
+    toc: false
+---
+
+This is an overview of additional material we provide:
+
+-   In [Materials](81-materials.qmd), you can download all necessary data and code.
+
+-   In [Coding style](82-coding-style.qmd), we provide best practice guidelines for coding.
+
+-   In [Glossary](83-glossary.qmd), you can get a useful overview of important functions.
+
+-   In the [GitHub forum](84-forum.qmd), you can discuss questions with others.
+
+-   In [FAQ R](85-faq-r.qmd), we provide an overview of common R question.
+
+-   In [FAQ Class/exam](86-fac-class.qmd), we provide an overview of common questions about the class/exam.

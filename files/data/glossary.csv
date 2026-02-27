@@ -1,0 +1,2 @@
+﻿R-Function;Definition
+setwd();Sets your working directory - folder where R searches for/saves data
