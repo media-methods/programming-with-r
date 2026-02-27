@@ -1,6 +1,5 @@
 We’re using GitHub Discussions as a place to connect with other students in this course. We hope that you:
-
-Ask questions you’re wondering about.
+* Ask questions you’re wondering about.
 * Share ideas.
 * Engage with other students.
 * Welcome others and are open-minded. Remember that this is a community we build together 💪.
