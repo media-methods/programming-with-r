@@ -22,7 +22,13 @@ book:
   
   chapters:
     - index.qmd
-    - 1-install-r.qmd
+
+    - part: R Basics
+      chapters:
+       - 1-install-r.qmd
+      # - 2-overview.qmd
+      # - 3-workflow.qmd
+      # - 4-coding-practice.qmd
   
     - part: 80-appendix.qmd
       chapters:

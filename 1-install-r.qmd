@@ -15,6 +15,8 @@ R is the programming language we'll use to import, edit, and analyze data. R Stu
 
 In programming, R Studio is called an "integrated development environment (IDE). There are other interfaces or IDEs (e.g., Positron, Visual Studio Code), but we will stick with R Studio for now.
 
+## 2. How do I install R and R Studio?
+
 ### Install/Update R {.unlisted}
 
 *I don't have R on my computer yet!*
@@ -46,7 +48,7 @@ Next, install R Studio. The newest version of R Studio can be downloaded via thi
 
 If you already have R Studio on your computer, simply make sure to update it to the newest version. The easiest way to do this is via: *"Help/Check for Updates"* in R Studio.
 
-## 2. Why should I learn R?
+## 3. Why should I learn R?
 
 There are several reasons why I recommend learning **R** (and similar programming languages like Python) instead of menu-based programs such as **SPSS**.
 
@@ -58,7 +60,7 @@ There are several reasons why I recommend learning **R** (and similar programmin
 
 4.  **Programming is a valuable job skill.** Knowing R (or Python) can strengthen your applications in areas like academia, market research, data science, and data journalism—because many employers expect applicants to be comfortable working with code.
 
-## 3. What should I know about learning R?
+## 4. What should I know about learning R?
 
 ### The learning curve (aka: break your keyboard and scream) {.unlisted}
 
@@ -77,11 +79,12 @@ Many students experience a similar learning curve:
 -   **Confidence:** Tasks get faster, and learning new tools becomes easier. Even if you hit a problem you can’t solve right away, you know you will—it may just take some time. You’ve got it now.
 
 ### Many ways to do the same thing in R {.unlisted}
-R is a full programming language. Wo with it you can analyze data, create graphics, automate repetitive tasks, and use thousands of add-on packages for specialized methods. That flexibility is a big advantage, but it can feel confusing at first: There are many different ways to solve the same problem in R. 
+
+R is a full programming language. Wo with it you can analyze data, create graphics, automate repetitive tasks, and use thousands of add-on packages for specialized methods. That flexibility is a big advantage, but it can feel confusing at first: There are many different ways to solve the same problem in R.
 
 You might see two solutions in different tutorials that look completely different but produce the same result - and that’s normal. In this course, we have one goal: make the code work and understand what it’s doing, even if it isn’t the shortest or “prettiest” solution yet. It doesn't matter which solution you choose - as long as it it correct.
 
-Once that feels comfortable, we’ll improve our workflow step by step: cleaner code, fewer steps, and more reusable solutions. 
+Once that feels comfortable, we’ll improve our workflow step by step: cleaner code, fewer steps, and more reusable solutions.
 
 ## 💡 Take-Aways {.unnumbered}
 

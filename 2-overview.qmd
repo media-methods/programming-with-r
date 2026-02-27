@@ -1,0 +1,166 @@
+---
+title: "1 Install R/R Studio"
+---
+
+## 🎯Learning goals
+
+After working through Tutorial 1, you'll...
+
+-   know how to install R and R Studio
+-   understand the main set-up of R Studio
+
+# Tutorial 2: What to do where in R Studio {#tutorial-2-what-to-do-where-in-r-Studio}
+
+As mentioned, R studio is a graphical interface which facilitates programming with R. It contains up to four main windows, which allow for different things:
+
+__Window 1__ (Source): Writing your own code. **Important**: When first installing R/R Studio and opening R studio, you may not see this window right away. In this case, simply open it by clicking on *File/New File/R Script*.
+
+__Window 2__ (Console): Executing your own code.
+
+__Window 3__ (Environment): Inspecting objects
+
+__Window 4__ (Files/Plots/Packages): Visualizing data, searching for help, updating packages etc. 
+
+*Image: Four main windows in R*
+
+![](H:/Lehre/WS2024_25/R Tutorials/Github/images/Tut1_Overview.JPG)
+
+Please note that the specific set-up of your R Studio may look different (the order of windows may vary and so may the windows' names). I have made the experience that having these four windows open works best for me. This may be different for you. If you want to modify the appearance of your R Studio, simply choose *"Tools/Global Options/Pane Layout"*.
+
+*Image: Changing the Layout*
+
+![](H:/Lehre/WS2024_25/R Tutorials/Github/images/Tut1_Change.JPG)
+
+In the options menu, you can perform various cool customizations, such as enabling rainbow parentheses via *"Tools/Global Options/Code/Display"*. With this feature, a starting parenthesis will be displayed in the same color as its corresponding closing parenthesis.
+
+## Source: Write your own code
+
+Using the window "Source", you'll write your own code to execute whichever task you want R to fulfill.
+
+### Write Code
+
+Let's start with an easy example: Assume you simply want R to print the word "hello". In this case, you would first write a simple command that assigns the word "hello" to an object called *word*. The assigment of values to named objects is done via either the operator `<-` or the operator `=`. The left side of that command contains the object that should be created; its right side the values that should be assigned to this object.
+
+In short, this command tells R to assign the world "hello" to an object called *word*.
+
+```{r,hello-1, eval = TRUE, echo = TRUE}
+word <- "hello"
+```
+
+*Image: "Source"*
+
+![](H:/Lehre/WS2024_25/R Tutorials/Github/images/Tut1_Source Panel.JPG)
+
+### Annotate Code
+
+Another helpful aspect of R is that you can comment your own code. Oftentimes, this is very helpful for understanding your code later (if you write several hundred lines of codes, you may not remember their exact meaning months later).
+
+Comments or notes can be made via hashtags #. Anything following a hashtag will not be considered code by R but be ignored instead.
+
+```{r,notes, eval = FALSE, echo = TRUE}
+#this line of code assigns the word "hello" to an object called word
+word <- "hello"
+```
+
+A pretty cool feature is that you can use hashtags to structure your word in blocks - think of them like "chapter headings" in Word or similar.
+
+If you add four hashtags before and after a heading `####`, R will create a heading (see below). You can use these to jump from specific code to the next. This is especially useful if you have long sections of code, as it gives you a better overview and structure.
+
+*Image: Structuring Code*
+
+![](H:/Lehre/WS2024_25/R Tutorials/Github/images/Tut1_Structure.JPG)
+
+### Execute Code
+We now want to execute our code. Doing so is simple:
+
+-   Mark the parts of the code you want to run (for instance, single rows of code or blocks of code across several rows)
+-   Either press *Run* (see upper right side of the same window) or press **Alt + Enter**. On Mac OS X, hold the command key and press return instead.
+
+R should now execute exactly those lines of codes that you marked (hereby creating the object *word*). If you haven't marked any specific code, all lines of code will be executed.
+
+*Image: Executing Code*
+
+![](H:/Lehre/WS2024_25/R Tutorials/Github/images/Tut1_Execute.JPG)
+
+Some commands run for a longer time - and you may realize while they are running that the code still contains an error. In this case, you may want to stop R in executing the command. If you want to do this manually, you can use the *stop* button in the window "Console" (only visible while R is executing code).
+
+*Image: Interrupting R*
+
+![](H:/Lehre/WS2024_25/R Tutorials/Github/images/Tut2_interrupt.JPG)
+
+Else, you can use the menu via *Session / Interrupt R*.
+
+### Save Code
+
+A great feature of R is that it makes analyses easily reproducible - given that you save your code. When reopening R Studio and your script, you can simply "rerun" the code with one click and your analysis will be reproduced.
+
+To save code, you have two options:
+
+-   Choose the menu option *File/Save as*. Important: Code needs to be saved with the ending ".R".
+-   Chose the Save-button in the source window and save your code in the correct format, for instance as "MyCode.R"
+
+![](H:/Lehre/WS2024_25/R Tutorials/Github/images/Tut1_Save.JPG)
+
+## Console: Print results
+
+Results of executing code are printed in a second window called "Console", which includes the code you ran and the object you may have called when doing so.
+
+Previously, we defined an object called word, which consists of the single word "hello". Thus, R prints our code as well as objects called when running this code (here, the object word) in the console.
+
+```{r,hello-3, eval = TRUE, echo = TRUE}
+word <- "hello"
+word
+```
+
+*Image: Window "Console"*
+
+![](H:/Lehre/WS2024_25/R Tutorials/Github/images/Tut1_Konsole Panel.JPG)
+
+## Environment: Overview of objects
+
+The third window is called "Environment"[^1]. This windows displays all the objects currently existing - in our case, only the object "word". As soon as you start creating more objects, this environment will fill up.
+
+[^1]: again, this only applies for the way I set up my R Studio. You can change this via *"Tools/Global Options/Pane Layout"*
+
+If you're an SPSS user, this window is very similar to what is called the *Datenansicht / Data overview* in SPSS. However, the R version of this is much more flexible, given that our environment can contain several data sets, for example, at the same time.
+
+*Image: Window "Environment"*
+
+![](H:/Lehre/WS2024_25/R Tutorials/Github/images/Tut1_Environment Panel.JPG)
+
+It is important to know that we can visually inspect any object using the `View()` command (with a new tab then opening in the "Source" window). While this may not seem particularly useful at the moment, it becomes immensely helpful when working with larger datasets that have multiple observations and variables.
+
+```{r,hello-4, eval = FALSE, echo = TRUE}
+View(word)
+```
+
+*Image: Window "View"*
+
+![](H:/Lehre/WS2024_25/R Tutorials/Github/images/Tut1_View.JPG)
+
+## Plots/Help/Packages: Do everything else
+
+Lastly, the standard R Studio interface contains a fourth window (if you opted for this layout). In my case, the window contains several sub-sections called "Files", "Plots", or "Packages" among others. You'll understand their specific functions later - the window can, for instance, be used to plot/visualize results or see which packages are currently loaded.
+
+*Image: Window "Files/Plots/Packages"*
+
+![](H:/Lehre/WS2024_25/R Tutorials/Github/images/Tut1_Files_Plots_Packages.JPG)
+
+## 💡 Take-Aways {.unnumbered}
+
+-   **Window "Source"**: used to write/execute code in R
+-   **Window "Console"**: used to return results of executed code
+-   **Window "Environment"**: used to inspect objects on which to use functions
+-   **Window "Files/Plots/Packages etc."**: used for additional functions, for instance visualizations/searching for help/activating or updating packages
+-   **Packages**: collections of topic-specific functions that extend the functions implemented in Base-R.
+
+## 📚 More tutorials on this {.unnumbered}
+
+You still have questions? The following tutorials & papers can help you with that:
+
+-   [YaRrr! The Pirate's Guide to R by N.D.Phillips, Tutorial 2](https://bookdown.org/ndphillips/YaRrr/started.html)
+-   [Computational Methods in der politischen Kommunikationsforschung by J. Unkel, Tutorial 1](https://bookdown.org/joone/ComputationalMethods/firststeps.html)
+-   [Continuing education in R by Lara Kobilke, Tutorial 2](https://lkobilke.github.io/introduction_to_R/tutorial-installing-understanding-rr-studio.html)
+-   [SICSS Boot Camp by C. Bail, Video 1](https://sicss.io/boot_camp#install)
+-   [wegweisR by M. Haim, Video 1](https://youtu.be/p6f4oq08z48)
+-   [R Cookbook by Long et al., Tutorial 1](https://rc2e.com/gettingstarted#recipe-id001)

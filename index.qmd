@@ -18,7 +18,7 @@ Across several tutorials, we will help you build practical computational skills:
 3.  **Data collection & analysis**\
     → visualization, data collection using web scraping, basic statistical analysis
 
-All course materials (code, etc.) are available [**here**](Materials.qmd)
+All course materials (code, etc.) are available [**here**](81-materials.qmd)
 
 ## What Can You Expect? {.unnumbered}
 
