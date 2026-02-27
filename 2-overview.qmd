@@ -1,47 +1,51 @@
 ---
-title: "1 Install R/R Studio"
+title: "2 What to do where in R"
 ---
 
-## 🎯Learning goals
+## 🎯 Learning goals
 
-After working through Tutorial 1, you'll...
+After working through Tutorial 2, you'll...
 
--   know how to install R and R Studio
--   understand the main set-up of R Studio
+-   know what each window (panel) in RStudio does
 
-# Tutorial 2: What to do where in R Studio {#tutorial-2-what-to-do-where-in-r-Studio}
+## 1. What does each window in RStudio do?
 
-As mentioned, R studio is a graphical interface which facilitates programming with R. It contains up to four main windows, which allow for different things:
+RStudio is a graphical interface (an app) that makes it easier to work with R. It usually contains **four main windows (panels)**, each with a different purpose:
 
-__Window 1__ (Source): Writing your own code. **Important**: When first installing R/R Studio and opening R studio, you may not see this window right away. In this case, simply open it by clicking on *File/New File/R Script*.
+-   **Source (Script Editor):** Write and save your code. *Important:* After installing R/RStudio, you may not see this window right away. To open it, click *File → New File → R Script*.
 
-__Window 2__ (Console): Executing your own code.
+-   **Console:** Run code. This is where commands are executed and results are shown.
 
-__Window 3__ (Environment): Inspecting objects
+-   **Environment:** View the objects you have created (e.g., datasets, variables, lists).
 
-__Window 4__ (Files/Plots/Packages): Visualizing data, searching for help, updating packages etc. 
+-   **Files / Plots / Packages / Help:** Manage files, view plots, install/update packages, and look up help pages.
 
-*Image: Four main windows in R*
+*Image: Four main windows in RStudio*
 
-![](H:/Lehre/WS2024_25/R Tutorials/Github/images/Tut1_Overview.JPG)
+![](files/images/1_overview.jpg){fig-alt="Overview of panels in RStudio"}
 
-Please note that the specific set-up of your R Studio may look different (the order of windows may vary and so may the windows' names). I have made the experience that having these four windows open works best for me. This may be different for you. If you want to modify the appearance of your R Studio, simply choose *"Tools/Global Options/Pane Layout"*.
+Your layout may look slightly different (panels can be arranged differently, and labels may vary). The four-panel setup shown here works well for many people, but feel free to adjust it. To change the layout, go to *Tools → Global Options → Pane Layout*.
 
-*Image: Changing the Layout*
+*Image: Changing the layout*
 
-![](H:/Lehre/WS2024_25/R Tutorials/Github/images/Tut1_Change.JPG)
+![](files/images/1_change.jpg){fig-alt="Changing the layout in RStudio"}
 
-In the options menu, you can perform various cool customizations, such as enabling rainbow parentheses via *"Tools/Global Options/Code/Display"*. With this feature, a starting parenthesis will be displayed in the same color as its corresponding closing parenthesis.
+::: callout-tip
+Want a more “hacky” look and feel like a coding pro? Go to *Tools → Appearance → Editor theme* and try a theme like **Chaos**.
 
-## Source: Write your own code
+In the options menu, you can also customize the editor—for example, you can enable **rainbow parentheses** via *Tools → Global Options → Code → Display*. This highlights matching parentheses in the same color, which can make code easier to read.
+:::
 
-Using the window "Source", you'll write your own code to execute whichever task you want R to fulfill.
+### 1.1 Source: Write your own code
 
-### Write Code
+In the Source window, you write the code that tells R what task to perform.
 
-Let's start with an easy example: Assume you simply want R to print the word "hello". In this case, you would first write a simple command that assigns the word "hello" to an object called *word*. The assigment of values to named objects is done via either the operator `<-` or the operator `=`. The left side of that command contains the object that should be created; its right side the values that should be assigned to this object.
+**Write code**
 
-In short, this command tells R to assign the world "hello" to an object called *word*.
+Let’s start with a simple example. Suppose you want R to print the word `"hello"`.\
+First, we create an **object** called *word* and assign the value `"hello"` to it.
+
+Values are assigned to objects using either the operator `<-` or `=`. The **left side** contains the object name, and the **right side** contains the value that should be stored in that object. The following command tells R to assign the word `"hello"` to an object called *word*:
 
 ```{r,hello-1, eval = TRUE, echo = TRUE}
 word <- "hello"
@@ -49,63 +53,71 @@ word <- "hello"
 
 *Image: "Source"*
 
-![](H:/Lehre/WS2024_25/R Tutorials/Github/images/Tut1_Source Panel.JPG)
+![](files/images/1_source.jpg){fig-alt="Overview of the source panel in RStudio"}
 
-### Annotate Code
+R allows you to add comments to your code. This is helpful when you return to your script later—especially once your code becomes longer.
 
-Another helpful aspect of R is that you can comment your own code. Oftentimes, this is very helpful for understanding your code later (if you write several hundred lines of codes, you may not remember their exact meaning months later).
+Comments are created using a hashtag `#`. Everything after `#` is ignored by R and treated as a note for humans only (so not run as code)
 
-Comments or notes can be made via hashtags #. Anything following a hashtag will not be considered code by R but be ignored instead.
-
-```{r,notes, eval = FALSE, echo = TRUE}
+```{r, notes, eval = FALSE, echo = TRUE}
 #this line of code assigns the word "hello" to an object called word
 word <- "hello"
 ```
 
-A pretty cool feature is that you can use hashtags to structure your word in blocks - think of them like "chapter headings" in Word or similar.
+You can also use hashtags to structure your script into sections—similar to headings in a Word document.
 
-If you add four hashtags before and after a heading `####`, R will create a heading (see below). You can use these to jump from specific code to the next. This is especially useful if you have long sections of code, as it gives you a better overview and structure.
+If you add four hashtags before a heading `####`, RStudio creates a section header that helps you navigate through your script. This is especially useful for long files.
 
 *Image: Structuring Code*
 
-![](H:/Lehre/WS2024_25/R Tutorials/Github/images/Tut1_Structure.JPG)
+![](files/images/1_structure.jpg){fig-alt="Structuring code in RStudio"}
 
-### Execute Code
-We now want to execute our code. Doing so is simple:
+**Execute Code**
 
--   Mark the parts of the code you want to run (for instance, single rows of code or blocks of code across several rows)
--   Either press *Run* (see upper right side of the same window) or press **Alt + Enter**. On Mac OS X, hold the command key and press return instead.
+Next, we want to run (execute) our code.
 
-R should now execute exactly those lines of codes that you marked (hereby creating the object *word*). If you haven't marked any specific code, all lines of code will be executed.
+1.  Select the line(s) of code you want to run.
+
+2.  Click Run (top right of the Source window), or press:
+
+-   Ctrl + Enter (Windows)
+
+-   Cmd + Enter (Mac)
+
+R will execute exactly the selected lines and create the object word. If no code is selected, only the current line (where your cursor is placed) will run.
 
 *Image: Executing Code*
 
-![](H:/Lehre/WS2024_25/R Tutorials/Github/images/Tut1_Execute.JPG)
+![](files/images/1_execute.jpg){fig-alt="Executing code in RStudio"}
 
-Some commands run for a longer time - and you may realize while they are running that the code still contains an error. In this case, you may want to stop R in executing the command. If you want to do this manually, you can use the *stop* button in the window "Console" (only visible while R is executing code).
+Some commands take longer to run. If you notice an error while code is executing, you can stop it manually using the **Stop** button in the *Console* (visible only while R is running).
 
 *Image: Interrupting R*
 
-![](H:/Lehre/WS2024_25/R Tutorials/Github/images/Tut2_interrupt.JPG)
+![](files/images/1_interrupt.jpg){fig-alt="Interrupting code in RStudio"} Else, you can use the menu via *Session / Interrupt R*.
 
-Else, you can use the menu via *Session / Interrupt R*.
+Alternatively, use *Session → Interrupt R*.
 
-### Save Code
+**Save Code**
 
-A great feature of R is that it makes analyses easily reproducible - given that you save your code. When reopening R Studio and your script, you can simply "rerun" the code with one click and your analysis will be reproduced.
+One major advantage of R is that analyses are reproducible—as long as you save your code. When you reopen RStudio, you can simply run the script again to reproduce your results.
 
-To save code, you have two options:
+To save your code:
 
--   Choose the menu option *File/Save as*. Important: Code needs to be saved with the ending ".R".
--   Chose the Save-button in the source window and save your code in the correct format, for instance as "MyCode.R"
+-   Select *File → Save As…* (scripts must use the file ending `.R`), or
 
-![](H:/Lehre/WS2024_25/R Tutorials/Github/images/Tut1_Save.JPG)
+-   Click the Save button in the Source window and save your script, for example as `MyCode.R`.
 
-## Console: Print results
+![](files/images/1_save.jpg){fig-alt="Saving code in RStudio"}
 
-Results of executing code are printed in a second window called "Console", which includes the code you ran and the object you may have called when doing so.
+### 1.2 Console: Print results
 
-Previously, we defined an object called word, which consists of the single word "hello". Thus, R prints our code as well as objects called when running this code (here, the object word) in the console.
+The results of executed code appear in the **Console**, the second main window in RStudio. The Console shows both the commands you run and the output produced by R.
+
+In the previous example, we created an object called *word* that stores the value `"hello"`.  
+When we run code, R prints the executed command and—if requested—the content of the object in the Console.
+
+For example, typing the object name and running the line will display its content:
 
 ```{r,hello-3, eval = TRUE, echo = TRUE}
 word <- "hello"
@@ -114,37 +126,34 @@ word
 
 *Image: Window "Console"*
 
-![](H:/Lehre/WS2024_25/R Tutorials/Github/images/Tut1_Konsole Panel.JPG)
+![](files/images/1_console.jpg){fig-alt="Console panel in RStudio"}
 
-## Environment: Overview of objects
+### 1.3 Environment: Overview of objects
 
-The third window is called "Environment"[^1]. This windows displays all the objects currently existing - in our case, only the object "word". As soon as you start creating more objects, this environment will fill up.
+The third window is the **Environment**. It shows all objects that currently exist in your R session—right now, that’s just the object *word*. As you create more objects (datasets, variables, results, etc.), this list will grow.
 
-[^1]: again, this only applies for the way I set up my R Studio. You can change this via *"Tools/Global Options/Pane Layout"*
-
-If you're an SPSS user, this window is very similar to what is called the *Datenansicht / Data overview* in SPSS. However, the R version of this is much more flexible, given that our environment can contain several data sets, for example, at the same time.
+If you have worked with SPSS before, you can think of the Environment as a kind of *overview* of what is currently loaded. The key difference is that R can keep **many different objects at the same time**—for example, several datasets, models, or tables—so you can switch between them easily.
 
 *Image: Window "Environment"*
 
-![](H:/Lehre/WS2024_25/R Tutorials/Github/images/Tut1_Environment Panel.JPG)
+![](files/images/1_environment.jpg){fig-alt="Environment panel in RStudio"} 
 
-It is important to know that we can visually inspect any object using the `View()` command (with a new tab then opening in the "Source" window). While this may not seem particularly useful at the moment, it becomes immensely helpful when working with larger datasets that have multiple observations and variables.
-
+It’s important to know that you can visually inspect many objects (especially datasets) with the function `View()`. This opens the object in a new tab in the Source window. It may not feel very useful yet, but it becomes extremely helpful once you work with larger datasets that contain many observations (rows) and variables (columns).
 ```{r,hello-4, eval = FALSE, echo = TRUE}
 View(word)
 ```
 
 *Image: Window "View"*
 
-![](H:/Lehre/WS2024_25/R Tutorials/Github/images/Tut1_View.JPG)
+![](files/images/1_view.jpg){fig-alt="Viewing data in RStudio"} 
 
-## Plots/Help/Packages: Do everything else
+### 1.4 Plots/Help/Packages: Do everything else
 
-Lastly, the standard R Studio interface contains a fourth window (if you opted for this layout). In my case, the window contains several sub-sections called "Files", "Plots", or "Packages" among others. You'll understand their specific functions later - the window can, for instance, be used to plot/visualize results or see which packages are currently loaded.
+Lastly, the standard RStudio interface includes a fourth window (depending on your chosen layout). In many setups, this panel contains tabs such as Files, Plots, Packages, and Help. We’ll cover these in more detail later. For now, it’s enough to know that this window is used, for example, to view plots and other output, browse files, and manage packages (including checking which packages are currently loaded).
 
 *Image: Window "Files/Plots/Packages"*
 
-![](H:/Lehre/WS2024_25/R Tutorials/Github/images/Tut1_Files_Plots_Packages.JPG)
+![](files/images/1_files_plots_packages.jpg){fig-alt="Files etc. panel in RStudio"} 
 
 ## 💡 Take-Aways {.unnumbered}
 
