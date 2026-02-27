@@ -222,5 +222,60 @@
       "R Basics",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>1 Install R/R Studio</span>"
     ]
+  },
+  {
+    "objectID": "2-overview.html",
+    "href": "2-overview.html",
+    "title": "2 What to do where in R",
+    "section": "",
+    "text": "🎯 Learning goals\nAfter working through Tutorial 2, you’ll…",
+    "crumbs": [
+      "R Basics",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>2 What to do where in R</span>"
+    ]
+  },
+  {
+    "objectID": "2-overview.html#learning-goals",
+    "href": "2-overview.html#learning-goals",
+    "title": "2 What to do where in R",
+    "section": "",
+    "text": "know what each window (panel) in RStudio does",
+    "crumbs": [
+      "R Basics",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>2 What to do where in R</span>"
+    ]
+  },
+  {
+    "objectID": "2-overview.html#what-does-each-window-in-rstudio-do",
+    "href": "2-overview.html#what-does-each-window-in-rstudio-do",
+    "title": "2 What to do where in R",
+    "section": "1. What does each window in RStudio do?",
+    "text": "1. What does each window in RStudio do?\nRStudio is a graphical interface (an app) that makes it easier to work with R. It usually contains four main windows (panels), each with a different purpose:\n\nSource (Script Editor): Write and save your code. Important: After installing R/RStudio, you may not see this window right away. To open it, click File → New File → R Script.\nConsole: Run code. This is where commands are executed and results are shown.\nEnvironment: View the objects you have created (e.g., datasets, variables, lists).\nFiles / Plots / Packages / Help: Manage files, view plots, install/update packages, and look up help pages.\n\nImage: Four main windows in RStudio\n\nYour layout may look slightly different (panels can be arranged differently, and labels may vary). The four-panel setup shown here works well for many people, but feel free to adjust it. To change the layout, go to Tools → Global Options → Pane Layout.\nImage: Changing the layout\n\n\n\n\n\n\n\nTip\n\n\n\nWant a more “hacky” look and feel like a coding pro? Go to Tools → Appearance → Editor theme and try a theme like Chaos.\nIn the options menu, you can also customize the editor—for example, you can enable rainbow parentheses via Tools → Global Options → Code → Display. This highlights matching parentheses in the same color, which can make code easier to read.\n\n\n1.1 Source: Write your own code\nIn the Source window, you write the code that tells R what task to perform.\nWrite code\nLet’s start with a simple example. Suppose you want R to print the word \"hello\".\nFirst, we create an object called word and assign the value \"hello\" to it.\nValues are assigned to objects using either the operator &lt;- or =. The left side contains the object name, and the right side contains the value that should be stored in that object. The following command tells R to assign the word \"hello\" to an object called word:\n\nword &lt;- \"hello\"\n\nImage: “Source”\n\nR allows you to add comments to your code. This is helpful when you return to your script later—especially once your code becomes longer.\nComments are created using a hashtag #. Everything after # is ignored by R and treated as a note for humans only (so not run as code)\n\n#this line of code assigns the word \"hello\" to an object called word\nword &lt;- \"hello\"\n\nYou can also use hashtags to structure your script into sections—similar to headings in a Word document.\nIf you add four hashtags before a heading ####, RStudio creates a section header that helps you navigate through your script. This is especially useful for long files.\nImage: Structuring Code\n\nExecute Code\nNext, we want to run (execute) our code.\n\nSelect the line(s) of code you want to run.\nClick Run (top right of the Source window), or press:\n\n\nCtrl + Enter (Windows)\nCmd + Enter (Mac)\n\nR will execute exactly the selected lines and create the object word. If no code is selected, only the current line (where your cursor is placed) will run.\nImage: Executing Code\n\nSome commands take longer to run. If you notice an error while code is executing, you can stop it manually using the Stop button in the Console (visible only while R is running).\nImage: Interrupting R\n Else, you can use the menu via Session / Interrupt R.\nAlternatively, use Session → Interrupt R.\nSave Code\nOne major advantage of R is that analyses are reproducible—as long as you save your code. When you reopen RStudio, you can simply run the script again to reproduce your results.\nTo save your code:\n\nSelect File → Save As… (scripts must use the file ending .R), or\nClick the Save button in the Source window and save your script, for example as MyCode.R.\n\n\n1.2 Console: Print results\nThe results of executed code appear in the Console, the second main window in RStudio. The Console shows both the commands you run and the output produced by R.\nIn the previous example, we created an object called word that stores the value \"hello\".\nWhen we run code, R prints the executed command and—if requested—the content of the object in the Console.\nFor example, typing the object name and running the line will display its content:\n\nword &lt;- \"hello\"\nword\n\n[1] \"hello\"\n\n\nImage: Window “Console”\n\n1.3 Environment: Overview of objects\nThe third window is the Environment. It shows all objects that currently exist in your R session—right now, that’s just the object word. As you create more objects (datasets, variables, results, etc.), this list will grow.\nIf you have worked with SPSS before, you can think of the Environment as a kind of overview of what is currently loaded. The key difference is that R can keep many different objects at the same time—for example, several datasets, models, or tables—so you can switch between them easily.\nImage: Window “Environment”\n\nIt’s important to know that you can visually inspect many objects (especially datasets) with the function View(). This opens the object in a new tab in the Source window. It may not feel very useful yet, but it becomes extremely helpful once you work with larger datasets that contain many observations (rows) and variables (columns).\n\nView(word)\n\nImage: Window “View”\n\n1.4 Plots/Help/Packages: Do everything else\nLastly, the standard RStudio interface includes a fourth window (depending on your chosen layout). In many setups, this panel contains tabs such as Files, Plots, Packages, and Help. We’ll cover these in more detail later. For now, it’s enough to know that this window is used, for example, to view plots and other output, browse files, and manage packages (including checking which packages are currently loaded).\nImage: Window “Files/Plots/Packages”",
+    "crumbs": [
+      "R Basics",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>2 What to do where in R</span>"
+    ]
+  },
+  {
+    "objectID": "2-overview.html#take-aways",
+    "href": "2-overview.html#take-aways",
+    "title": "2 What to do where in R",
+    "section": "💡 Take-Aways",
+    "text": "💡 Take-Aways\n\n\nWindow “Source”: used to write/execute code in R\n\nWindow “Console”: used to return results of executed code\n\nWindow “Environment”: used to inspect objects on which to use functions\n\nWindow “Files/Plots/Packages etc.”: used for additional functions, for instance visualizations/searching for help/activating or updating packages\n\nPackages: collections of topic-specific functions that extend the functions implemented in Base-R.",
+    "crumbs": [
+      "R Basics",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>2 What to do where in R</span>"
+    ]
+  },
+  {
+    "objectID": "2-overview.html#more-tutorials-on-this",
+    "href": "2-overview.html#more-tutorials-on-this",
+    "title": "2 What to do where in R",
+    "section": "📚 More tutorials on this",
+    "text": "📚 More tutorials on this\nYou still have questions? The following tutorials & papers can help you with that:\n\nYaRrr! The Pirate’s Guide to R by N.D.Phillips, Tutorial 2\nComputational Methods in der politischen Kommunikationsforschung by J. Unkel, Tutorial 1\nContinuing education in R by Lara Kobilke, Tutorial 2\nSICSS Boot Camp by C. Bail, Video 1\nwegweisR by M. Haim, Video 1\nR Cookbook by Long et al., Tutorial 1",
+    "crumbs": [
+      "R Basics",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>2 What to do where in R</span>"
+    ]
   }
 ]

@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.57">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
-<title>2 What to do where in R</title>
+<meta name="author" content="Valerie Hase">
+<title>2 What to do where in R – Programming with R for Social Scientists</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -56,30 +54,174 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 </style>
 
-
-<script src="2-overview_files/libs/clipboard/clipboard.min.js"></script>
-<script src="2-overview_files/libs/quarto-html/quarto.js"></script>
-<script src="2-overview_files/libs/quarto-html/popper.min.js"></script>
-<script src="2-overview_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="2-overview_files/libs/quarto-html/anchor.min.js"></script>
-<link href="2-overview_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="2-overview_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="2-overview_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="2-overview_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="2-overview_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-
-
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./80-appendix.html" rel="next">
+<link href="./1-install-r.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script><link rel="stylesheet" href="files/www/custom.css">
 </head>
+<body class="nav-sidebar floating">
 
-<body class="fullcontent">
-
-<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
-
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">2 What to do where in R</h1>
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./1-install-r.html">R Basics</a></li><li class="breadcrumb-item"><a href="./2-overview.html"><span class="chapter-title">2 What to do where in R</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Programming with R for Social Scientists</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Welcome</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">R Basics</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./1-install-r.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1 Install R/R Studio</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./2-overview.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">2 What to do where in R</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./80-appendix.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Appendix</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./81-materials.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">🔷 Materials</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./82-coding-style.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">🔷 Coding style</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./83-glossary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">🔷 Glossary</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./84-forum.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">🔷 Github Discussion forum</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./85-faq-r.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">🔷 FAQ R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./86-faq-class.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">🔷 FAQ Class/exam</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+    </ul>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Content</h2>
+   
+  <ul>
+<li><a href="#learning-goals" id="toc-learning-goals" class="nav-link active" data-scroll-target="#learning-goals">🎯 Learning goals</a></li>
+  <li>
+<a href="#what-does-each-window-in-rstudio-do" id="toc-what-does-each-window-in-rstudio-do" class="nav-link" data-scroll-target="#what-does-each-window-in-rstudio-do">1. What does each window in RStudio do?</a>
+  <ul class="collapse">
+<li><a href="#source-write-your-own-code" id="toc-source-write-your-own-code" class="nav-link" data-scroll-target="#source-write-your-own-code">1.1 Source: Write your own code</a></li>
+  <li><a href="#console-print-results" id="toc-console-print-results" class="nav-link" data-scroll-target="#console-print-results">1.2 Console: Print results</a></li>
+  <li><a href="#environment-overview-of-objects" id="toc-environment-overview-of-objects" class="nav-link" data-scroll-target="#environment-overview-of-objects">1.3 Environment: Overview of objects</a></li>
+  <li><a href="#plotshelppackages-do-everything-else" id="toc-plotshelppackages-do-everything-else" class="nav-link" data-scroll-target="#plotshelppackages-do-everything-else">1.4 Plots/Help/Packages: Do everything else</a></li>
+  </ul>
+</li>
+  <li><a href="#take-aways" id="toc-take-aways" class="nav-link" data-scroll-target="#take-aways">💡 Take-Aways</a></li>
+  <li><a href="#more-tutorials-on-this" id="toc-more-tutorials-on-this" class="nav-link" data-scroll-target="#more-tutorials-on-this">📚 More tutorials on this</a></li>
+  </ul></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./1-install-r.html">R Basics</a></li><li class="breadcrumb-item"><a href="./2-overview.html"><span class="chapter-title">2 What to do where in R</span></a></li></ol></nav><div class="quarto-title">
+<h1 class="title"><span class="chapter-title">2 What to do where in R</span></h1>
 </div>
 
 
@@ -93,18 +235,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 
 
-</header>
-
-
-<section id="learning-goals" class="level2">
-<h2 class="anchored" data-anchor-id="learning-goals">🎯 Learning goals</h2>
+</header><section id="learning-goals" class="level2"><h2 class="anchored" data-anchor-id="learning-goals">🎯 Learning goals</h2>
 <p>After working through Tutorial 2, you’ll…</p>
 <ul>
 <li>know what each window (panel) in RStudio does</li>
-</ul>
-</section>
-<section id="what-does-each-window-in-rstudio-do" class="level2">
-<h2 class="anchored" data-anchor-id="what-does-each-window-in-rstudio-do">1. What does each window in RStudio do?</h2>
+</ul></section><section id="what-does-each-window-in-rstudio-do" class="level2"><h2 class="anchored" data-anchor-id="what-does-each-window-in-rstudio-do">1. What does each window in RStudio do?</h2>
 <p>RStudio is a graphical interface (an app) that makes it easier to work with R. It usually contains <strong>four main windows (panels)</strong>, each with a different purpose:</p>
 <ul>
 <li><p><strong>Source (Script Editor):</strong> Write and save your code. <em>Important:</em> After installing R/RStudio, you may not see this window right away. To open it, click <em>File → New File → R Script</em>.</p></li>
@@ -131,23 +266,22 @@ Tip
 <p>In the options menu, you can also customize the editor—for example, you can enable <strong>rainbow parentheses</strong> via <em>Tools → Global Options → Code → Display</em>. This highlights matching parentheses in the same color, which can make code easier to read.</p>
 </div>
 </div>
-<section id="source-write-your-own-code" class="level3">
-<h3 class="anchored" data-anchor-id="source-write-your-own-code">1.1 Source: Write your own code</h3>
+<section id="source-write-your-own-code" class="level3"><h3 class="anchored" data-anchor-id="source-write-your-own-code">1.1 Source: Write your own code</h3>
 <p>In the Source window, you write the code that tells R what task to perform.</p>
 <p><strong>Write code</strong></p>
 <p>Let’s start with a simple example. Suppose you want R to print the word <code>"hello"</code>.<br>
 First, we create an <strong>object</strong> called <em>word</em> and assign the value <code>"hello"</code> to it.</p>
 <p>Values are assigned to objects using either the operator <code>&lt;-</code> or <code>=</code>. The <strong>left side</strong> contains the object name, and the <strong>right side</strong> contains the value that should be stored in that object. The following command tells R to assign the word <code>"hello"</code> to an object called <em>word</em>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>word <span class="ot">&lt;-</span> <span class="st">"hello"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">word</span> <span class="op">&lt;-</span> <span class="st">"hello"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><em>Image: “Source”</em></p>
 <p><img src="files/images/1_source.jpg" class="img-fluid" alt="Overview of the source panel in RStudio"></p>
 <p>R allows you to add comments to your code. This is helpful when you return to your script later—especially once your code becomes longer.</p>
 <p>Comments are created using a hashtag <code>#</code>. Everything after <code>#</code> is ignored by R and treated as a note for humans only (so not run as code)</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#this line of code assigns the word "hello" to an object called word</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>word <span class="ot">&lt;-</span> <span class="st">"hello"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#this line of code assigns the word "hello" to an object called word</span></span>
+<span><span class="va">word</span> <span class="op">&lt;-</span> <span class="st">"hello"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>You can also use hashtags to structure your script into sections—similar to headings in a Word document.</p>
 <p>If you add four hashtags before a heading <code>####</code>, RStudio creates a section header that helps you navigate through your script. This is especially useful for long files.</p>
@@ -178,55 +312,48 @@ First, we create an <strong>object</strong> called <em>word</em> and assign the 
 <li><p>Click the Save button in the Source window and save your script, for example as <code>MyCode.R</code>.</p></li>
 </ul>
 <p><img src="files/images/1_save.jpg" class="img-fluid" alt="Saving code in RStudio"></p>
-</section>
-<section id="console-print-results" class="level3">
-<h3 class="anchored" data-anchor-id="console-print-results">1.2 Console: Print results</h3>
+</section><section id="console-print-results" class="level3"><h3 class="anchored" data-anchor-id="console-print-results">1.2 Console: Print results</h3>
 <p>The results of executed code appear in the <strong>Console</strong>, the second main window in RStudio. The Console shows both the commands you run and the output produced by R.</p>
 <p>In the previous example, we created an object called <em>word</em> that stores the value <code>"hello"</code>.<br>
 When we run code, R prints the executed command and—if requested—the content of the object in the Console.</p>
 <p>For example, typing the object name and running the line will display its content:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>word <span class="ot">&lt;-</span> <span class="st">"hello"</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>word</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">word</span> <span class="op">&lt;-</span> <span class="st">"hello"</span></span>
+<span><span class="va">word</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "hello"</code></pre>
 </div>
 </div>
 <p><em>Image: Window “Console”</em></p>
 <p><img src="files/images/1_console.jpg" class="img-fluid" alt="Console panel in RStudio"></p>
-</section>
-<section id="environment-overview-of-objects" class="level3">
-<h3 class="anchored" data-anchor-id="environment-overview-of-objects">1.3 Environment: Overview of objects</h3>
+</section><section id="environment-overview-of-objects" class="level3"><h3 class="anchored" data-anchor-id="environment-overview-of-objects">1.3 Environment: Overview of objects</h3>
 <p>The third window is the <strong>Environment</strong>. It shows all objects that currently exist in your R session—right now, that’s just the object <em>word</em>. As you create more objects (datasets, variables, results, etc.), this list will grow.</p>
 <p>If you have worked with SPSS before, you can think of the Environment as a kind of <em>overview</em> of what is currently loaded. The key difference is that R can keep <strong>many different objects at the same time</strong>—for example, several datasets, models, or tables—so you can switch between them easily.</p>
 <p><em>Image: Window “Environment”</em></p>
 <p><img src="files/images/1_environment.jpg" class="img-fluid" alt="Environment panel in RStudio"></p>
-<p>It’s important to know that you can visually inspect many objects (especially datasets) with the function <code>View()</code>. This opens the object in a new tab in the Source window. It may not feel very useful yet, but it becomes extremely helpful once you work with larger datasets that contain many observations (rows) and variables (columns).</p>
+<p>It’s important to know that you can visually inspect many objects (especially datasets) with the function <code><a href="https://rdrr.io/r/utils/View.html">View()</a></code>. This opens the object in a new tab in the Source window. It may not feel very useful yet, but it becomes extremely helpful once you work with larger datasets that contain many observations (rows) and variables (columns).</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">View</span>(word)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/View.html">View</a></span><span class="op">(</span><span class="va">word</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><em>Image: Window “View”</em></p>
 <p><img src="files/images/1_view.jpg" class="img-fluid" alt="Viewing data in RStudio"></p>
-</section>
-<section id="plotshelppackages-do-everything-else" class="level3">
-<h3 class="anchored" data-anchor-id="plotshelppackages-do-everything-else">1.4 Plots/Help/Packages: Do everything else</h3>
+</section><section id="plotshelppackages-do-everything-else" class="level3"><h3 class="anchored" data-anchor-id="plotshelppackages-do-everything-else">1.4 Plots/Help/Packages: Do everything else</h3>
 <p>Lastly, the standard RStudio interface includes a fourth window (depending on your chosen layout). In many setups, this panel contains tabs such as Files, Plots, Packages, and Help. We’ll cover these in more detail later. For now, it’s enough to know that this window is used, for example, to view plots and other output, browse files, and manage packages (including checking which packages are currently loaded).</p>
 <p><em>Image: Window “Files/Plots/Packages”</em></p>
 <p><img src="files/images/1_files_plots_packages.jpg" class="img-fluid" alt="Files etc. panel in RStudio"></p>
-</section>
-</section>
-<section id="take-aways" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="take-aways">💡 Take-Aways</h2>
+</section></section><section id="take-aways" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="take-aways">💡 Take-Aways</h2>
 <ul>
-<li><strong>Window “Source”</strong>: used to write/execute code in R</li>
-<li><strong>Window “Console”</strong>: used to return results of executed code</li>
-<li><strong>Window “Environment”</strong>: used to inspect objects on which to use functions</li>
-<li><strong>Window “Files/Plots/Packages etc.”</strong>: used for additional functions, for instance visualizations/searching for help/activating or updating packages</li>
-<li><strong>Packages</strong>: collections of topic-specific functions that extend the functions implemented in Base-R.</li>
-</ul>
-</section>
-<section id="more-tutorials-on-this" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="more-tutorials-on-this">📚 More tutorials on this</h2>
+<li>
+<strong>Window “Source”</strong>: used to write/execute code in R</li>
+<li>
+<strong>Window “Console”</strong>: used to return results of executed code</li>
+<li>
+<strong>Window “Environment”</strong>: used to inspect objects on which to use functions</li>
+<li>
+<strong>Window “Files/Plots/Packages etc.”</strong>: used for additional functions, for instance visualizations/searching for help/activating or updating packages</li>
+<li>
+<strong>Packages</strong>: collections of topic-specific functions that extend the functions implemented in Base-R.</li>
+</ul></section><section id="more-tutorials-on-this" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="more-tutorials-on-this">📚 More tutorials on this</h2>
 <p>You still have questions? The following tutorials &amp; papers can help you with that:</p>
 <ul>
 <li><a href="https://bookdown.org/ndphillips/YaRrr/started.html">YaRrr! The Pirate’s Guide to R by N.D.Phillips, Tutorial 2</a></li>
@@ -236,11 +363,9 @@ When we run code, R prints the executed command and—if requested—the content
 <li><a href="https://youtu.be/p6f4oq08z48">wegweisR by M. Haim, Video 1</a></li>
 <li><a href="https://rc2e.com/gettingstarted#recipe-id001">R Cookbook by Long et al., Tutorial 1</a></li>
 </ul>
-</section>
 
-</main>
-<!-- /main column -->
-<script id="quarto-html-after-body" type="application/javascript">
+
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -659,10 +784,30 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
+</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="./1-install-r.html" class="pagination-link" aria-label="1 Install R/R Studio">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">1 Install R/R Studio</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./80-appendix.html" class="pagination-link" aria-label="Appendix">
+        <span class="nav-page-text">Appendix</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
-
-
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>University of Klagenfurt | Built with <a href="https://quarto.org/">Quarto</a> | <a href="imprint.qmd">Imprint</a> | Shared under the <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC license</a></p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
 
 
 </body></html>
