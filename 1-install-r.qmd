@@ -30,13 +30,13 @@ Please use [Cran](https://cran.r-project.org/) to install the newest version of 
 
 If you already have R installed, you just need to update it to the latest version.
 
-1.  **Download and install** the newest R version using the links above. (This won’t usually remove your old version—it installs alongside it.)
+1.  Download and install the newest R version using the links above. (This won’t usually remove your old version—it installs alongside it.)
 
-2.  Open **RStudio** and go to **Tools → Global Options → General**.
+2.  Open RStudio and go to Tools → Global Options → General.
 
-3.  Under **R version**, select the newest installed version of R.
+3.  Under R version, select the newest installed version of R.
 
-4.  **Restart RStudio** (close and reopen it) so the change takes effect.
+4.  Restart RStudio (close and reopen it) so the change takes effect.
 
 ### 2.2 Install/Update R Studio {.unlisted}
 
@@ -50,7 +50,7 @@ If you already have R Studio on your computer, simply make sure to update it to 
 
 ## 3. Why should I learn R?
 
-There are several reasons why I recommend learning **R** (and similar programming languages like Python) instead of menu-based programs such as **SPSS**.
+There are several reasons why I recommend learning **R** (and similar programming languages like Python) instead of menu-based programs such as SPSS.
 
 1.  **R is free.** Unlike many other statistical programs, you don’t have to buy it or depend on a university license—which often expires once you leave.
 
