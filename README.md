@@ -11,7 +11,7 @@ Some **recommendations** for posting:
 * Use different posts for different questions.
 * If you have a R problem, make sure that you make the problem reproducible
 
-Making problems reproducible
+Making **problems reproducible**
 * share your code snippet
 * include sample data
 * paste the full error message
