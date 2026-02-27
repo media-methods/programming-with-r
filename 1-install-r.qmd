@@ -60,6 +60,8 @@ There are several reasons why I recommend learning **R** (and similar programmin
 
 ## 3. What should I know about learning R?
 
+### The learning curve (aka: break your keyboard and scream) {.unlisted}
+
 Learning R can feel hard—especially at the beginning. You might even think: *Why the hell did I pick this course?*\
 
 That’s normal. Once you understand the basics, things start to click. That’s when the fun begins and we can do the cool stuff: building visuals, scraping, and more.
@@ -74,6 +76,13 @@ Many students experience a similar learning curve:
 -   **Breakthrough:** Core ideas start to make sense. Some setbacks still happen, and you might forget things you thought you already knew.
 -   **Confidence:** Tasks get faster, and learning new tools becomes easier. Even if you hit a problem you can’t solve right away, you know you will—it may just take some time. You’ve got it now.
 
+### Many ways to do the same thing in R {.unlisted}
+R is a full programming language. Wo with it you can analyze data, create graphics, automate repetitive tasks, and use thousands of add-on packages for specialized methods. That flexibility is a big advantage, but it can feel confusing at first: There are many different ways to solve the same problem in R. 
+
+You might see two solutions in different tutorials that look completely different but produce the same result - and that’s normal. In this course, we have one goal: make the code work and understand what it’s doing, even if it isn’t the shortest or “prettiest” solution yet. It doesn't matter which solution you choose - as long as it it correct.
+
+Once that feels comfortable, we’ll improve our workflow step by step: cleaner code, fewer steps, and more reusable solutions. 
+
 ## 💡 Take-Aways {.unnumbered}
 
 R is great! 🫶
@@ -82,8 +91,7 @@ R is great! 🫶
 
 You still have questions? The following tutorials & papers can help you with that:
 
--   ["Tutorial 2: Installing & Understanding R", by L. Kobilke](https://lkobilke.github.io/introduction_to_R/tutorial-installing-understanding-rr-studio.html)
--   ["SICSS Boot Camp" by C. Bail, Video 1](https://sicss.io/boot_camp#install)
+-   [R for Data Science by Wickham et al.](https://r4ds.hadley.nz/)
 -   ["wegweisR" by M. Haim, Video 1](https://youtu.be/p6f4oq08z48)
 -   ["R Cookbook" by Long et al., Tutorial 1](https://rc2e.com/)
 -   ["Tutorial 2 - Wissen macht R" by B. Fretwurst](https://ikmz.pages.uzh.ch/Wissen-macht-R/01-Basics.html)
