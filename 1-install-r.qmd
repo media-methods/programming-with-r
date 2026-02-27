@@ -9,7 +9,7 @@ After working through Tutorial 1, you'll...
 -   know how to install R and R Studio
 -   understand the main set-up of R Studio
 
-## What are R and R Studio?
+## 1. What are R and R Studio?
 
 R is the programming language we'll use to import, edit, and analyze data. R Studio is a desktop application with a graphical interface that facilitates programming with R. Basically, R Studio makes coding with R much easier!
 
@@ -24,9 +24,7 @@ Please use [Cran](https://cran.r-project.org/) to install the newest version of 
 -   [R for Windows](https://cran.r-project.org/bin/windows/base)
 -   [R for Mac](https://cran.r-project.org/bin/macosx/big-sur-arm64/base/R-4.3.1-arm64.pkg), please read the documentation and installation information [here](https://cran.r-project.org/bin/macosx/)
 
-::: callout-note
-I have R, but need to update it!
-:::
+*I have R, but need to update it!*
 
 If you already have R installed, you just need to update it to the latest version.
 
@@ -48,7 +46,7 @@ Next, install R Studio. The newest version of R Studio can be downloaded via thi
 
 If you already have R Studio on your computer, simply make sure to update it to the newest version. The easiest way to do this is via: *"Help/Check for Updates"* in R Studio.
 
-## Why should I learn R?
+## 2. Why should I learn R?
 
 There are several reasons why I recommend learning **R** (and similar programming languages like Python) instead of menu-based programs such as **SPSS**.
 
@@ -60,12 +58,11 @@ There are several reasons why I recommend learning **R** (and similar programmin
 
 4.  **Programming is a valuable job skill.** Knowing R (or Python) can strengthen your applications in areas like academia, market research, data science, and data journalism—because many employers expect applicants to be comfortable working with code.
 
-## What should I know about learning R?
+## 3. What should I know about learning R?
 
 Learning R can feel hard—especially at the beginning. You might even think: *Why the hell did I pick this course?*\
-That’s normal. Once you understand the basics, things start to click. That’s when the fun begins and we can do the cool stuff: building visuals, scraping, and more.
 
-*Learning curve in R*
+That’s normal. Once you understand the basics, things start to click. That’s when the fun begins and we can do the cool stuff: building visuals, scraping, and more.
 
 ![](https://miro.medium.com/v2/resize:fit:720/format:webp/1*hgad4Sefmbmvv6P3o9LUYA.jpeg)
 
