@@ -154,5 +154,45 @@
     "crumbs": [
       "Appendix"
     ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Programming with R for Social Scientists",
+    "section": "",
+    "text": "Welcome! 👋 What Is This Compendium For?\nAcross several tutorials, we will help you build practical computational skills:\nAll course materials (code, etc.) are available here",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#welcome-what-is-this-compendium-for",
+    "href": "index.html#welcome-what-is-this-compendium-for",
+    "title": "Programming with R for Social Scientists",
+    "section": "",
+    "text": "Workflow in R and RStudio\n→ setting up the infrastructure, getting help, addressing problems\nData management\n→ filtering, selecting, transforming data\nData collection & analysis\n→ visualization, data collection using web scraping, basic statistical analysis",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#what-can-you-expect",
+    "href": "index.html#what-can-you-expect",
+    "title": "Programming with R for Social Scientists",
+    "section": "What Can You Expect?",
+    "text": "What Can You Expect?\nEach tutorial in this compendium includes:\n\nExplanations of new R functions and analysis methods (with example code)\nA short summary of the key takeaways & additional learning resources\nPractice exercises/quizzes to help you apply your new skills\n\nThis tutorial is inspired by Michael Scharkow and Ben Fretwurst who, in the spirit of open science, shared their materials with me. Thanks! 🙌",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#what-do-we-expect-from-you",
+    "href": "index.html#what-do-we-expect-from-you",
+    "title": "Programming with R for Social Scientists",
+    "section": "What Do We Expect from You?",
+    "text": "What Do We Expect from You?\nTo get the most out of our in-person sessions, you should complete the assigned tutorial before each class. Please check the syllabus to see which tutorial you should prepare for each week. That way, we can use our time together to clarify questions, go through examples, and apply what you have learned.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome</span>"
+    ]
   }
 ]
