@@ -22,7 +22,9 @@ Please use [Cran](https://cran.r-project.org/) to install the newest version of 
 -   [R for Windows](https://cran.r-project.org/bin/windows/base)
 -   [R for Mac](https://cran.r-project.org/bin/macosx/big-sur-arm64/base/R-4.3.1-arm64.pkg), please read the documentation and installation information [here](https://cran.r-project.org/bin/macosx/)
 
-*I have R, but need to update it!*
+::: {.callout-note}
+I have R, but need to update it!
+:::
 
 If you already have R installed, you just need to update it to the latest version.
 
