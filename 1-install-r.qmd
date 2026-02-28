@@ -92,11 +92,11 @@ You might see two solutions in different tutorials that look completely differen
 
 Once that feels comfortable, we’ll improve our workflow step by step: cleaner code, fewer steps, and more reusable solutions.
 
-## 5.💡 Take-Aways
+##💡 Take-Aways
 
 R is great! 🫶
 
-## 6.📚 More tutorials on this
+## 📚 More tutorials on this
 
 You still have questions? The following tutorials & papers can help you with that:
 

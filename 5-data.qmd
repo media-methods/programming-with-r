@@ -1,0 +1,121 @@
+---
+title: "1 Install R/R Studio"
+---
+
+::: callout-note
+## 🎯 Learning goals
+
+After working through Tutorial 2, you'll be able to...
+
+-   **apply** data import and export to get data into and out of R
+:::
+
+## Import data (potentially)
+
+Oftentimes, you may want to import data that you saved outside of R into R. This is not always necessary, but I will quickly show you how this works.
+
+### Read in external files
+
+Here, we'll use the Excel file *"data_fictional_survey.csv"* (via *Moodle/Data for R*).
+
+One of the most frequently encountered external data types you'll have to get into R are comma-separated values files, or short, CSV files. You may know CSV files from Excel - oftentimes, such data consists of observations (in rows) and variables (in columns). Values are separated by a *separator* (oftentimes a comma or a semicolon, depending on your data).
+
+**Information on the data set**
+
+The data set consists of data that is completely made up - a survey with 20 fictional students in a fictional seminar. We only use this data here so you can understand how to import data.
+
+-   Each row contains the answer for a single student.
+-   Each column contains all values given by students for a single variable.
+
+The variables included here are:
+
+-   **name**: the name of each student
+-   **age**: the age of each student (in years)
+-   **date**: the date on which each student was surveyed (in YYYY-MM-DD)
+-   **outlet**: the type of media outlet each student's mainly uses to get information
+-   **outlet_use**: the time each student uses this media outlet daily (in hours)
+-   **outlet_trust**: how much each student trusts this media outlet (from 1 = not at all to 5 = very much)
+
+We'll read in the file with `read.csv()`. Here, we specify where to find the data file with the argument `x` as well as that the first row contains variable names with the argument `header = TRUE`.
+
+```{r,tut4bdata, eval = TRUE, echo = FALSE}
+survey <- read.csv2("H:/Lehre/WS2023_24/R Tutorials/Github/data/data_fictional_survey.csv", header = TRUE)
+```
+
+```{r,tut4bdata2, eval = FALSE, echo = TRUE}
+survey <- read.csv2("data_fictional_survey.csv")
+```
+
+What does this command do? Let's see:
+
+```{r,csv3, eval = FALSE, echo = TRUE}
+?read.csv2
+```
+
+*Image: Help for the read.csv2 function*
+
+![](H:/Lehre/WS2024_25/R%20Tutorials/Github/images/Tut4_help2.JPG)
+
+The `read.csv2()` function is part of the *utils* package. To read in CSV files, two different functions exist:
+
+-   `read.csv()` reads in CSV files where values are comma separated
+-   `read.csv2()` reads in CSV files where values are semicolon separated
+
+Other than that, both functions work the same way and consist of the same arguments:
+
+-   `file`: Here, you need to identify the name of the CSV files that should be read in (including the file extension, here .csv). The file should be located in your working directory, otherwise R will not be able to identify it: `file = "data_fictional_survey.csv"`
+-   `header`: This argument specifies whether or not the first row of the CSV file contains the name of variables. It is automatically set to true - thus, if our data wouldn't contain the name of each variable in its first row, we would need to set this argument to `FALSE`. In our case, we could either ignore this argument (since it is automatically set to `TRUE`) or actively set it to `TRUE`. Both leads to the same result.
+
+**Important**: R differentiates between **necessary** (marked in red) and **obligatory** (marked in green) arguments.
+
+Arguments where no default value is given (i.e., those without a *=*) are necessary. That means you **have** to specify it once you call the function by passing respective values to the function. For instance, you cannot read in a CSV file without specifying the argument `file` - R would not even know which file to read in in that case.
+
+However, arguments were are default value is given **can be ignored**. If you do not specify values for these arguments yourself, R will simply take the default value. For instance, the `read.csv2()` function will automatically use the first row of a CSV file as column names, unless you actively set the argument *header* to `FALSE`.
+
+Another important thing to know is that you can specify arguments in functions in two ways:
+
+-   explicitly by name, for instance by setting \`file\* equal to *data_fictional_survey.csv*
+-   implicitly by order, for instance by passing *data_fictional_survey.csv* as the first argument to the `read.csv2()` function
+
+In fact, the following two commands will give the exact same results:
+
+```{r,csv1a, eval = FALSE, echo = TRUE}
+survey <- read.csv2(file = "data_fictional_survey.csv")
+```
+
+```{r,csv2a, eval = FALSE, echo = TRUE}
+survey <- read.csv2("data_fictional_survey.csv")
+```
+
+### Load existing working spaces
+
+If you saved results in a previous session, you can now also easily import them in a new session via the `load()` command, you can import working spaces into a new R session.
+
+Here, we'll use the working space that includes the survey data from above. Download the file "working-space-tutorial2.RDATA" (via *Moodle/Data for R*).
+
+To see that this actually work, delete all objects in your current working environment. By specifying an empty lists of objects, `ls()`, as the element to be deleted via `rm()`, all objects get deleted:
+
+```{r,erase3, eval = FALSE, echo = TRUE}
+rm(list = ls())
+```
+
+Your working environment should now be empty.
+
+Using the `load()` function, import "working-space-tutorial2.RDATA" into R.
+
+```{r,load, eval = FALSE, echo = TRUE}
+load("working-space-tutorial2.RDATA")
+```
+## 💡 Take Aways {.unnumbered}
+
+-   **Import data from working directory**: Plenty of commands and packages for doing this - e.g., `read.csv()`. To load an existing workspace, use `load()`
+
+## 📌 Test your knowledge {.unnumbered}
+
+### Task 3.1 {.unnumbered}
+
+Create a subfolder called "data" in your current working environment. Download the text file *"data_halloween.txt"* (via *Moodle/Data for R*). Save the text file in the subfolder and try to load it into R as an object called `data_halloween`.
+
+### Task 3.2 {.unnumbered}
+
+In this subfolder called "data", try to write out the file you just created called `data_halloween` as a .csv file. You may have to google for the right command.

@@ -61,7 +61,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./80-appendix.html" rel="next">
+<link href="./3-workflow.html" rel="next">
 <link href="./1-install-r.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -153,6 +153,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./2-overview.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">2 What to do where in R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./3-workflow.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3 Workflow in R</span></a>
   </div>
 </li>
       </ul>
@@ -416,7 +421,7 @@ Smart Hack
 </ul>
 <p><img src="files/images/1_project_3.jpg" class="img-fluid" alt="Creating a R project in RStudio"></p>
 </section><section id="which-folders-do-i-need-for-this-class" class="level3"><h3 class="anchored" data-anchor-id="which-folders-do-i-need-for-this-class">6.4 Which folders do I need for this class?</h3>
-<p>For this class, I recommend using the following structure:</p>
+<p>For this class, I recommend using the following folder structure:</p>
 <pre class="text"><code>digital-methods/
 └── digital-methods.Rproj
 ├── data/
@@ -446,216 +451,214 @@ Smart Hack
 <strong>Window “Environment”</strong>: used to inspect objects on which to use functions</li>
 <li>
 <strong>Window “Files/Plots/Packages etc.”</strong>: used for additional functions, for instance visualizations/searching for help/activating or updating packages</li>
-<li>
-<strong>Packages</strong>: collections of topic-specific functions that extend the functions implemented in Base-R.</li>
 </ul></section><section id="quiz" class="level2"><h2 class="anchored" data-anchor-id="quiz">🎲 Quiz</h2>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb7" data-startfrom="261" data-source-offset="-1"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 260;"><span id="cb7-261"><a href="#cb7-261" aria-hidden="true" tabindex="-1"></a>round <span class="op">=</span> (n<span class="op">,</span> places) <span class="kw">=&gt;</span> {</span>
-<span id="cb7-262"><a href="#cb7-262" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="op">!</span>places) <span class="cf">return</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(n)<span class="op">;</span></span>
-<span id="cb7-263"><a href="#cb7-263" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> d <span class="op">=</span> <span class="dv">10</span> <span class="op">**</span> places<span class="op">;</span></span>
-<span id="cb7-264"><a href="#cb7-264" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(n <span class="op">*</span> d) <span class="op">/</span> d<span class="op">;</span></span>
-<span id="cb7-265"><a href="#cb7-265" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb7-266"><a href="#cb7-266" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-267"><a href="#cb7-267" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">textReplacementWithText</span>({ text<span class="op">,</span> placeholder<span class="op">,</span> correctText<span class="op">,</span> fontFamily <span class="op">=</span> <span class="st">"monospace"</span><span class="op">,</span> color <span class="op">=</span> <span class="st">"#000000"</span> }) {</span>
-<span id="cb7-268"><a href="#cb7-268" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> parts <span class="op">=</span> text<span class="op">.</span><span class="fu">split</span>(<span class="ss">/</span><span class="sc">\{\{</span><span class="ss">input</span><span class="sc">\}\}</span><span class="ss">/</span>)<span class="op">;</span> <span class="co">// Teilt den Text an den Eingabestellen</span></span>
-<span id="cb7-269"><a href="#cb7-269" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-270"><a href="#cb7-270" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> <span class="bu">root</span> <span class="op">=</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;div style="font-size: HUGE; margin-top: -40; margin-bottom: -40; margin-left: -50px; line-height: 1.8; font-family: </span><span class="sc">${</span>fontFamily<span class="sc">}</span><span class="vs">; color: </span><span class="sc">${</span>color<span class="sc">}</span><span class="vs">; white-space: pre-wrap; text-indent: 0; display: flex; align-items: baseline;"&gt;</span></span>
-<span id="cb7-271"><a href="#cb7-271" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;div style="flex: 1;"&gt;</span></span>
-<span id="cb7-272"><a href="#cb7-272" aria-hidden="true" tabindex="-1"></a><span class="vs">      </span><span class="sc">${</span>parts<span class="op">.</span><span class="fu">map</span>((part<span class="op">,</span> index) <span class="kw">=&gt;</span></span>
-<span id="cb7-273"><a href="#cb7-273" aria-hidden="true" tabindex="-1"></a>        htl<span class="op">.</span><span class="fu">html</span><span class="vs">`</span><span class="sc">${</span>part<span class="sc">}${</span>index <span class="op">&lt;</span> parts<span class="op">.</span><span class="at">length</span> <span class="op">-</span> <span class="dv">1</span> <span class="op">?</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;span style="display: inline-flex; align-items: baseline;"&gt;</span></span>
-<span id="cb7-274"><a href="#cb7-274" aria-hidden="true" tabindex="-1"></a><span class="vs">          &lt;input </span></span>
-<span id="cb7-275"><a href="#cb7-275" aria-hidden="true" tabindex="-1"></a><span class="vs">            type="text"</span></span>
-<span id="cb7-276"><a href="#cb7-276" aria-hidden="true" tabindex="-1"></a><span class="vs">            placeholder="</span><span class="sc">${</span>placeholder<span class="sc">}</span><span class="vs">"</span></span>
-<span id="cb7-277"><a href="#cb7-277" aria-hidden="true" tabindex="-1"></a><span class="vs">            style="padding: 3px; font-size: HUGE; border: 1px solid #ccc; margin-left: 0px; border-radius: 4px; width: calc(</span><span class="sc">${</span>correctText<span class="op">.</span><span class="at">length</span><span class="sc">}</span><span class="vs">ch + 1em); font-family: </span><span class="sc">${</span>fontFamily<span class="sc">}</span><span class="vs">; color: </span><span class="sc">${</span>color<span class="sc">}</span><span class="vs">; text-align: right; box-sizing: border-box; margin-right: 0.2em;"</span></span>
-<span id="cb7-278"><a href="#cb7-278" aria-hidden="true" tabindex="-1"></a><span class="vs">            oninput=</span><span class="sc">${</span>(e) <span class="kw">=&gt;</span> {</span>
-<span id="cb7-279"><a href="#cb7-279" aria-hidden="true" tabindex="-1"></a>              <span class="kw">const</span> feedbackElement <span class="op">=</span> <span class="bu">root</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="vs">`#feedback-final`</span>)<span class="op">;</span></span>
-<span id="cb7-280"><a href="#cb7-280" aria-hidden="true" tabindex="-1"></a>              <span class="kw">const</span> allInputsCorrect <span class="op">=</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(<span class="bu">root</span><span class="op">.</span><span class="fu">querySelectorAll</span>(<span class="st">"input"</span>))<span class="op">.</span><span class="fu">every</span>((input) <span class="kw">=&gt;</span> input<span class="op">.</span><span class="at">value</span><span class="op">.</span><span class="fu">trim</span>() <span class="op">===</span> correctText<span class="op">.</span><span class="fu">trim</span>())<span class="op">;</span></span>
-<span id="cb7-281"><a href="#cb7-281" aria-hidden="true" tabindex="-1"></a>              <span class="cf">if</span> (allInputsCorrect) {</span>
-<span id="cb7-282"><a href="#cb7-282" aria-hidden="true" tabindex="-1"></a>                feedbackElement<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> <span class="st">"✅"</span><span class="op">;</span></span>
-<span id="cb7-283"><a href="#cb7-283" aria-hidden="true" tabindex="-1"></a>                feedbackElement<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">color</span> <span class="op">=</span> <span class="st">"green"</span><span class="op">;</span></span>
-<span id="cb7-284"><a href="#cb7-284" aria-hidden="true" tabindex="-1"></a>              } <span class="cf">else</span> {</span>
-<span id="cb7-285"><a href="#cb7-285" aria-hidden="true" tabindex="-1"></a>                feedbackElement<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> <span class="st">"🔴"</span><span class="op">;</span></span>
-<span id="cb7-286"><a href="#cb7-286" aria-hidden="true" tabindex="-1"></a>                feedbackElement<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">color</span> <span class="op">=</span> <span class="st">"red"</span><span class="op">;</span></span>
-<span id="cb7-287"><a href="#cb7-287" aria-hidden="true" tabindex="-1"></a>              }</span>
-<span id="cb7-288"><a href="#cb7-288" aria-hidden="true" tabindex="-1"></a>            }<span class="sc">}</span></span>
-<span id="cb7-289"><a href="#cb7-289" aria-hidden="true" tabindex="-1"></a><span class="vs">          /&gt;&lt;/span&gt;`</span> <span class="op">:</span> <span class="st">""</span><span class="sc">}</span><span class="vs">`</span></span>
-<span id="cb7-290"><a href="#cb7-290" aria-hidden="true" tabindex="-1"></a>      )<span class="sc">}</span></span>
-<span id="cb7-291"><a href="#cb7-291" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;/div&gt;</span></span>
-<span id="cb7-292"><a href="#cb7-292" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;span id="feedback-final" style="font-weight: bold; font-size: HUGE; margin-left: 0.5em; color: inherit;"&gt;&lt;/span&gt;</span></span>
-<span id="cb7-293"><a href="#cb7-293" aria-hidden="true" tabindex="-1"></a><span class="vs">  &lt;/div&gt;`</span><span class="op">;</span></span>
-<span id="cb7-294"><a href="#cb7-294" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-295"><a href="#cb7-295" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="bu">root</span><span class="op">;</span></span>
-<span id="cb7-296"><a href="#cb7-296" aria-hidden="true" tabindex="-1"></a>}</span>
+<div class="sourceCode cell-code hidden" id="cb7" data-startfrom="260" data-source-offset="-1"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 259;"><span id="cb7-260"><a href="#cb7-260" aria-hidden="true" tabindex="-1"></a>round <span class="op">=</span> (n<span class="op">,</span> places) <span class="kw">=&gt;</span> {</span>
+<span id="cb7-261"><a href="#cb7-261" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="op">!</span>places) <span class="cf">return</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(n)<span class="op">;</span></span>
+<span id="cb7-262"><a href="#cb7-262" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> d <span class="op">=</span> <span class="dv">10</span> <span class="op">**</span> places<span class="op">;</span></span>
+<span id="cb7-263"><a href="#cb7-263" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(n <span class="op">*</span> d) <span class="op">/</span> d<span class="op">;</span></span>
+<span id="cb7-264"><a href="#cb7-264" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-265"><a href="#cb7-265" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-266"><a href="#cb7-266" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">textReplacementWithText</span>({ text<span class="op">,</span> placeholder<span class="op">,</span> correctText<span class="op">,</span> fontFamily <span class="op">=</span> <span class="st">"monospace"</span><span class="op">,</span> color <span class="op">=</span> <span class="st">"#000000"</span> }) {</span>
+<span id="cb7-267"><a href="#cb7-267" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> parts <span class="op">=</span> text<span class="op">.</span><span class="fu">split</span>(<span class="ss">/</span><span class="sc">\{\{</span><span class="ss">input</span><span class="sc">\}\}</span><span class="ss">/</span>)<span class="op">;</span> <span class="co">// Teilt den Text an den Eingabestellen</span></span>
+<span id="cb7-268"><a href="#cb7-268" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-269"><a href="#cb7-269" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> <span class="bu">root</span> <span class="op">=</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;div style="font-size: HUGE; margin-top: -40; margin-bottom: -40; margin-left: -50px; line-height: 1.8; font-family: </span><span class="sc">${</span>fontFamily<span class="sc">}</span><span class="vs">; color: </span><span class="sc">${</span>color<span class="sc">}</span><span class="vs">; white-space: pre-wrap; text-indent: 0; display: flex; align-items: baseline;"&gt;</span></span>
+<span id="cb7-270"><a href="#cb7-270" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;div style="flex: 1;"&gt;</span></span>
+<span id="cb7-271"><a href="#cb7-271" aria-hidden="true" tabindex="-1"></a><span class="vs">      </span><span class="sc">${</span>parts<span class="op">.</span><span class="fu">map</span>((part<span class="op">,</span> index) <span class="kw">=&gt;</span></span>
+<span id="cb7-272"><a href="#cb7-272" aria-hidden="true" tabindex="-1"></a>        htl<span class="op">.</span><span class="fu">html</span><span class="vs">`</span><span class="sc">${</span>part<span class="sc">}${</span>index <span class="op">&lt;</span> parts<span class="op">.</span><span class="at">length</span> <span class="op">-</span> <span class="dv">1</span> <span class="op">?</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;span style="display: inline-flex; align-items: baseline;"&gt;</span></span>
+<span id="cb7-273"><a href="#cb7-273" aria-hidden="true" tabindex="-1"></a><span class="vs">          &lt;input </span></span>
+<span id="cb7-274"><a href="#cb7-274" aria-hidden="true" tabindex="-1"></a><span class="vs">            type="text"</span></span>
+<span id="cb7-275"><a href="#cb7-275" aria-hidden="true" tabindex="-1"></a><span class="vs">            placeholder="</span><span class="sc">${</span>placeholder<span class="sc">}</span><span class="vs">"</span></span>
+<span id="cb7-276"><a href="#cb7-276" aria-hidden="true" tabindex="-1"></a><span class="vs">            style="padding: 3px; font-size: HUGE; border: 1px solid #ccc; margin-left: 0px; border-radius: 4px; width: calc(</span><span class="sc">${</span>correctText<span class="op">.</span><span class="at">length</span><span class="sc">}</span><span class="vs">ch + 1em); font-family: </span><span class="sc">${</span>fontFamily<span class="sc">}</span><span class="vs">; color: </span><span class="sc">${</span>color<span class="sc">}</span><span class="vs">; text-align: right; box-sizing: border-box; margin-right: 0.2em;"</span></span>
+<span id="cb7-277"><a href="#cb7-277" aria-hidden="true" tabindex="-1"></a><span class="vs">            oninput=</span><span class="sc">${</span>(e) <span class="kw">=&gt;</span> {</span>
+<span id="cb7-278"><a href="#cb7-278" aria-hidden="true" tabindex="-1"></a>              <span class="kw">const</span> feedbackElement <span class="op">=</span> <span class="bu">root</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="vs">`#feedback-final`</span>)<span class="op">;</span></span>
+<span id="cb7-279"><a href="#cb7-279" aria-hidden="true" tabindex="-1"></a>              <span class="kw">const</span> allInputsCorrect <span class="op">=</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(<span class="bu">root</span><span class="op">.</span><span class="fu">querySelectorAll</span>(<span class="st">"input"</span>))<span class="op">.</span><span class="fu">every</span>((input) <span class="kw">=&gt;</span> input<span class="op">.</span><span class="at">value</span><span class="op">.</span><span class="fu">trim</span>() <span class="op">===</span> correctText<span class="op">.</span><span class="fu">trim</span>())<span class="op">;</span></span>
+<span id="cb7-280"><a href="#cb7-280" aria-hidden="true" tabindex="-1"></a>              <span class="cf">if</span> (allInputsCorrect) {</span>
+<span id="cb7-281"><a href="#cb7-281" aria-hidden="true" tabindex="-1"></a>                feedbackElement<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> <span class="st">"✅"</span><span class="op">;</span></span>
+<span id="cb7-282"><a href="#cb7-282" aria-hidden="true" tabindex="-1"></a>                feedbackElement<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">color</span> <span class="op">=</span> <span class="st">"green"</span><span class="op">;</span></span>
+<span id="cb7-283"><a href="#cb7-283" aria-hidden="true" tabindex="-1"></a>              } <span class="cf">else</span> {</span>
+<span id="cb7-284"><a href="#cb7-284" aria-hidden="true" tabindex="-1"></a>                feedbackElement<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> <span class="st">"🔴"</span><span class="op">;</span></span>
+<span id="cb7-285"><a href="#cb7-285" aria-hidden="true" tabindex="-1"></a>                feedbackElement<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">color</span> <span class="op">=</span> <span class="st">"red"</span><span class="op">;</span></span>
+<span id="cb7-286"><a href="#cb7-286" aria-hidden="true" tabindex="-1"></a>              }</span>
+<span id="cb7-287"><a href="#cb7-287" aria-hidden="true" tabindex="-1"></a>            }<span class="sc">}</span></span>
+<span id="cb7-288"><a href="#cb7-288" aria-hidden="true" tabindex="-1"></a><span class="vs">          /&gt;&lt;/span&gt;`</span> <span class="op">:</span> <span class="st">""</span><span class="sc">}</span><span class="vs">`</span></span>
+<span id="cb7-289"><a href="#cb7-289" aria-hidden="true" tabindex="-1"></a>      )<span class="sc">}</span></span>
+<span id="cb7-290"><a href="#cb7-290" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;/div&gt;</span></span>
+<span id="cb7-291"><a href="#cb7-291" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;span id="feedback-final" style="font-weight: bold; font-size: HUGE; margin-left: 0.5em; color: inherit;"&gt;&lt;/span&gt;</span></span>
+<span id="cb7-292"><a href="#cb7-292" aria-hidden="true" tabindex="-1"></a><span class="vs">  &lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb7-293"><a href="#cb7-293" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-294"><a href="#cb7-294" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="bu">root</span><span class="op">;</span></span>
+<span id="cb7-295"><a href="#cb7-295" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-296"><a href="#cb7-296" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-297"><a href="#cb7-297" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-298"><a href="#cb7-298" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-299"><a href="#cb7-299" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-300"><a href="#cb7-300" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">textReplacementTask</span>({ placeholder<span class="op">,</span> correctText<span class="op">,</span> width <span class="op">=</span> <span class="st">"300px"</span><span class="op">,</span> fontFamily <span class="op">=</span> <span class="st">"monospace"</span><span class="op">,</span> color <span class="op">=</span> <span class="st">"black"</span> }) {</span>
-<span id="cb7-301"><a href="#cb7-301" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> enteredText <span class="op">=</span> <span class="st">""</span><span class="op">;</span> </span>
-<span id="cb7-302"><a href="#cb7-302" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-303"><a href="#cb7-303" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> <span class="bu">root</span> <span class="op">=</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;div style="font-size: 14px; line-height: 1.5; margin-bottom: 20px;"&gt;</span></span>
-<span id="cb7-304"><a href="#cb7-304" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;h4&gt;Bitte ersetzen Sie den Text:&lt;/h4&gt;</span></span>
-<span id="cb7-305"><a href="#cb7-305" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;!-- Eingabefeld --&gt;</span></span>
-<span id="cb7-306"><a href="#cb7-306" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;div style="display: flex; align-items: center;"&gt;</span></span>
-<span id="cb7-307"><a href="#cb7-307" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;input</span></span>
-<span id="cb7-308"><a href="#cb7-308" aria-hidden="true" tabindex="-1"></a><span class="vs">        type="text"</span></span>
-<span id="cb7-309"><a href="#cb7-309" aria-hidden="true" tabindex="-1"></a><span class="vs">        placeholder="</span><span class="sc">${</span>placeholder<span class="sc">}</span><span class="vs">"</span></span>
-<span id="cb7-310"><a href="#cb7-310" aria-hidden="true" tabindex="-1"></a><span class="vs">        style="padding: 5px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px; width: </span><span class="sc">${</span>width<span class="sc">}</span><span class="vs">; font-family: </span><span class="sc">${</span>fontFamily<span class="sc">}</span><span class="vs">; color: </span><span class="sc">${</span>color<span class="sc">}</span><span class="vs">;"</span></span>
-<span id="cb7-311"><a href="#cb7-311" aria-hidden="true" tabindex="-1"></a><span class="vs">        onInput=</span><span class="sc">${</span>(e) <span class="kw">=&gt;</span> {</span>
-<span id="cb7-312"><a href="#cb7-312" aria-hidden="true" tabindex="-1"></a>          enteredText <span class="op">=</span> e<span class="op">.</span><span class="at">target</span><span class="op">.</span><span class="at">value</span><span class="op">;</span></span>
-<span id="cb7-313"><a href="#cb7-313" aria-hidden="true" tabindex="-1"></a>          <span class="bu">root</span><span class="op">.</span><span class="at">value</span> <span class="op">=</span> enteredText<span class="op">;</span></span>
-<span id="cb7-314"><a href="#cb7-314" aria-hidden="true" tabindex="-1"></a>          <span class="bu">root</span><span class="op">.</span><span class="fu">dispatchEvent</span>(<span class="kw">new</span> <span class="bu">CustomEvent</span>(<span class="st">"input"</span>))<span class="op">;</span></span>
-<span id="cb7-315"><a href="#cb7-315" aria-hidden="true" tabindex="-1"></a>          <span class="fu">updateFeedback</span>()<span class="op">;</span></span>
-<span id="cb7-316"><a href="#cb7-316" aria-hidden="true" tabindex="-1"></a>        }<span class="sc">}</span></span>
-<span id="cb7-317"><a href="#cb7-317" aria-hidden="true" tabindex="-1"></a><span class="vs">      /&gt;</span></span>
-<span id="cb7-318"><a href="#cb7-318" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;!-- Feedback --&gt;</span></span>
-<span id="cb7-319"><a href="#cb7-319" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;div id="feedback" style="font-weight: bold; font-size: 14px; margin-left: 10px; text-align: left; white-space: nowrap; color: inherit;"&gt;&lt;/div&gt;</span></span>
-<span id="cb7-320"><a href="#cb7-320" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;/div&gt;</span></span>
-<span id="cb7-321"><a href="#cb7-321" aria-hidden="true" tabindex="-1"></a><span class="vs">  &lt;/div&gt;`</span><span class="op">;</span></span>
-<span id="cb7-322"><a href="#cb7-322" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-323"><a href="#cb7-323" aria-hidden="true" tabindex="-1"></a><span class="co">// Funktion zur Aktualisierung des Feedbacks</span></span>
-<span id="cb7-324"><a href="#cb7-324" aria-hidden="true" tabindex="-1"></a>  <span class="kw">function</span> <span class="fu">updateFeedback</span>() {</span>
-<span id="cb7-325"><a href="#cb7-325" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> feedbackElement <span class="op">=</span> <span class="bu">root</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">"#feedback"</span>)<span class="op">;</span></span>
-<span id="cb7-326"><a href="#cb7-326" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (enteredText<span class="op">.</span><span class="fu">trim</span>() <span class="op">===</span> correctText<span class="op">.</span><span class="fu">trim</span>()) {</span>
-<span id="cb7-327"><a href="#cb7-327" aria-hidden="true" tabindex="-1"></a>      feedbackElement<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> <span class="st">"✅"</span><span class="op">;</span></span>
-<span id="cb7-328"><a href="#cb7-328" aria-hidden="true" tabindex="-1"></a>      feedbackElement<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">color</span> <span class="op">=</span> <span class="st">"green"</span><span class="op">;</span></span>
-<span id="cb7-329"><a href="#cb7-329" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> <span class="cf">if</span> (enteredText<span class="op">.</span><span class="fu">trim</span>() <span class="op">===</span> <span class="st">""</span>) {</span>
-<span id="cb7-330"><a href="#cb7-330" aria-hidden="true" tabindex="-1"></a>      feedbackElement<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> <span class="st">""</span><span class="op">;</span> </span>
-<span id="cb7-331"><a href="#cb7-331" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
-<span id="cb7-332"><a href="#cb7-332" aria-hidden="true" tabindex="-1"></a>      feedbackElement<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> <span class="st">"🔴"</span><span class="op">;</span></span>
-<span id="cb7-333"><a href="#cb7-333" aria-hidden="true" tabindex="-1"></a>      feedbackElement<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">color</span> <span class="op">=</span> <span class="st">"red"</span><span class="op">;</span></span>
-<span id="cb7-334"><a href="#cb7-334" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb7-335"><a href="#cb7-335" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb7-336"><a href="#cb7-336" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-337"><a href="#cb7-337" aria-hidden="true" tabindex="-1"></a>  <span class="bu">root</span><span class="op">.</span><span class="at">value</span> <span class="op">=</span> <span class="kw">null</span><span class="op">;</span> </span>
-<span id="cb7-338"><a href="#cb7-338" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="bu">root</span><span class="op">;</span></span>
-<span id="cb7-339"><a href="#cb7-339" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-299"><a href="#cb7-299" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">textReplacementTask</span>({ placeholder<span class="op">,</span> correctText<span class="op">,</span> width <span class="op">=</span> <span class="st">"300px"</span><span class="op">,</span> fontFamily <span class="op">=</span> <span class="st">"monospace"</span><span class="op">,</span> color <span class="op">=</span> <span class="st">"black"</span> }) {</span>
+<span id="cb7-300"><a href="#cb7-300" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> enteredText <span class="op">=</span> <span class="st">""</span><span class="op">;</span> </span>
+<span id="cb7-301"><a href="#cb7-301" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-302"><a href="#cb7-302" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> <span class="bu">root</span> <span class="op">=</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;div style="font-size: 14px; line-height: 1.5; margin-bottom: 20px;"&gt;</span></span>
+<span id="cb7-303"><a href="#cb7-303" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;h4&gt;Bitte ersetzen Sie den Text:&lt;/h4&gt;</span></span>
+<span id="cb7-304"><a href="#cb7-304" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;!-- Eingabefeld --&gt;</span></span>
+<span id="cb7-305"><a href="#cb7-305" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;div style="display: flex; align-items: center;"&gt;</span></span>
+<span id="cb7-306"><a href="#cb7-306" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;input</span></span>
+<span id="cb7-307"><a href="#cb7-307" aria-hidden="true" tabindex="-1"></a><span class="vs">        type="text"</span></span>
+<span id="cb7-308"><a href="#cb7-308" aria-hidden="true" tabindex="-1"></a><span class="vs">        placeholder="</span><span class="sc">${</span>placeholder<span class="sc">}</span><span class="vs">"</span></span>
+<span id="cb7-309"><a href="#cb7-309" aria-hidden="true" tabindex="-1"></a><span class="vs">        style="padding: 5px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px; width: </span><span class="sc">${</span>width<span class="sc">}</span><span class="vs">; font-family: </span><span class="sc">${</span>fontFamily<span class="sc">}</span><span class="vs">; color: </span><span class="sc">${</span>color<span class="sc">}</span><span class="vs">;"</span></span>
+<span id="cb7-310"><a href="#cb7-310" aria-hidden="true" tabindex="-1"></a><span class="vs">        onInput=</span><span class="sc">${</span>(e) <span class="kw">=&gt;</span> {</span>
+<span id="cb7-311"><a href="#cb7-311" aria-hidden="true" tabindex="-1"></a>          enteredText <span class="op">=</span> e<span class="op">.</span><span class="at">target</span><span class="op">.</span><span class="at">value</span><span class="op">;</span></span>
+<span id="cb7-312"><a href="#cb7-312" aria-hidden="true" tabindex="-1"></a>          <span class="bu">root</span><span class="op">.</span><span class="at">value</span> <span class="op">=</span> enteredText<span class="op">;</span></span>
+<span id="cb7-313"><a href="#cb7-313" aria-hidden="true" tabindex="-1"></a>          <span class="bu">root</span><span class="op">.</span><span class="fu">dispatchEvent</span>(<span class="kw">new</span> <span class="bu">CustomEvent</span>(<span class="st">"input"</span>))<span class="op">;</span></span>
+<span id="cb7-314"><a href="#cb7-314" aria-hidden="true" tabindex="-1"></a>          <span class="fu">updateFeedback</span>()<span class="op">;</span></span>
+<span id="cb7-315"><a href="#cb7-315" aria-hidden="true" tabindex="-1"></a>        }<span class="sc">}</span></span>
+<span id="cb7-316"><a href="#cb7-316" aria-hidden="true" tabindex="-1"></a><span class="vs">      /&gt;</span></span>
+<span id="cb7-317"><a href="#cb7-317" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;!-- Feedback --&gt;</span></span>
+<span id="cb7-318"><a href="#cb7-318" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;div id="feedback" style="font-weight: bold; font-size: 14px; margin-left: 10px; text-align: left; white-space: nowrap; color: inherit;"&gt;&lt;/div&gt;</span></span>
+<span id="cb7-319"><a href="#cb7-319" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;/div&gt;</span></span>
+<span id="cb7-320"><a href="#cb7-320" aria-hidden="true" tabindex="-1"></a><span class="vs">  &lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb7-321"><a href="#cb7-321" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-322"><a href="#cb7-322" aria-hidden="true" tabindex="-1"></a><span class="co">// Funktion zur Aktualisierung des Feedbacks</span></span>
+<span id="cb7-323"><a href="#cb7-323" aria-hidden="true" tabindex="-1"></a>  <span class="kw">function</span> <span class="fu">updateFeedback</span>() {</span>
+<span id="cb7-324"><a href="#cb7-324" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> feedbackElement <span class="op">=</span> <span class="bu">root</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">"#feedback"</span>)<span class="op">;</span></span>
+<span id="cb7-325"><a href="#cb7-325" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (enteredText<span class="op">.</span><span class="fu">trim</span>() <span class="op">===</span> correctText<span class="op">.</span><span class="fu">trim</span>()) {</span>
+<span id="cb7-326"><a href="#cb7-326" aria-hidden="true" tabindex="-1"></a>      feedbackElement<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> <span class="st">"✅"</span><span class="op">;</span></span>
+<span id="cb7-327"><a href="#cb7-327" aria-hidden="true" tabindex="-1"></a>      feedbackElement<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">color</span> <span class="op">=</span> <span class="st">"green"</span><span class="op">;</span></span>
+<span id="cb7-328"><a href="#cb7-328" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> <span class="cf">if</span> (enteredText<span class="op">.</span><span class="fu">trim</span>() <span class="op">===</span> <span class="st">""</span>) {</span>
+<span id="cb7-329"><a href="#cb7-329" aria-hidden="true" tabindex="-1"></a>      feedbackElement<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> <span class="st">""</span><span class="op">;</span> </span>
+<span id="cb7-330"><a href="#cb7-330" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
+<span id="cb7-331"><a href="#cb7-331" aria-hidden="true" tabindex="-1"></a>      feedbackElement<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> <span class="st">"🔴"</span><span class="op">;</span></span>
+<span id="cb7-332"><a href="#cb7-332" aria-hidden="true" tabindex="-1"></a>      feedbackElement<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">color</span> <span class="op">=</span> <span class="st">"red"</span><span class="op">;</span></span>
+<span id="cb7-333"><a href="#cb7-333" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb7-334"><a href="#cb7-334" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb7-335"><a href="#cb7-335" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-336"><a href="#cb7-336" aria-hidden="true" tabindex="-1"></a>  <span class="bu">root</span><span class="op">.</span><span class="at">value</span> <span class="op">=</span> <span class="kw">null</span><span class="op">;</span> </span>
+<span id="cb7-337"><a href="#cb7-337" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="bu">root</span><span class="op">;</span></span>
+<span id="cb7-338"><a href="#cb7-338" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-339"><a href="#cb7-339" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-340"><a href="#cb7-340" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-341"><a href="#cb7-341" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-342"><a href="#cb7-342" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">singleChoiceInput</span>({ options<span class="op">,</span> correctIndex }) {</span>
-<span id="cb7-343"><a href="#cb7-343" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> selectedAnswer <span class="op">=</span> <span class="kw">null</span><span class="op">;</span></span>
-<span id="cb7-344"><a href="#cb7-344" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-345"><a href="#cb7-345" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> <span class="bu">root</span> <span class="op">=</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;div style="font-size: HUGE; line-height: 1.5; margin-bottom: 0px;"&gt;</span></span>
-<span id="cb7-346"><a href="#cb7-346" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;!-- Antworten --&gt;</span></span>
-<span id="cb7-347"><a href="#cb7-347" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;div style="display: grid; row-gap: 12px;"&gt;</span></span>
-<span id="cb7-348"><a href="#cb7-348" aria-hidden="true" tabindex="-1"></a><span class="vs">      </span><span class="sc">${</span>options<span class="op">.</span><span class="fu">map</span>(</span>
-<span id="cb7-349"><a href="#cb7-349" aria-hidden="true" tabindex="-1"></a>        (option<span class="op">,</span> index) <span class="kw">=&gt;</span></span>
-<span id="cb7-350"><a href="#cb7-350" aria-hidden="true" tabindex="-1"></a>          htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;div style="display: flex; align-items: center;"&gt;</span></span>
-<span id="cb7-351"><a href="#cb7-351" aria-hidden="true" tabindex="-1"></a><span class="vs">            &lt;!-- Radiobutton und Option --&gt;</span></span>
-<span id="cb7-352"><a href="#cb7-352" aria-hidden="true" tabindex="-1"></a><span class="vs">            &lt;label style="display: flex; align-items: center; padding-left: 4pt; font-weight: normal;"&gt;</span></span>
-<span id="cb7-353"><a href="#cb7-353" aria-hidden="true" tabindex="-1"></a><span class="vs">              &lt;input</span></span>
-<span id="cb7-354"><a href="#cb7-354" aria-hidden="true" tabindex="-1"></a><span class="vs">                type="radio"</span></span>
-<span id="cb7-355"><a href="#cb7-355" aria-hidden="true" tabindex="-1"></a><span class="vs">                name="singleChoice"</span></span>
-<span id="cb7-356"><a href="#cb7-356" aria-hidden="true" tabindex="-1"></a><span class="vs">                value=</span><span class="sc">${</span>index<span class="sc">}</span></span>
-<span id="cb7-357"><a href="#cb7-357" aria-hidden="true" tabindex="-1"></a><span class="vs">                style="margin-right: 10px;"</span></span>
-<span id="cb7-358"><a href="#cb7-358" aria-hidden="true" tabindex="-1"></a><span class="vs">                onChange=</span><span class="sc">${</span>() <span class="kw">=&gt;</span> {</span>
-<span id="cb7-359"><a href="#cb7-359" aria-hidden="true" tabindex="-1"></a>                  selectedAnswer <span class="op">=</span> index<span class="op">;</span></span>
-<span id="cb7-360"><a href="#cb7-360" aria-hidden="true" tabindex="-1"></a>                  <span class="bu">root</span><span class="op">.</span><span class="at">value</span> <span class="op">=</span> selectedAnswer<span class="op">;</span></span>
-<span id="cb7-361"><a href="#cb7-361" aria-hidden="true" tabindex="-1"></a>                  <span class="bu">root</span><span class="op">.</span><span class="fu">dispatchEvent</span>(<span class="kw">new</span> <span class="bu">CustomEvent</span>(<span class="st">"input"</span>))<span class="op">;</span></span>
-<span id="cb7-362"><a href="#cb7-362" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">updateFeedback</span>()<span class="op">;</span></span>
-<span id="cb7-363"><a href="#cb7-363" aria-hidden="true" tabindex="-1"></a>                }<span class="sc">}</span></span>
-<span id="cb7-364"><a href="#cb7-364" aria-hidden="true" tabindex="-1"></a><span class="vs">              /&gt;</span></span>
-<span id="cb7-365"><a href="#cb7-365" aria-hidden="true" tabindex="-1"></a><span class="vs">              &lt;span&gt;</span><span class="sc">${</span>option<span class="sc">}</span><span class="vs">&lt;/span&gt;</span></span>
-<span id="cb7-366"><a href="#cb7-366" aria-hidden="true" tabindex="-1"></a><span class="vs">            &lt;/label&gt;</span></span>
-<span id="cb7-367"><a href="#cb7-367" aria-hidden="true" tabindex="-1"></a><span class="vs">            &lt;!-- Feedback --&gt;</span></span>
-<span id="cb7-368"><a href="#cb7-368" aria-hidden="true" tabindex="-1"></a><span class="vs">            &lt;div id="feedback-</span><span class="sc">${</span>index<span class="sc">}</span><span class="vs">" style="font-weight: bold; font-size: 14px; margin-left: 10px; text-align: left; white-space: nowrap; color: inherit;"&gt;&lt;/div&gt;</span></span>
-<span id="cb7-369"><a href="#cb7-369" aria-hidden="true" tabindex="-1"></a><span class="vs">          &lt;/div&gt;`</span></span>
-<span id="cb7-370"><a href="#cb7-370" aria-hidden="true" tabindex="-1"></a>      )<span class="sc">}</span></span>
-<span id="cb7-371"><a href="#cb7-371" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;/div&gt;</span></span>
-<span id="cb7-372"><a href="#cb7-372" aria-hidden="true" tabindex="-1"></a><span class="vs">  &lt;/div&gt;`</span><span class="op">;</span></span>
-<span id="cb7-373"><a href="#cb7-373" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-374"><a href="#cb7-374" aria-hidden="true" tabindex="-1"></a><span class="co">// Funktion zur Aktualisierung des Feedbacks</span></span>
-<span id="cb7-375"><a href="#cb7-375" aria-hidden="true" tabindex="-1"></a>  <span class="kw">function</span> <span class="fu">updateFeedback</span>() {</span>
-<span id="cb7-376"><a href="#cb7-376" aria-hidden="true" tabindex="-1"></a>    options<span class="op">.</span><span class="fu">forEach</span>((_<span class="op">,</span> index) <span class="kw">=&gt;</span> {</span>
-<span id="cb7-377"><a href="#cb7-377" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> feedbackElement <span class="op">=</span> <span class="bu">root</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="vs">`#feedback-</span><span class="sc">${</span>index<span class="sc">}</span><span class="vs">`</span>)<span class="op">;</span></span>
-<span id="cb7-378"><a href="#cb7-378" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (selectedAnswer <span class="op">===</span> index) {</span>
-<span id="cb7-379"><a href="#cb7-379" aria-hidden="true" tabindex="-1"></a>        feedbackElement<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span></span>
-<span id="cb7-380"><a href="#cb7-380" aria-hidden="true" tabindex="-1"></a>          index <span class="op">===</span> correctIndex <span class="op">?</span> <span class="st">"✅"</span> <span class="op">:</span> <span class="st">"🔴"</span><span class="op">;</span></span>
-<span id="cb7-381"><a href="#cb7-381" aria-hidden="true" tabindex="-1"></a>        feedbackElement<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">color</span> <span class="op">=</span> index <span class="op">===</span> correctIndex <span class="op">?</span> <span class="st">"green"</span> <span class="op">:</span> <span class="st">"red"</span><span class="op">;</span></span>
-<span id="cb7-382"><a href="#cb7-382" aria-hidden="true" tabindex="-1"></a>      } <span class="cf">else</span> {</span>
-<span id="cb7-383"><a href="#cb7-383" aria-hidden="true" tabindex="-1"></a>        feedbackElement<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> <span class="st">""</span><span class="op">;</span> <span class="co">// Löscht Feedback für nicht ausgewählte Optionen</span></span>
-<span id="cb7-384"><a href="#cb7-384" aria-hidden="true" tabindex="-1"></a>      }</span>
-<span id="cb7-385"><a href="#cb7-385" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
-<span id="cb7-386"><a href="#cb7-386" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb7-387"><a href="#cb7-387" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-388"><a href="#cb7-388" aria-hidden="true" tabindex="-1"></a>  <span class="bu">root</span><span class="op">.</span><span class="at">value</span> <span class="op">=</span> <span class="kw">null</span><span class="op">;</span></span>
-<span id="cb7-389"><a href="#cb7-389" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="bu">root</span><span class="op">;</span></span>
-<span id="cb7-390"><a href="#cb7-390" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-341"><a href="#cb7-341" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">singleChoiceInput</span>({ options<span class="op">,</span> correctIndex }) {</span>
+<span id="cb7-342"><a href="#cb7-342" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> selectedAnswer <span class="op">=</span> <span class="kw">null</span><span class="op">;</span></span>
+<span id="cb7-343"><a href="#cb7-343" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-344"><a href="#cb7-344" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> <span class="bu">root</span> <span class="op">=</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;div style="font-size: HUGE; line-height: 1.5; margin-bottom: 0px;"&gt;</span></span>
+<span id="cb7-345"><a href="#cb7-345" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;!-- Antworten --&gt;</span></span>
+<span id="cb7-346"><a href="#cb7-346" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;div style="display: grid; row-gap: 12px;"&gt;</span></span>
+<span id="cb7-347"><a href="#cb7-347" aria-hidden="true" tabindex="-1"></a><span class="vs">      </span><span class="sc">${</span>options<span class="op">.</span><span class="fu">map</span>(</span>
+<span id="cb7-348"><a href="#cb7-348" aria-hidden="true" tabindex="-1"></a>        (option<span class="op">,</span> index) <span class="kw">=&gt;</span></span>
+<span id="cb7-349"><a href="#cb7-349" aria-hidden="true" tabindex="-1"></a>          htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;div style="display: flex; align-items: center;"&gt;</span></span>
+<span id="cb7-350"><a href="#cb7-350" aria-hidden="true" tabindex="-1"></a><span class="vs">            &lt;!-- Radiobutton und Option --&gt;</span></span>
+<span id="cb7-351"><a href="#cb7-351" aria-hidden="true" tabindex="-1"></a><span class="vs">            &lt;label style="display: flex; align-items: center; padding-left: 4pt; font-weight: normal;"&gt;</span></span>
+<span id="cb7-352"><a href="#cb7-352" aria-hidden="true" tabindex="-1"></a><span class="vs">              &lt;input</span></span>
+<span id="cb7-353"><a href="#cb7-353" aria-hidden="true" tabindex="-1"></a><span class="vs">                type="radio"</span></span>
+<span id="cb7-354"><a href="#cb7-354" aria-hidden="true" tabindex="-1"></a><span class="vs">                name="singleChoice"</span></span>
+<span id="cb7-355"><a href="#cb7-355" aria-hidden="true" tabindex="-1"></a><span class="vs">                value=</span><span class="sc">${</span>index<span class="sc">}</span></span>
+<span id="cb7-356"><a href="#cb7-356" aria-hidden="true" tabindex="-1"></a><span class="vs">                style="margin-right: 10px;"</span></span>
+<span id="cb7-357"><a href="#cb7-357" aria-hidden="true" tabindex="-1"></a><span class="vs">                onChange=</span><span class="sc">${</span>() <span class="kw">=&gt;</span> {</span>
+<span id="cb7-358"><a href="#cb7-358" aria-hidden="true" tabindex="-1"></a>                  selectedAnswer <span class="op">=</span> index<span class="op">;</span></span>
+<span id="cb7-359"><a href="#cb7-359" aria-hidden="true" tabindex="-1"></a>                  <span class="bu">root</span><span class="op">.</span><span class="at">value</span> <span class="op">=</span> selectedAnswer<span class="op">;</span></span>
+<span id="cb7-360"><a href="#cb7-360" aria-hidden="true" tabindex="-1"></a>                  <span class="bu">root</span><span class="op">.</span><span class="fu">dispatchEvent</span>(<span class="kw">new</span> <span class="bu">CustomEvent</span>(<span class="st">"input"</span>))<span class="op">;</span></span>
+<span id="cb7-361"><a href="#cb7-361" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">updateFeedback</span>()<span class="op">;</span></span>
+<span id="cb7-362"><a href="#cb7-362" aria-hidden="true" tabindex="-1"></a>                }<span class="sc">}</span></span>
+<span id="cb7-363"><a href="#cb7-363" aria-hidden="true" tabindex="-1"></a><span class="vs">              /&gt;</span></span>
+<span id="cb7-364"><a href="#cb7-364" aria-hidden="true" tabindex="-1"></a><span class="vs">              &lt;span&gt;</span><span class="sc">${</span>option<span class="sc">}</span><span class="vs">&lt;/span&gt;</span></span>
+<span id="cb7-365"><a href="#cb7-365" aria-hidden="true" tabindex="-1"></a><span class="vs">            &lt;/label&gt;</span></span>
+<span id="cb7-366"><a href="#cb7-366" aria-hidden="true" tabindex="-1"></a><span class="vs">            &lt;!-- Feedback --&gt;</span></span>
+<span id="cb7-367"><a href="#cb7-367" aria-hidden="true" tabindex="-1"></a><span class="vs">            &lt;div id="feedback-</span><span class="sc">${</span>index<span class="sc">}</span><span class="vs">" style="font-weight: bold; font-size: 14px; margin-left: 10px; text-align: left; white-space: nowrap; color: inherit;"&gt;&lt;/div&gt;</span></span>
+<span id="cb7-368"><a href="#cb7-368" aria-hidden="true" tabindex="-1"></a><span class="vs">          &lt;/div&gt;`</span></span>
+<span id="cb7-369"><a href="#cb7-369" aria-hidden="true" tabindex="-1"></a>      )<span class="sc">}</span></span>
+<span id="cb7-370"><a href="#cb7-370" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;/div&gt;</span></span>
+<span id="cb7-371"><a href="#cb7-371" aria-hidden="true" tabindex="-1"></a><span class="vs">  &lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb7-372"><a href="#cb7-372" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-373"><a href="#cb7-373" aria-hidden="true" tabindex="-1"></a><span class="co">// Funktion zur Aktualisierung des Feedbacks</span></span>
+<span id="cb7-374"><a href="#cb7-374" aria-hidden="true" tabindex="-1"></a>  <span class="kw">function</span> <span class="fu">updateFeedback</span>() {</span>
+<span id="cb7-375"><a href="#cb7-375" aria-hidden="true" tabindex="-1"></a>    options<span class="op">.</span><span class="fu">forEach</span>((_<span class="op">,</span> index) <span class="kw">=&gt;</span> {</span>
+<span id="cb7-376"><a href="#cb7-376" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> feedbackElement <span class="op">=</span> <span class="bu">root</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="vs">`#feedback-</span><span class="sc">${</span>index<span class="sc">}</span><span class="vs">`</span>)<span class="op">;</span></span>
+<span id="cb7-377"><a href="#cb7-377" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (selectedAnswer <span class="op">===</span> index) {</span>
+<span id="cb7-378"><a href="#cb7-378" aria-hidden="true" tabindex="-1"></a>        feedbackElement<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span></span>
+<span id="cb7-379"><a href="#cb7-379" aria-hidden="true" tabindex="-1"></a>          index <span class="op">===</span> correctIndex <span class="op">?</span> <span class="st">"✅"</span> <span class="op">:</span> <span class="st">"🔴"</span><span class="op">;</span></span>
+<span id="cb7-380"><a href="#cb7-380" aria-hidden="true" tabindex="-1"></a>        feedbackElement<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">color</span> <span class="op">=</span> index <span class="op">===</span> correctIndex <span class="op">?</span> <span class="st">"green"</span> <span class="op">:</span> <span class="st">"red"</span><span class="op">;</span></span>
+<span id="cb7-381"><a href="#cb7-381" aria-hidden="true" tabindex="-1"></a>      } <span class="cf">else</span> {</span>
+<span id="cb7-382"><a href="#cb7-382" aria-hidden="true" tabindex="-1"></a>        feedbackElement<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> <span class="st">""</span><span class="op">;</span> <span class="co">// Löscht Feedback für nicht ausgewählte Optionen</span></span>
+<span id="cb7-383"><a href="#cb7-383" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb7-384"><a href="#cb7-384" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
+<span id="cb7-385"><a href="#cb7-385" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb7-386"><a href="#cb7-386" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-387"><a href="#cb7-387" aria-hidden="true" tabindex="-1"></a>  <span class="bu">root</span><span class="op">.</span><span class="at">value</span> <span class="op">=</span> <span class="kw">null</span><span class="op">;</span></span>
+<span id="cb7-388"><a href="#cb7-388" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="bu">root</span><span class="op">;</span></span>
+<span id="cb7-389"><a href="#cb7-389" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-390"><a href="#cb7-390" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-391"><a href="#cb7-391" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-392"><a href="#cb7-392" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-393"><a href="#cb7-393" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">quizInput</span>({ questions<span class="op">,</span> options}) {</span>
-<span id="cb7-394"><a href="#cb7-394" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> answers <span class="op">=</span> questions<span class="op">.</span><span class="fu">map</span>(() <span class="kw">=&gt;</span> <span class="kw">null</span>)<span class="op">;</span></span>
-<span id="cb7-395"><a href="#cb7-395" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> <span class="bu">root</span> <span class="op">=</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;div</span></span>
-<span id="cb7-396"><a href="#cb7-396" aria-hidden="true" tabindex="-1"></a><span class="vs">      style="</span></span>
-<span id="cb7-397"><a href="#cb7-397" aria-hidden="true" tabindex="-1"></a><span class="vs">        display: grid;</span></span>
-<span id="cb7-398"><a href="#cb7-398" aria-hidden="true" tabindex="-1"></a><span class="vs">        grid-template-columns: 10% 10% 70% 10%;"</span></span>
-<span id="cb7-399"><a href="#cb7-399" aria-hidden="true" tabindex="-1"></a><span class="vs">    &gt;</span></span>
-<span id="cb7-400"><a href="#cb7-400" aria-hidden="true" tabindex="-1"></a><span class="vs">      </span><span class="sc">${</span>options<span class="op">.</span><span class="fu">map</span>(</span>
-<span id="cb7-401"><a href="#cb7-401" aria-hidden="true" tabindex="-1"></a>        (opt) <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;div style="font-weight: bold; font-size: HUGE"&gt;</span><span class="sc">${</span>opt<span class="sc">}</span><span class="vs">&lt;/div&gt;`</span></span>
-<span id="cb7-402"><a href="#cb7-402" aria-hidden="true" tabindex="-1"></a>      )<span class="sc">}</span></span>
-<span id="cb7-403"><a href="#cb7-403" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;div style="font-weight: bold"&gt;Statement&lt;/div&gt;</span></span>
-<span id="cb7-404"><a href="#cb7-404" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;div style="font-weight: bold"&gt;&lt;/div&gt;</span></span>
-<span id="cb7-405"><a href="#cb7-405" aria-hidden="true" tabindex="-1"></a><span class="vs">      </span><span class="sc">${</span><span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(questions<span class="op">.</span><span class="fu">entries</span>()<span class="op">,</span> ([i<span class="op">,</span> [question<span class="op">,</span> correct]]) <span class="kw">=&gt;</span></span>
-<span id="cb7-406"><a href="#cb7-406" aria-hidden="true" tabindex="-1"></a>        <span class="fu">quizInputRow</span>({</span>
-<span id="cb7-407"><a href="#cb7-407" aria-hidden="true" tabindex="-1"></a>          question<span class="op">,</span></span>
-<span id="cb7-408"><a href="#cb7-408" aria-hidden="true" tabindex="-1"></a>          options<span class="op">,</span></span>
-<span id="cb7-409"><a href="#cb7-409" aria-hidden="true" tabindex="-1"></a>          correct<span class="op">,</span></span>
-<span id="cb7-410"><a href="#cb7-410" aria-hidden="true" tabindex="-1"></a>          <span class="dt">onChange</span><span class="op">:</span> (newAnswer) <span class="kw">=&gt;</span> {</span>
-<span id="cb7-411"><a href="#cb7-411" aria-hidden="true" tabindex="-1"></a>            answers[i] <span class="op">=</span> newAnswer<span class="op">;</span></span>
-<span id="cb7-412"><a href="#cb7-412" aria-hidden="true" tabindex="-1"></a>            <span class="bu">root</span><span class="op">.</span><span class="at">value</span> <span class="op">=</span> answers<span class="op">;</span></span>
-<span id="cb7-413"><a href="#cb7-413" aria-hidden="true" tabindex="-1"></a>            <span class="bu">root</span><span class="op">.</span><span class="fu">dispatchEvent</span>(<span class="kw">new</span> <span class="bu">CustomEvent</span>(<span class="st">"input"</span>))<span class="op">;</span></span>
-<span id="cb7-414"><a href="#cb7-414" aria-hidden="true" tabindex="-1"></a>          }</span>
-<span id="cb7-415"><a href="#cb7-415" aria-hidden="true" tabindex="-1"></a>        })</span>
-<span id="cb7-416"><a href="#cb7-416" aria-hidden="true" tabindex="-1"></a>      )<span class="sc">}</span></span>
-<span id="cb7-417"><a href="#cb7-417" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;/div&gt;`</span><span class="op">;</span></span>
-<span id="cb7-418"><a href="#cb7-418" aria-hidden="true" tabindex="-1"></a>  <span class="bu">root</span><span class="op">.</span><span class="at">value</span> <span class="op">=</span> answers<span class="op">;</span></span>
-<span id="cb7-419"><a href="#cb7-419" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="bu">root</span><span class="op">;</span></span>
-<span id="cb7-420"><a href="#cb7-420" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb7-421"><a href="#cb7-421" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-422"><a href="#cb7-422" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">quizInputRow</span>({</span>
-<span id="cb7-423"><a href="#cb7-423" aria-hidden="true" tabindex="-1"></a>  question<span class="op">,</span></span>
-<span id="cb7-424"><a href="#cb7-424" aria-hidden="true" tabindex="-1"></a>  options<span class="op">,</span></span>
-<span id="cb7-425"><a href="#cb7-425" aria-hidden="true" tabindex="-1"></a>  correct<span class="op">,</span></span>
-<span id="cb7-426"><a href="#cb7-426" aria-hidden="true" tabindex="-1"></a>  onChange <span class="op">=</span> () <span class="kw">=&gt;</span> {}</span>
-<span id="cb7-427"><a href="#cb7-427" aria-hidden="true" tabindex="-1"></a>}) {</span>
-<span id="cb7-428"><a href="#cb7-428" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> <span class="bu">root</span> <span class="op">=</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;div&gt;`</span><span class="op">;</span></span>
-<span id="cb7-429"><a href="#cb7-429" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-430"><a href="#cb7-430" aria-hidden="true" tabindex="-1"></a>  <span class="kw">function</span> <span class="fu">setAnswer</span>(answer<span class="op">,</span> initial <span class="op">=</span> <span class="kw">false</span>) {</span>
-<span id="cb7-431"><a href="#cb7-431" aria-hidden="true" tabindex="-1"></a>    <span class="fu">morph</span>(</span>
-<span id="cb7-432"><a href="#cb7-432" aria-hidden="true" tabindex="-1"></a>      <span class="bu">root</span><span class="op">,</span></span>
-<span id="cb7-433"><a href="#cb7-433" aria-hidden="true" tabindex="-1"></a>      htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;div style="display: contents"&gt; </span></span>
-<span id="cb7-434"><a href="#cb7-434" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;form style="display: contents"&gt;</span></span>
-<span id="cb7-435"><a href="#cb7-435" aria-hidden="true" tabindex="-1"></a><span class="vs">        </span><span class="sc">${</span>options<span class="op">.</span><span class="fu">map</span>(</span>
-<span id="cb7-436"><a href="#cb7-436" aria-hidden="true" tabindex="-1"></a>          (opt) <span class="kw">=&gt;</span></span>
-<span id="cb7-437"><a href="#cb7-437" aria-hidden="true" tabindex="-1"></a>            htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;label&gt;&amp;emsp;&lt;/label&gt; </span></span>
-<span id="cb7-438"><a href="#cb7-438" aria-hidden="true" tabindex="-1"></a><span class="vs">            &lt;input  </span></span>
-<span id="cb7-439"><a href="#cb7-439" aria-hidden="true" tabindex="-1"></a><span class="vs">              name=</span><span class="sc">${</span>question<span class="sc">}</span><span class="vs"> &amp;emsp;</span></span>
-<span id="cb7-440"><a href="#cb7-440" aria-hidden="true" tabindex="-1"></a><span class="vs">              type="radio"</span></span>
-<span id="cb7-441"><a href="#cb7-441" aria-hidden="true" tabindex="-1"></a><span class="vs">              value="</span><span class="sc">${</span>opt<span class="sc">}</span><span class="vs">"</span></span>
-<span id="cb7-442"><a href="#cb7-442" aria-hidden="true" tabindex="-1"></a><span class="vs">              checked=</span><span class="sc">${</span>opt <span class="op">===</span> answer<span class="sc">}</span></span>
-<span id="cb7-443"><a href="#cb7-443" aria-hidden="true" tabindex="-1"></a><span class="vs">              onChange=</span><span class="sc">${</span>() <span class="kw">=&gt;</span> <span class="fu">setAnswer</span>(opt)<span class="sc">}</span></span>
-<span id="cb7-444"><a href="#cb7-444" aria-hidden="true" tabindex="-1"></a><span class="vs">            &gt;</span></span>
-<span id="cb7-445"><a href="#cb7-445" aria-hidden="true" tabindex="-1"></a><span class="vs">            &lt;/input&gt;`</span></span>
-<span id="cb7-446"><a href="#cb7-446" aria-hidden="true" tabindex="-1"></a>        )<span class="sc">}</span></span>
-<span id="cb7-447"><a href="#cb7-447" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;/form&gt;</span></span>
-<span id="cb7-448"><a href="#cb7-448" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;div&gt;</span><span class="sc">${</span>question<span class="sc">}</span><span class="vs">&lt;/div&gt;</span></span>
-<span id="cb7-449"><a href="#cb7-449" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;div&gt; &amp;emsp; </span><span class="sc">${</span></span>
-<span id="cb7-450"><a href="#cb7-450" aria-hidden="true" tabindex="-1"></a>       answer <span class="op">===</span> <span class="kw">null</span> <span class="op">?</span> <span class="st">""</span> <span class="op">:</span> answer <span class="op">===</span> correct <span class="op">?</span> <span class="st">"✅"</span> <span class="op">:</span> <span class="st">"🔴"</span></span>
-<span id="cb7-451"><a href="#cb7-451" aria-hidden="true" tabindex="-1"></a>      <span class="sc">}</span><span class="vs">&lt;/div&gt;</span></span>
-<span id="cb7-452"><a href="#cb7-452" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;/div&gt;`</span></span>
-<span id="cb7-453"><a href="#cb7-453" aria-hidden="true" tabindex="-1"></a>    )<span class="op">;</span></span>
-<span id="cb7-454"><a href="#cb7-454" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-455"><a href="#cb7-455" aria-hidden="true" tabindex="-1"></a>    <span class="bu">root</span><span class="op">.</span><span class="at">value</span> <span class="op">=</span> answer<span class="op">;</span></span>
-<span id="cb7-456"><a href="#cb7-456" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="op">!</span>initial) {</span>
-<span id="cb7-457"><a href="#cb7-457" aria-hidden="true" tabindex="-1"></a>      <span class="bu">root</span><span class="op">.</span><span class="fu">dispatchEvent</span>(<span class="kw">new</span> <span class="bu">CustomEvent</span>(<span class="st">"input"</span>))<span class="op">;</span></span>
-<span id="cb7-458"><a href="#cb7-458" aria-hidden="true" tabindex="-1"></a>      <span class="fu">onChange</span>(answer)<span class="op">;</span></span>
-<span id="cb7-459"><a href="#cb7-459" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb7-460"><a href="#cb7-460" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb7-461"><a href="#cb7-461" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-462"><a href="#cb7-462" aria-hidden="true" tabindex="-1"></a>  <span class="fu">setAnswer</span>(<span class="kw">null</span><span class="op">,</span> <span class="kw">true</span>)<span class="op">;</span></span>
-<span id="cb7-463"><a href="#cb7-463" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="bu">root</span><span class="op">;</span></span>
-<span id="cb7-464"><a href="#cb7-464" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb7-465"><a href="#cb7-465" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-466"><a href="#cb7-466" aria-hidden="true" tabindex="-1"></a>morph <span class="op">=</span> <span class="pp">require</span>(<span class="st">"https://bundle.run/nanomorph@5.4.2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-392"><a href="#cb7-392" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">quizInput</span>({ questions<span class="op">,</span> options}) {</span>
+<span id="cb7-393"><a href="#cb7-393" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> answers <span class="op">=</span> questions<span class="op">.</span><span class="fu">map</span>(() <span class="kw">=&gt;</span> <span class="kw">null</span>)<span class="op">;</span></span>
+<span id="cb7-394"><a href="#cb7-394" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> <span class="bu">root</span> <span class="op">=</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;div</span></span>
+<span id="cb7-395"><a href="#cb7-395" aria-hidden="true" tabindex="-1"></a><span class="vs">      style="</span></span>
+<span id="cb7-396"><a href="#cb7-396" aria-hidden="true" tabindex="-1"></a><span class="vs">        display: grid;</span></span>
+<span id="cb7-397"><a href="#cb7-397" aria-hidden="true" tabindex="-1"></a><span class="vs">        grid-template-columns: 10% 10% 70% 10%;"</span></span>
+<span id="cb7-398"><a href="#cb7-398" aria-hidden="true" tabindex="-1"></a><span class="vs">    &gt;</span></span>
+<span id="cb7-399"><a href="#cb7-399" aria-hidden="true" tabindex="-1"></a><span class="vs">      </span><span class="sc">${</span>options<span class="op">.</span><span class="fu">map</span>(</span>
+<span id="cb7-400"><a href="#cb7-400" aria-hidden="true" tabindex="-1"></a>        (opt) <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;div style="font-weight: bold; font-size: HUGE"&gt;</span><span class="sc">${</span>opt<span class="sc">}</span><span class="vs">&lt;/div&gt;`</span></span>
+<span id="cb7-401"><a href="#cb7-401" aria-hidden="true" tabindex="-1"></a>      )<span class="sc">}</span></span>
+<span id="cb7-402"><a href="#cb7-402" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;div style="font-weight: bold"&gt;Statement&lt;/div&gt;</span></span>
+<span id="cb7-403"><a href="#cb7-403" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;div style="font-weight: bold"&gt;&lt;/div&gt;</span></span>
+<span id="cb7-404"><a href="#cb7-404" aria-hidden="true" tabindex="-1"></a><span class="vs">      </span><span class="sc">${</span><span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(questions<span class="op">.</span><span class="fu">entries</span>()<span class="op">,</span> ([i<span class="op">,</span> [question<span class="op">,</span> correct]]) <span class="kw">=&gt;</span></span>
+<span id="cb7-405"><a href="#cb7-405" aria-hidden="true" tabindex="-1"></a>        <span class="fu">quizInputRow</span>({</span>
+<span id="cb7-406"><a href="#cb7-406" aria-hidden="true" tabindex="-1"></a>          question<span class="op">,</span></span>
+<span id="cb7-407"><a href="#cb7-407" aria-hidden="true" tabindex="-1"></a>          options<span class="op">,</span></span>
+<span id="cb7-408"><a href="#cb7-408" aria-hidden="true" tabindex="-1"></a>          correct<span class="op">,</span></span>
+<span id="cb7-409"><a href="#cb7-409" aria-hidden="true" tabindex="-1"></a>          <span class="dt">onChange</span><span class="op">:</span> (newAnswer) <span class="kw">=&gt;</span> {</span>
+<span id="cb7-410"><a href="#cb7-410" aria-hidden="true" tabindex="-1"></a>            answers[i] <span class="op">=</span> newAnswer<span class="op">;</span></span>
+<span id="cb7-411"><a href="#cb7-411" aria-hidden="true" tabindex="-1"></a>            <span class="bu">root</span><span class="op">.</span><span class="at">value</span> <span class="op">=</span> answers<span class="op">;</span></span>
+<span id="cb7-412"><a href="#cb7-412" aria-hidden="true" tabindex="-1"></a>            <span class="bu">root</span><span class="op">.</span><span class="fu">dispatchEvent</span>(<span class="kw">new</span> <span class="bu">CustomEvent</span>(<span class="st">"input"</span>))<span class="op">;</span></span>
+<span id="cb7-413"><a href="#cb7-413" aria-hidden="true" tabindex="-1"></a>          }</span>
+<span id="cb7-414"><a href="#cb7-414" aria-hidden="true" tabindex="-1"></a>        })</span>
+<span id="cb7-415"><a href="#cb7-415" aria-hidden="true" tabindex="-1"></a>      )<span class="sc">}</span></span>
+<span id="cb7-416"><a href="#cb7-416" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb7-417"><a href="#cb7-417" aria-hidden="true" tabindex="-1"></a>  <span class="bu">root</span><span class="op">.</span><span class="at">value</span> <span class="op">=</span> answers<span class="op">;</span></span>
+<span id="cb7-418"><a href="#cb7-418" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="bu">root</span><span class="op">;</span></span>
+<span id="cb7-419"><a href="#cb7-419" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-420"><a href="#cb7-420" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-421"><a href="#cb7-421" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">quizInputRow</span>({</span>
+<span id="cb7-422"><a href="#cb7-422" aria-hidden="true" tabindex="-1"></a>  question<span class="op">,</span></span>
+<span id="cb7-423"><a href="#cb7-423" aria-hidden="true" tabindex="-1"></a>  options<span class="op">,</span></span>
+<span id="cb7-424"><a href="#cb7-424" aria-hidden="true" tabindex="-1"></a>  correct<span class="op">,</span></span>
+<span id="cb7-425"><a href="#cb7-425" aria-hidden="true" tabindex="-1"></a>  onChange <span class="op">=</span> () <span class="kw">=&gt;</span> {}</span>
+<span id="cb7-426"><a href="#cb7-426" aria-hidden="true" tabindex="-1"></a>}) {</span>
+<span id="cb7-427"><a href="#cb7-427" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> <span class="bu">root</span> <span class="op">=</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;div&gt;`</span><span class="op">;</span></span>
+<span id="cb7-428"><a href="#cb7-428" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-429"><a href="#cb7-429" aria-hidden="true" tabindex="-1"></a>  <span class="kw">function</span> <span class="fu">setAnswer</span>(answer<span class="op">,</span> initial <span class="op">=</span> <span class="kw">false</span>) {</span>
+<span id="cb7-430"><a href="#cb7-430" aria-hidden="true" tabindex="-1"></a>    <span class="fu">morph</span>(</span>
+<span id="cb7-431"><a href="#cb7-431" aria-hidden="true" tabindex="-1"></a>      <span class="bu">root</span><span class="op">,</span></span>
+<span id="cb7-432"><a href="#cb7-432" aria-hidden="true" tabindex="-1"></a>      htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;div style="display: contents"&gt; </span></span>
+<span id="cb7-433"><a href="#cb7-433" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;form style="display: contents"&gt;</span></span>
+<span id="cb7-434"><a href="#cb7-434" aria-hidden="true" tabindex="-1"></a><span class="vs">        </span><span class="sc">${</span>options<span class="op">.</span><span class="fu">map</span>(</span>
+<span id="cb7-435"><a href="#cb7-435" aria-hidden="true" tabindex="-1"></a>          (opt) <span class="kw">=&gt;</span></span>
+<span id="cb7-436"><a href="#cb7-436" aria-hidden="true" tabindex="-1"></a>            htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;label&gt;&amp;emsp;&lt;/label&gt; </span></span>
+<span id="cb7-437"><a href="#cb7-437" aria-hidden="true" tabindex="-1"></a><span class="vs">            &lt;input  </span></span>
+<span id="cb7-438"><a href="#cb7-438" aria-hidden="true" tabindex="-1"></a><span class="vs">              name=</span><span class="sc">${</span>question<span class="sc">}</span><span class="vs"> &amp;emsp;</span></span>
+<span id="cb7-439"><a href="#cb7-439" aria-hidden="true" tabindex="-1"></a><span class="vs">              type="radio"</span></span>
+<span id="cb7-440"><a href="#cb7-440" aria-hidden="true" tabindex="-1"></a><span class="vs">              value="</span><span class="sc">${</span>opt<span class="sc">}</span><span class="vs">"</span></span>
+<span id="cb7-441"><a href="#cb7-441" aria-hidden="true" tabindex="-1"></a><span class="vs">              checked=</span><span class="sc">${</span>opt <span class="op">===</span> answer<span class="sc">}</span></span>
+<span id="cb7-442"><a href="#cb7-442" aria-hidden="true" tabindex="-1"></a><span class="vs">              onChange=</span><span class="sc">${</span>() <span class="kw">=&gt;</span> <span class="fu">setAnswer</span>(opt)<span class="sc">}</span></span>
+<span id="cb7-443"><a href="#cb7-443" aria-hidden="true" tabindex="-1"></a><span class="vs">            &gt;</span></span>
+<span id="cb7-444"><a href="#cb7-444" aria-hidden="true" tabindex="-1"></a><span class="vs">            &lt;/input&gt;`</span></span>
+<span id="cb7-445"><a href="#cb7-445" aria-hidden="true" tabindex="-1"></a>        )<span class="sc">}</span></span>
+<span id="cb7-446"><a href="#cb7-446" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;/form&gt;</span></span>
+<span id="cb7-447"><a href="#cb7-447" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;div&gt;</span><span class="sc">${</span>question<span class="sc">}</span><span class="vs">&lt;/div&gt;</span></span>
+<span id="cb7-448"><a href="#cb7-448" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;div&gt; &amp;emsp; </span><span class="sc">${</span></span>
+<span id="cb7-449"><a href="#cb7-449" aria-hidden="true" tabindex="-1"></a>       answer <span class="op">===</span> <span class="kw">null</span> <span class="op">?</span> <span class="st">""</span> <span class="op">:</span> answer <span class="op">===</span> correct <span class="op">?</span> <span class="st">"✅"</span> <span class="op">:</span> <span class="st">"🔴"</span></span>
+<span id="cb7-450"><a href="#cb7-450" aria-hidden="true" tabindex="-1"></a>      <span class="sc">}</span><span class="vs">&lt;/div&gt;</span></span>
+<span id="cb7-451"><a href="#cb7-451" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;/div&gt;`</span></span>
+<span id="cb7-452"><a href="#cb7-452" aria-hidden="true" tabindex="-1"></a>    )<span class="op">;</span></span>
+<span id="cb7-453"><a href="#cb7-453" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-454"><a href="#cb7-454" aria-hidden="true" tabindex="-1"></a>    <span class="bu">root</span><span class="op">.</span><span class="at">value</span> <span class="op">=</span> answer<span class="op">;</span></span>
+<span id="cb7-455"><a href="#cb7-455" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="op">!</span>initial) {</span>
+<span id="cb7-456"><a href="#cb7-456" aria-hidden="true" tabindex="-1"></a>      <span class="bu">root</span><span class="op">.</span><span class="fu">dispatchEvent</span>(<span class="kw">new</span> <span class="bu">CustomEvent</span>(<span class="st">"input"</span>))<span class="op">;</span></span>
+<span id="cb7-457"><a href="#cb7-457" aria-hidden="true" tabindex="-1"></a>      <span class="fu">onChange</span>(answer)<span class="op">;</span></span>
+<span id="cb7-458"><a href="#cb7-458" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb7-459"><a href="#cb7-459" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb7-460"><a href="#cb7-460" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-461"><a href="#cb7-461" aria-hidden="true" tabindex="-1"></a>  <span class="fu">setAnswer</span>(<span class="kw">null</span><span class="op">,</span> <span class="kw">true</span>)<span class="op">;</span></span>
+<span id="cb7-462"><a href="#cb7-462" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="bu">root</span><span class="op">;</span></span>
+<span id="cb7-463"><a href="#cb7-463" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-464"><a href="#cb7-464" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-465"><a href="#cb7-465" aria-hidden="true" tabindex="-1"></a>morph <span class="op">=</span> <span class="pp">require</span>(<span class="st">"https://bundle.run/nanomorph@5.4.2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-1-1" data-nodetype="declaration">
@@ -712,23 +715,23 @@ Smart Hack
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Question 1
+🎲 Question 1
 </div>
 </div>
 <div class="callout-body-container callout-body">
 <p><strong>Which of the following statements about R windows are correct?</strong></p>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb8" data-startfrom="284" data-source-offset="-1"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 283;"><span id="cb8-284"><a href="#cb8-284" aria-hidden="true" tabindex="-1"></a>MC_windows_1 <span class="op">=</span> [</span>
-<span id="cb8-285"><a href="#cb8-285" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"The Source window is used to write and save R code."</span><span class="op">,</span> <span class="st">"True"</span>]<span class="op">,</span></span>
-<span id="cb8-286"><a href="#cb8-286" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"I can only write code in the Source window."</span><span class="op">,</span> <span class="st">"False"</span>]<span class="op">,</span></span>
-<span id="cb8-287"><a href="#cb8-287" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"Packages are installed in the Environment window."</span><span class="op">,</span> <span class="st">"False"</span>]<span class="op">,</span></span>
-<span id="cb8-288"><a href="#cb8-288" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"The Console automatically saves your code permanently."</span><span class="op">,</span> <span class="st">"False"</span>]</span>
-<span id="cb8-289"><a href="#cb8-289" aria-hidden="true" tabindex="-1"></a>]</span>
-<span id="cb8-290"><a href="#cb8-290" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-291"><a href="#cb8-291" aria-hidden="true" tabindex="-1"></a>viewof answers_windows_1 <span class="op">=</span> <span class="fu">quizInput</span>({</span>
-<span id="cb8-292"><a href="#cb8-292" aria-hidden="true" tabindex="-1"></a>  <span class="dt">questions</span><span class="op">:</span> MC_windows_1<span class="op">,</span></span>
-<span id="cb8-293"><a href="#cb8-293" aria-hidden="true" tabindex="-1"></a>  <span class="dt">options</span><span class="op">:</span> [<span class="st">"True"</span><span class="op">,</span> <span class="st">"False"</span>]</span>
-<span id="cb8-294"><a href="#cb8-294" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb8" data-startfrom="282" data-source-offset="-1"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 281;"><span id="cb8-282"><a href="#cb8-282" aria-hidden="true" tabindex="-1"></a>MC_windows_1 <span class="op">=</span> [</span>
+<span id="cb8-283"><a href="#cb8-283" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"The Source window is used to write and save R code."</span><span class="op">,</span> <span class="st">"True"</span>]<span class="op">,</span></span>
+<span id="cb8-284"><a href="#cb8-284" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"I can only write code in the Source window."</span><span class="op">,</span> <span class="st">"False"</span>]<span class="op">,</span></span>
+<span id="cb8-285"><a href="#cb8-285" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"Packages are installed in the Environment window."</span><span class="op">,</span> <span class="st">"False"</span>]<span class="op">,</span></span>
+<span id="cb8-286"><a href="#cb8-286" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"The Console automatically saves your code permanently."</span><span class="op">,</span> <span class="st">"False"</span>]</span>
+<span id="cb8-287"><a href="#cb8-287" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb8-288"><a href="#cb8-288" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-289"><a href="#cb8-289" aria-hidden="true" tabindex="-1"></a>viewof answers_windows_1 <span class="op">=</span> <span class="fu">quizInput</span>({</span>
+<span id="cb8-290"><a href="#cb8-290" aria-hidden="true" tabindex="-1"></a>  <span class="dt">questions</span><span class="op">:</span> MC_windows_1<span class="op">,</span></span>
+<span id="cb8-291"><a href="#cb8-291" aria-hidden="true" tabindex="-1"></a>  <span class="dt">options</span><span class="op">:</span> [<span class="st">"True"</span><span class="op">,</span> <span class="st">"False"</span>]</span>
+<span id="cb8-292"><a href="#cb8-292" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-2-1" data-nodetype="declaration">
@@ -752,7 +755,7 @@ Question 1
 <i class="callout-icon no-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Question 2
+🎲 Question 2
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -787,7 +790,6 @@ Question 2
 </div>
 </div>
 </section><section id="more-tutorials-on-this" class="level2"><h2 class="anchored" data-anchor-id="more-tutorials-on-this">📚 More tutorials on this</h2>
-<p>You still have questions? The following tutorials &amp; papers can help you with that:</p>
 <p>You still have questions? The following tutorials &amp; papers can help you with that:</p>
 <ul>
 <li><a href="https://r4ds.hadley.nz/">R for Data Science by Wickham et al.</a></li>
@@ -1231,8 +1233,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./80-appendix.html" class="pagination-link" aria-label="Appendix">
-        <span class="nav-page-text">Appendix</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./3-workflow.html" class="pagination-link" aria-label="3 Workflow in R">
+        <span class="nav-page-text"><span class="chapter-title">3 Workflow in R</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
