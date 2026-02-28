@@ -37,7 +37,7 @@ The basic workflow in R looks like this:
 
 - [ ] Save your code (and any edited data files, if applicable)
 
-Check your set-up. Are you ready to go?
+Check your set-up. Are you ready to go? 🚀
 
 ## 2. Object- and function-oriented programming
 
@@ -434,6 +434,16 @@ viewof answers_packages_1 = quizInput({
 ```{r, question3, eval = FALSE, echo = TRUE}
 age <- c(1, 4, 7, 8, NA, 0, 3, 6)
 mean(age)
+```
+:::
+
+::: {.callout-note icon=false}
+## 🎲 Question 4
+
+**Run the following code. Why does it not create an object called "days" in the Environment pane**?
+
+```{r, question4, eval = FALSE, echo = TRUE}
+c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday")
 ```
 :::
 

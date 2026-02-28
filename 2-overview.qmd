@@ -174,7 +174,7 @@ Use a project whenever files belong together, for example:
 
 ### 6.2 Why are R projects so useful?
 
--   **No more “file not found” drama:** YouR project folder becomes the default location, so loading files is simpler.
+-   **No more “file not found”:** Your project folder becomes the default location, so loading files is simpler.
 -   **Cleaner workflow:** You naturally separate *data*, *scripts*, and *outputs* instead of mixing everything. This helps knowing what to find where.
 -   **Reproducible work:** If you reopen the project later, you can rerun your code and reproduce your results - especially if you also create virtual environment with packages like `renv`.
 -   **Collaboration-friendly:** A shared project structure makes it easier for others to run your code on their computer.
@@ -301,3 +301,4 @@ You still have questions? The following tutorials & papers can help you with tha
 -   ["wegweisR" by M. Haim, Video 1](https://youtu.be/p6f4oq08z48)
 -   ["R Cookbook" by Long et al., Tutorial 1](https://rc2e.com/)
 -   ["Tutorial 2 - Wissen macht R" by B. Fretwurst](https://ikmz.pages.uzh.ch/Wissen-macht-R/01-Basics.html)
+:::::
