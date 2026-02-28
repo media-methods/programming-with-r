@@ -16,24 +16,24 @@ After working through Tutorial 3, you'll be able to...
 
 The basic workflow in R looks like this:
 
-### 🖥️ Setup
+**🖥️ Setup**
 
 - [ ] Open the RStudio project
 - [ ] Check that the project is located in the correct folder and contains *data*, *scripts*, and *output* subfolders
 - [ ] If necessary, open the script for the tutorial (download via [Materials](81-materials.qmd)). **Note**: No script for tutorial 3!
 
-### 📦 Packages
+**📦 Packages**
 
 - [ ] Install the required packages (if needed)
 - [ ] Load the required packages using `library()`
 
-### 🔎 Analysis
+**🔎 Analysis**
 
 - [ ] Import or create your data
 - [ ] Run the analysis
 - [ ] Create outputs (e.g., tables, plots, or saved files)
 
-### 💾 Saving everything
+**💾 Saving everything**
 
 - [ ] Save your code (and any edited data files, if applicable)
 
@@ -213,7 +213,7 @@ Once a package is loaded, its functions can be used directly. Alternatively, you
 
 Here, we use the `select()` function from the `dplyr()` package even without loading the package first.
 ```{r, use, eval = FALSE, echo = TRUE}
-`dplyr::select()`
+dplyr::select()
 ```
 
 This approach is useful when you only need one function or multiple packages contain functions with the same name.
@@ -321,9 +321,10 @@ Include at least:
 While most Google searches will get you a multitude of different answers for your questions, not all of them are necessarily right for your specific problem. Often, there are different solutions for the same problem - so don't be confused when people are proposing different approaches. Its often best to scroll through some search results and then try the solution that seems most understandable and/or suitable for you.
 
 ***Make your problem reproducible***
+
 If you ask others for help (online, classmates, instructor, or ChatGPT), they need to be able to reproduce the problem.
 
-This i a bad help request: "*If I try to set my working directory, I get an error. What is the problem?*"
+This is a bad help request: "*If I try to set my working directory, I get an error. What is the problem?*"
 
 A good help request includes:
 
@@ -332,7 +333,7 @@ A good help request includes:
 - your operating system (Windows/Mac/Linux)
 - ideally your session information, with `sessionInfo()`
 
-Example of a good help request: "*I am using Windows. I ran this code: setwd(C:\Users\Admin\Documents). R returns: Error: unexpected input in setwd(C:\. What am I doing wrong?*"
+Example of a better request: "*I am using Windows. I ran this code: setwd(C:\Users\Admin\Documents). R returns: Error: unexpected input in setwd(C:\. What am I doing wrong?*"
 
 ## 5. Save code & results
 

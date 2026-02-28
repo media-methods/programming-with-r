@@ -1,2 +1,5 @@
 ﻿R-Function;Definition
-setwd();Sets your working directory - folder where R searches for/saves data
+install.packages();Installs packages on your machine - only has to be run once
+library();Loads existing packages - has to be run everytime you reopen R Studio
+? and help();Help you to get more info on a specific function
+save.image;Saves your working directory

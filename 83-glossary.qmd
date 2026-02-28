@@ -6,8 +6,6 @@ format:
     toc: false
 ---
 
-[]{#sec-83-glossary}
-
 ```{r}
 #| label: glossary-table
 #| echo: false
