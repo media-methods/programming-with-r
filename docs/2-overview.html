@@ -218,8 +218,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#console-print-results" id="toc-console-print-results" class="nav-link" data-scroll-target="#console-print-results">3. Console: Print results</a></li>
   <li><a href="#environment-overview-of-objects" id="toc-environment-overview-of-objects" class="nav-link" data-scroll-target="#environment-overview-of-objects">4. Environment: Overview of objects</a></li>
   <li><a href="#plotshelppackages-do-everything-else" id="toc-plotshelppackages-do-everything-else" class="nav-link" data-scroll-target="#plotshelppackages-do-everything-else">5. Plots/Help/Packages: Do everything else</a></li>
-  <li><a href="#take-aways" id="toc-take-aways" class="nav-link" data-scroll-target="#take-aways">6.💡 Take-Aways</a></li>
-  <li><a href="#more-tutorials-on-this" id="toc-more-tutorials-on-this" class="nav-link" data-scroll-target="#more-tutorials-on-this">7.📚 More tutorials on this</a></li>
+  <li>
+<a href="#working-with-r-projects" id="toc-working-with-r-projects" class="nav-link" data-scroll-target="#working-with-r-projects">6. Working with R projects</a>
+  <ul class="collapse">
+<li><a href="#what-can-we-use-r-projects-for" id="toc-what-can-we-use-r-projects-for" class="nav-link" data-scroll-target="#what-can-we-use-r-projects-for">6.1 What can we use R Projects for?</a></li>
+  <li><a href="#why-are-r-projects-so-useful" id="toc-why-are-r-projects-so-useful" class="nav-link" data-scroll-target="#why-are-r-projects-so-useful">6.2 Why are R Projects so useful?</a></li>
+  <li><a href="#how-to-set-up-a-r-project-for-this-class" id="toc-how-to-set-up-a-r-project-for-this-class" class="nav-link" data-scroll-target="#how-to-set-up-a-r-project-for-this-class">6.3 How to set up a R project for this class</a></li>
+  <li><a href="#which-folders-do-i-need-for-this-class" id="toc-which-folders-do-i-need-for-this-class" class="nav-link" data-scroll-target="#which-folders-do-i-need-for-this-class">6.4 Which folders do I need for this class?</a></li>
+  </ul>
+</li>
+  <li><a href="#take-aways" id="toc-take-aways" class="nav-link" data-scroll-target="#take-aways">💡 Take-Aways</a></li>
+  <li><a href="#more-tutorials-on-this" id="toc-more-tutorials-on-this" class="nav-link" data-scroll-target="#more-tutorials-on-this">📚 More tutorials on this</a></li>
   </ul></nav>
     </div>
 <!-- main -->
@@ -300,7 +309,7 @@ Smart Hack
 <p>R allows you to add comments to your code. This is helpful when you return to your script later—especially once your code becomes longer and you may have forgotten what specific code elements do.</p>
 <p>Comments are created using a hashtag <code>#</code>. Everything after <code>#</code> <strong>is ignored by R</strong> and treated as a note for humans only (so not run as code). In the following, everything after the hashtag is purely a “mental note” to yourself:</p>
 <div class="cell">
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#this line of code assigns the word "hello" to an object called word</span></span>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># this line of code assigns the word "hello" to an object called word</span></span>
 <span><span class="va">word</span> <span class="op">&lt;-</span> <span class="st">"hello"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>You can also use hashtags to structure your script into sections—similar to headings in a Word document. If you add four hashtags before a heading <code>####</code>, RStudio creates a section header that helps you navigate through your script. This is especially useful for long files.</p>
@@ -355,7 +364,76 @@ Smart Hack
 <p>Lastly, the standard RStudio interface includes a final important window. In many setups, this panel contains tabs such as “Files”, “Plots”, “Packages”, and “Help”. We’ll cover these in more detail later. For now, it’s enough to know that this window is used, for example, to view plots and other output, browse files, and manage additional functions in so-called packages (including checking which packages are currently loaded).</p>
 <p><em>Image: Window “Files/Plots/Packages”</em></p>
 <p><img src="files/images/1_files_plots_packages.jpg" class="img-fluid" alt="Files etc. panel in RStudio"></p>
-</section><section id="take-aways" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="take-aways">6.💡 Take-Aways</h2>
+</section><section id="working-with-r-projects" class="level2"><h2 class="anchored" data-anchor-id="working-with-r-projects">6. Working with R projects</h2>
+<p>In this class, we will work with R projects. An <strong>R Project</strong> is a feature offered in RStudio: Basically, it creates a dedicated folder to organize and manage files, scripts, and data for a specific analysis (for a longer explanation, see <a href="https://www.r-bloggers.com/2020/01/rstudio-projects-and-working-directories-a-beginners-guide/">here</a>. You should create a R project for this class and always use this R project.</p>
+<p>When you open the <code>.Rproj</code> file in RStudio, RStudio treats that folder as your <strong>project home</strong>. All data will be stored in this folder as a so-called root directory. This helps you keep everything in one place.</p>
+<section id="what-can-we-use-r-projects-for" class="level3"><h3 class="anchored" data-anchor-id="what-can-we-use-r-projects-for">6.1 What can we use R Projects for?</h3>
+<p>Use a project whenever files belong together, for example:</p>
+<ul>
+<li>this class</li>
+<li>a research paper, thesis, or replication project</li>
+<li>a group project in a research seminar (especially for GitHub collaboration - we will learn about this later)</li>
+</ul></section><section id="why-are-r-projects-so-useful" class="level3"><h3 class="anchored" data-anchor-id="why-are-r-projects-so-useful">6.2 Why are R Projects so useful?</h3>
+<ul>
+<li>
+<strong>No more “file not found” drama:</strong> Your project folder becomes the default location, so loading files is simpler.</li>
+<li>
+<strong>Cleaner workflow:</strong> You naturally separate <em>data</em>, <em>scripts</em>, and <em>outputs</em> instead of mixing everything. This helps knowing what to find where.</li>
+<li>
+<strong>Reproducible work:</strong> If you reopen the project later, you can rerun your code and reproduce your results - especially if you also create virtual environment with packages like <code>renv</code>.</li>
+<li>
+<strong>Collaboration-friendly:</strong> A shared project structure makes it easier for others to run your code on their computer.</li>
+</ul></section><section id="how-to-set-up-a-r-project-for-this-class" class="level3"><h3 class="anchored" data-anchor-id="how-to-set-up-a-r-project-for-this-class">6.3 How to set up a R project for this class</h3>
+<p>Follow these steps to create a R project. <em>Important</em>: Make sure that this project is stored at a folder you can access over the course of this class (e.g., a folder that is continuously back-uped, for example via the <a href="https://seafile.aau.at/">AAU Seafiles Cloud</a>).</p>
+<ol type="1">
+<li>Click <em>File → New Project</em>
+</li>
+<li>Choose <em>New Directory</em>
+</li>
+</ol>
+<p><img src="files/images/1_project.jpg" class="img-fluid" alt="Creating a R Project in RStudio"></p>
+<ol start="3" type="1">
+<li>Select <em>New Project</em>
+</li>
+<li>Enter a project name (e.g., <code>digital-methods-class</code>)</li>
+<li>Choose where the folder should be saved. I would recommend a folder that is regularly backed-up (e.g., the AAU Seafiles Cloud)</li>
+</ol>
+<p><img src="files/images/1_project_2.jpg" class="img-fluid" alt="Creating a R Project in RStudio"></p>
+<p>RStudio will now open a new session inside your project and automatically create:</p>
+<ul>
+<li>a project folder</li>
+<li>a file ending in <code>.Rproj</code>
+</li>
+</ul>
+<p>Always open your work by clicking the <code>.Rproj</code> file — this ensures the correct settings and working directory are used.</p>
+<p>You can check if you are actually opening R via the R project by checking that…</p>
+<ul>
+<li>the project is shown on top of the Environment window (see yellow mark, top right)</li>
+<li>the file path under “Files” is shown (see yellow mark, bottom right)</li>
+</ul>
+<p><img src="files/images/1_project_3.jpg" class="img-fluid" alt="Creating a R Project in RStudio"></p>
+</section><section id="which-folders-do-i-need-for-this-class" class="level3"><h3 class="anchored" data-anchor-id="which-folders-do-i-need-for-this-class">6.4 Which folders do I need for this class?</h3>
+<p>For this class, I recommend using the following structure:</p>
+<pre class="text"><code>digital-methods/
+└── digital-methods.Rproj
+├── data/
+├── scripts/
+│   ├── 01_data_management.R
+│   └── 02_analysis.R
+└── output/
+    ├── results/
+    └── images/</code></pre>
+<p>With this, you have:</p>
+<ul>
+<li>the R-project (digital-methods.Rproj)</li>
+<li>a folder called <em>data</em> where you can store all data</li>
+<li>a folder called <em>scripts</em> where you can store all scripts</li>
+<li>a folder called <em>output</em> where, in the subfolders <em>results</em> and <em>images</em> you can store different types of results.</li>
+</ul>
+<p>Please make sure to create these three folders (<em>data</em>, <em>scripts</em>, and <em>output</em>) in the same folder where your R project currently lies.</p>
+<p><img src="files/images/1_structure_project.jpg" class="img-fluid" alt="Recommended folder structure for R"></p>
+<p>Perfect - we are ready to get into the workflow of R now!</p>
+</section></section><section id="take-aways" class="level2"><h2 class="anchored" data-anchor-id="take-aways">💡 Take-Aways</h2>
 <ul>
 <li>
 <strong>Window “Source”</strong>: used to write/execute code in R</li>
@@ -367,7 +445,7 @@ Smart Hack
 <strong>Window “Files/Plots/Packages etc.”</strong>: used for additional functions, for instance visualizations/searching for help/activating or updating packages</li>
 <li>
 <strong>Packages</strong>: collections of topic-specific functions that extend the functions implemented in Base-R.</li>
-</ul></section><section id="more-tutorials-on-this" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="more-tutorials-on-this">7.📚 More tutorials on this</h2>
+</ul></section><section id="more-tutorials-on-this" class="level2"><h2 class="anchored" data-anchor-id="more-tutorials-on-this">📚 More tutorials on this</h2>
 <p>You still have questions? The following tutorials &amp; papers can help you with that:</p>
 <ul>
 <li><a href="https://bookdown.org/ndphillips/YaRrr/started.html">YaRrr! The Pirate’s Guide to R by N.D.Phillips, Tutorial 2</a></li>

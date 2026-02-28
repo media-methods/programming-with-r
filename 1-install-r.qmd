@@ -1,5 +1,9 @@
 ---
 title: "1 Install R/R Studio"
+format:
+  html:
+    html-math-method: katex   # irrelevant, but keeps format block explicit
+    include-in-header: []     # ensures format block is honored
 ---
 
 ::: callout-note
@@ -64,7 +68,7 @@ There are several reasons why I recommend learning R (and similar programming la
 
 ## 4. What should I know about learning R?
 
-### 4.1 The learning curve (aka: break your keyboard and scream) {.unlisted}
+### The learning curve (aka: break your keyboard and scream) {.unlisted}
 
 Learning R can feel hard—especially at the beginning. You might even think: *Why the hell did I pick this course?*\
 
@@ -80,7 +84,7 @@ Many students experience a similar learning curve:
 -   **Breakthrough:** Core ideas start to make sense. Some setbacks still happen, and you might forget things you thought you already knew.
 -   **Confidence:** Tasks get faster, and learning new tools becomes easier. Even if you hit a problem you can’t solve right away, you know you will—it may just take some time. You’ve got it now.
 
-### 4.2 Many ways to do the same thing in R {.unlisted}
+### Many ways to do the same thing in R {.unlisted}
 
 R is a full programming language. Wo with it you can analyze data, create graphics, automate repetitive tasks, and use thousands of add-on packages for specialized methods. That flexibility is a big advantage, but it can feel confusing at first: There are many different ways to solve the same problem in R.
 
@@ -100,3 +104,25 @@ You still have questions? The following tutorials & papers can help you with tha
 -   ["wegweisR" by M. Haim, Video 1](https://youtu.be/p6f4oq08z48)
 -   ["R Cookbook" by Long et al., Tutorial 1](https://rc2e.com/)
 -   ["Tutorial 2 - Wissen macht R" by B. Fretwurst](https://ikmz.pages.uzh.ch/Wissen-macht-R/01-Basics.html)
+
+## 7.📚 GitHub discussion
+
+<!-- giscus will appear below -->
+<div class="giscus"></div>
+
+<script src="https://giscus.app/client.js"
+        data-repo="media-methods/programming-with-r"
+        data-repo-id="R_kgDORaPluQ"
+        data-category="FAQ R"
+        data-category-id="DIC_kwDORaPluc4C3Uwp"
+        data-mapping="specific"
+        data-term="r"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
