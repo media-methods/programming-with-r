@@ -64,7 +64,7 @@ There are several reasons why I recommend learning R (and similar programming la
 
 ## 4. What should I know about learning R?
 
-### The learning curve (aka: break your keyboard and scream) {.unlisted}
+### 4.1 The learning curve (aka: break your keyboard and scream) {.unlisted}
 
 Learning R can feel hard—especially at the beginning. You might even think: *Why the hell did I pick this course?*\
 
@@ -80,7 +80,7 @@ Many students experience a similar learning curve:
 -   **Breakthrough:** Core ideas start to make sense. Some setbacks still happen, and you might forget things you thought you already knew.
 -   **Confidence:** Tasks get faster, and learning new tools becomes easier. Even if you hit a problem you can’t solve right away, you know you will—it may just take some time. You’ve got it now.
 
-### Many ways to do the same thing in R {.unlisted}
+### 4.2 Many ways to do the same thing in R {.unlisted}
 
 R is a full programming language. Wo with it you can analyze data, create graphics, automate repetitive tasks, and use thousands of add-on packages for specialized methods. That flexibility is a big advantage, but it can feel confusing at first: There are many different ways to solve the same problem in R.
 
@@ -88,11 +88,11 @@ You might see two solutions in different tutorials that look completely differen
 
 Once that feels comfortable, we’ll improve our workflow step by step: cleaner code, fewer steps, and more reusable solutions.
 
-## 💡 Take-Aways {.unnumbered}
+## 5.💡 Take-Aways
 
 R is great! 🫶
 
-## 📚 More tutorials on this {.unnumbered}
+## 6.📚 More tutorials on this
 
 You still have questions? The following tutorials & papers can help you with that:
 

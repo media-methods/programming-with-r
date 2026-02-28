@@ -156,7 +156,7 @@ Lastly, the standard RStudio interface includes a final important window. In man
 
 ![](files/images/1_files_plots_packages.jpg){fig-alt="Files etc. panel in RStudio"}
 
-## 💡 Take-Aways {.unnumbered}
+## 6.💡 Take-Aways
 
 -   **Window "Source"**: used to write/execute code in R
 -   **Window "Console"**: used to return results of executed code
@@ -164,7 +164,7 @@ Lastly, the standard RStudio interface includes a final important window. In man
 -   **Window "Files/Plots/Packages etc."**: used for additional functions, for instance visualizations/searching for help/activating or updating packages
 -   **Packages**: collections of topic-specific functions that extend the functions implemented in Base-R.
 
-## 📚 More tutorials on this {.unnumbered}
+## 7.📚 More tutorials on this
 
 You still have questions? The following tutorials & papers can help you with that:
 
