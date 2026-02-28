@@ -17,7 +17,7 @@ In programming, R Studio is called an "integrated development environment (IDE).
 
 ## 2. How do I install R and R Studio?
 
-### 2.1 Install/Update R {.unlisted}
+### 2.1 Install/Update R
 
 *I don't have R on my computer yet!*
 
@@ -38,7 +38,7 @@ If you already have R installed, you just need to update it to the latest versio
 
 4.  Restart RStudio (close and reopen it) so the change takes effect.
 
-### 2.2 Install/Update R Studio {.unlisted}
+### 2.2 Install/Update R Studio
 
 *I don't have R Studio on my computer yet!*
 

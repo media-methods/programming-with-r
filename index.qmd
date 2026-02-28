@@ -30,7 +30,7 @@ Each tutorial in this compendium includes:
 
 -   Practice exercises/quizzes to help you apply your new skills
 
-This tutorial is inspired by [Michael Scharkow](https://stats.ifp.uni-mainz.de/) and [Ben Fretwurst](https://ikmz.pages.uzh.ch/Wissen-macht-R/) who, in the spirit of open science, shared their materials with me. Thanks! 🙌
+This tutorial is inspired by many people who talked to me or, in the spirit of open science, even shared their materials with me. Thanks to all of them, especially [Michael Scharkow](https://stats.ifp.uni-mainz.de/) and [Ben Fretwurst](https://ikmz.pages.uzh.ch/Wissen-macht-R/) for sending their quarto files 🙌 !
 
 ## What Do We Expect from You? {.unnumbered}
 

@@ -186,7 +186,7 @@
     "href": "index.html#what-can-you-expect",
     "title": "Programming with R for Social Scientists",
     "section": "What Can You Expect?",
-    "text": "What Can You Expect?\nEach tutorial in this compendium includes:\n\nExplanations of new R functions and analysis methods (with example code)\nA short summary of the key takeaways & additional learning resources\nPractice exercises/quizzes to help you apply your new skills\n\nThis tutorial is inspired by Michael Scharkow and Ben Fretwurst who, in the spirit of open science, shared their materials with me. Thanks! 🙌",
+    "text": "What Can You Expect?\nEach tutorial in this compendium includes:\n\nExplanations of new R functions and analysis methods (with example code)\nA short summary of the key takeaways & additional learning resources\nPractice exercises/quizzes to help you apply your new skills\n\nThis tutorial is inspired by many people who talked to me or, in the spirit of open science, even shared their materials with me. Thanks to all of them, especially Michael Scharkow and Ben Fretwurst for sending their quarto files 🙌 !",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome</span>"
     ]
