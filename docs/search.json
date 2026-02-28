@@ -11,44 +11,13 @@
     ]
   },
   {
-    "objectID": "1-install-r.html#learning-goals",
-    "href": "1-install-r.html#learning-goals",
+    "objectID": "1-install-r.html#how-do-i-install-r-and-r-studio",
+    "href": "1-install-r.html#how-do-i-install-r-and-r-studio",
     "title": "1 Install R/R Studio",
-    "section": "",
-    "text": "know how to install R and R Studio\nunderstand the main set-up of R Studio",
+    "section": "2. How do I install R and R Studio?",
+    "text": "2. How do I install R and R Studio?\n\n2.1 Install/Update R\nI don’t have R on my computer yet!\nPlease use Cran to install the newest version of R (version 4.3.1, “Beagle Scouts”). You’ll have to specify your operation system to download the right version:\n\nR for Windows\nR for Mac, please read the documentation and installation information here\n\nI have R, but need to update it!\nIf you already have R installed, you just need to update it to the latest version.\n\nDownload and install the newest R version using the links above. (This won’t usually remove your old version—it installs alongside it.)\nOpen RStudio and go to Tools → Global Options → General.\nUnder R version, select the newest installed version of R.\nRestart RStudio (close and reopen it) so the change takes effect.\n\n\n\n2.2 Install/Update R Studio\nI don’t have R Studio on my computer yet!\nNext, install R Studio. The newest version of R Studio can be downloaded via this link.\nI have R Studio, but need to update it!\nIf you already have R Studio on your computer, simply make sure to update it to the newest version. The easiest way to do this is via: “Help/Check for Updates” in R Studio.",
     "crumbs": [
       "R Basics",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>1 Install R/R Studio</span>"
-    ]
-  },
-  {
-    "objectID": "1-install-r.html#what-are-r-and-r-studio",
-    "href": "1-install-r.html#what-are-r-and-r-studio",
-    "title": "1 Install R/R Studio",
-    "section": "1. What are R and R Studio?",
-    "text": "1. What are R and R Studio?\nR is the programming language we’ll use to import, edit, and analyze data. R Studio is a desktop application with a graphical interface that facilitates programming with R. Basically, R Studio makes coding with R much easier!\nIn programming, R Studio is called an “integrated development environment (IDE). There are other interfaces or IDEs (e.g., Positron, Visual Studio Code), but we will stick with R Studio for now.",
-    "crumbs": [
-      "R Basics",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>1 Install R/R Studio</span>"
-    ]
-  },
-  {
-    "objectID": "1-install-r.html#installupdate-r",
-    "href": "1-install-r.html#installupdate-r",
-    "title": "1 Install R/R Studio",
-    "section": "1.1.1 Install/Update R",
-    "text": "1.1.1 Install/Update R\n\nI don’t have R on my computer yet!\nPlease use Cran to install the newest version of R (version 4.3.1, “Beagle Scouts”). You’ll have to specify your operation system to download the right version:\n\nR for Windows\nR for Mac, please read the documentation and installation information here\n\n\n\nI have R, but need to update it!\nIf you already have R installed, you just need to update it to the latest version.\n\nDownload and install the newest R version using the links above. (This won’t usually remove your old version—it installs alongside it.)\nOpen RStudio and go to Tools → Global Options → General.\nUnder R version, select the newest installed version of R.\nRestart RStudio (close and reopen it) so the change takes effect.",
-    "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>1 Install R/R Studio</span>"
-    ]
-  },
-  {
-    "objectID": "1-install-r.html#installupdate-r-studio",
-    "href": "1-install-r.html#installupdate-r-studio",
-    "title": "1 Install R/R Studio",
-    "section": "1.1.2 Install/Update R Studio",
-    "text": "1.1.2 Install/Update R Studio\n\nI don’t have R Studio on my computer yet!\nNext, install R Studio. The newest version of R Studio can be downloaded via this link.\n\n\nI have R Studio, but need to update it!\nIf you already have R Studio on your computer, simply make sure to update it to the newest version. The easiest way to do this is via: “Help/Check for Updates” in R Studio.",
-    "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>1 Install R/R Studio</span>"
     ]
   },
@@ -58,6 +27,17 @@
     "title": "1 Install R/R Studio",
     "section": "3. Why should I learn R?",
     "text": "3. Why should I learn R?\nThere are several reasons why I recommend learning R (and similar programming languages like Python) instead of menu-based programs such as SPSS.\n\nR is free. Unlike many other statistical programs, you don’t have to buy it or depend on a university license—which often expires once you leave.\nR is open source. That means the source code (the “blueprint” of the software) is publicly available. On top of that, R has thousands of add-on packages—extra tools that provide specialized functions for particular tasks. Most of these packages are available through CRAN (the Comprehensive R Archive Network), and you can install them whenever you need them.\nR is flexible. You can work with many different types of data and choose from a huge range of functions to import, clean, visualize, and analyze it. And if a function you need doesn’t exist yet, you can often write your own (or adapt code someone else has shared).\nProgramming is a valuable job skill. Knowing R (or Python) can strengthen your applications in areas like academia, market research, data science, and data journalism—because many employers expect applicants to be comfortable working with code.",
+    "crumbs": [
+      "R Basics",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>1 Install R/R Studio</span>"
+    ]
+  },
+  {
+    "objectID": "1-install-r.html#what-should-i-know-about-learning-r",
+    "href": "1-install-r.html#what-should-i-know-about-learning-r",
+    "title": "1 Install R/R Studio",
+    "section": "4. What should I know about learning R?",
+    "text": "4. What should I know about learning R?\n\nThe learning curve (aka: break your keyboard and scream)\nLearning R can feel hard—especially at the beginning. You might even think: Why the hell did I pick this course?\n\nThat’s normal. Once you understand the basics, things start to click. That’s when the fun begins and we can do the cool stuff: building visuals, scraping, and more.\n\nSource: Learning curve illustration originally published on Medium (Konstantin Borimechkov).\nMany students experience a similar learning curve:\n\nFrustration phase: Errors, syntax issues, and unfamiliar concepts make progress feel slow. This stage is normal—you may want to break your keyboard and scream.\nBreakthrough: Core ideas start to make sense. Some setbacks still happen, and you might forget things you thought you already knew.\nConfidence: Tasks get faster, and learning new tools becomes easier. Even if you hit a problem you can’t solve right away, you know you will—it may just take some time. You’ve got it now.\n\n\n\nMany ways to do the same thing in R\nR is a full programming language. Wo with it you can analyze data, create graphics, automate repetitive tasks, and use thousands of add-on packages for specialized methods. That flexibility is a big advantage, but it can feel confusing at first: There are many different ways to solve the same problem in R.\nYou might see two solutions in different tutorials that look completely different but produce the same result - and that’s normal. In this course, we have one goal: make the code work and understand what it’s doing, even if it isn’t the shortest or “prettiest” solution yet. It doesn’t matter which solution you choose - as long as it it correct.\nOnce that feels comfortable, we’ll improve our workflow step by step: cleaner code, fewer steps, and more reusable solutions.",
     "crumbs": [
       "R Basics",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>1 Install R/R Studio</span>"
@@ -86,138 +66,22 @@
     ]
   },
   {
-    "objectID": "81-materials.html",
-    "href": "81-materials.html",
-    "title": "🔷 Materials",
-    "section": "",
-    "text": "Data sets\nempty for now\n\n\nR Code\nempty for now",
-    "crumbs": [
-      "Appendix",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>🔷 Materials</span>"
-    ]
-  },
-  {
-    "objectID": "82-coding-style.html",
-    "href": "82-coding-style.html",
-    "title": "🔷 Coding style",
-    "section": "",
-    "text": "Recommendations for good coding style\ntbd",
-    "crumbs": [
-      "Appendix",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>🔷 Coding style</span>"
-    ]
-  },
-  {
-    "objectID": "83-glossary.html",
-    "href": "83-glossary.html",
-    "title": "🔷 Glossary",
-    "section": "",
-    "text": "R Function\nDefinition\n\n\nsetwd()\nSets your working directory - folder where R searches for/saves data",
-    "crumbs": [
-      "Appendix",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>🔷 Glossary</span>"
-    ]
-  },
-  {
-    "objectID": "84-forum.html",
-    "href": "84-forum.html",
-    "title": "🔷 Github Discussion forum",
-    "section": "",
-    "text": "GitHub Discussion Forum\nYou can ask questions, report issues, or participate in discussions on GitHub:\n👉 https://github.com/media-methods/programming-with-r/discussions\n\n\n\nGitHub Forum",
-    "crumbs": [
-      "Appendix",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>🔷 Github Discussion forum</span>"
-    ]
-  },
-  {
-    "objectID": "85-faq-r.html",
-    "href": "85-faq-r.html",
-    "title": "🔷 FAQ R",
-    "section": "",
-    "text": "How do I set my working directory?\n\nsetwd()\n\nI get this error…\nSolution:\nThis is it!\n\nsetwd(right)",
-    "crumbs": [
-      "Appendix",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>🔷 FAQ R</span>"
-    ]
-  },
-  {
-    "objectID": "86-faq-class.html",
-    "href": "86-faq-class.html",
-    "title": "🔷 FAQ Class/exam",
-    "section": "",
-    "text": "Do I need to bring my own laptop to class?\nYES\n\n\nHow will I be evaluated?\nXXX\n\n\nHow can I sign up for the exam?\nMit der Buchung des Moduls sind Sie gleichzeitig auch für den Leistungsnachweis angemeldet. Sie müssen die Prüfung nicht separat buchen.\n\n\nHow is the exam structured?\nIn der Prüfung kann prinzipiell alles drankommen, was in der Vorlesung gelehrt wurde, auf der Seite der Begleiterin steht (mit Ausnahme der gekennzeichneten IYI-Zusätze für Interessierte) und was auf den Folien steht (grosse Überschneidung mit der Begleiterin). Desweiteren sind die Antworten in unserem Forum zu berücksichtigen – wobei wir die wichtigsten Q&A auch immer nochmal auf die Seite der Begleiterin packen.\n\n\nI am a bit afraid of programming and statistics. What do I do?\nWenn Sie in die Vorlesung und die Übung gehen und sich mit den LEF, der Begleiterin und der Zusammenfassung vorbereiten, werden Sie sehr sicher bestehen. Es gibt immer eine gewisse Durchfallquote, aber das sind in der Regel Studierende, die es mit minimaler Vorbereitung einfach mal versuchen.\nWenn Sie grosse Probleme haben, suchen Sie sich bald eine Lerngruppe und fragen Sie in unserem Forum, ob Ihnen ein:e Tutor:in nochmal helfen kann.",
-    "crumbs": [
-      "Appendix",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>🔷 FAQ Class/exam</span>"
-    ]
-  },
-  {
-    "objectID": "80-appendix.html",
-    "href": "80-appendix.html",
-    "title": "Appendix",
-    "section": "",
-    "text": "This is an overview of additional material we provide:\n\nIn Materials, you can download all necessary data and code.\nIn Coding style, we provide best practice guidelines for coding.\nIn Glossary, you can get a useful overview of important functions.\nIn the GitHub forum, you can discuss questions with others.\nIn FAQ R, we provide an overview of common R question.\nIn FAQ Class/exam, we provide an overview of common questions about the class/exam.",
-    "crumbs": [
-      "Appendix"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Programming with R for Social Scientists",
-    "section": "",
-    "text": "Welcome! 👋 What Is This Compendium For?\nAcross several tutorials, we will help you build practical computational skills:\nAll course materials (code, etc.) are available here",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome</span>"
-    ]
-  },
-  {
-    "objectID": "index.html#welcome-what-is-this-compendium-for",
-    "href": "index.html#welcome-what-is-this-compendium-for",
-    "title": "Programming with R for Social Scientists",
-    "section": "",
-    "text": "Workflow in R and RStudio\n→ setting up the infrastructure, getting help, addressing problems\nData management\n→ filtering, selecting, transforming data\nData collection & analysis\n→ visualization, data collection using web scraping, basic statistical analysis",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome</span>"
-    ]
-  },
-  {
-    "objectID": "index.html#what-can-you-expect",
-    "href": "index.html#what-can-you-expect",
-    "title": "Programming with R for Social Scientists",
-    "section": "What Can You Expect?",
-    "text": "What Can You Expect?\nEach tutorial in this compendium includes:\n\nExplanations of new R functions and analysis methods (with example code)\nA short summary of the key takeaways & additional learning resources\nPractice exercises/quizzes to help you apply your new skills\n\nThis tutorial is inspired by many people who talked to me or, in the spirit of open science, even shared their materials with me. Thanks to all of them, especially Michael Scharkow and Ben Fretwurst for sending their quarto files 🙌 !",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome</span>"
-    ]
-  },
-  {
-    "objectID": "index.html#what-do-we-expect-from-you",
-    "href": "index.html#what-do-we-expect-from-you",
-    "title": "Programming with R for Social Scientists",
-    "section": "What Do We Expect from You?",
-    "text": "What Do We Expect from You?\nTo get the most out of our in-person sessions, you should complete the assigned tutorial before each class. Please check the syllabus to see which tutorial you should prepare for each week. That way, we can use our time together to clarify questions, go through examples, and apply what you have learned.",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome</span>"
-    ]
-  },
-  {
-    "objectID": "1-install-r.html#what-should-i-know-about-learning-r",
-    "href": "1-install-r.html#what-should-i-know-about-learning-r",
+    "objectID": "1-install-r.html#learning-goals",
+    "href": "1-install-r.html#learning-goals",
     "title": "1 Install R/R Studio",
-    "section": "4. What should I know about learning R?",
-    "text": "4. What should I know about learning R?\n\nThe learning curve (aka: break your keyboard and scream)\nLearning R can feel hard—especially at the beginning. You might even think: Why the hell did I pick this course?\n\nThat’s normal. Once you understand the basics, things start to click. That’s when the fun begins and we can do the cool stuff: building visuals, scraping, and more.\n\nSource: Learning curve illustration originally published on Medium (Konstantin Borimechkov).\nMany students experience a similar learning curve:\n\nFrustration phase: Errors, syntax issues, and unfamiliar concepts make progress feel slow. This stage is normal—you may want to break your keyboard and scream.\nBreakthrough: Core ideas start to make sense. Some setbacks still happen, and you might forget things you thought you already knew.\nConfidence: Tasks get faster, and learning new tools becomes easier. Even if you hit a problem you can’t solve right away, you know you will—it may just take some time. You’ve got it now.\n\n\n\nMany ways to do the same thing in R\nR is a full programming language. Wo with it you can analyze data, create graphics, automate repetitive tasks, and use thousands of add-on packages for specialized methods. That flexibility is a big advantage, but it can feel confusing at first: There are many different ways to solve the same problem in R.\nYou might see two solutions in different tutorials that look completely different but produce the same result - and that’s normal. In this course, we have one goal: make the code work and understand what it’s doing, even if it isn’t the shortest or “prettiest” solution yet. It doesn’t matter which solution you choose - as long as it it correct.\nOnce that feels comfortable, we’ll improve our workflow step by step: cleaner code, fewer steps, and more reusable solutions.",
+    "section": "",
+    "text": "know how to install R and R Studio\nunderstand the main set-up of R Studio",
     "crumbs": [
       "R Basics",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>1 Install R/R Studio</span>"
     ]
   },
   {
-    "objectID": "1-install-r.html#how-do-i-install-r-and-r-studio",
-    "href": "1-install-r.html#how-do-i-install-r-and-r-studio",
+    "objectID": "1-install-r.html#what-are-r-and-r-studio",
+    "href": "1-install-r.html#what-are-r-and-r-studio",
     "title": "1 Install R/R Studio",
-    "section": "2. How do I install R and R Studio?",
-    "text": "2. How do I install R and R Studio?\n\n2.1 Install/Update R\nI don’t have R on my computer yet!\nPlease use Cran to install the newest version of R (version 4.3.1, “Beagle Scouts”). You’ll have to specify your operation system to download the right version:\n\nR for Windows\nR for Mac, please read the documentation and installation information here\n\nI have R, but need to update it!\nIf you already have R installed, you just need to update it to the latest version.\n\nDownload and install the newest R version using the links above. (This won’t usually remove your old version—it installs alongside it.)\nOpen RStudio and go to Tools → Global Options → General.\nUnder R version, select the newest installed version of R.\nRestart RStudio (close and reopen it) so the change takes effect.\n\n\n\n2.2 Install/Update R Studio\nI don’t have R Studio on my computer yet!\nNext, install R Studio. The newest version of R Studio can be downloaded via this link.\nI have R Studio, but need to update it!\nIf you already have R Studio on your computer, simply make sure to update it to the newest version. The easiest way to do this is via: “Help/Check for Updates” in R Studio.",
+    "section": "1. What are R and R Studio?",
+    "text": "1. What are R and R Studio?\nR is the programming language we’ll use to import, edit, and analyze data. R Studio is a desktop application with a graphical interface that facilitates programming with R. Basically, R Studio makes coding with R much easier!\nIn programming, R Studio is called an “integrated development environment (IDE). There are other interfaces or IDEs (e.g., Positron, Visual Studio Code), but we will stick with R Studio for now.",
     "crumbs": [
       "R Basics",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>1 Install R/R Studio</span>"
@@ -228,18 +92,7 @@
     "href": "2-overview.html",
     "title": "2 What to do where in R",
     "section": "",
-    "text": "🎯 Learning goals\nAfter working through Tutorial 2, you’ll…",
-    "crumbs": [
-      "R Basics",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>2 What to do where in R</span>"
-    ]
-  },
-  {
-    "objectID": "2-overview.html#learning-goals",
-    "href": "2-overview.html#learning-goals",
-    "title": "2 What to do where in R",
-    "section": "",
-    "text": "know what each window (panel) in RStudio does",
+    "text": "1. What does each window in RStudio do?\nRStudio is a graphical interface (like an app) that makes it easier to work with R. It usually contains four main windows (panels), each with a different purpose:\nImage: Four main windows in RStudio\nYour layout may look slightly different (panels can be arranged differently, and labels may vary). The four-panel setup shown here works well for many people, but feel free to adjust it.\nTo change the layout, go to Tools → Global Options → Pane Layout.\nImage: Changing the layout",
     "crumbs": [
       "R Basics",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>2 What to do where in R</span>"
@@ -249,8 +102,52 @@
     "objectID": "2-overview.html#what-does-each-window-in-rstudio-do",
     "href": "2-overview.html#what-does-each-window-in-rstudio-do",
     "title": "2 What to do where in R",
-    "section": "1. What does each window in RStudio do?",
-    "text": "1. What does each window in RStudio do?\nRStudio is a graphical interface (an app) that makes it easier to work with R. It usually contains four main windows (panels), each with a different purpose:\n\nSource (Script Editor): Write and save your code. Important: After installing R/RStudio, you may not see this window right away. To open it, click File → New File → R Script.\nConsole: Run code. This is where commands are executed and results are shown.\nEnvironment: View the objects you have created (e.g., datasets, variables, lists).\nFiles / Plots / Packages / Help: Manage files, view plots, install/update packages, and look up help pages.\n\nImage: Four main windows in RStudio\n\nYour layout may look slightly different (panels can be arranged differently, and labels may vary). The four-panel setup shown here works well for many people, but feel free to adjust it. To change the layout, go to Tools → Global Options → Pane Layout.\nImage: Changing the layout\n\n\n\n\n\n\n\nTip\n\n\n\nWant a more “hacky” look and feel like a coding pro? Go to Tools → Appearance → Editor theme and try a theme like Chaos.\nIn the options menu, you can also customize the editor—for example, you can enable rainbow parentheses via Tools → Global Options → Code → Display. This highlights matching parentheses in the same color, which can make code easier to read.",
+    "section": "",
+    "text": "Source (Script Editor): Write and save your code. Important: After installing R/RStudio, you may not see this window right away. To open it, click File → New File → R Script.\nConsole: Run code. This is where commands are executed and results are shown.\nEnvironment: View the objects you have created (e.g., datasets, variables, lists).\nFiles / Plots / Packages / Help: Manage files, view plots, install/update packages, and look up help pages.\n\n\n\n\n\n\n\n\n\n\n\n\n\nSmart Hack\n\n\n\nWant a more “hacky” look and feel like a coding pro? 🤓\n\nGo to Tools → Appearance → Editor theme and try a dark theme like Chaos.\nEnable rainbow parentheses via Tools → Global Options → Code → Display. This highlights matching parentheses in the same color, which can make code easier to read.",
+    "crumbs": [
+      "R Basics",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>2 What to do where in R</span>"
+    ]
+  },
+  {
+    "objectID": "2-overview.html#source-write-your-own-code",
+    "href": "2-overview.html#source-write-your-own-code",
+    "title": "2 What to do where in R",
+    "section": "2. Source: Write your own code",
+    "text": "2. Source: Write your own code\nIn the Source window, you write the code that tells R what task to perform.\n2.1 Write code\nLet’s start with a simple example. Suppose you want R to print the word \"hello\". First, we create an object called word and assign the value \"hello\" to it.\nValues are assigned to objects using either the operator &lt;- or =. The left side contains the object name, and the right side contains the value that should be stored in that object.\nThe following command tells R to assign the word \"hello\" to an object called word:\n\nword &lt;- \"hello\"\n\nIn R, you would use then use the Source window to do this:\n\n2.2 Comment code\nR allows you to add comments to your code. This is helpful when you return to your script later—especially once your code becomes longer and you may have forgotten what specific code elements do.\nComments are created using a hashtag #. Everything after # is ignored by R and treated as a note for humans only (so not run as code). In the following, everything after the hashtag is purely a “mental note” to yourself:\n\n#this line of code assigns the word \"hello\" to an object called word\nword &lt;- \"hello\"\n\nYou can also use hashtags to structure your script into sections—similar to headings in a Word document. If you add four hashtags before a heading ####, RStudio creates a section header that helps you navigate through your script. This is especially useful for long files.\n\n2.3 Execute Code\nNext, we want to run (execute) our code.\n\nSelect the line(s) of code you want to run.\nClick Run (top right of the Source window), or press:\n\n\nCtrl + Enter (Windows)\nCmd + Enter (Mac)\n\nR will execute exactly the selected lines and create the object word. If no code is selected, only the current line (where your cursor is placed) will run.\n\nSome commands take longer to run. If you notice an error while code is executing, you can stop it manually using the Stop button in the Console (visible only while R is running). Alternatively, use Session → Interrupt R.\n\n2.4 Save Code\nOne major advantage of R is that analyses are reproducible—as long as you save your code. When you reopen RStudio, you can simply run the script again to reproduce your results.\nTo save your code:\n\nSelect File → Save As… (scripts must use the file ending .R), or\nClick the Save button in the Source window and save your script, for example as MyCode.R.",
+    "crumbs": [
+      "R Basics",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>2 What to do where in R</span>"
+    ]
+  },
+  {
+    "objectID": "2-overview.html#console-print-results",
+    "href": "2-overview.html#console-print-results",
+    "title": "2 What to do where in R",
+    "section": "3. Console: Print results",
+    "text": "3. Console: Print results\nThe results of executed code appear in the Console, another main window in RStudio. The Console shows both the commands you run and the output produced by R.\nIn the previous example, we created an object called word that stores the value \"hello\". When we run code, R prints the executed code and results (if requested).\nFor example, typing the object name and running the line will display its content:\n\nword &lt;- \"hello\"\nword\n\n[1] \"hello\"\n\n\nImage: Window “Console”",
+    "crumbs": [
+      "R Basics",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>2 What to do where in R</span>"
+    ]
+  },
+  {
+    "objectID": "2-overview.html#environment-overview-of-objects",
+    "href": "2-overview.html#environment-overview-of-objects",
+    "title": "2 What to do where in R",
+    "section": "4. Environment: Overview of objects",
+    "text": "4. Environment: Overview of objects\nAnother important window is the Environment. It shows all objects that currently exist in your R session—right now, that’s just the object word. As you create more objects (datasets, variables, results, etc.), this list will grow.\nIf you have worked with SPSS before, you can think of the Environment as a kind of overview of what is currently loaded. The key difference is that R can keep many different objects at the same time—for example, several datasets, models, or tables—so you can switch between them easily.\nImage: Window “Environment”\n\nIt’s important to know that you can visually inspect many objects (especially datasets) with the function View(). This opens the object in a new tab in the Source window. It may not feel very useful yet, but it becomes extremely helpful once you work with larger datasets that contain many observations (rows) and variables (columns).\n\nView(word)\n\nImage: Window “View”",
+    "crumbs": [
+      "R Basics",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>2 What to do where in R</span>"
+    ]
+  },
+  {
+    "objectID": "2-overview.html#plotshelppackages-do-everything-else",
+    "href": "2-overview.html#plotshelppackages-do-everything-else",
+    "title": "2 What to do where in R",
+    "section": "5. Plots/Help/Packages: Do everything else",
+    "text": "5. Plots/Help/Packages: Do everything else\nLastly, the standard RStudio interface includes a final important window. In many setups, this panel contains tabs such as “Files”, “Plots”, “Packages”, and “Help”. We’ll cover these in more detail later. For now, it’s enough to know that this window is used, for example, to view plots and other output, browse files, and manage additional functions in so-called packages (including checking which packages are currently loaded).\nImage: Window “Files/Plots/Packages”",
     "crumbs": [
       "R Basics",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>2 What to do where in R</span>"
@@ -273,50 +170,6 @@
     "title": "2 What to do where in R",
     "section": "📚 More tutorials on this",
     "text": "📚 More tutorials on this\nYou still have questions? The following tutorials & papers can help you with that:\n\nYaRrr! The Pirate’s Guide to R by N.D.Phillips, Tutorial 2\nComputational Methods in der politischen Kommunikationsforschung by J. Unkel, Tutorial 1\nContinuing education in R by Lara Kobilke, Tutorial 2\nSICSS Boot Camp by C. Bail, Video 1\nwegweisR by M. Haim, Video 1\nR Cookbook by Long et al., Tutorial 1",
-    "crumbs": [
-      "R Basics",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>2 What to do where in R</span>"
-    ]
-  },
-  {
-    "objectID": "2-overview.html#source-write-your-own-code",
-    "href": "2-overview.html#source-write-your-own-code",
-    "title": "2 What to do where in R",
-    "section": "2. Source: Write your own code",
-    "text": "2. Source: Write your own code\nIn the Source window, you write the code that tells R what task to perform.\n2.1 Write code\nLet’s start with a simple example. Suppose you want R to print the word \"hello\".\nFirst, we create an object called word and assign the value \"hello\" to it.\nValues are assigned to objects using either the operator &lt;- or =. The left side contains the object name, and the right side contains the value that should be stored in that object. The following command tells R to assign the word \"hello\" to an object called word:\n\nword &lt;- \"hello\"\n\nImage: “Source”\n R allows you to add comments to your code. This is helpful when you return to your script later—especially once your code becomes longer.\nComments are created using a hashtag #. Everything after # is ignored by R and treated as a note for humans only (so not run as code)\n\n#this line of code assigns the word \"hello\" to an object called word\nword &lt;- \"hello\"\n\nYou can also use hashtags to structure your script into sections—similar to headings in a Word document.\nIf you add four hashtags before a heading ####, RStudio creates a section header that helps you navigate through your script. This is especially useful for long files.\nImage: Structuring Code\n\n2.2 Execute Code\nNext, we want to run (execute) our code.\n\nSelect the line(s) of code you want to run.\nClick Run (top right of the Source window), or press:\n\n\nCtrl + Enter (Windows)\nCmd + Enter (Mac)\n\nR will execute exactly the selected lines and create the object word. If no code is selected, only the current line (where your cursor is placed) will run.\nImage: Executing Code\n\nSome commands take longer to run. If you notice an error while code is executing, you can stop it manually using the Stop button in the Console (visible only while R is running).\nImage: Interrupting R\n Else, you can use the menu via Session / Interrupt R.\nAlternatively, use Session → Interrupt R.\n2.3 Save Code\nOne major advantage of R is that analyses are reproducible—as long as you save your code. When you reopen RStudio, you can simply run the script again to reproduce your results.\nTo save your code:\n\nSelect File → Save As… (scripts must use the file ending .R), or\nClick the Save button in the Source window and save your script, for example as MyCode.R.",
-    "crumbs": [
-      "R Basics",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>2 What to do where in R</span>"
-    ]
-  },
-  {
-    "objectID": "2-overview.html#console-print-results",
-    "href": "2-overview.html#console-print-results",
-    "title": "2 What to do where in R",
-    "section": "3. Console: Print results",
-    "text": "3. Console: Print results\nThe results of executed code appear in the Console, the second main window in RStudio. The Console shows both the commands you run and the output produced by R.\nIn the previous example, we created an object called word that stores the value \"hello\".\nWhen we run code, R prints the executed command and—if requested—the content of the object in the Console.\nFor example, typing the object name and running the line will display its content:\n\nword &lt;- \"hello\"\nword\n\n[1] \"hello\"\n\n\nImage: Window “Console”",
-    "crumbs": [
-      "R Basics",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>2 What to do where in R</span>"
-    ]
-  },
-  {
-    "objectID": "2-overview.html#environment-overview-of-objects",
-    "href": "2-overview.html#environment-overview-of-objects",
-    "title": "2 What to do where in R",
-    "section": "4. Environment: Overview of objects",
-    "text": "4. Environment: Overview of objects\nThe third window is the Environment. It shows all objects that currently exist in your R session—right now, that’s just the object word. As you create more objects (datasets, variables, results, etc.), this list will grow.\nIf you have worked with SPSS before, you can think of the Environment as a kind of overview of what is currently loaded. The key difference is that R can keep many different objects at the same time—for example, several datasets, models, or tables—so you can switch between them easily.\nImage: Window “Environment”\n\nIt’s important to know that you can visually inspect many objects (especially datasets) with the function View(). This opens the object in a new tab in the Source window. It may not feel very useful yet, but it becomes extremely helpful once you work with larger datasets that contain many observations (rows) and variables (columns).\n\nView(word)\n\nImage: Window “View”",
-    "crumbs": [
-      "R Basics",
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>2 What to do where in R</span>"
-    ]
-  },
-  {
-    "objectID": "2-overview.html#plotshelppackages-do-everything-else",
-    "href": "2-overview.html#plotshelppackages-do-everything-else",
-    "title": "2 What to do where in R",
-    "section": "5. Plots/Help/Packages: Do everything else",
-    "text": "5. Plots/Help/Packages: Do everything else\nLastly, the standard RStudio interface includes a fourth window (depending on your chosen layout). In many setups, this panel contains tabs such as Files, Plots, Packages, and Help. We’ll cover these in more detail later. For now, it’s enough to know that this window is used, for example, to view plots and other output, browse files, and manage packages (including checking which packages are currently loaded).\nImage: Window “Files/Plots/Packages”",
     "crumbs": [
       "R Basics",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>2 What to do where in R</span>"

@@ -205,14 +205,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Content</h2>
    
   <ul>
-<li><a href="#learning-goals" id="toc-learning-goals" class="nav-link active" data-scroll-target="#learning-goals">🎯 Learning goals</a></li>
-  <li><a href="#what-does-each-window-in-rstudio-do" id="toc-what-does-each-window-in-rstudio-do" class="nav-link" data-scroll-target="#what-does-each-window-in-rstudio-do">1. What does each window in RStudio do?</a></li>
+<li><a href="#what-does-each-window-in-rstudio-do" id="toc-what-does-each-window-in-rstudio-do" class="nav-link active" data-scroll-target="#what-does-each-window-in-rstudio-do">1. What does each window in RStudio do?</a></li>
   <li>
 <a href="#source-write-your-own-code" id="toc-source-write-your-own-code" class="nav-link" data-scroll-target="#source-write-your-own-code">2. Source: Write your own code</a>
   <ul class="collapse">
 <li><a href="#write-code" id="toc-write-code" class="nav-link" data-scroll-target="#write-code">2.1 Write code</a></li>
-  <li><a href="#execute-code" id="toc-execute-code" class="nav-link" data-scroll-target="#execute-code">2.2 Execute Code</a></li>
-  <li><a href="#save-code" id="toc-save-code" class="nav-link" data-scroll-target="#save-code">2.3 Save Code</a></li>
+  <li><a href="#comment-code" id="toc-comment-code" class="nav-link" data-scroll-target="#comment-code">2.2 Comment code</a></li>
+  <li><a href="#execute-code" id="toc-execute-code" class="nav-link" data-scroll-target="#execute-code">2.3 Execute Code</a></li>
+  <li><a href="#save-code" id="toc-save-code" class="nav-link" data-scroll-target="#save-code">2.4 Save Code</a></li>
   </ul>
 </li>
   <li><a href="#console-print-results" id="toc-console-print-results" class="nav-link" data-scroll-target="#console-print-results">3. Console: Print results</a></li>
@@ -238,12 +238,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 
 
-</header><section id="learning-goals" class="level2"><h2 class="anchored" data-anchor-id="learning-goals">🎯 Learning goals</h2>
+</header><div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🎯 Learning goals
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>After working through Tutorial 2, you’ll…</p>
 <ul>
 <li>know what each window (panel) in RStudio does</li>
-</ul></section><section id="what-does-each-window-in-rstudio-do" class="level2"><h2 class="anchored" data-anchor-id="what-does-each-window-in-rstudio-do">1. What does each window in RStudio do?</h2>
-<p>RStudio is a graphical interface (an app) that makes it easier to work with R. It usually contains <strong>four main windows (panels)</strong>, each with a different purpose:</p>
+</ul>
+</div>
+</div>
+<section id="what-does-each-window-in-rstudio-do" class="level2"><h2 class="anchored" data-anchor-id="what-does-each-window-in-rstudio-do">1. What does each window in RStudio do?</h2>
+<p>RStudio is a graphical interface (like an app) that makes it easier to work with R. It usually contains <strong>four main windows (panels)</strong>, each with a different purpose:</p>
 <ul>
 <li><p><strong>Source (Script Editor):</strong> Write and save your code. <em>Important:</em> After installing R/RStudio, you may not see this window right away. To open it, click <em>File → New File → R Script</em>.</p></li>
 <li><p><strong>Console:</strong> Run code. This is where commands are executed and results are shown.</p></li>
@@ -252,44 +264,48 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p><em>Image: Four main windows in RStudio</em></p>
 <p><img src="files/images/1_overview.jpg" class="img-fluid" alt="Overview of panels in RStudio"></p>
-<p>Your layout may look slightly different (panels can be arranged differently, and labels may vary). The four-panel setup shown here works well for many people, but feel free to adjust it. To change the layout, go to <em>Tools → Global Options → Pane Layout</em>.</p>
+<p>Your layout may look slightly different (panels can be arranged differently, and labels may vary). The four-panel setup shown here works well for many people, but feel free to adjust it.</p>
+<p>To change the layout, go to <em>Tools → Global Options → Pane Layout</em>.</p>
 <p><em>Image: Changing the layout</em></p>
-<p><img src="files/images/1_change.jpg" class="img-fluid" alt="Changing the layout in RStudio"></p>
+<p><img src="files/images/1_change.jpg" class="img-fluid" alt="Changing the layout in RStudio" width="483"></p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Tip
+Smart Hack
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Want a more “hacky” look and feel like a coding pro? Go to <em>Tools → Appearance → Editor theme</em> and try a theme like <strong>Chaos</strong>.</p>
-<p>In the options menu, you can also customize the editor—for example, you can enable <strong>rainbow parentheses</strong> via <em>Tools → Global Options → Code → Display</em>. This highlights matching parentheses in the same color, which can make code easier to read.</p>
+<p>Want a more “hacky” look and feel like a coding pro? 🤓</p>
+<ul>
+<li><p>Go to <em>Tools → Appearance → Editor theme</em> and try a dark theme like <strong>Chaos</strong>.</p></li>
+<li><p>Enable <strong>rainbow parentheses</strong> via <em>Tools → Global Options → Code → Display</em>. This highlights matching parentheses in the same color, which can make code easier to read.</p></li>
+</ul>
 </div>
 </div>
 </section><section id="source-write-your-own-code" class="level2"><h2 class="anchored" data-anchor-id="source-write-your-own-code">2. Source: Write your own code</h2>
 <p>In the Source window, you write the code that tells R what task to perform.</p>
 <section id="write-code" class="level3"><h3 class="anchored" data-anchor-id="write-code">2.1 Write code</h3>
-<p>Let’s start with a simple example. Suppose you want R to print the word <code>"hello"</code>.<br>
-First, we create an <strong>object</strong> called <em>word</em> and assign the value <code>"hello"</code> to it.</p>
-<p>Values are assigned to objects using either the operator <code>&lt;-</code> or <code>=</code>. The <strong>left side</strong> contains the object name, and the <strong>right side</strong> contains the value that should be stored in that object. The following command tells R to assign the word <code>"hello"</code> to an object called <em>word</em>:</p>
+<p>Let’s start with a simple example. Suppose you want R to print the word <code>"hello"</code>. First, we create an <strong>object</strong> called <em>word</em> and assign the value <code>"hello"</code> to it.</p>
+<p>Values are assigned to objects using either the operator <code>&lt;-</code> or <code>=</code>. The <strong>left side</strong> contains the object name, and the <strong>right side</strong> contains the value that should be stored in that object.</p>
+<p>The following command tells R to assign the word <code>"hello"</code> to an object called <em>word</em>:</p>
 <div class="cell">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">word</span> <span class="op">&lt;-</span> <span class="st">"hello"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><em>Image: “Source”</em></p>
-<p><img src="files/images/1_source.jpg" class="img-fluid" alt="Overview of the source panel in RStudio"> R allows you to add comments to your code. This is helpful when you return to your script later—especially once your code becomes longer.</p>
-<p>Comments are created using a hashtag <code>#</code>. Everything after <code>#</code> is ignored by R and treated as a note for humans only (so not run as code)</p>
+<p>In R, you would use then use the Source window to do this:</p>
+<p><img src="files/images/1_source.jpg" class="img-fluid" alt="Overview of the source panel in RStudio" width="831"></p>
+</section><section id="comment-code" class="level3"><h3 class="anchored" data-anchor-id="comment-code">2.2 Comment code</h3>
+<p>R allows you to add comments to your code. This is helpful when you return to your script later—especially once your code becomes longer and you may have forgotten what specific code elements do.</p>
+<p>Comments are created using a hashtag <code>#</code>. Everything after <code>#</code> <strong>is ignored by R</strong> and treated as a note for humans only (so not run as code). In the following, everything after the hashtag is purely a “mental note” to yourself:</p>
 <div class="cell">
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#this line of code assigns the word "hello" to an object called word</span></span>
 <span><span class="va">word</span> <span class="op">&lt;-</span> <span class="st">"hello"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>You can also use hashtags to structure your script into sections—similar to headings in a Word document.</p>
-<p>If you add four hashtags before a heading <code>####</code>, RStudio creates a section header that helps you navigate through your script. This is especially useful for long files.</p>
-<p><em>Image: Structuring Code</em></p>
+<p>You can also use hashtags to structure your script into sections—similar to headings in a Word document. If you add four hashtags before a heading <code>####</code>, RStudio creates a section header that helps you navigate through your script. This is especially useful for long files.</p>
 <p><img src="files/images/1_structure.jpg" class="img-fluid" alt="Structuring code in RStudio"></p>
-</section><section id="execute-code" class="level3"><h3 class="anchored" data-anchor-id="execute-code">2.2 Execute Code</h3>
+</section><section id="execute-code" class="level3"><h3 class="anchored" data-anchor-id="execute-code">2.3 Execute Code</h3>
 <p>Next, we want to run (execute) our code.</p>
 <ol type="1">
 <li><p>Select the line(s) of code you want to run.</p></li>
@@ -300,14 +316,11 @@ First, we create an <strong>object</strong> called <em>word</em> and assign the 
 <li><p>Cmd + Enter (Mac)</p></li>
 </ul>
 <p>R will execute exactly the selected lines and create the object word. If no code is selected, only the current line (where your cursor is placed) will run.</p>
-<p><em>Image: Executing Code</em></p>
-<p><img src="files/images/1_execute.jpg" class="img-fluid" alt="Executing code in RStudio"></p>
-<p>Some commands take longer to run. If you notice an error while code is executing, you can stop it manually using the <strong>Stop</strong> button in the <em>Console</em> (visible only while R is running).</p>
-<p><em>Image: Interrupting R</em></p>
-<p><img src="files/images/1_interrupt.jpg" class="img-fluid" alt="Interrupting code in RStudio"> Else, you can use the menu via <em>Session / Interrupt R</em>.</p>
-<p>Alternatively, use <em>Session → Interrupt R</em>.</p>
-</section><section id="save-code" class="level3"><h3 class="anchored" data-anchor-id="save-code">2.3 Save Code</h3>
-<p>One major advantage of R is that analyses are reproducible—as long as you save your code. When you reopen RStudio, you can simply run the script again to reproduce your results.</p>
+<p><img src="files/images/1_execute.jpg" class="img-fluid" alt="Executing code in RStudio" width="831"></p>
+<p>Some commands take longer to run. If you notice an error while code is executing, you can stop it manually using the <strong>Stop</strong> button in the <em>Console</em> (visible only while R is running). Alternatively, use <em>Session → Interrupt R</em>.</p>
+<p><img src="files/images/1_interrupt.jpg" class="img-fluid" alt="Interrupting code in RStudio"></p>
+</section><section id="save-code" class="level3"><h3 class="anchored" data-anchor-id="save-code">2.4 Save Code</h3>
+<p>One major advantage of R is that analyses are reproducible—<strong>as long as you save your code</strong>. When you reopen RStudio, you can simply run the script again to reproduce your results.</p>
 <p>To save your code:</p>
 <ul>
 <li><p>Select <em>File → Save As…</em> (scripts must use the file ending <code>.R</code>), or</p></li>
@@ -315,9 +328,8 @@ First, we create an <strong>object</strong> called <em>word</em> and assign the 
 </ul>
 <p><img src="files/images/1_save.jpg" class="img-fluid" alt="Saving code in RStudio"></p>
 </section></section><section id="console-print-results" class="level2"><h2 class="anchored" data-anchor-id="console-print-results">3. Console: Print results</h2>
-<p>The results of executed code appear in the <strong>Console</strong>, the second main window in RStudio. The Console shows both the commands you run and the output produced by R.</p>
-<p>In the previous example, we created an object called <em>word</em> that stores the value <code>"hello"</code>.<br>
-When we run code, R prints the executed command and—if requested—the content of the object in the Console.</p>
+<p>The results of executed code appear in the <strong>Console</strong>, another main window in RStudio. The Console shows both the commands you run and the output produced by R.</p>
+<p>In the previous example, we created an object called <em>word</em> that stores the value <code>"hello"</code>. When we run code, R prints the executed code and results (if requested).</p>
 <p>For example, typing the object name and running the line will display its content:</p>
 <div class="cell">
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">word</span> <span class="op">&lt;-</span> <span class="st">"hello"</span></span>
@@ -329,10 +341,10 @@ When we run code, R prints the executed command and—if requested—the content
 <p><em>Image: Window “Console”</em></p>
 <p><img src="files/images/1_console.jpg" class="img-fluid" alt="Console panel in RStudio"></p>
 </section><section id="environment-overview-of-objects" class="level2"><h2 class="anchored" data-anchor-id="environment-overview-of-objects">4. Environment: Overview of objects</h2>
-<p>The third window is the <strong>Environment</strong>. It shows all objects that currently exist in your R session—right now, that’s just the object <em>word</em>. As you create more objects (datasets, variables, results, etc.), this list will grow.</p>
+<p>Another important window is the <strong>Environment</strong>. It shows all objects that currently exist in your R session—right now, that’s just the object <em>word</em>. As you create more objects (datasets, variables, results, etc.), this list will grow.</p>
 <p>If you have worked with SPSS before, you can think of the Environment as a kind of <em>overview</em> of what is currently loaded. The key difference is that R can keep <strong>many different objects at the same time</strong>—for example, several datasets, models, or tables—so you can switch between them easily.</p>
 <p><em>Image: Window “Environment”</em></p>
-<p><img src="files/images/1_environment.jpg" class="img-fluid" alt="Environment panel in RStudio"></p>
+<p><img src="files/images/1_environment.jpg" class="img-fluid" alt="Environment panel in RStudio" width="600"></p>
 <p>It’s important to know that you can visually inspect many objects (especially datasets) with the function <code><a href="https://rdrr.io/r/utils/View.html">View()</a></code>. This opens the object in a new tab in the Source window. It may not feel very useful yet, but it becomes extremely helpful once you work with larger datasets that contain many observations (rows) and variables (columns).</p>
 <div class="cell">
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/View.html">View</a></span><span class="op">(</span><span class="va">word</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -340,7 +352,7 @@ When we run code, R prints the executed command and—if requested—the content
 <p><em>Image: Window “View”</em></p>
 <p><img src="files/images/1_view.jpg" class="img-fluid" alt="Viewing data in RStudio"></p>
 </section><section id="plotshelppackages-do-everything-else" class="level2"><h2 class="anchored" data-anchor-id="plotshelppackages-do-everything-else">5. Plots/Help/Packages: Do everything else</h2>
-<p>Lastly, the standard RStudio interface includes a fourth window (depending on your chosen layout). In many setups, this panel contains tabs such as Files, Plots, Packages, and Help. We’ll cover these in more detail later. For now, it’s enough to know that this window is used, for example, to view plots and other output, browse files, and manage packages (including checking which packages are currently loaded).</p>
+<p>Lastly, the standard RStudio interface includes a final important window. In many setups, this panel contains tabs such as “Files”, “Plots”, “Packages”, and “Help”. We’ll cover these in more detail later. For now, it’s enough to know that this window is used, for example, to view plots and other output, browse files, and manage additional functions in so-called packages (including checking which packages are currently loaded).</p>
 <p><em>Image: Window “Files/Plots/Packages”</em></p>
 <p><img src="files/images/1_files_plots_packages.jpg" class="img-fluid" alt="Files etc. panel in RStudio"></p>
 </section><section id="take-aways" class="level2 unnumbered"><h2 class="unnumbered anchored" data-anchor-id="take-aways">💡 Take-Aways</h2>

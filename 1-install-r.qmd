@@ -2,12 +2,14 @@
 title: "1 Install R/R Studio"
 ---
 
-## 🎯Learning goals
+::: callout-note
+## 🎯 Learning goals
 
 After working through Tutorial 1, you'll...
 
 -   know how to install R and R Studio
 -   understand the main set-up of R Studio
+:::
 
 ## 1. What are R and R Studio?
 
