@@ -60,8 +60,5 @@ format:
 #bibliography: 
 #  - files/digital-methods.bib
 #bibliographystyle: apa
-    
-execute:
-  freeze: auto 
 
 editor: visual

@@ -1,5 +1,111 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Programming with R for Social Scientists",
+    "section": "",
+    "text": "Welcome! 👋 What Is This Compendium For?\nAcross several tutorials, we will help you build practical computational skills:\nAll course materials (code, etc.) are available here",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#welcome-what-is-this-compendium-for",
+    "href": "index.html#welcome-what-is-this-compendium-for",
+    "title": "Programming with R for Social Scientists",
+    "section": "",
+    "text": "Workflow in R and RStudio\n→ setting up the infrastructure, getting help, addressing problems\nData management\n→ filtering, selecting, transforming data\nData collection & analysis\n→ visualization, data collection using web scraping, basic statistical analysis",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#what-can-you-expect",
+    "href": "index.html#what-can-you-expect",
+    "title": "Programming with R for Social Scientists",
+    "section": "What Can You Expect?",
+    "text": "What Can You Expect?\nEach tutorial in this compendium includes:\n\nExplanations of new R functions and analysis methods (with example code)\nA short summary of the key takeaways & additional learning resources\nPractice exercises/quizzes to help you apply your new skills\n\nThis tutorial is inspired by many people who talked to me about teaching R in times of generative AI. Thanks 🙌 to: Lara Kobilke, Michael Scharkow, Ben Fretwurst, Marko Bachl, Katharina Maubach, Jakob Jünger. In the spirit of open science, many even shared their materials with me - special shoutout to Michael Scharkow and Ben Fretwurst!",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#what-do-we-expect-from-you",
+    "href": "index.html#what-do-we-expect-from-you",
+    "title": "Programming with R for Social Scientists",
+    "section": "What Do We Expect from You?",
+    "text": "What Do We Expect from You?\nTo get the most out of our in-person sessions, you should complete the assigned tutorial before each class. Please check the syllabus to see which tutorial you should prepare for each week. That way, we can use our time together to clarify questions, go through examples, and apply what you have learned.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome</span>"
+    ]
+  },
+  {
+    "objectID": "1-install-r.html",
+    "href": "1-install-r.html",
+    "title": "1 Install R/R Studio",
+    "section": "",
+    "text": "1. What are R and R Studio?\nR is the programming language we’ll use to import, edit, and analyze data. R Studio is a desktop application with a graphical interface that facilitates programming with R. Basically, R Studio makes coding with R much easier!\nIn programming, R Studio is called an “integrated development environment (IDE). There are other interfaces or IDEs (e.g., Positron, Visual Studio Code), but we will stick with R Studio for now.",
+    "crumbs": [
+      "R Basics",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>1 Install R/R Studio</span>"
+    ]
+  },
+  {
+    "objectID": "1-install-r.html#how-do-i-install-r-and-r-studio",
+    "href": "1-install-r.html#how-do-i-install-r-and-r-studio",
+    "title": "1 Install R/R Studio",
+    "section": "2. How do I install R and R Studio?",
+    "text": "2. How do I install R and R Studio?\n\n2.1 Install/Update R\nI don’t have R on my computer yet!\nPlease use Cran to install the newest version of R (version 4.3.1, “Beagle Scouts”). You’ll have to specify your operation system to download the right version:\n\nR for Windows\nR for Mac, please read the documentation and installation information here\n\nI have R, but need to update it!\nIf you already have R installed, you just need to update it to the latest version.\n\nDownload and install the newest R version using the links above. (This won’t usually remove your old version—it installs alongside it.)\nOpen RStudio and go to Tools → Global Options → General.\nUnder R version, select the newest installed version of R.\nRestart RStudio (close and reopen it) so the change takes effect.\n\n\n\n2.2 Install/Update R Studio\nI don’t have R Studio on my computer yet!\nNext, install R Studio. The newest version of R Studio can be downloaded via this link.\nI have R Studio, but need to update it!\nIf you already have R Studio on your computer, simply make sure to update it to the newest version. The easiest way to do this is via: “Help/Check for Updates” in R Studio.",
+    "crumbs": [
+      "R Basics",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>1 Install R/R Studio</span>"
+    ]
+  },
+  {
+    "objectID": "1-install-r.html#why-should-i-learn-r",
+    "href": "1-install-r.html#why-should-i-learn-r",
+    "title": "1 Install R/R Studio",
+    "section": "3. Why should I learn R?",
+    "text": "3. Why should I learn R?\nThere are several reasons why I recommend learning R (and similar programming languages like Python) instead of menu-based programs such as SPSS.\n\nR is free. Unlike many other statistical programs, you don’t have to buy it or depend on a university license—which often expires once you leave.\nR is open source. That means the source code (the “blueprint” of the software) is publicly available. On top of that, R has thousands of add-on packages—extra tools that provide specialized functions for particular tasks. Most of these packages are available through CRAN (the Comprehensive R Archive Network), and you can install them whenever you need them.\nR is flexible. You can work with many different types of data and choose from a huge range of functions to import, clean, visualize, and analyze it. And if a function you need doesn’t exist yet, you can often write your own (or adapt code someone else has shared).\nProgramming is a valuable job skill. Knowing R (or Python) can strengthen your applications in areas like academia, market research, data science, and data journalism—because many employers expect applicants to be comfortable working with code.",
+    "crumbs": [
+      "R Basics",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>1 Install R/R Studio</span>"
+    ]
+  },
+  {
+    "objectID": "1-install-r.html#what-should-i-know-about-learning-r",
+    "href": "1-install-r.html#what-should-i-know-about-learning-r",
+    "title": "1 Install R/R Studio",
+    "section": "4. What should I know about learning R?",
+    "text": "4. What should I know about learning R?\n\nThe learning curve (aka: break your keyboard and scream)\nLearning R can feel hard—especially at the beginning. You might even think: Why the hell did I pick this course?\n\nThat’s normal. Once you understand the basics, things start to click. That’s when the fun begins and we can do the cool stuff: building visuals, scraping, and more.\n\nSource: Learning curve illustration originally published on Medium (Konstantin Borimechkov).\nMany students experience a similar learning curve:\n\nFrustration phase: Errors, syntax issues, and unfamiliar concepts make progress feel slow. This stage is normal—you may want to break your keyboard and scream.\nBreakthrough: Core ideas start to make sense. Some setbacks still happen, and you might forget things you thought you already knew.\nConfidence: Tasks get faster, and learning new tools becomes easier. Even if you hit a problem you can’t solve right away, you know you will—it may just take some time. You’ve got it now.\n\n\n\nMany ways to do the same thing in R\nR is a full programming language. Wo with it you can analyze data, create graphics, automate repetitive tasks, and use thousands of add-on packages for specialized methods. That flexibility is a big advantage, but it can feel confusing at first: There are many different ways to solve the same problem in R.\nYou might see two solutions in different tutorials that look completely different but produce the same result - and that’s normal. In this course, we have one goal: make the code work and understand what it’s doing, even if it isn’t the shortest or “prettiest” solution yet. It doesn’t matter which solution you choose - as long as it it correct.\nOnce that feels comfortable, we’ll improve our workflow step by step: cleaner code, fewer steps, and more reusable solutions.",
+    "crumbs": [
+      "R Basics",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>1 Install R/R Studio</span>"
+    ]
+  },
+  {
+    "objectID": "1-install-r.html#take-aways",
+    "href": "1-install-r.html#take-aways",
+    "title": "1 Install R/R Studio",
+    "section": "5.💡 Take-Aways",
+    "text": "5.💡 Take-Aways\nR is great! 🫶",
+    "crumbs": [
+      "R Basics",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>1 Install R/R Studio</span>"
+    ]
+  },
+  {
+    "objectID": "1-install-r.html#more-tutorials-on-this",
+    "href": "1-install-r.html#more-tutorials-on-this",
+    "title": "1 Install R/R Studio",
+    "section": "6.📚 More tutorials on this",
+    "text": "6.📚 More tutorials on this\nYou still have questions? The following tutorials & papers can help you with that:\n\nR for Data Science by Wickham et al.\n“wegweisR” by M. Haim, Video 1\n“R Cookbook” by Long et al., Tutorial 1\n“Tutorial 2 - Wissen macht R” by B. Fretwurst",
+    "crumbs": [
+      "R Basics",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>1 Install R/R Studio</span>"
+    ]
+  },
+  {
     "objectID": "2-overview.html",
     "href": "2-overview.html",
     "title": "2 What to do where in R",
@@ -107,6 +213,82 @@
     "crumbs": [
       "R Basics",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>2 What to do where in R</span>"
+    ]
+  },
+  {
+    "objectID": "81-materials.html",
+    "href": "81-materials.html",
+    "title": "🔷 Materials",
+    "section": "",
+    "text": "Data sets\nempty for now\n\n\nR Code\nempty for now",
+    "crumbs": [
+      "Appendix",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>🔷 Materials</span>"
+    ]
+  },
+  {
+    "objectID": "82-coding-style.html",
+    "href": "82-coding-style.html",
+    "title": "🔷 Coding style",
+    "section": "",
+    "text": "Recommendations for good coding style\ntbd",
+    "crumbs": [
+      "Appendix",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>🔷 Coding style</span>"
+    ]
+  },
+  {
+    "objectID": "83-glossary.html",
+    "href": "83-glossary.html",
+    "title": "🔷 Glossary",
+    "section": "",
+    "text": "R Function\nDefinition\n\n\nsetwd()\nSets your working directory - folder where R searches for/saves data",
+    "crumbs": [
+      "Appendix",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>🔷 Glossary</span>"
+    ]
+  },
+  {
+    "objectID": "84-forum.html",
+    "href": "84-forum.html",
+    "title": "🔷 Github Discussion forum",
+    "section": "",
+    "text": "GitHub Discussion Forum\nYou can ask questions, report issues, or participate in discussions on GitHub:\n👉 https://github.com/media-methods/programming-with-r/discussions\n\n\n\nGitHub Forum",
+    "crumbs": [
+      "Appendix",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>🔷 Github Discussion forum</span>"
+    ]
+  },
+  {
+    "objectID": "85-faq-r.html",
+    "href": "85-faq-r.html",
+    "title": "🔷 FAQ R",
+    "section": "",
+    "text": "How do I set my working directory?\n\nsetwd()\n\nI get this error…\nSolution:\nThis is it!\n\nsetwd(right)",
+    "crumbs": [
+      "Appendix",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>🔷 FAQ R</span>"
+    ]
+  },
+  {
+    "objectID": "86-faq-class.html",
+    "href": "86-faq-class.html",
+    "title": "🔷 FAQ Class/exam",
+    "section": "",
+    "text": "Do I need to bring my own laptop to class?\nYES\n\n\nHow will I be evaluated?\nXXX\n\n\nHow can I sign up for the exam?\nMit der Buchung des Moduls sind Sie gleichzeitig auch für den Leistungsnachweis angemeldet. Sie müssen die Prüfung nicht separat buchen.\n\n\nHow is the exam structured?\nIn der Prüfung kann prinzipiell alles drankommen, was in der Vorlesung gelehrt wurde, auf der Seite der Begleiterin steht (mit Ausnahme der gekennzeichneten IYI-Zusätze für Interessierte) und was auf den Folien steht (grosse Überschneidung mit der Begleiterin). Desweiteren sind die Antworten in unserem Forum zu berücksichtigen – wobei wir die wichtigsten Q&A auch immer nochmal auf die Seite der Begleiterin packen.\n\n\nI am a bit afraid of programming and statistics. What do I do?\nWenn Sie in die Vorlesung und die Übung gehen und sich mit den LEF, der Begleiterin und der Zusammenfassung vorbereiten, werden Sie sehr sicher bestehen. Es gibt immer eine gewisse Durchfallquote, aber das sind in der Regel Studierende, die es mit minimaler Vorbereitung einfach mal versuchen.\nWenn Sie grosse Probleme haben, suchen Sie sich bald eine Lerngruppe und fragen Sie in unserem Forum, ob Ihnen ein:e Tutor:in nochmal helfen kann.",
+    "crumbs": [
+      "Appendix",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>🔷 FAQ Class/exam</span>"
+    ]
+  },
+  {
+    "objectID": "80-appendix.html",
+    "href": "80-appendix.html",
+    "title": "Appendix",
+    "section": "",
+    "text": "This is an overview of additional material we provide:\n\nIn Materials, you can download all necessary data and code.\nIn Coding style, we provide best practice guidelines for coding.\nIn Glossary, you can get a useful overview of important functions.\nIn the GitHub forum, you can discuss questions with others.\nIn FAQ R, we provide an overview of common R question.\nIn FAQ Class/exam, we provide an overview of common questions about the class/exam.",
+    "crumbs": [
+      "Appendix"
     ]
   }
 ]

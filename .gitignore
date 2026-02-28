@@ -6,7 +6,7 @@
 
 #errors
 _freeze
-83-glossary_files
+*_cache/
 
 # Quarto
 .quarto

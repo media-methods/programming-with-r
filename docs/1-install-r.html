@@ -8,7 +8,7 @@
 
 <meta name="author" content="Valerie Hase">
 
-<title>Programming with R for Social Scientists</title>
+<title>1 Install R/R Studio – Programming with R for Social Scientists</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -31,7 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./1-install-r.html" rel="next">
+<link href="./2-overview.html" rel="next">
+<link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -73,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="files/www/custom.css">
 </head>
 
-<body class="nav-sidebar floating fullcontent">
+<body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -82,7 +83,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-title">Welcome</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./1-install-r.html">R Basics</a></li><li class="breadcrumb-item"><a href="./1-install-r.html"><span class="chapter-title">1 Install R/R Studio</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -112,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Welcome</span></a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Welcome</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -126,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./1-install-r.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1 Install R/R Studio</span></a>
+  <a href="./1-install-r.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">1 Install R/R Studio</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -182,13 +183,30 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Content</h2>
+   
+  <ul>
+  <li><a href="#what-are-r-and-r-studio" id="toc-what-are-r-and-r-studio" class="nav-link active" data-scroll-target="#what-are-r-and-r-studio">1. What are R and R Studio?</a></li>
+  <li><a href="#how-do-i-install-r-and-r-studio" id="toc-how-do-i-install-r-and-r-studio" class="nav-link" data-scroll-target="#how-do-i-install-r-and-r-studio">2. How do I install R and R Studio?</a>
+  <ul class="collapse">
+  <li><a href="#installupdate-r" id="toc-installupdate-r" class="nav-link" data-scroll-target="#installupdate-r">2.1 Install/Update R</a></li>
+  <li><a href="#installupdate-r-studio" id="toc-installupdate-r-studio" class="nav-link" data-scroll-target="#installupdate-r-studio">2.2 Install/Update R Studio</a></li>
+  </ul></li>
+  <li><a href="#why-should-i-learn-r" id="toc-why-should-i-learn-r" class="nav-link" data-scroll-target="#why-should-i-learn-r">3. Why should I learn R?</a></li>
+  <li><a href="#what-should-i-know-about-learning-r" id="toc-what-should-i-know-about-learning-r" class="nav-link" data-scroll-target="#what-should-i-know-about-learning-r">4. What should I know about learning R?</a></li>
+  <li><a href="#take-aways" id="toc-take-aways" class="nav-link" data-scroll-target="#take-aways">5.💡 Take-Aways</a></li>
+  <li><a href="#more-tutorials-on-this" id="toc-more-tutorials-on-this" class="nav-link" data-scroll-target="#more-tutorials-on-this">6.📚 More tutorials on this</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./1-install-r.html">R Basics</a></li><li class="breadcrumb-item"><a href="./1-install-r.html"><span class="chapter-title">1 Install R/R Studio</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Programming with R for Social Scientists</h1>
+<h1 class="title"><span class="chapter-title">1 Install R/R Studio</span></h1>
 </div>
 
 
@@ -205,32 +223,101 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="welcome-what-is-this-compendium-for" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="welcome-what-is-this-compendium-for">Welcome! 👋 What Is This Compendium For?</h2>
-<p>Across several tutorials, we will help you build practical computational skills:</p>
-<ol type="1">
-<li><p><strong>Workflow in R and RStudio</strong><br>
-→ setting up the infrastructure, getting help, addressing problems</p></li>
-<li><p><strong>Data management</strong><br>
-→ filtering, selecting, transforming data</p></li>
-<li><p><strong>Data collection &amp; analysis</strong><br>
-→ visualization, data collection using web scraping, basic statistical analysis</p></li>
-</ol>
-<p>All course materials (code, etc.) are available <a href="./81-materials.html"><strong>here</strong></a></p>
-</section>
-<section id="what-can-you-expect" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="what-can-you-expect">What Can You Expect?</h2>
-<p>Each tutorial in this compendium includes:</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+🎯 Learning goals
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>After working through Tutorial 1, you’ll…</p>
 <ul>
-<li><p>Explanations of new R functions and analysis methods (with example code)</p></li>
-<li><p>A short summary of the key takeaways &amp; additional learning resources</p></li>
-<li><p>Practice exercises/quizzes to help you apply your new skills</p></li>
+<li>know how to install R and R Studio</li>
+<li>understand the main set-up of R Studio</li>
 </ul>
-<p>This tutorial is inspired by many people who talked to me about teaching R in times of generative AI. Thanks 🙌 to: Lara Kobilke, Michael Scharkow, Ben Fretwurst, Marko Bachl, Katharina Maubach, Jakob Jünger. In the spirit of open science, many even shared their materials with me - special shoutout to <a href="https://stats.ifp.uni-mainz.de/">Michael Scharkow</a> and <a href="https://ikmz.pages.uzh.ch/Wissen-macht-R/">Ben Fretwurst</a>!</p>
+</div>
+</div>
+<section id="what-are-r-and-r-studio" class="level2">
+<h2 class="anchored" data-anchor-id="what-are-r-and-r-studio">1. What are R and R Studio?</h2>
+<p>R is the programming language we’ll use to import, edit, and analyze data. R Studio is a desktop application with a graphical interface that facilitates programming with R. Basically, R Studio makes coding with R much easier!</p>
+<p>In programming, R Studio is called an “integrated development environment (IDE). There are other interfaces or IDEs (e.g., Positron, Visual Studio Code), but we will stick with R Studio for now.</p>
 </section>
-<section id="what-do-we-expect-from-you" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="what-do-we-expect-from-you">What Do We Expect from You?</h2>
-<p>To get the most out of our in-person sessions, you should complete the assigned tutorial <em>before</em> each class. Please check the syllabus to see which tutorial you should prepare for each week. That way, we can use our time together to clarify questions, go through examples, and apply what you have learned.</p>
+<section id="how-do-i-install-r-and-r-studio" class="level2">
+<h2 class="anchored" data-anchor-id="how-do-i-install-r-and-r-studio">2. How do I install R and R Studio?</h2>
+<section id="installupdate-r" class="level3">
+<h3 class="anchored" data-anchor-id="installupdate-r">2.1 Install/Update R</h3>
+<p><em>I don’t have R on my computer yet!</em></p>
+<p>Please use <a href="https://cran.r-project.org/">Cran</a> to install the newest version of R (version 4.3.1, “Beagle Scouts”). You’ll have to specify your operation system to download the right version:</p>
+<ul>
+<li><a href="https://cran.r-project.org/bin/windows/base">R for Windows</a></li>
+<li><a href="https://cran.r-project.org/bin/macosx/big-sur-arm64/base/R-4.3.1-arm64.pkg">R for Mac</a>, please read the documentation and installation information <a href="https://cran.r-project.org/bin/macosx/">here</a></li>
+</ul>
+<p><em>I have R, but need to update it!</em></p>
+<p>If you already have R installed, you just need to update it to the latest version.</p>
+<ol type="1">
+<li><p>Download and install the newest R version using the links above. (This won’t usually remove your old version—it installs alongside it.)</p></li>
+<li><p>Open RStudio and go to Tools → Global Options → General.</p></li>
+<li><p>Under R version, select the newest installed version of R.</p></li>
+<li><p>Restart RStudio (close and reopen it) so the change takes effect.</p></li>
+</ol>
+</section>
+<section id="installupdate-r-studio" class="level3">
+<h3 class="anchored" data-anchor-id="installupdate-r-studio">2.2 Install/Update R Studio</h3>
+<p><em>I don’t have R Studio on my computer yet!</em></p>
+<p>Next, install R Studio. The newest version of R Studio can be downloaded via this <a href="https://www.rstudio.com/products/rstudio/download/#download">link</a>.</p>
+<p><em>I have R Studio, but need to update it!</em></p>
+<p>If you already have R Studio on your computer, simply make sure to update it to the newest version. The easiest way to do this is via: <em>“Help/Check for Updates”</em> in R Studio.</p>
+</section>
+</section>
+<section id="why-should-i-learn-r" class="level2">
+<h2 class="anchored" data-anchor-id="why-should-i-learn-r">3. Why should I learn R?</h2>
+<p>There are several reasons why I recommend learning R (and similar programming languages like Python) instead of menu-based programs such as SPSS.</p>
+<ol type="1">
+<li><p><strong>R is free.</strong> Unlike many other statistical programs, you don’t have to buy it or depend on a university license—which often expires once you leave.</p></li>
+<li><p><strong>R is open source.</strong> That means the source code (the “blueprint” of the software) is publicly available. On top of that, R has <strong>thousands of add-on packages</strong>—extra tools that provide specialized functions for particular tasks. Most of these packages are available through <strong>CRAN</strong> (the Comprehensive R Archive Network), and you can install them whenever you need them.</p></li>
+<li><p><strong>R is flexible.</strong> You can work with many different types of data and choose from a huge range of functions to import, clean, visualize, and analyze it. And if a function you need doesn’t exist yet, you can often <strong>write your own</strong> (or adapt code someone else has shared).</p></li>
+<li><p><strong>Programming is a valuable job skill.</strong> Knowing R (or Python) can strengthen your applications in areas like academia, market research, data science, and data journalism—because many employers expect applicants to be comfortable working with code.</p></li>
+</ol>
+</section>
+<section id="what-should-i-know-about-learning-r" class="level2">
+<h2 class="anchored" data-anchor-id="what-should-i-know-about-learning-r">4. What should I know about learning R?</h2>
+<section id="the-learning-curve-aka-break-your-keyboard-and-scream" class="level3 unlisted">
+<h3 class="unlisted anchored" data-anchor-id="the-learning-curve-aka-break-your-keyboard-and-scream">The learning curve (aka: break your keyboard and scream)</h3>
+<p>Learning R can feel hard—especially at the beginning. You might even think: <em>Why the hell did I pick this course?</em><br>
+</p>
+<p>That’s normal. Once you understand the basics, things start to click. That’s when the fun begins and we can do the cool stuff: building visuals, scraping, and more.</p>
+<p><img src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*hgad4Sefmbmvv6P3o9LUYA.jpeg" class="img-fluid"></p>
+<p><em>Source: Learning curve illustration originally published on <a href="https://konstantinmb.medium.com/the-learning-curve-we-all-experience-299643aaa27f">Medium</a> (Konstantin Borimechkov).</em></p>
+<p>Many students experience a similar learning curve:</p>
+<ul>
+<li><strong>Frustration phase:</strong> Errors, syntax issues, and unfamiliar concepts make progress feel slow. This stage is normal—you may want to break your keyboard and scream.</li>
+<li><strong>Breakthrough:</strong> Core ideas start to make sense. Some setbacks still happen, and you might forget things you thought you already knew.</li>
+<li><strong>Confidence:</strong> Tasks get faster, and learning new tools becomes easier. Even if you hit a problem you can’t solve right away, you know you will—it may just take some time. You’ve got it now.</li>
+</ul>
+</section>
+<section id="many-ways-to-do-the-same-thing-in-r" class="level3 unlisted">
+<h3 class="unlisted anchored" data-anchor-id="many-ways-to-do-the-same-thing-in-r">Many ways to do the same thing in R</h3>
+<p>R is a full programming language. Wo with it you can analyze data, create graphics, automate repetitive tasks, and use thousands of add-on packages for specialized methods. That flexibility is a big advantage, but it can feel confusing at first: There are many different ways to solve the same problem in R.</p>
+<p>You might see two solutions in different tutorials that look completely different but produce the same result - and that’s normal. In this course, we have one goal: make the code work and understand what it’s doing, even if it isn’t the shortest or “prettiest” solution yet. It doesn’t matter which solution you choose - as long as it it correct.</p>
+<p>Once that feels comfortable, we’ll improve our workflow step by step: cleaner code, fewer steps, and more reusable solutions.</p>
+</section>
+</section>
+<section id="take-aways" class="level2">
+<h2 class="anchored" data-anchor-id="take-aways">5.💡 Take-Aways</h2>
+<p>R is great! 🫶</p>
+</section>
+<section id="more-tutorials-on-this" class="level2">
+<h2 class="anchored" data-anchor-id="more-tutorials-on-this">6.📚 More tutorials on this</h2>
+<p>You still have questions? The following tutorials &amp; papers can help you with that:</p>
+<ul>
+<li><a href="https://r4ds.hadley.nz/">R for Data Science by Wickham et al.</a></li>
+<li><a href="https://youtu.be/p6f4oq08z48">“wegweisR” by M. Haim, Video 1</a></li>
+<li><a href="https://rc2e.com/">“R Cookbook” by Long et al., Tutorial 1</a></li>
+<li><a href="https://ikmz.pages.uzh.ch/Wissen-macht-R/01-Basics.html">“Tutorial 2 - Wissen macht R” by B. Fretwurst</a></li>
+</ul>
 
 
 </section>
@@ -658,10 +745,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link" aria-label="Welcome">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">Welcome</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./1-install-r.html" class="pagination-link" aria-label="1 Install R/R Studio">
-        <span class="nav-page-text"><span class="chapter-title">1 Install R/R Studio</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./2-overview.html" class="pagination-link" aria-label="2 What to do where in R">
+        <span class="nav-page-text"><span class="chapter-title">2 What to do where in R</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

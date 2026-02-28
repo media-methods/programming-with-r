@@ -18,4 +18,4 @@ This is an overview of additional material we provide:
 
 -   In [FAQ R](85-faq-r.qmd), we provide an overview of common R question.
 
--   In [FAQ Class/exam](86-fac-class.qmd), we provide an overview of common questions about the class/exam.
+-   In [FAQ Class/exam](86-faq-class.qmd), we provide an overview of common questions about the class/exam.
