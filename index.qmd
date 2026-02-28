@@ -30,7 +30,7 @@ Each tutorial in this compendium includes:
 
 -   Practice exercises/quizzes to help you apply your new skills
 
-This tutorial is inspired by many people who talked to me or, in the spirit of open science, even shared their materials with me. Thanks to all of them, especially [Michael Scharkow](https://stats.ifp.uni-mainz.de/) and [Ben Fretwurst](https://ikmz.pages.uzh.ch/Wissen-macht-R/) for sending their quarto files 🙌 !
+This tutorial is inspired by many people who talked to me about teaching R in times of generative AI. Thanks 🙌 to: Lara Kobilke, Michael Scharkow, Ben Fretwurst, Marko Bachl, Katharina Maubach, Jakob Jünger. In the spirit of open science, many even shared their materials with me - special shoutout to [Michael Scharkow](https://stats.ifp.uni-mainz.de/) and [Ben Fretwurst](https://ikmz.pages.uzh.ch/Wissen-macht-R/)!
 
 ## What Do We Expect from You? {.unnumbered}
 
