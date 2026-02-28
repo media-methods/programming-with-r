@@ -84,17 +84,6 @@
     ]
   },
   {
-    "objectID": "1-install-r.html#take-aways",
-    "href": "1-install-r.html#take-aways",
-    "title": "1 Install R/R Studio",
-    "section": "5.💡 Take-Aways",
-    "text": "5.💡 Take-Aways\nR is great! 🫶",
-    "crumbs": [
-      "R Basics",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>1 Install R/R Studio</span>"
-    ]
-  },
-  {
     "objectID": "1-install-r.html#more-tutorials-on-this",
     "href": "1-install-r.html#more-tutorials-on-this",
     "title": "1 Install R/R Studio",
@@ -216,82 +205,6 @@
     ]
   },
   {
-    "objectID": "81-materials.html",
-    "href": "81-materials.html",
-    "title": "🔷 Materials",
-    "section": "",
-    "text": "Data sets\nempty for now\n\n\nR Code\nempty for now",
-    "crumbs": [
-      "Appendix",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>🔷 Materials</span>"
-    ]
-  },
-  {
-    "objectID": "82-coding-style.html",
-    "href": "82-coding-style.html",
-    "title": "🔷 Coding style",
-    "section": "",
-    "text": "Recommendations for good coding style\ntbd",
-    "crumbs": [
-      "Appendix",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>🔷 Coding style</span>"
-    ]
-  },
-  {
-    "objectID": "83-glossary.html",
-    "href": "83-glossary.html",
-    "title": "🔷 Glossary",
-    "section": "",
-    "text": "R Function\nDefinition\n\n\n\n? and help()\nHelp you to get more info on a specific function\n\n\ninstall.packages()\nInstalls packages on your machine - only has to be run once\n\n\nlibrary()\nLoads existing packages - has to be run everytime you reopen R Studio\n\n\nsave.image\nSaves your working directory",
-    "crumbs": [
-      "Appendix",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>🔷 Glossary</span>"
-    ]
-  },
-  {
-    "objectID": "84-forum.html",
-    "href": "84-forum.html",
-    "title": "🔷 Github Discussion forum",
-    "section": "",
-    "text": "GitHub Discussion Forum\nYou can ask questions, report issues, or participate in discussions on GitHub:\n👉 https://github.com/media-methods/programming-with-r/discussions\n\n\n\nGitHub Forum",
-    "crumbs": [
-      "Appendix",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>🔷 Github Discussion forum</span>"
-    ]
-  },
-  {
-    "objectID": "85-faq-r.html",
-    "href": "85-faq-r.html",
-    "title": "🔷 FAQ R",
-    "section": "",
-    "text": "How do I set my working directory?\n\nsetwd()\n\nI get this error…\nSolution:\nThis is it!\n\nsetwd(right)",
-    "crumbs": [
-      "Appendix",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>🔷 FAQ R</span>"
-    ]
-  },
-  {
-    "objectID": "86-faq-class.html",
-    "href": "86-faq-class.html",
-    "title": "🔷 FAQ Class/exam",
-    "section": "",
-    "text": "Do I need to bring my own laptop to class?\nYES\n\n\nHow will I be evaluated?\nXXX\n\n\nHow can I sign up for the exam?\nMit der Buchung des Moduls sind Sie gleichzeitig auch für den Leistungsnachweis angemeldet. Sie müssen die Prüfung nicht separat buchen.\n\n\nHow is the exam structured?\nIn der Prüfung kann prinzipiell alles drankommen, was in der Vorlesung gelehrt wurde, auf der Seite der Begleiterin steht (mit Ausnahme der gekennzeichneten IYI-Zusätze für Interessierte) und was auf den Folien steht (grosse Überschneidung mit der Begleiterin). Desweiteren sind die Antworten in unserem Forum zu berücksichtigen – wobei wir die wichtigsten Q&A auch immer nochmal auf die Seite der Begleiterin packen.\n\n\nI am a bit afraid of programming and statistics. What do I do?\nWenn Sie in die Vorlesung und die Übung gehen und sich mit den LEF, der Begleiterin und der Zusammenfassung vorbereiten, werden Sie sehr sicher bestehen. Es gibt immer eine gewisse Durchfallquote, aber das sind in der Regel Studierende, die es mit minimaler Vorbereitung einfach mal versuchen.\nWenn Sie grosse Probleme haben, suchen Sie sich bald eine Lerngruppe und fragen Sie in unserem Forum, ob Ihnen ein:e Tutor:in nochmal helfen kann.",
-    "crumbs": [
-      "Appendix",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>🔷 FAQ Class/exam</span>"
-    ]
-  },
-  {
-    "objectID": "80-appendix.html",
-    "href": "80-appendix.html",
-    "title": "Appendix",
-    "section": "",
-    "text": "This is an overview of additional material we provide:\n\nIn Materials, you can download all necessary data and code.\nIn Coding style, we provide best practice guidelines for coding.\nIn Glossary, you can get a useful overview of important functions.\nIn the GitHub forum, you can discuss questions with others.\nIn FAQ R, we provide an overview of common R question.\nIn FAQ Class/exam, we provide an overview of common questions about the class/exam.",
-    "crumbs": [
-      "Appendix"
-    ]
-  },
-  {
     "objectID": "3-workflow.html",
     "href": "3-workflow.html",
     "title": "3 Workflow in R",
@@ -325,11 +238,11 @@
     ]
   },
   {
-    "objectID": "3-workflow.html#packages-1",
-    "href": "3-workflow.html#packages-1",
+    "objectID": "3-workflow.html#packages",
+    "href": "3-workflow.html#packages",
     "title": "3 Workflow in R",
     "section": "3. Packages",
-    "text": "3. Packages\nR already comes with many built-in functions (called Base R).\nHowever, for many tasks — such as data visualization, web scraping, or advanced data management — we need additional tools.\n👉 Packages are collections of functions, data, and documentation that extend the functionality of Base R.\nYou can think of packages as toolboxes: each package provides tools designed for a specific purpose.\nIn the spirit of open science, anyone can develop and publish R packages, and the source code is openly available. This allows researchers and developers worldwide to share methods and improve existing tools.\nA complete list of available R packages can be found on CRAN (the Comprehensive R Archive Network).\nIn this seminar, we’ll for instance use packages like tidyverse, which provides tools for data import, cleaning, transformation, and visualization.\n3.1 Install packages\nBefore you can use a package, you must install it on your computer. Installation downloads the package from CRAN and saves it locally.\nFor example, to install the tidyverse package, run:\n\ninstall.packages(\"tidyverse\")\n\nYou only need to install a package once per computer (unless you reinstall R or update packages).\n3.2 Load packages\nAfter installation, you must load the package in every new R session before using its functions. This is done with the library() function:\n\nlibrary(\"tidyverse\")\n\n👉 Important distinction\n\n\ninstall.packages() → done once\n\nlibrary() → done every time you start R\n\n\n\n\n\n\n\nSmart Hack: Using :: to call functions\n\n\n\n\n\nOnce a package is loaded, its functions can be used directly. Alternatively, you can call a specific function without loading the entire package using the :: operator. For example, you may want to use a single function from a package without loading the whole package with library().\nHere, we use the select() function from the dplyr() package even without loading the package first.\n\n`dplyr::select()`\n\nThis approach is useful when you only need one function or multiple packages contain functions with the same name.\n\n\n\n3.3 Getting help and information about packages\nAfter installing and loading a package, you may want to learn what it can do.\nPackages usually include:\n\nHelp files for individual functions\na reference manual (list of all functions)\nvignettes (long-form tutorials written by the package authors)\n\nHelpful commands in R:\n\n\nhelp(package = \"tidyverse\") — overview of a package\n\n\n?select — help page for a function\n\nYou can also visit the package’s CRAN page (e.g., search CRAN tidyverse in Google). There you will find descriptions, documentation, and tutorials explaining how the package is used.",
+    "text": "3. Packages\nR already comes with many built-in functions (called Base R).\nHowever, for many tasks — such as data visualization, web scraping, or advanced data management — we need additional tools.\n👉 Packages are collections of functions, data, and documentation that extend the functionality of Base R.\nYou can think of packages as toolboxes: each package provides tools designed for a specific purpose.\nIn the spirit of open science, anyone can develop and publish R packages, and the source code is openly available. This allows researchers and developers worldwide to share methods and improve existing tools.\nA complete list of available R packages can be found on CRAN (the Comprehensive R Archive Network).\nIn this seminar, we’ll for instance use packages like tidyverse, which provides tools for data import, cleaning, transformation, and visualization.\n3.1 Install packages\nBefore you can use a package, you must install it on your computer. Installation downloads the package from CRAN and saves it locally.\nFor example, to install the tidyverse package, run:\n\ninstall.packages(\"tidyverse\")\n\nYou only need to install a package once per computer (unless you reinstall R or update packages).\n3.2 Load packages\nAfter installation, you must load the package in every new R session before using its functions. This is done with the library() function:\n\nlibrary(\"tidyverse\")\n\n👉 Important distinction\n\n\ninstall.packages() → done once\n\nlibrary() → done every time you start R\n\n\n\n\n\n\n\nSmart Hack: Using :: to call functions\n\n\n\n\n\nOnce a package is loaded, its functions can be used directly. Alternatively, you can call a specific function without loading the entire package using the :: operator. For example, you may want to use a single function from a package without loading the whole package with library().\nHere, we use the select() function from the dplyr() package even without loading the package first.\n\ndplyr::select()\n\nThis approach is useful when you only need one function or multiple packages contain functions with the same name.\n\n\n\n3.3 Getting help and information about packages\nAfter installing and loading a package, you may want to learn what it can do.\nPackages usually include:\n\nHelp files for individual functions\na reference manual (list of all functions)\nvignettes (long-form tutorials written by the package authors)\n\nHelpful commands in R:\n\n\nhelp(package = \"tidyverse\") — overview of a package\n\n\n?select — help page for a function\n\nYou can also visit the package’s CRAN page (e.g., search CRAN tidyverse in Google). There you will find descriptions, documentation, and tutorials explaining how the package is used.",
     "crumbs": [
       "R Basics",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>3 Workflow in R</span>"
@@ -358,6 +271,17 @@
     ]
   },
   {
+    "objectID": "3-workflow.html#take-aways",
+    "href": "3-workflow.html#take-aways",
+    "title": "3 Workflow in R",
+    "section": "💡 Take-Aways",
+    "text": "💡 Take-Aways\n\n\nPackages: Collections of topic-specific functions that extend the functions implemented in base R. You only need to install them once on your computer - but you have to load packages at the beginning of each session. Otherwise, R will not be able to find related functions. Commands: install.packages(), library()\n\n\nHelp: The thing everyone working with R needs. It’s normal to run into errors when working with R - don’t get frustrated too easily. Commands: ?, help()\n\n\nSave code & results: You should save your code/results from time to time to be able to replicate analyses. Commands: save.image",
+    "crumbs": [
+      "R Basics",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>3 Workflow in R</span>"
+    ]
+  },
+  {
     "objectID": "3-workflow.html#quiz",
     "href": "3-workflow.html#quiz",
     "title": "3 Workflow in R",
@@ -380,25 +304,79 @@
     ]
   },
   {
-    "objectID": "3-workflow.html#take-aways",
-    "href": "3-workflow.html#take-aways",
-    "title": "3 Workflow in R",
-    "section": "💡 Take-Aways",
-    "text": "💡 Take-Aways\n\n\nPackages: Collections of topic-specific functions that extend the functions implemented in base R. You only need to install them once on your computer - but you have to load packages at the beginning of each session. Otherwise, R will not be able to find related functions. Commands: install.packages(), library()\n\n\nHelp: The thing everyone working with R needs. It’s normal to run into errors when working with R - don’t get frustrated too easily. Commands: ?, help()\n\n\nSave code & results: You should save your code/results from time to time to be able to replicate analyses. Commands: save.image",
+    "objectID": "81-materials.html",
+    "href": "81-materials.html",
+    "title": "🔷 Materials",
+    "section": "",
+    "text": "Data sets\nempty for now\n\n\nR Code\nempty for now",
     "crumbs": [
-      "R Basics",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>3 Workflow in R</span>"
+      "Appendix",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>🔷 Materials</span>"
     ]
   },
   {
-    "objectID": "3-workflow.html#packages",
-    "href": "3-workflow.html#packages",
-    "title": "3 Workflow in R",
-    "section": "3. Packages",
-    "text": "3. Packages\nR already comes with many built-in functions (called Base R).\nHowever, for many tasks — such as data visualization, web scraping, or advanced data management — we need additional tools.\n👉 Packages are collections of functions, data, and documentation that extend the functionality of Base R.\nYou can think of packages as toolboxes: each package provides tools designed for a specific purpose.\nIn the spirit of open science, anyone can develop and publish R packages, and the source code is openly available. This allows researchers and developers worldwide to share methods and improve existing tools.\nA complete list of available R packages can be found on CRAN (the Comprehensive R Archive Network).\nIn this seminar, we’ll for instance use packages like tidyverse, which provides tools for data import, cleaning, transformation, and visualization.\n3.1 Install packages\nBefore you can use a package, you must install it on your computer. Installation downloads the package from CRAN and saves it locally.\nFor example, to install the tidyverse package, run:\n\ninstall.packages(\"tidyverse\")\n\nYou only need to install a package once per computer (unless you reinstall R or update packages).\n3.2 Load packages\nAfter installation, you must load the package in every new R session before using its functions. This is done with the library() function:\n\nlibrary(\"tidyverse\")\n\n👉 Important distinction\n\n\ninstall.packages() → done once\n\nlibrary() → done every time you start R\n\n\n\n\n\n\n\nSmart Hack: Using :: to call functions\n\n\n\n\n\nOnce a package is loaded, its functions can be used directly. Alternatively, you can call a specific function without loading the entire package using the :: operator. For example, you may want to use a single function from a package without loading the whole package with library().\nHere, we use the select() function from the dplyr() package even without loading the package first.\n\ndplyr::select()\n\nThis approach is useful when you only need one function or multiple packages contain functions with the same name.\n\n\n\n3.3 Getting help and information about packages\nAfter installing and loading a package, you may want to learn what it can do.\nPackages usually include:\n\nHelp files for individual functions\na reference manual (list of all functions)\nvignettes (long-form tutorials written by the package authors)\n\nHelpful commands in R:\n\n\nhelp(package = \"tidyverse\") — overview of a package\n\n\n?select — help page for a function\n\nYou can also visit the package’s CRAN page (e.g., search CRAN tidyverse in Google). There you will find descriptions, documentation, and tutorials explaining how the package is used.",
+    "objectID": "82-coding-style.html",
+    "href": "82-coding-style.html",
+    "title": "🔷 Coding style",
+    "section": "",
+    "text": "Recommendations for good coding style\ntbd",
     "crumbs": [
-      "R Basics",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>3 Workflow in R</span>"
+      "Appendix",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>🔷 Coding style</span>"
+    ]
+  },
+  {
+    "objectID": "83-glossary.html",
+    "href": "83-glossary.html",
+    "title": "🔷 Glossary",
+    "section": "",
+    "text": "R Function\nDefinition\n\n\n\n? and help()\nHelp you to get more info on a specific function\n\n\ninstall.packages()\nInstalls packages on your machine - only has to be run once\n\n\nlibrary()\nLoads existing packages - has to be run everytime you reopen R Studio\n\n\nsave.image\nSaves your working directory",
+    "crumbs": [
+      "Appendix",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>🔷 Glossary</span>"
+    ]
+  },
+  {
+    "objectID": "84-forum.html",
+    "href": "84-forum.html",
+    "title": "🔷 Github Discussion forum",
+    "section": "",
+    "text": "GitHub Discussion Forum\nYou can ask questions, report issues, or participate in discussions on GitHub:\n👉 https://github.com/media-methods/programming-with-r/discussions\n\n\n\nGitHub Forum",
+    "crumbs": [
+      "Appendix",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>🔷 Github Discussion forum</span>"
+    ]
+  },
+  {
+    "objectID": "85-faq-r.html",
+    "href": "85-faq-r.html",
+    "title": "🔷 FAQ R",
+    "section": "",
+    "text": "How do I set my working directory?\n\nsetwd()\n\nI get this error…\nSolution:\nThis is it!\n\nsetwd(right)",
+    "crumbs": [
+      "Appendix",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>🔷 FAQ R</span>"
+    ]
+  },
+  {
+    "objectID": "86-faq-class.html",
+    "href": "86-faq-class.html",
+    "title": "🔷 FAQ Class/exam",
+    "section": "",
+    "text": "Do I need to bring my own laptop to class?\nYES\n\n\nHow will I be evaluated?\nXXX\n\n\nHow can I sign up for the exam?\nMit der Buchung des Moduls sind Sie gleichzeitig auch für den Leistungsnachweis angemeldet. Sie müssen die Prüfung nicht separat buchen.\n\n\nHow is the exam structured?\nIn der Prüfung kann prinzipiell alles drankommen, was in der Vorlesung gelehrt wurde, auf der Seite der Begleiterin steht (mit Ausnahme der gekennzeichneten IYI-Zusätze für Interessierte) und was auf den Folien steht (grosse Überschneidung mit der Begleiterin). Desweiteren sind die Antworten in unserem Forum zu berücksichtigen – wobei wir die wichtigsten Q&A auch immer nochmal auf die Seite der Begleiterin packen.\n\n\nI am a bit afraid of programming and statistics. What do I do?\nWenn Sie in die Vorlesung und die Übung gehen und sich mit den LEF, der Begleiterin und der Zusammenfassung vorbereiten, werden Sie sehr sicher bestehen. Es gibt immer eine gewisse Durchfallquote, aber das sind in der Regel Studierende, die es mit minimaler Vorbereitung einfach mal versuchen.\nWenn Sie grosse Probleme haben, suchen Sie sich bald eine Lerngruppe und fragen Sie in unserem Forum, ob Ihnen ein:e Tutor:in nochmal helfen kann.",
+    "crumbs": [
+      "Appendix",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>🔷 FAQ Class/exam</span>"
+    ]
+  },
+  {
+    "objectID": "80-appendix.html",
+    "href": "80-appendix.html",
+    "title": "Appendix",
+    "section": "",
+    "text": "This is an overview of additional material we provide:\n\nIn Materials, you can download all necessary data and code.\nIn Coding style, we provide best practice guidelines for coding.\nIn Glossary, you can get a useful overview of important functions.\nIn the GitHub forum, you can discuss questions with others.\nIn FAQ R, we provide an overview of common R question.\nIn FAQ Class/exam, we provide an overview of common questions about the class/exam.",
+    "crumbs": [
+      "Appendix"
     ]
   }
 ]
