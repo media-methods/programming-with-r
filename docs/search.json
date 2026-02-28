@@ -304,6 +304,50 @@
     ]
   },
   {
+    "objectID": "4-coding-style.html",
+    "href": "4-coding-style.html",
+    "title": "4 Good coding practice",
+    "section": "",
+    "text": "1. Base-R vs. tidyverse\nWhen working with R, you will often encounter two main approaches to writing code:\nBoth approaches are valid and widely used (see this overview for a comparison). Understanding the difference helps you read other people’s code and develop a consistent coding style yourself.",
+    "crumbs": [
+      "R Basics",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>4 Good coding practice</span>"
+    ]
+  },
+  {
+    "objectID": "4-coding-style.html#base-r-vs.-tidyverse",
+    "href": "4-coding-style.html#base-r-vs.-tidyverse",
+    "title": "4 Good coding practice",
+    "section": "",
+    "text": "Base R\nthe tidyverse\n\n\n1.1 Base R\nBase R includes all functions that are available immediately after installing R.\nYou do not need to install additional packages to use Base R functionality.\nMany online examples, older tutorials, and forum discussions use Base R.\nFor this reason, it is useful to recognize Base R syntax even if you do not primarily use it yourself.\n1.2 The tidyverse**\nThe tidyverse is a collection of additional packages designed for data science workflows. It was developed by Hadley Wickham and collaborators at Posit (formerly RStudio).\nThe tidyverse provides:\n\nconsistent function naming\nreadable and structured workflows\ntools for data import, transformation, visualization, and analysis\na shared philosophy for organizing data and code\n\nMany beginners find tidyverse code easier to read because commands follow a consistent grammar and style.\nIn this course, we will primarily work with the tidyverse. In practice, most R users learn to read both styles but typically choose one main style within a project to keep code consistent.",
+    "crumbs": [
+      "R Basics",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>4 Good coding practice</span>"
+    ]
+  },
+  {
+    "objectID": "4-coding-style.html#coding-style",
+    "href": "4-coding-style.html#coding-style",
+    "title": "4 Good coding practice",
+    "section": "2. Coding style",
+    "text": "2. Coding style\nWriting code that works is important — but writing code that is readable and understandable is just as important. This is called good coding style.\nOr, as Wickham et al. (2025) put it “Good coding style is like correct punctuation: you can manage without it, butitsuremakesthingseasiertoread.”\nGood coding style helps you:\n\nunderstand your own code later,\nfind and fix errors more easily,\ncollaborate with others,\nmake your analyses reproducible.\n\nIn this course, we follow the tidyverse style guide.\n2.1 Use clear object names\nChoose names that describe what the object contains.\nGood examples:\n\nstudent_age\nsurvey_data\nmean_income\n\nAvoid unclear names like:\n\nx\ndata1\ntemp\n2.2 Use a consistent naming convention style\nNames for objects or functions cannot contain blank spaces. Please also avoid special signs (e.g., ! or ?). Apart from these, a few naming convention styles exist:\n\nsnake_case 🐍: words are separated using an underscore _. This is the preferred naming style in the tidyverse and the main style used in this course. Example: data_survey.\nant.case: words are separated using a dot .. This style appears frequently in Base R scripts. Example: data.survey.\ncamelCase: each new word starts with a capital letter (except the first word). This style appears frequently in Base R scripts. Example: dataSurvey.\nlowercase: all letters are written continuously without separators. Especially for long names, this makes reading names quite hard. Example: datasurvey.\n\nDifferent styles exist because R developed over many years with contributions from many programmers.\nIn this course:\n\n✅ Use snake_case for your own objects and variables.\n👀 Learn to recognize other styles when reading existing R code.\n\n\n\n\n\n\n\nSmart Hack: Using the styler package\n\n\n\n\n\nInstall the styler package by Kirill Müller and colleagues. If you then click on Addins at the top of your R Studio and select, for example, “Style active file”. The package automatically formats spacing, indentation, and layout according to tidyverse style conventions.\n\n\n\n\n2.3 Add spaces around operators\nSpaces make code easier to scan visually. Compare the following codes:\nBad example:\n\nnumber&lt;-5+3\n\nGood example:\n\nnumber &lt;- 5 + 3\n\n2.4 Comment your code\nComments explain why you are doing something. Good comments help future-you understand past-you. Comments start with #:\n\n# calculate mean age while excluding missing values\nmean(age, na.rm = TRUE)",
+    "crumbs": [
+      "R Basics",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>4 Good coding practice</span>"
+    ]
+  },
+  {
+    "objectID": "4-coding-style.html#quiz",
+    "href": "4-coding-style.html#quiz",
+    "title": "4 Good coding practice",
+    "section": "🎲 Quiz",
+    "text": "🎲 Quiz\n\nround = (n, places) =&gt; {\n  if (!places) return Math.round(n);\n  const d = 10 ** places;\n  return Math.round(n * d) / d;\n}\n\nfunction textReplacementWithText({ text, placeholder, correctText, fontFamily = \"monospace\", color = \"#000000\" }) {\n  const parts = text.split(/\\{\\{input\\}\\}/); // Teilt den Text an den Eingabestellen\n\n  const root = htl.html`&lt;div style=\"font-size: HUGE; margin-top: -40; margin-bottom: -40; margin-left: -50px; line-height: 1.8; font-family: ${fontFamily}; color: ${color}; white-space: pre-wrap; text-indent: 0; display: flex; align-items: baseline;\"&gt;\n    &lt;div style=\"flex: 1;\"&gt;\n      ${parts.map((part, index) =&gt;\n        htl.html`${part}${index &lt; parts.length - 1 ? htl.html`&lt;span style=\"display: inline-flex; align-items: baseline;\"&gt;\n          &lt;input \n            type=\"text\"\n            placeholder=\"${placeholder}\"\n            style=\"padding: 3px; font-size: HUGE; border: 1px solid #ccc; margin-left: 0px; border-radius: 4px; width: calc(${correctText.length}ch + 1em); font-family: ${fontFamily}; color: ${color}; text-align: right; box-sizing: border-box; margin-right: 0.2em;\"\n            oninput=${(e) =&gt; {\n              const feedbackElement = root.querySelector(`#feedback-final`);\n              const allInputsCorrect = Array.from(root.querySelectorAll(\"input\")).every((input) =&gt; input.value.trim() === correctText.trim());\n              if (allInputsCorrect) {\n                feedbackElement.textContent = \"✅\";\n                feedbackElement.style.color = \"green\";\n              } else {\n                feedbackElement.textContent = \"🔴\";\n                feedbackElement.style.color = \"red\";\n              }\n            }}\n          /&gt;&lt;/span&gt;` : \"\"}`\n      )}\n    &lt;/div&gt;\n    &lt;span id=\"feedback-final\" style=\"font-weight: bold; font-size: HUGE; margin-left: 0.5em; color: inherit;\"&gt;&lt;/span&gt;\n  &lt;/div&gt;`;\n\n  return root;\n}\n\n\n\nfunction textReplacementTask({ placeholder, correctText, width = \"300px\", fontFamily = \"monospace\", color = \"black\" }) {\n  let enteredText = \"\"; \n\n  const root = htl.html`&lt;div style=\"font-size: 14px; line-height: 1.5; margin-bottom: 20px;\"&gt;\n    &lt;h4&gt;Bitte ersetzen Sie den Text:&lt;/h4&gt;\n    &lt;!-- Eingabefeld --&gt;\n    &lt;div style=\"display: flex; align-items: center;\"&gt;\n      &lt;input\n        type=\"text\"\n        placeholder=\"${placeholder}\"\n        style=\"padding: 5px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px; width: ${width}; font-family: ${fontFamily}; color: ${color};\"\n        onInput=${(e) =&gt; {\n          enteredText = e.target.value;\n          root.value = enteredText;\n          root.dispatchEvent(new CustomEvent(\"input\"));\n          updateFeedback();\n        }}\n      /&gt;\n      &lt;!-- Feedback --&gt;\n      &lt;div id=\"feedback\" style=\"font-weight: bold; font-size: 14px; margin-left: 10px; text-align: left; white-space: nowrap; color: inherit;\"&gt;&lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;`;\n\n// Funktion zur Aktualisierung des Feedbacks\n  function updateFeedback() {\n    const feedbackElement = root.querySelector(\"#feedback\");\n    if (enteredText.trim() === correctText.trim()) {\n      feedbackElement.textContent = \"✅\";\n      feedbackElement.style.color = \"green\";\n    } else if (enteredText.trim() === \"\") {\n      feedbackElement.textContent = \"\"; \n    } else {\n      feedbackElement.textContent = \"🔴\";\n      feedbackElement.style.color = \"red\";\n    }\n  }\n\n  root.value = null; \n  return root;\n}\n\n\nfunction singleChoiceInput({ options, correctIndex }) {\n  let selectedAnswer = null;\n\n  const root = htl.html`&lt;div style=\"font-size: HUGE; line-height: 1.5; margin-bottom: 0px;\"&gt;\n    &lt;!-- Antworten --&gt;\n    &lt;div style=\"display: grid; row-gap: 12px;\"&gt;\n      ${options.map(\n        (option, index) =&gt;\n          htl.html`&lt;div style=\"display: flex; align-items: center;\"&gt;\n            &lt;!-- Radiobutton und Option --&gt;\n            &lt;label style=\"display: flex; align-items: center; padding-left: 4pt; font-weight: normal;\"&gt;\n              &lt;input\n                type=\"radio\"\n                name=\"singleChoice\"\n                value=${index}\n                style=\"margin-right: 10px;\"\n                onChange=${() =&gt; {\n                  selectedAnswer = index;\n                  root.value = selectedAnswer;\n                  root.dispatchEvent(new CustomEvent(\"input\"));\n                  updateFeedback();\n                }}\n              /&gt;\n              &lt;span&gt;${option}&lt;/span&gt;\n            &lt;/label&gt;\n            &lt;!-- Feedback --&gt;\n            &lt;div id=\"feedback-${index}\" style=\"font-weight: bold; font-size: 14px; margin-left: 10px; text-align: left; white-space: nowrap; color: inherit;\"&gt;&lt;/div&gt;\n          &lt;/div&gt;`\n      )}\n    &lt;/div&gt;\n  &lt;/div&gt;`;\n\n// Funktion zur Aktualisierung des Feedbacks\n  function updateFeedback() {\n    options.forEach((_, index) =&gt; {\n      const feedbackElement = root.querySelector(`#feedback-${index}`);\n      if (selectedAnswer === index) {\n        feedbackElement.textContent =\n          index === correctIndex ? \"✅\" : \"🔴\";\n        feedbackElement.style.color = index === correctIndex ? \"green\" : \"red\";\n      } else {\n        feedbackElement.textContent = \"\"; // Löscht Feedback für nicht ausgewählte Optionen\n      }\n    });\n  }\n\n  root.value = null;\n  return root;\n}\n\n\nfunction quizInput({ questions, options}) {\n  let answers = questions.map(() =&gt; null);\n  let root = htl.html`&lt;div\n      style=\"\n        display: grid;\n        grid-template-columns: 10% 10% 70% 10%;\"\n    &gt;\n      ${options.map(\n        (opt) =&gt; htl.html`&lt;div style=\"font-weight: bold; font-size: HUGE\"&gt;${opt}&lt;/div&gt;`\n      )}\n      &lt;div style=\"font-weight: bold\"&gt;Statement&lt;/div&gt;\n      &lt;div style=\"font-weight: bold\"&gt;&lt;/div&gt;\n      ${Array.from(questions.entries(), ([i, [question, correct]]) =&gt;\n        quizInputRow({\n          question,\n          options,\n          correct,\n          onChange: (newAnswer) =&gt; {\n            answers[i] = newAnswer;\n            root.value = answers;\n            root.dispatchEvent(new CustomEvent(\"input\"));\n          }\n        })\n      )}\n    &lt;/div&gt;`;\n  root.value = answers;\n  return root;\n}\n\nfunction quizInputRow({\n  question,\n  options,\n  correct,\n  onChange = () =&gt; {}\n}) {\n  let root = htl.html`&lt;div&gt;`;\n\n  function setAnswer(answer, initial = false) {\n    morph(\n      root,\n      htl.html`&lt;div style=\"display: contents\"&gt; \n      &lt;form style=\"display: contents\"&gt;\n        ${options.map(\n          (opt) =&gt;\n            htl.html`&lt;label&gt;&emsp;&lt;/label&gt; \n            &lt;input  \n              name=${question} &emsp;\n              type=\"radio\"\n              value=\"${opt}\"\n              checked=${opt === answer}\n              onChange=${() =&gt; setAnswer(opt)}\n            &gt;\n            &lt;/input&gt;`\n        )}\n      &lt;/form&gt;\n      &lt;div&gt;${question}&lt;/div&gt;\n      &lt;div&gt; &emsp; ${\n       answer === null ? \"\" : answer === correct ? \"✅\" : \"🔴\"\n      }&lt;/div&gt;\n    &lt;/div&gt;`\n    );\n\n    root.value = answer;\n    if (!initial) {\n      root.dispatchEvent(new CustomEvent(\"input\"));\n      onChange(answer);\n    }\n  }\n\n  setAnswer(null, true);\n  return root;\n}\n\nmorph = require(\"https://bundle.run/nanomorph@5.4.2\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n🎲 Question 1\n\n\n\nWhy does the following code produce an error? (Try running it)\n\ndays_week &lt;- c(\"Monday\", \"Tuesday\", \"Wednesday\", \"Thursday\", \"Friday\")\ndays_Week\n\n\n\n\n\n\n\n\n\n🎲 Question 2\n\n\n\nWhich of the following lines of code follow any of the coding style mentioned before consistently?\n\n//| echo: false\n\nMC_coding_styles_2 = [\n    [\"survey_data &lt;- read.csv(\\\"data.csv\\\")\", \"True\"],\n    [\"surveyData &lt;- clean_data(survey_data)\", \"False\"],\n    [\"survey.data &lt;- analyze_data(survey.data)\", \"True\"],\n    [\"survey_data &lt;- transformData(survey_data)\", \"False\"],\n    [\"surveydata &lt;- summarize_results(surveydata)\", \"True\"]\n]\n\nviewof answers_coding_styles_2 = quizInput({\n  questions: MC_coding_styles_2,\n  options: [\"Consistent style\", \"Not consistent style\"]\n})",
+    "crumbs": [
+      "R Basics",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>4 Good coding practice</span>"
+    ]
+  },
+  {
     "objectID": "81-materials.html",
     "href": "81-materials.html",
     "title": "🔷 Materials",
@@ -311,7 +355,7 @@
     "text": "Data sets\nempty for now\n\n\nR Code\nempty for now",
     "crumbs": [
       "Appendix",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>🔷 Materials</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>🔷 Materials</span>"
     ]
   },
   {
@@ -322,7 +366,7 @@
     "text": "Recommendations for good coding style\ntbd",
     "crumbs": [
       "Appendix",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>🔷 Coding style</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>🔷 Coding style</span>"
     ]
   },
   {
@@ -333,7 +377,7 @@
     "text": "R Function\nDefinition\n\n\n\n? and help()\nHelp you to get more info on a specific function\n\n\ninstall.packages()\nInstalls packages on your machine - only has to be run once\n\n\nlibrary()\nLoads existing packages - has to be run everytime you reopen R Studio\n\n\nsave.image\nSaves your working directory",
     "crumbs": [
       "Appendix",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>🔷 Glossary</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>🔷 Glossary</span>"
     ]
   },
   {
@@ -344,7 +388,7 @@
     "text": "GitHub Discussion Forum\nYou can ask questions, report issues, or participate in discussions on GitHub:\n👉 https://github.com/media-methods/programming-with-r/discussions\n\n\n\nGitHub Forum",
     "crumbs": [
       "Appendix",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>🔷 Github Discussion forum</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>🔷 Github Discussion forum</span>"
     ]
   },
   {
@@ -355,7 +399,7 @@
     "text": "How do I set my working directory?\n\nsetwd()\n\nI get this error…\nSolution:\nThis is it!\n\nsetwd(right)",
     "crumbs": [
       "Appendix",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>🔷 FAQ R</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>🔷 FAQ R</span>"
     ]
   },
   {
@@ -366,7 +410,7 @@
     "text": "Do I need to bring my own laptop to class?\nYES\n\n\nHow will I be evaluated?\nXXX\n\n\nHow can I sign up for the exam?\nMit der Buchung des Moduls sind Sie gleichzeitig auch für den Leistungsnachweis angemeldet. Sie müssen die Prüfung nicht separat buchen.\n\n\nHow is the exam structured?\nIn der Prüfung kann prinzipiell alles drankommen, was in der Vorlesung gelehrt wurde, auf der Seite der Begleiterin steht (mit Ausnahme der gekennzeichneten IYI-Zusätze für Interessierte) und was auf den Folien steht (grosse Überschneidung mit der Begleiterin). Desweiteren sind die Antworten in unserem Forum zu berücksichtigen – wobei wir die wichtigsten Q&A auch immer nochmal auf die Seite der Begleiterin packen.\n\n\nI am a bit afraid of programming and statistics. What do I do?\nWenn Sie in die Vorlesung und die Übung gehen und sich mit den LEF, der Begleiterin und der Zusammenfassung vorbereiten, werden Sie sehr sicher bestehen. Es gibt immer eine gewisse Durchfallquote, aber das sind in der Regel Studierende, die es mit minimaler Vorbereitung einfach mal versuchen.\nWenn Sie grosse Probleme haben, suchen Sie sich bald eine Lerngruppe und fragen Sie in unserem Forum, ob Ihnen ein:e Tutor:in nochmal helfen kann.",
     "crumbs": [
       "Appendix",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>🔷 FAQ Class/exam</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>🔷 FAQ Class/exam</span>"
     ]
   },
   {
