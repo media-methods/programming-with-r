@@ -158,59 +158,61 @@ Lastly, the standard RStudio interface includes a final important window. In man
 
 ## 6. Working with R projects
 
-In this class, we will work with R projects. An **R Project** is a feature offered in RStudio: Basically, it creates a dedicated folder to organize and manage files, scripts, and data for a specific analysis (for a longer explanation, see [here](https://www.r-bloggers.com/2020/01/rstudio-projects-and-working-directories-a-beginners-guide/). You should create a R project for this class and always use this R project. 
+In this class, we will work with R projects. An **R project** is a feature offered in RStudio: Basically, it creates a dedicated folder to organize and manage files, scripts, and data for a specific analysis (for a longer explanation, see [here](https://www.r-bloggers.com/2020/01/rstudio-projects-and-working-directories-a-beginners-guide/). You should create a R project for this class and always use this R project.
 
 When you open the `.Rproj` file in RStudio, RStudio treats that folder as your **project home**. All data will be stored in this folder as a so-called root directory. This helps you keep everything in one place.
 
-### 6.1 What can we use R Projects for?
+R projects therefore work with absolute instead of relative paths: Instead of having to set your working directory manually (e.g., `setwd(Desktop/Data`)), R projects simply run from the folder where the project lies automatically. Any files in this folder (or in subfolders) can thus be accessed. 
+
+### 6.1 What can we use R projects for?
 
 Use a project whenever files belong together, for example:
 
-- this class
-- a research paper, thesis, or replication project
-- a group project in a research seminar (especially for GitHub collaboration - we will learn about this later)
+-   this class
+-   a research paper, thesis, or replication project
+-   a group project in a research seminar (especially for GitHub collaboration - we will learn about this later)
 
-### 6.2 Why are R Projects so useful?
+### 6.2 Why are R projects so useful?
 
-- **No more “file not found” drama:** Your project folder becomes the default location, so loading files is simpler.
-- **Cleaner workflow:** You naturally separate *data*, *scripts*, and *outputs* instead of mixing everything. This helps knowing what to find where. 
-- **Reproducible work:** If you reopen the project later, you can rerun your code and reproduce your results - especially if you also create virtual environment with packages like `renv`.
-- **Collaboration-friendly:** A shared project structure makes it easier for others to run your code on their computer.
+-   **No more “file not found” drama:** YouR project folder becomes the default location, so loading files is simpler.
+-   **Cleaner workflow:** You naturally separate *data*, *scripts*, and *outputs* instead of mixing everything. This helps knowing what to find where.
+-   **Reproducible work:** If you reopen the project later, you can rerun your code and reproduce your results - especially if you also create virtual environment with packages like `renv`.
+-   **Collaboration-friendly:** A shared project structure makes it easier for others to run your code on their computer.
 
 ### 6.3 How to set up a R project for this class
 
 Follow these steps to create a R project. *Important*: Make sure that this project is stored at a folder you can access over the course of this class (e.g., a folder that is continuously back-uped, for example via the [AAU Seafiles Cloud](https://seafile.aau.at/)).
 
-1. Click *File → New Project*
-2. Choose *New Directory*
+1.  Click *File → New Project*
+2.  Choose *New Directory*
 
-![](files/images/1_project.jpg){fig-alt="Creating a R Project in RStudio"}
+![](files/images/1_project.jpg){fig-alt="Creating a R project in RStudio"}
 
-3. Select *New Project*
-4. Enter a project name (e.g., `digital-methods-class`)
-5. Choose where the folder should be saved. I would recommend a folder that is regularly backed-up (e.g., the AAU Seafiles Cloud)
+3.  Select *New Project*
+4.  Enter a project name (e.g., `digital-methods-class`)
+5.  Choose where the folder should be saved. I would recommend a folder that is regularly backed-up (e.g., the AAU Seafiles Cloud)
 
-![](files/images/1_project_2.jpg){fig-alt="Creating a R Project in RStudio"}
+![](files/images/1_project_2.jpg){fig-alt="Creating a R project in RStudio"}
 
-RStudio will now open a new session inside your project and automatically create:
+RStudio will now open a new session inside youR project and automatically create:
 
-- a project folder
-- a file ending in `.Rproj`
+-   a project folder
+-   a file ending in `.Rproj`
 
 Always open your work by clicking the `.Rproj` file — this ensures the correct settings and working directory are used.
 
 You can check if you are actually opening R via the R project by checking that...
 
-- the project is shown on top of the Environment window (see yellow mark, top right)
-- the file path under "Files" is shown (see yellow mark, bottom right)
+-   the project is shown on top of the Environment window (see yellow mark, top right)
+-   the file path under "Files" is shown (see yellow mark, bottom right)
 
-![](files/images/1_project_3.jpg){fig-alt="Creating a R Project in RStudio"}
+![](files/images/1_project_3.jpg){fig-alt="Creating a R project in RStudio"}
 
 ### 6.4 Which folders do I need for this class?
 
 For this class, I recommend using the following structure:
 
-```text
+``` text
 digital-methods/
 └── digital-methods.Rproj
 ├── data/
@@ -224,10 +226,10 @@ digital-methods/
 
 With this, you have:
 
-- the R-project (digital-methods.Rproj)
-- a folder called *data* where you can store all data
-- a folder called *scripts* where you can store all scripts
-- a folder called *output* where, in the subfolders *results* and *images* you can store different types of results.
+-   the R-project (digital-methods.Rproj)
+-   a folder called *data* where you can store all data
+-   a folder called *scripts* where you can store all scripts
+-   a folder called *output* where, in the subfolders *results* and *images* you can store different types of results.
 
 Please make sure to create these three folders (*data*, *scripts*, and *output*) in the same folder where your R project currently lies.
 
@@ -243,13 +245,63 @@ Perfect - we are ready to get into the workflow of R now!
 -   **Window "Files/Plots/Packages etc."**: used for additional functions, for instance visualizations/searching for help/activating or updating packages
 -   **Packages**: collections of topic-specific functions that extend the functions implemented in Base-R.
 
+## 🎲 Quiz
+
+:::: {.content-visible when-format="html"}
+{{< include "files/www/quiz_script.qmd" >}}
+
+::: {.callout-note icon=false}
+## Question 1
+
+**Which of the following statements about R windows are correct?**
+
+```{ojs}
+//| echo: false
+
+MC_windows_1 = [
+    ["The Source window is used to write and save R code.", "True"],
+    ["I can only write code in the Source window.", "False"],
+    ["Packages are installed in the Environment window.", "False"],
+    ["The Console automatically saves your code permanently.", "False"]
+]
+
+viewof answers_windows_1 = quizInput({
+  questions: MC_windows_1,
+  options: ["True", "False"]
+})
+```
+:::
+
+
+::: {.callout-note icon=false}
+## Question 2
+
+**Which of the following statements about R projects are correct?**
+
+```{ojs}
+//| echo: false
+
+MC_projects_mix = [
+    ["Opening an .Rproj file automatically sets the correct working directory.", "True"],
+    ["R projects work with relative instead of absolute paths.", "True"],
+    ["You can have multiple R projects on your computer.", "True"],
+    ["You should avoid using setwd() when working inside an R project.", "True"]
+]
+
+viewof answers_projects_mix = quizInput({
+  questions: MC_projects_mix,
+  options: ["True", "False"]
+})
+```
+:::
+
 ## 📚 More tutorials on this
 
 You still have questions? The following tutorials & papers can help you with that:
 
--   [YaRrr! The Pirate's Guide to R by N.D.Phillips, Tutorial 2](https://bookdown.org/ndphillips/YaRrr/started.html)
--   [Computational Methods in der politischen Kommunikationsforschung by J. Unkel, Tutorial 1](https://bookdown.org/joone/ComputationalMethods/firststeps.html)
--   [Continuing education in R by Lara Kobilke, Tutorial 2](https://lkobilke.github.io/introduction_to_R/tutorial-installing-understanding-rr-studio.html)
--   [SICSS Boot Camp by C. Bail, Video 1](https://sicss.io/boot_camp#install)
--   [wegweisR by M. Haim, Video 1](https://youtu.be/p6f4oq08z48)
--   [R Cookbook by Long et al., Tutorial 1](https://rc2e.com/gettingstarted#recipe-id001)
+You still have questions? The following tutorials & papers can help you with that:
+
+-   [R for Data Science by Wickham et al.](https://r4ds.hadley.nz/)
+-   ["wegweisR" by M. Haim, Video 1](https://youtu.be/p6f4oq08z48)
+-   ["R Cookbook" by Long et al., Tutorial 1](https://rc2e.com/)
+-   ["Tutorial 2 - Wissen macht R" by B. Fretwurst](https://ikmz.pages.uzh.ch/Wissen-macht-R/01-Basics.html)

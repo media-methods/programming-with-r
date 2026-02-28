@@ -6,8 +6,6 @@ format:
     toc: false
 ---
 
-[]{#sec-84-forum}
-
 ### GitHub Discussion Forum
 
 You can ask questions, report issues, or participate in discussions on GitHub:
@@ -15,3 +13,4 @@ You can ask questions, report issues, or participate in discussions on GitHub:
 👉 <https://github.com/media-methods/programming-with-r/discussions>
 
 [![GitHub Forum](files/images/github-forum.jpg){fig-alt="Screenshot of the Github Discussion forum"}](https://github.com/media-methods/programming-with-r/discussions)
+

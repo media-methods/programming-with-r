@@ -97,7 +97,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script><link rel="stylesheet" href="files/www/custom.css">
+}</script><script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script><link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+<link rel="stylesheet" href="files/www/custom.css">
 </head>
 <body class="nav-sidebar floating">
 
@@ -221,13 +222,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li>
 <a href="#working-with-r-projects" id="toc-working-with-r-projects" class="nav-link" data-scroll-target="#working-with-r-projects">6. Working with R projects</a>
   <ul class="collapse">
-<li><a href="#what-can-we-use-r-projects-for" id="toc-what-can-we-use-r-projects-for" class="nav-link" data-scroll-target="#what-can-we-use-r-projects-for">6.1 What can we use R Projects for?</a></li>
-  <li><a href="#why-are-r-projects-so-useful" id="toc-why-are-r-projects-so-useful" class="nav-link" data-scroll-target="#why-are-r-projects-so-useful">6.2 Why are R Projects so useful?</a></li>
+<li><a href="#what-can-we-use-r-projects-for" id="toc-what-can-we-use-r-projects-for" class="nav-link" data-scroll-target="#what-can-we-use-r-projects-for">6.1 What can we use R projects for?</a></li>
+  <li><a href="#why-are-r-projects-so-useful" id="toc-why-are-r-projects-so-useful" class="nav-link" data-scroll-target="#why-are-r-projects-so-useful">6.2 Why are R projects so useful?</a></li>
   <li><a href="#how-to-set-up-a-r-project-for-this-class" id="toc-how-to-set-up-a-r-project-for-this-class" class="nav-link" data-scroll-target="#how-to-set-up-a-r-project-for-this-class">6.3 How to set up a R project for this class</a></li>
   <li><a href="#which-folders-do-i-need-for-this-class" id="toc-which-folders-do-i-need-for-this-class" class="nav-link" data-scroll-target="#which-folders-do-i-need-for-this-class">6.4 Which folders do I need for this class?</a></li>
   </ul>
 </li>
   <li><a href="#take-aways" id="toc-take-aways" class="nav-link" data-scroll-target="#take-aways">💡 Take-Aways</a></li>
+  <li><a href="#quiz" id="toc-quiz" class="nav-link" data-scroll-target="#quiz">🎲 Quiz</a></li>
   <li><a href="#more-tutorials-on-this" id="toc-more-tutorials-on-this" class="nav-link" data-scroll-target="#more-tutorials-on-this">📚 More tutorials on this</a></li>
   </ul></nav>
     </div>
@@ -365,18 +367,19 @@ Smart Hack
 <p><em>Image: Window “Files/Plots/Packages”</em></p>
 <p><img src="files/images/1_files_plots_packages.jpg" class="img-fluid" alt="Files etc. panel in RStudio"></p>
 </section><section id="working-with-r-projects" class="level2"><h2 class="anchored" data-anchor-id="working-with-r-projects">6. Working with R projects</h2>
-<p>In this class, we will work with R projects. An <strong>R Project</strong> is a feature offered in RStudio: Basically, it creates a dedicated folder to organize and manage files, scripts, and data for a specific analysis (for a longer explanation, see <a href="https://www.r-bloggers.com/2020/01/rstudio-projects-and-working-directories-a-beginners-guide/">here</a>. You should create a R project for this class and always use this R project.</p>
+<p>In this class, we will work with R projects. An <strong>R project</strong> is a feature offered in RStudio: Basically, it creates a dedicated folder to organize and manage files, scripts, and data for a specific analysis (for a longer explanation, see <a href="https://www.r-bloggers.com/2020/01/rstudio-projects-and-working-directories-a-beginners-guide/">here</a>. You should create a R project for this class and always use this R project.</p>
 <p>When you open the <code>.Rproj</code> file in RStudio, RStudio treats that folder as your <strong>project home</strong>. All data will be stored in this folder as a so-called root directory. This helps you keep everything in one place.</p>
-<section id="what-can-we-use-r-projects-for" class="level3"><h3 class="anchored" data-anchor-id="what-can-we-use-r-projects-for">6.1 What can we use R Projects for?</h3>
+<p>R projects therefore work with absolute instead of relative paths: Instead of having to set your working directory manually (e.g., <code>setwd(Desktop/Data</code>)), R projects simply run from the folder where the project lies automatically. Any files in this folder (or in subfolders) can thus be accessed.</p>
+<section id="what-can-we-use-r-projects-for" class="level3"><h3 class="anchored" data-anchor-id="what-can-we-use-r-projects-for">6.1 What can we use R projects for?</h3>
 <p>Use a project whenever files belong together, for example:</p>
 <ul>
 <li>this class</li>
 <li>a research paper, thesis, or replication project</li>
 <li>a group project in a research seminar (especially for GitHub collaboration - we will learn about this later)</li>
-</ul></section><section id="why-are-r-projects-so-useful" class="level3"><h3 class="anchored" data-anchor-id="why-are-r-projects-so-useful">6.2 Why are R Projects so useful?</h3>
+</ul></section><section id="why-are-r-projects-so-useful" class="level3"><h3 class="anchored" data-anchor-id="why-are-r-projects-so-useful">6.2 Why are R projects so useful?</h3>
 <ul>
 <li>
-<strong>No more “file not found” drama:</strong> Your project folder becomes the default location, so loading files is simpler.</li>
+<strong>No more “file not found” drama:</strong> YouR project folder becomes the default location, so loading files is simpler.</li>
 <li>
 <strong>Cleaner workflow:</strong> You naturally separate <em>data</em>, <em>scripts</em>, and <em>outputs</em> instead of mixing everything. This helps knowing what to find where.</li>
 <li>
@@ -391,15 +394,15 @@ Smart Hack
 <li>Choose <em>New Directory</em>
 </li>
 </ol>
-<p><img src="files/images/1_project.jpg" class="img-fluid" alt="Creating a R Project in RStudio"></p>
+<p><img src="files/images/1_project.jpg" class="img-fluid" alt="Creating a R project in RStudio"></p>
 <ol start="3" type="1">
 <li>Select <em>New Project</em>
 </li>
 <li>Enter a project name (e.g., <code>digital-methods-class</code>)</li>
 <li>Choose where the folder should be saved. I would recommend a folder that is regularly backed-up (e.g., the AAU Seafiles Cloud)</li>
 </ol>
-<p><img src="files/images/1_project_2.jpg" class="img-fluid" alt="Creating a R Project in RStudio"></p>
-<p>RStudio will now open a new session inside your project and automatically create:</p>
+<p><img src="files/images/1_project_2.jpg" class="img-fluid" alt="Creating a R project in RStudio"></p>
+<p>RStudio will now open a new session inside youR project and automatically create:</p>
 <ul>
 <li>a project folder</li>
 <li>a file ending in <code>.Rproj</code>
@@ -411,7 +414,7 @@ Smart Hack
 <li>the project is shown on top of the Environment window (see yellow mark, top right)</li>
 <li>the file path under “Files” is shown (see yellow mark, bottom right)</li>
 </ul>
-<p><img src="files/images/1_project_3.jpg" class="img-fluid" alt="Creating a R Project in RStudio"></p>
+<p><img src="files/images/1_project_3.jpg" class="img-fluid" alt="Creating a R project in RStudio"></p>
 </section><section id="which-folders-do-i-need-for-this-class" class="level3"><h3 class="anchored" data-anchor-id="which-folders-do-i-need-for-this-class">6.4 Which folders do I need for this class?</h3>
 <p>For this class, I recommend using the following structure:</p>
 <pre class="text"><code>digital-methods/
@@ -445,19 +448,365 @@ Smart Hack
 <strong>Window “Files/Plots/Packages etc.”</strong>: used for additional functions, for instance visualizations/searching for help/activating or updating packages</li>
 <li>
 <strong>Packages</strong>: collections of topic-specific functions that extend the functions implemented in Base-R.</li>
-</ul></section><section id="more-tutorials-on-this" class="level2"><h2 class="anchored" data-anchor-id="more-tutorials-on-this">📚 More tutorials on this</h2>
+</ul></section><section id="quiz" class="level2"><h2 class="anchored" data-anchor-id="quiz">🎲 Quiz</h2>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb7" data-startfrom="261" data-source-offset="-1"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 260;"><span id="cb7-261"><a href="#cb7-261" aria-hidden="true" tabindex="-1"></a>round <span class="op">=</span> (n<span class="op">,</span> places) <span class="kw">=&gt;</span> {</span>
+<span id="cb7-262"><a href="#cb7-262" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="op">!</span>places) <span class="cf">return</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(n)<span class="op">;</span></span>
+<span id="cb7-263"><a href="#cb7-263" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> d <span class="op">=</span> <span class="dv">10</span> <span class="op">**</span> places<span class="op">;</span></span>
+<span id="cb7-264"><a href="#cb7-264" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(n <span class="op">*</span> d) <span class="op">/</span> d<span class="op">;</span></span>
+<span id="cb7-265"><a href="#cb7-265" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-266"><a href="#cb7-266" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-267"><a href="#cb7-267" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">textReplacementWithText</span>({ text<span class="op">,</span> placeholder<span class="op">,</span> correctText<span class="op">,</span> fontFamily <span class="op">=</span> <span class="st">"monospace"</span><span class="op">,</span> color <span class="op">=</span> <span class="st">"#000000"</span> }) {</span>
+<span id="cb7-268"><a href="#cb7-268" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> parts <span class="op">=</span> text<span class="op">.</span><span class="fu">split</span>(<span class="ss">/</span><span class="sc">\{\{</span><span class="ss">input</span><span class="sc">\}\}</span><span class="ss">/</span>)<span class="op">;</span> <span class="co">// Teilt den Text an den Eingabestellen</span></span>
+<span id="cb7-269"><a href="#cb7-269" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-270"><a href="#cb7-270" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> <span class="bu">root</span> <span class="op">=</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;div style="font-size: HUGE; margin-top: -40; margin-bottom: -40; margin-left: -50px; line-height: 1.8; font-family: </span><span class="sc">${</span>fontFamily<span class="sc">}</span><span class="vs">; color: </span><span class="sc">${</span>color<span class="sc">}</span><span class="vs">; white-space: pre-wrap; text-indent: 0; display: flex; align-items: baseline;"&gt;</span></span>
+<span id="cb7-271"><a href="#cb7-271" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;div style="flex: 1;"&gt;</span></span>
+<span id="cb7-272"><a href="#cb7-272" aria-hidden="true" tabindex="-1"></a><span class="vs">      </span><span class="sc">${</span>parts<span class="op">.</span><span class="fu">map</span>((part<span class="op">,</span> index) <span class="kw">=&gt;</span></span>
+<span id="cb7-273"><a href="#cb7-273" aria-hidden="true" tabindex="-1"></a>        htl<span class="op">.</span><span class="fu">html</span><span class="vs">`</span><span class="sc">${</span>part<span class="sc">}${</span>index <span class="op">&lt;</span> parts<span class="op">.</span><span class="at">length</span> <span class="op">-</span> <span class="dv">1</span> <span class="op">?</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;span style="display: inline-flex; align-items: baseline;"&gt;</span></span>
+<span id="cb7-274"><a href="#cb7-274" aria-hidden="true" tabindex="-1"></a><span class="vs">          &lt;input </span></span>
+<span id="cb7-275"><a href="#cb7-275" aria-hidden="true" tabindex="-1"></a><span class="vs">            type="text"</span></span>
+<span id="cb7-276"><a href="#cb7-276" aria-hidden="true" tabindex="-1"></a><span class="vs">            placeholder="</span><span class="sc">${</span>placeholder<span class="sc">}</span><span class="vs">"</span></span>
+<span id="cb7-277"><a href="#cb7-277" aria-hidden="true" tabindex="-1"></a><span class="vs">            style="padding: 3px; font-size: HUGE; border: 1px solid #ccc; margin-left: 0px; border-radius: 4px; width: calc(</span><span class="sc">${</span>correctText<span class="op">.</span><span class="at">length</span><span class="sc">}</span><span class="vs">ch + 1em); font-family: </span><span class="sc">${</span>fontFamily<span class="sc">}</span><span class="vs">; color: </span><span class="sc">${</span>color<span class="sc">}</span><span class="vs">; text-align: right; box-sizing: border-box; margin-right: 0.2em;"</span></span>
+<span id="cb7-278"><a href="#cb7-278" aria-hidden="true" tabindex="-1"></a><span class="vs">            oninput=</span><span class="sc">${</span>(e) <span class="kw">=&gt;</span> {</span>
+<span id="cb7-279"><a href="#cb7-279" aria-hidden="true" tabindex="-1"></a>              <span class="kw">const</span> feedbackElement <span class="op">=</span> <span class="bu">root</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="vs">`#feedback-final`</span>)<span class="op">;</span></span>
+<span id="cb7-280"><a href="#cb7-280" aria-hidden="true" tabindex="-1"></a>              <span class="kw">const</span> allInputsCorrect <span class="op">=</span> <span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(<span class="bu">root</span><span class="op">.</span><span class="fu">querySelectorAll</span>(<span class="st">"input"</span>))<span class="op">.</span><span class="fu">every</span>((input) <span class="kw">=&gt;</span> input<span class="op">.</span><span class="at">value</span><span class="op">.</span><span class="fu">trim</span>() <span class="op">===</span> correctText<span class="op">.</span><span class="fu">trim</span>())<span class="op">;</span></span>
+<span id="cb7-281"><a href="#cb7-281" aria-hidden="true" tabindex="-1"></a>              <span class="cf">if</span> (allInputsCorrect) {</span>
+<span id="cb7-282"><a href="#cb7-282" aria-hidden="true" tabindex="-1"></a>                feedbackElement<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> <span class="st">"✅"</span><span class="op">;</span></span>
+<span id="cb7-283"><a href="#cb7-283" aria-hidden="true" tabindex="-1"></a>                feedbackElement<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">color</span> <span class="op">=</span> <span class="st">"green"</span><span class="op">;</span></span>
+<span id="cb7-284"><a href="#cb7-284" aria-hidden="true" tabindex="-1"></a>              } <span class="cf">else</span> {</span>
+<span id="cb7-285"><a href="#cb7-285" aria-hidden="true" tabindex="-1"></a>                feedbackElement<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> <span class="st">"🔴"</span><span class="op">;</span></span>
+<span id="cb7-286"><a href="#cb7-286" aria-hidden="true" tabindex="-1"></a>                feedbackElement<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">color</span> <span class="op">=</span> <span class="st">"red"</span><span class="op">;</span></span>
+<span id="cb7-287"><a href="#cb7-287" aria-hidden="true" tabindex="-1"></a>              }</span>
+<span id="cb7-288"><a href="#cb7-288" aria-hidden="true" tabindex="-1"></a>            }<span class="sc">}</span></span>
+<span id="cb7-289"><a href="#cb7-289" aria-hidden="true" tabindex="-1"></a><span class="vs">          /&gt;&lt;/span&gt;`</span> <span class="op">:</span> <span class="st">""</span><span class="sc">}</span><span class="vs">`</span></span>
+<span id="cb7-290"><a href="#cb7-290" aria-hidden="true" tabindex="-1"></a>      )<span class="sc">}</span></span>
+<span id="cb7-291"><a href="#cb7-291" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;/div&gt;</span></span>
+<span id="cb7-292"><a href="#cb7-292" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;span id="feedback-final" style="font-weight: bold; font-size: HUGE; margin-left: 0.5em; color: inherit;"&gt;&lt;/span&gt;</span></span>
+<span id="cb7-293"><a href="#cb7-293" aria-hidden="true" tabindex="-1"></a><span class="vs">  &lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb7-294"><a href="#cb7-294" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-295"><a href="#cb7-295" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="bu">root</span><span class="op">;</span></span>
+<span id="cb7-296"><a href="#cb7-296" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-297"><a href="#cb7-297" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-298"><a href="#cb7-298" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-299"><a href="#cb7-299" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-300"><a href="#cb7-300" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">textReplacementTask</span>({ placeholder<span class="op">,</span> correctText<span class="op">,</span> width <span class="op">=</span> <span class="st">"300px"</span><span class="op">,</span> fontFamily <span class="op">=</span> <span class="st">"monospace"</span><span class="op">,</span> color <span class="op">=</span> <span class="st">"black"</span> }) {</span>
+<span id="cb7-301"><a href="#cb7-301" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> enteredText <span class="op">=</span> <span class="st">""</span><span class="op">;</span> </span>
+<span id="cb7-302"><a href="#cb7-302" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-303"><a href="#cb7-303" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> <span class="bu">root</span> <span class="op">=</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;div style="font-size: 14px; line-height: 1.5; margin-bottom: 20px;"&gt;</span></span>
+<span id="cb7-304"><a href="#cb7-304" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;h4&gt;Bitte ersetzen Sie den Text:&lt;/h4&gt;</span></span>
+<span id="cb7-305"><a href="#cb7-305" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;!-- Eingabefeld --&gt;</span></span>
+<span id="cb7-306"><a href="#cb7-306" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;div style="display: flex; align-items: center;"&gt;</span></span>
+<span id="cb7-307"><a href="#cb7-307" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;input</span></span>
+<span id="cb7-308"><a href="#cb7-308" aria-hidden="true" tabindex="-1"></a><span class="vs">        type="text"</span></span>
+<span id="cb7-309"><a href="#cb7-309" aria-hidden="true" tabindex="-1"></a><span class="vs">        placeholder="</span><span class="sc">${</span>placeholder<span class="sc">}</span><span class="vs">"</span></span>
+<span id="cb7-310"><a href="#cb7-310" aria-hidden="true" tabindex="-1"></a><span class="vs">        style="padding: 5px; font-size: 14px; border: 1px solid #ccc; border-radius: 4px; width: </span><span class="sc">${</span>width<span class="sc">}</span><span class="vs">; font-family: </span><span class="sc">${</span>fontFamily<span class="sc">}</span><span class="vs">; color: </span><span class="sc">${</span>color<span class="sc">}</span><span class="vs">;"</span></span>
+<span id="cb7-311"><a href="#cb7-311" aria-hidden="true" tabindex="-1"></a><span class="vs">        onInput=</span><span class="sc">${</span>(e) <span class="kw">=&gt;</span> {</span>
+<span id="cb7-312"><a href="#cb7-312" aria-hidden="true" tabindex="-1"></a>          enteredText <span class="op">=</span> e<span class="op">.</span><span class="at">target</span><span class="op">.</span><span class="at">value</span><span class="op">;</span></span>
+<span id="cb7-313"><a href="#cb7-313" aria-hidden="true" tabindex="-1"></a>          <span class="bu">root</span><span class="op">.</span><span class="at">value</span> <span class="op">=</span> enteredText<span class="op">;</span></span>
+<span id="cb7-314"><a href="#cb7-314" aria-hidden="true" tabindex="-1"></a>          <span class="bu">root</span><span class="op">.</span><span class="fu">dispatchEvent</span>(<span class="kw">new</span> <span class="bu">CustomEvent</span>(<span class="st">"input"</span>))<span class="op">;</span></span>
+<span id="cb7-315"><a href="#cb7-315" aria-hidden="true" tabindex="-1"></a>          <span class="fu">updateFeedback</span>()<span class="op">;</span></span>
+<span id="cb7-316"><a href="#cb7-316" aria-hidden="true" tabindex="-1"></a>        }<span class="sc">}</span></span>
+<span id="cb7-317"><a href="#cb7-317" aria-hidden="true" tabindex="-1"></a><span class="vs">      /&gt;</span></span>
+<span id="cb7-318"><a href="#cb7-318" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;!-- Feedback --&gt;</span></span>
+<span id="cb7-319"><a href="#cb7-319" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;div id="feedback" style="font-weight: bold; font-size: 14px; margin-left: 10px; text-align: left; white-space: nowrap; color: inherit;"&gt;&lt;/div&gt;</span></span>
+<span id="cb7-320"><a href="#cb7-320" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;/div&gt;</span></span>
+<span id="cb7-321"><a href="#cb7-321" aria-hidden="true" tabindex="-1"></a><span class="vs">  &lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb7-322"><a href="#cb7-322" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-323"><a href="#cb7-323" aria-hidden="true" tabindex="-1"></a><span class="co">// Funktion zur Aktualisierung des Feedbacks</span></span>
+<span id="cb7-324"><a href="#cb7-324" aria-hidden="true" tabindex="-1"></a>  <span class="kw">function</span> <span class="fu">updateFeedback</span>() {</span>
+<span id="cb7-325"><a href="#cb7-325" aria-hidden="true" tabindex="-1"></a>    <span class="kw">const</span> feedbackElement <span class="op">=</span> <span class="bu">root</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">"#feedback"</span>)<span class="op">;</span></span>
+<span id="cb7-326"><a href="#cb7-326" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (enteredText<span class="op">.</span><span class="fu">trim</span>() <span class="op">===</span> correctText<span class="op">.</span><span class="fu">trim</span>()) {</span>
+<span id="cb7-327"><a href="#cb7-327" aria-hidden="true" tabindex="-1"></a>      feedbackElement<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> <span class="st">"✅"</span><span class="op">;</span></span>
+<span id="cb7-328"><a href="#cb7-328" aria-hidden="true" tabindex="-1"></a>      feedbackElement<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">color</span> <span class="op">=</span> <span class="st">"green"</span><span class="op">;</span></span>
+<span id="cb7-329"><a href="#cb7-329" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> <span class="cf">if</span> (enteredText<span class="op">.</span><span class="fu">trim</span>() <span class="op">===</span> <span class="st">""</span>) {</span>
+<span id="cb7-330"><a href="#cb7-330" aria-hidden="true" tabindex="-1"></a>      feedbackElement<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> <span class="st">""</span><span class="op">;</span> </span>
+<span id="cb7-331"><a href="#cb7-331" aria-hidden="true" tabindex="-1"></a>    } <span class="cf">else</span> {</span>
+<span id="cb7-332"><a href="#cb7-332" aria-hidden="true" tabindex="-1"></a>      feedbackElement<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> <span class="st">"🔴"</span><span class="op">;</span></span>
+<span id="cb7-333"><a href="#cb7-333" aria-hidden="true" tabindex="-1"></a>      feedbackElement<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">color</span> <span class="op">=</span> <span class="st">"red"</span><span class="op">;</span></span>
+<span id="cb7-334"><a href="#cb7-334" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb7-335"><a href="#cb7-335" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb7-336"><a href="#cb7-336" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-337"><a href="#cb7-337" aria-hidden="true" tabindex="-1"></a>  <span class="bu">root</span><span class="op">.</span><span class="at">value</span> <span class="op">=</span> <span class="kw">null</span><span class="op">;</span> </span>
+<span id="cb7-338"><a href="#cb7-338" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="bu">root</span><span class="op">;</span></span>
+<span id="cb7-339"><a href="#cb7-339" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-340"><a href="#cb7-340" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-341"><a href="#cb7-341" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-342"><a href="#cb7-342" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">singleChoiceInput</span>({ options<span class="op">,</span> correctIndex }) {</span>
+<span id="cb7-343"><a href="#cb7-343" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> selectedAnswer <span class="op">=</span> <span class="kw">null</span><span class="op">;</span></span>
+<span id="cb7-344"><a href="#cb7-344" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-345"><a href="#cb7-345" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> <span class="bu">root</span> <span class="op">=</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;div style="font-size: HUGE; line-height: 1.5; margin-bottom: 0px;"&gt;</span></span>
+<span id="cb7-346"><a href="#cb7-346" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;!-- Antworten --&gt;</span></span>
+<span id="cb7-347"><a href="#cb7-347" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;div style="display: grid; row-gap: 12px;"&gt;</span></span>
+<span id="cb7-348"><a href="#cb7-348" aria-hidden="true" tabindex="-1"></a><span class="vs">      </span><span class="sc">${</span>options<span class="op">.</span><span class="fu">map</span>(</span>
+<span id="cb7-349"><a href="#cb7-349" aria-hidden="true" tabindex="-1"></a>        (option<span class="op">,</span> index) <span class="kw">=&gt;</span></span>
+<span id="cb7-350"><a href="#cb7-350" aria-hidden="true" tabindex="-1"></a>          htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;div style="display: flex; align-items: center;"&gt;</span></span>
+<span id="cb7-351"><a href="#cb7-351" aria-hidden="true" tabindex="-1"></a><span class="vs">            &lt;!-- Radiobutton und Option --&gt;</span></span>
+<span id="cb7-352"><a href="#cb7-352" aria-hidden="true" tabindex="-1"></a><span class="vs">            &lt;label style="display: flex; align-items: center; padding-left: 4pt; font-weight: normal;"&gt;</span></span>
+<span id="cb7-353"><a href="#cb7-353" aria-hidden="true" tabindex="-1"></a><span class="vs">              &lt;input</span></span>
+<span id="cb7-354"><a href="#cb7-354" aria-hidden="true" tabindex="-1"></a><span class="vs">                type="radio"</span></span>
+<span id="cb7-355"><a href="#cb7-355" aria-hidden="true" tabindex="-1"></a><span class="vs">                name="singleChoice"</span></span>
+<span id="cb7-356"><a href="#cb7-356" aria-hidden="true" tabindex="-1"></a><span class="vs">                value=</span><span class="sc">${</span>index<span class="sc">}</span></span>
+<span id="cb7-357"><a href="#cb7-357" aria-hidden="true" tabindex="-1"></a><span class="vs">                style="margin-right: 10px;"</span></span>
+<span id="cb7-358"><a href="#cb7-358" aria-hidden="true" tabindex="-1"></a><span class="vs">                onChange=</span><span class="sc">${</span>() <span class="kw">=&gt;</span> {</span>
+<span id="cb7-359"><a href="#cb7-359" aria-hidden="true" tabindex="-1"></a>                  selectedAnswer <span class="op">=</span> index<span class="op">;</span></span>
+<span id="cb7-360"><a href="#cb7-360" aria-hidden="true" tabindex="-1"></a>                  <span class="bu">root</span><span class="op">.</span><span class="at">value</span> <span class="op">=</span> selectedAnswer<span class="op">;</span></span>
+<span id="cb7-361"><a href="#cb7-361" aria-hidden="true" tabindex="-1"></a>                  <span class="bu">root</span><span class="op">.</span><span class="fu">dispatchEvent</span>(<span class="kw">new</span> <span class="bu">CustomEvent</span>(<span class="st">"input"</span>))<span class="op">;</span></span>
+<span id="cb7-362"><a href="#cb7-362" aria-hidden="true" tabindex="-1"></a>                  <span class="fu">updateFeedback</span>()<span class="op">;</span></span>
+<span id="cb7-363"><a href="#cb7-363" aria-hidden="true" tabindex="-1"></a>                }<span class="sc">}</span></span>
+<span id="cb7-364"><a href="#cb7-364" aria-hidden="true" tabindex="-1"></a><span class="vs">              /&gt;</span></span>
+<span id="cb7-365"><a href="#cb7-365" aria-hidden="true" tabindex="-1"></a><span class="vs">              &lt;span&gt;</span><span class="sc">${</span>option<span class="sc">}</span><span class="vs">&lt;/span&gt;</span></span>
+<span id="cb7-366"><a href="#cb7-366" aria-hidden="true" tabindex="-1"></a><span class="vs">            &lt;/label&gt;</span></span>
+<span id="cb7-367"><a href="#cb7-367" aria-hidden="true" tabindex="-1"></a><span class="vs">            &lt;!-- Feedback --&gt;</span></span>
+<span id="cb7-368"><a href="#cb7-368" aria-hidden="true" tabindex="-1"></a><span class="vs">            &lt;div id="feedback-</span><span class="sc">${</span>index<span class="sc">}</span><span class="vs">" style="font-weight: bold; font-size: 14px; margin-left: 10px; text-align: left; white-space: nowrap; color: inherit;"&gt;&lt;/div&gt;</span></span>
+<span id="cb7-369"><a href="#cb7-369" aria-hidden="true" tabindex="-1"></a><span class="vs">          &lt;/div&gt;`</span></span>
+<span id="cb7-370"><a href="#cb7-370" aria-hidden="true" tabindex="-1"></a>      )<span class="sc">}</span></span>
+<span id="cb7-371"><a href="#cb7-371" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;/div&gt;</span></span>
+<span id="cb7-372"><a href="#cb7-372" aria-hidden="true" tabindex="-1"></a><span class="vs">  &lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb7-373"><a href="#cb7-373" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-374"><a href="#cb7-374" aria-hidden="true" tabindex="-1"></a><span class="co">// Funktion zur Aktualisierung des Feedbacks</span></span>
+<span id="cb7-375"><a href="#cb7-375" aria-hidden="true" tabindex="-1"></a>  <span class="kw">function</span> <span class="fu">updateFeedback</span>() {</span>
+<span id="cb7-376"><a href="#cb7-376" aria-hidden="true" tabindex="-1"></a>    options<span class="op">.</span><span class="fu">forEach</span>((_<span class="op">,</span> index) <span class="kw">=&gt;</span> {</span>
+<span id="cb7-377"><a href="#cb7-377" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> feedbackElement <span class="op">=</span> <span class="bu">root</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="vs">`#feedback-</span><span class="sc">${</span>index<span class="sc">}</span><span class="vs">`</span>)<span class="op">;</span></span>
+<span id="cb7-378"><a href="#cb7-378" aria-hidden="true" tabindex="-1"></a>      <span class="cf">if</span> (selectedAnswer <span class="op">===</span> index) {</span>
+<span id="cb7-379"><a href="#cb7-379" aria-hidden="true" tabindex="-1"></a>        feedbackElement<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span></span>
+<span id="cb7-380"><a href="#cb7-380" aria-hidden="true" tabindex="-1"></a>          index <span class="op">===</span> correctIndex <span class="op">?</span> <span class="st">"✅"</span> <span class="op">:</span> <span class="st">"🔴"</span><span class="op">;</span></span>
+<span id="cb7-381"><a href="#cb7-381" aria-hidden="true" tabindex="-1"></a>        feedbackElement<span class="op">.</span><span class="at">style</span><span class="op">.</span><span class="at">color</span> <span class="op">=</span> index <span class="op">===</span> correctIndex <span class="op">?</span> <span class="st">"green"</span> <span class="op">:</span> <span class="st">"red"</span><span class="op">;</span></span>
+<span id="cb7-382"><a href="#cb7-382" aria-hidden="true" tabindex="-1"></a>      } <span class="cf">else</span> {</span>
+<span id="cb7-383"><a href="#cb7-383" aria-hidden="true" tabindex="-1"></a>        feedbackElement<span class="op">.</span><span class="at">textContent</span> <span class="op">=</span> <span class="st">""</span><span class="op">;</span> <span class="co">// Löscht Feedback für nicht ausgewählte Optionen</span></span>
+<span id="cb7-384"><a href="#cb7-384" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb7-385"><a href="#cb7-385" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
+<span id="cb7-386"><a href="#cb7-386" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb7-387"><a href="#cb7-387" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-388"><a href="#cb7-388" aria-hidden="true" tabindex="-1"></a>  <span class="bu">root</span><span class="op">.</span><span class="at">value</span> <span class="op">=</span> <span class="kw">null</span><span class="op">;</span></span>
+<span id="cb7-389"><a href="#cb7-389" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="bu">root</span><span class="op">;</span></span>
+<span id="cb7-390"><a href="#cb7-390" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-391"><a href="#cb7-391" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-392"><a href="#cb7-392" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-393"><a href="#cb7-393" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">quizInput</span>({ questions<span class="op">,</span> options}) {</span>
+<span id="cb7-394"><a href="#cb7-394" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> answers <span class="op">=</span> questions<span class="op">.</span><span class="fu">map</span>(() <span class="kw">=&gt;</span> <span class="kw">null</span>)<span class="op">;</span></span>
+<span id="cb7-395"><a href="#cb7-395" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> <span class="bu">root</span> <span class="op">=</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;div</span></span>
+<span id="cb7-396"><a href="#cb7-396" aria-hidden="true" tabindex="-1"></a><span class="vs">      style="</span></span>
+<span id="cb7-397"><a href="#cb7-397" aria-hidden="true" tabindex="-1"></a><span class="vs">        display: grid;</span></span>
+<span id="cb7-398"><a href="#cb7-398" aria-hidden="true" tabindex="-1"></a><span class="vs">        grid-template-columns: 10% 10% 70% 10%;"</span></span>
+<span id="cb7-399"><a href="#cb7-399" aria-hidden="true" tabindex="-1"></a><span class="vs">    &gt;</span></span>
+<span id="cb7-400"><a href="#cb7-400" aria-hidden="true" tabindex="-1"></a><span class="vs">      </span><span class="sc">${</span>options<span class="op">.</span><span class="fu">map</span>(</span>
+<span id="cb7-401"><a href="#cb7-401" aria-hidden="true" tabindex="-1"></a>        (opt) <span class="kw">=&gt;</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;div style="font-weight: bold; font-size: HUGE"&gt;</span><span class="sc">${</span>opt<span class="sc">}</span><span class="vs">&lt;/div&gt;`</span></span>
+<span id="cb7-402"><a href="#cb7-402" aria-hidden="true" tabindex="-1"></a>      )<span class="sc">}</span></span>
+<span id="cb7-403"><a href="#cb7-403" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;div style="font-weight: bold"&gt;Statement&lt;/div&gt;</span></span>
+<span id="cb7-404"><a href="#cb7-404" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;div style="font-weight: bold"&gt;&lt;/div&gt;</span></span>
+<span id="cb7-405"><a href="#cb7-405" aria-hidden="true" tabindex="-1"></a><span class="vs">      </span><span class="sc">${</span><span class="bu">Array</span><span class="op">.</span><span class="fu">from</span>(questions<span class="op">.</span><span class="fu">entries</span>()<span class="op">,</span> ([i<span class="op">,</span> [question<span class="op">,</span> correct]]) <span class="kw">=&gt;</span></span>
+<span id="cb7-406"><a href="#cb7-406" aria-hidden="true" tabindex="-1"></a>        <span class="fu">quizInputRow</span>({</span>
+<span id="cb7-407"><a href="#cb7-407" aria-hidden="true" tabindex="-1"></a>          question<span class="op">,</span></span>
+<span id="cb7-408"><a href="#cb7-408" aria-hidden="true" tabindex="-1"></a>          options<span class="op">,</span></span>
+<span id="cb7-409"><a href="#cb7-409" aria-hidden="true" tabindex="-1"></a>          correct<span class="op">,</span></span>
+<span id="cb7-410"><a href="#cb7-410" aria-hidden="true" tabindex="-1"></a>          <span class="dt">onChange</span><span class="op">:</span> (newAnswer) <span class="kw">=&gt;</span> {</span>
+<span id="cb7-411"><a href="#cb7-411" aria-hidden="true" tabindex="-1"></a>            answers[i] <span class="op">=</span> newAnswer<span class="op">;</span></span>
+<span id="cb7-412"><a href="#cb7-412" aria-hidden="true" tabindex="-1"></a>            <span class="bu">root</span><span class="op">.</span><span class="at">value</span> <span class="op">=</span> answers<span class="op">;</span></span>
+<span id="cb7-413"><a href="#cb7-413" aria-hidden="true" tabindex="-1"></a>            <span class="bu">root</span><span class="op">.</span><span class="fu">dispatchEvent</span>(<span class="kw">new</span> <span class="bu">CustomEvent</span>(<span class="st">"input"</span>))<span class="op">;</span></span>
+<span id="cb7-414"><a href="#cb7-414" aria-hidden="true" tabindex="-1"></a>          }</span>
+<span id="cb7-415"><a href="#cb7-415" aria-hidden="true" tabindex="-1"></a>        })</span>
+<span id="cb7-416"><a href="#cb7-416" aria-hidden="true" tabindex="-1"></a>      )<span class="sc">}</span></span>
+<span id="cb7-417"><a href="#cb7-417" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;/div&gt;`</span><span class="op">;</span></span>
+<span id="cb7-418"><a href="#cb7-418" aria-hidden="true" tabindex="-1"></a>  <span class="bu">root</span><span class="op">.</span><span class="at">value</span> <span class="op">=</span> answers<span class="op">;</span></span>
+<span id="cb7-419"><a href="#cb7-419" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="bu">root</span><span class="op">;</span></span>
+<span id="cb7-420"><a href="#cb7-420" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-421"><a href="#cb7-421" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-422"><a href="#cb7-422" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">quizInputRow</span>({</span>
+<span id="cb7-423"><a href="#cb7-423" aria-hidden="true" tabindex="-1"></a>  question<span class="op">,</span></span>
+<span id="cb7-424"><a href="#cb7-424" aria-hidden="true" tabindex="-1"></a>  options<span class="op">,</span></span>
+<span id="cb7-425"><a href="#cb7-425" aria-hidden="true" tabindex="-1"></a>  correct<span class="op">,</span></span>
+<span id="cb7-426"><a href="#cb7-426" aria-hidden="true" tabindex="-1"></a>  onChange <span class="op">=</span> () <span class="kw">=&gt;</span> {}</span>
+<span id="cb7-427"><a href="#cb7-427" aria-hidden="true" tabindex="-1"></a>}) {</span>
+<span id="cb7-428"><a href="#cb7-428" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> <span class="bu">root</span> <span class="op">=</span> htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;div&gt;`</span><span class="op">;</span></span>
+<span id="cb7-429"><a href="#cb7-429" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-430"><a href="#cb7-430" aria-hidden="true" tabindex="-1"></a>  <span class="kw">function</span> <span class="fu">setAnswer</span>(answer<span class="op">,</span> initial <span class="op">=</span> <span class="kw">false</span>) {</span>
+<span id="cb7-431"><a href="#cb7-431" aria-hidden="true" tabindex="-1"></a>    <span class="fu">morph</span>(</span>
+<span id="cb7-432"><a href="#cb7-432" aria-hidden="true" tabindex="-1"></a>      <span class="bu">root</span><span class="op">,</span></span>
+<span id="cb7-433"><a href="#cb7-433" aria-hidden="true" tabindex="-1"></a>      htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;div style="display: contents"&gt; </span></span>
+<span id="cb7-434"><a href="#cb7-434" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;form style="display: contents"&gt;</span></span>
+<span id="cb7-435"><a href="#cb7-435" aria-hidden="true" tabindex="-1"></a><span class="vs">        </span><span class="sc">${</span>options<span class="op">.</span><span class="fu">map</span>(</span>
+<span id="cb7-436"><a href="#cb7-436" aria-hidden="true" tabindex="-1"></a>          (opt) <span class="kw">=&gt;</span></span>
+<span id="cb7-437"><a href="#cb7-437" aria-hidden="true" tabindex="-1"></a>            htl<span class="op">.</span><span class="fu">html</span><span class="vs">`&lt;label&gt;&amp;emsp;&lt;/label&gt; </span></span>
+<span id="cb7-438"><a href="#cb7-438" aria-hidden="true" tabindex="-1"></a><span class="vs">            &lt;input  </span></span>
+<span id="cb7-439"><a href="#cb7-439" aria-hidden="true" tabindex="-1"></a><span class="vs">              name=</span><span class="sc">${</span>question<span class="sc">}</span><span class="vs"> &amp;emsp;</span></span>
+<span id="cb7-440"><a href="#cb7-440" aria-hidden="true" tabindex="-1"></a><span class="vs">              type="radio"</span></span>
+<span id="cb7-441"><a href="#cb7-441" aria-hidden="true" tabindex="-1"></a><span class="vs">              value="</span><span class="sc">${</span>opt<span class="sc">}</span><span class="vs">"</span></span>
+<span id="cb7-442"><a href="#cb7-442" aria-hidden="true" tabindex="-1"></a><span class="vs">              checked=</span><span class="sc">${</span>opt <span class="op">===</span> answer<span class="sc">}</span></span>
+<span id="cb7-443"><a href="#cb7-443" aria-hidden="true" tabindex="-1"></a><span class="vs">              onChange=</span><span class="sc">${</span>() <span class="kw">=&gt;</span> <span class="fu">setAnswer</span>(opt)<span class="sc">}</span></span>
+<span id="cb7-444"><a href="#cb7-444" aria-hidden="true" tabindex="-1"></a><span class="vs">            &gt;</span></span>
+<span id="cb7-445"><a href="#cb7-445" aria-hidden="true" tabindex="-1"></a><span class="vs">            &lt;/input&gt;`</span></span>
+<span id="cb7-446"><a href="#cb7-446" aria-hidden="true" tabindex="-1"></a>        )<span class="sc">}</span></span>
+<span id="cb7-447"><a href="#cb7-447" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;/form&gt;</span></span>
+<span id="cb7-448"><a href="#cb7-448" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;div&gt;</span><span class="sc">${</span>question<span class="sc">}</span><span class="vs">&lt;/div&gt;</span></span>
+<span id="cb7-449"><a href="#cb7-449" aria-hidden="true" tabindex="-1"></a><span class="vs">      &lt;div&gt; &amp;emsp; </span><span class="sc">${</span></span>
+<span id="cb7-450"><a href="#cb7-450" aria-hidden="true" tabindex="-1"></a>       answer <span class="op">===</span> <span class="kw">null</span> <span class="op">?</span> <span class="st">""</span> <span class="op">:</span> answer <span class="op">===</span> correct <span class="op">?</span> <span class="st">"✅"</span> <span class="op">:</span> <span class="st">"🔴"</span></span>
+<span id="cb7-451"><a href="#cb7-451" aria-hidden="true" tabindex="-1"></a>      <span class="sc">}</span><span class="vs">&lt;/div&gt;</span></span>
+<span id="cb7-452"><a href="#cb7-452" aria-hidden="true" tabindex="-1"></a><span class="vs">    &lt;/div&gt;`</span></span>
+<span id="cb7-453"><a href="#cb7-453" aria-hidden="true" tabindex="-1"></a>    )<span class="op">;</span></span>
+<span id="cb7-454"><a href="#cb7-454" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-455"><a href="#cb7-455" aria-hidden="true" tabindex="-1"></a>    <span class="bu">root</span><span class="op">.</span><span class="at">value</span> <span class="op">=</span> answer<span class="op">;</span></span>
+<span id="cb7-456"><a href="#cb7-456" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> (<span class="op">!</span>initial) {</span>
+<span id="cb7-457"><a href="#cb7-457" aria-hidden="true" tabindex="-1"></a>      <span class="bu">root</span><span class="op">.</span><span class="fu">dispatchEvent</span>(<span class="kw">new</span> <span class="bu">CustomEvent</span>(<span class="st">"input"</span>))<span class="op">;</span></span>
+<span id="cb7-458"><a href="#cb7-458" aria-hidden="true" tabindex="-1"></a>      <span class="fu">onChange</span>(answer)<span class="op">;</span></span>
+<span id="cb7-459"><a href="#cb7-459" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb7-460"><a href="#cb7-460" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb7-461"><a href="#cb7-461" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-462"><a href="#cb7-462" aria-hidden="true" tabindex="-1"></a>  <span class="fu">setAnswer</span>(<span class="kw">null</span><span class="op">,</span> <span class="kw">true</span>)<span class="op">;</span></span>
+<span id="cb7-463"><a href="#cb7-463" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="bu">root</span><span class="op">;</span></span>
+<span id="cb7-464"><a href="#cb7-464" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb7-465"><a href="#cb7-465" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-466"><a href="#cb7-466" aria-hidden="true" tabindex="-1"></a>morph <span class="op">=</span> <span class="pp">require</span>(<span class="st">"https://bundle.run/nanomorph@5.4.2"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-5" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-6" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-7" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Question 1
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Which of the following statements about R windows are correct?</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb8" data-startfrom="284" data-source-offset="-1"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 283;"><span id="cb8-284"><a href="#cb8-284" aria-hidden="true" tabindex="-1"></a>MC_windows_1 <span class="op">=</span> [</span>
+<span id="cb8-285"><a href="#cb8-285" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"The Source window is used to write and save R code."</span><span class="op">,</span> <span class="st">"True"</span>]<span class="op">,</span></span>
+<span id="cb8-286"><a href="#cb8-286" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"I can only write code in the Source window."</span><span class="op">,</span> <span class="st">"False"</span>]<span class="op">,</span></span>
+<span id="cb8-287"><a href="#cb8-287" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"Packages are installed in the Environment window."</span><span class="op">,</span> <span class="st">"False"</span>]<span class="op">,</span></span>
+<span id="cb8-288"><a href="#cb8-288" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"The Console automatically saves your code permanently."</span><span class="op">,</span> <span class="st">"False"</span>]</span>
+<span id="cb8-289"><a href="#cb8-289" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb8-290"><a href="#cb8-290" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-291"><a href="#cb8-291" aria-hidden="true" tabindex="-1"></a>viewof answers_windows_1 <span class="op">=</span> <span class="fu">quizInput</span>({</span>
+<span id="cb8-292"><a href="#cb8-292" aria-hidden="true" tabindex="-1"></a>  <span class="dt">questions</span><span class="op">:</span> MC_windows_1<span class="op">,</span></span>
+<span id="cb8-293"><a href="#cb8-293" aria-hidden="true" tabindex="-1"></a>  <span class="dt">options</span><span class="op">:</span> [<span class="st">"True"</span><span class="op">,</span> <span class="st">"False"</span>]</span>
+<span id="cb8-294"><a href="#cb8-294" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-2-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note no-icon callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Question 2
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Which of the following statements about R projects are correct?</strong></p>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb9" data-startfrom="2" data-source-offset="-1"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 1;"><span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>MC_projects_mix <span class="op">=</span> [</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"Opening an .Rproj file automatically sets the correct working directory."</span><span class="op">,</span> <span class="st">"True"</span>]<span class="op">,</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"R projects work with relative instead of absolute paths."</span><span class="op">,</span> <span class="st">"True"</span>]<span class="op">,</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"You can have multiple R projects on your computer."</span><span class="op">,</span> <span class="st">"True"</span>]<span class="op">,</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    [<span class="st">"You should avoid using setwd() when working inside an R project."</span><span class="op">,</span> <span class="st">"True"</span>]</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>viewof answers_projects_mix <span class="op">=</span> <span class="fu">quizInput</span>({</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">questions</span><span class="op">:</span> MC_projects_mix<span class="op">,</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="dt">options</span><span class="op">:</span> [<span class="st">"True"</span><span class="op">,</span> <span class="st">"False"</span>]</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-3-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="more-tutorials-on-this" class="level2"><h2 class="anchored" data-anchor-id="more-tutorials-on-this">📚 More tutorials on this</h2>
+<p>You still have questions? The following tutorials &amp; papers can help you with that:</p>
 <p>You still have questions? The following tutorials &amp; papers can help you with that:</p>
 <ul>
-<li><a href="https://bookdown.org/ndphillips/YaRrr/started.html">YaRrr! The Pirate’s Guide to R by N.D.Phillips, Tutorial 2</a></li>
-<li><a href="https://bookdown.org/joone/ComputationalMethods/firststeps.html">Computational Methods in der politischen Kommunikationsforschung by J. Unkel, Tutorial 1</a></li>
-<li><a href="https://lkobilke.github.io/introduction_to_R/tutorial-installing-understanding-rr-studio.html">Continuing education in R by Lara Kobilke, Tutorial 2</a></li>
-<li><a href="https://sicss.io/boot_camp#install">SICSS Boot Camp by C. Bail, Video 1</a></li>
-<li><a href="https://youtu.be/p6f4oq08z48">wegweisR by M. Haim, Video 1</a></li>
-<li><a href="https://rc2e.com/gettingstarted#recipe-id001">R Cookbook by Long et al., Tutorial 1</a></li>
+<li><a href="https://r4ds.hadley.nz/">R for Data Science by Wickham et al.</a></li>
+<li><a href="https://youtu.be/p6f4oq08z48">“wegweisR” by M. Haim, Video 1</a></li>
+<li><a href="https://rc2e.com/">“R Cookbook” by Long et al., Tutorial 1</a></li>
+<li><a href="https://ikmz.pages.uzh.ch/Wissen-macht-R/01-Basics.html">“Tutorial 2 - Wissen macht R” by B. Fretwurst</a></li>
 </ul>
 
 
-</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script type="ojs-module-contents">
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Ilxucm91bmQgPSAobiwgcGxhY2VzKSA9PiB7XG4gIGlmICghcGxhY2VzKSByZXR1cm4gTWF0aC5yb3VuZChuKTtcbiAgY29uc3QgZCA9IDEwICoqIHBsYWNlcztcbiAgcmV0dXJuIE1hdGgucm91bmQobiAqIGQpIC8gZDtcbn1cblxuZnVuY3Rpb24gdGV4dFJlcGxhY2VtZW50V2l0aFRleHQoeyB0ZXh0LCBwbGFjZWhvbGRlciwgY29ycmVjdFRleHQsIGZvbnRGYW1pbHkgPSBcIm1vbm9zcGFjZVwiLCBjb2xvciA9IFwiIzAwMDAwMFwiIH0pIHtcbiAgY29uc3QgcGFydHMgPSB0ZXh0LnNwbGl0KC9cXHtcXHtpbnB1dFxcfVxcfS8pOyAvLyBUZWlsdCBkZW4gVGV4dCBhbiBkZW4gRWluZ2FiZXN0ZWxsZW5cblxuICBjb25zdCByb290ID0gaHRsLmh0bWxgPGRpdiBzdHlsZT1cImZvbnQtc2l6ZTogSFVHRTsgbWFyZ2luLXRvcDogLTQwOyBtYXJnaW4tYm90dG9tOiAtNDA7IG1hcmdpbi1sZWZ0OiAtNTBweDsgbGluZS1oZWlnaHQ6IDEuODsgZm9udC1mYW1pbHk6ICR7Zm9udEZhbWlseX07IGNvbG9yOiAke2NvbG9yfTsgd2hpdGUtc3BhY2U6IHByZS13cmFwOyB0ZXh0LWluZGVudDogMDsgZGlzcGxheTogZmxleDsgYWxpZ24taXRlbXM6IGJhc2VsaW5lO1wiPlxuICAgIDxkaXYgc3R5bGU9XCJmbGV4OiAxO1wiPlxuICAgICAgJHtwYXJ0cy5tYXAoKHBhcnQsIGluZGV4KSA9PlxuICAgICAgICBodGwuaHRtbGAke3BhcnR9JHtpbmRleCA8IHBhcnRzLmxlbmd0aCAtIDEgPyBodGwuaHRtbGA8c3BhbiBzdHlsZT1cImRpc3BsYXk6IGlubGluZS1mbGV4OyBhbGlnbi1pdGVtczogYmFzZWxpbmU7XCI+XG4gICAgICAgICAgPGlucHV0IFxuICAgICAgICAgICAgdHlwZT1cInRleHRcIlxuICAgICAgICAgICAgcGxhY2Vob2xkZXI9XCIke3BsYWNlaG9sZGVyfVwiXG4gICAgICAgICAgICBzdHlsZT1cInBhZGRpbmc6IDNweDsgZm9udC1zaXplOiBIVUdFOyBib3JkZXI6IDFweCBzb2xpZCAjY2NjOyBtYXJnaW4tbGVmdDogMHB4OyBib3JkZXItcmFkaXVzOiA0cHg7IHdpZHRoOiBjYWxjKCR7Y29ycmVjdFRleHQubGVuZ3RofWNoICsgMWVtKTsgZm9udC1mYW1pbHk6ICR7Zm9udEZhbWlseX07IGNvbG9yOiAke2NvbG9yfTsgdGV4dC1hbGlnbjogcmlnaHQ7IGJveC1zaXppbmc6IGJvcmRlci1ib3g7IG1hcmdpbi1yaWdodDogMC4yZW07XCJcbiAgICAgICAgICAgIG9uaW5wdXQ9JHsoZSkgPT4ge1xuICAgICAgICAgICAgICBjb25zdCBmZWVkYmFja0VsZW1lbnQgPSByb290LnF1ZXJ5U2VsZWN0b3IoYCNmZWVkYmFjay1maW5hbGApO1xuICAgICAgICAgICAgICBjb25zdCBhbGxJbnB1dHNDb3JyZWN0ID0gQXJyYXkuZnJvbShyb290LnF1ZXJ5U2VsZWN0b3JBbGwoXCJpbnB1dFwiKSkuZXZlcnkoKGlucHV0KSA9PiBpbnB1dC52YWx1ZS50cmltKCkgPT09IGNvcnJlY3RUZXh0LnRyaW0oKSk7XG4gICAgICAgICAgICAgIGlmIChhbGxJbnB1dHNDb3JyZWN0KSB7XG4gICAgICAgICAgICAgICAgZmVlZGJhY2tFbGVtZW50LnRleHRDb250ZW50ID0gXCLinIVcIjtcbiAgICAgICAgICAgICAgICBmZWVkYmFja0VsZW1lbnQuc3R5bGUuY29sb3IgPSBcImdyZWVuXCI7XG4gICAgICAgICAgICAgIH0gZWxzZSB7XG4gICAgICAgICAgICAgICAgZmVlZGJhY2tFbGVtZW50LnRleHRDb250ZW50ID0gXCLwn5S0XCI7XG4gICAgICAgICAgICAgICAgZmVlZGJhY2tFbGVtZW50LnN0eWxlLmNvbG9yID0gXCJyZWRcIjtcbiAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgfX1cbiAgICAgICAgICAvPjwvc3Bhbj5gIDogXCJcIn1gXG4gICAgICApfVxuICAgIDwvZGl2PlxuICAgIDxzcGFuIGlkPVwiZmVlZGJhY2stZmluYWxcIiBzdHlsZT1cImZvbnQtd2VpZ2h0OiBib2xkOyBmb250LXNpemU6IEhVR0U7IG1hcmdpbi1sZWZ0OiAwLjVlbTsgY29sb3I6IGluaGVyaXQ7XCI+PC9zcGFuPlxuICA8L2Rpdj5gO1xuXG4gIHJldHVybiByb290O1xufVxuXG5cblxuZnVuY3Rpb24gdGV4dFJlcGxhY2VtZW50VGFzayh7IHBsYWNlaG9sZGVyLCBjb3JyZWN0VGV4dCwgd2lkdGggPSBcIjMwMHB4XCIsIGZvbnRGYW1pbHkgPSBcIm1vbm9zcGFjZVwiLCBjb2xvciA9IFwiYmxhY2tcIiB9KSB7XG4gIGxldCBlbnRlcmVkVGV4dCA9IFwiXCI7IFxuXG4gIGNvbnN0IHJvb3QgPSBodGwuaHRtbGA8ZGl2IHN0eWxlPVwiZm9udC1zaXplOiAxNHB4OyBsaW5lLWhlaWdodDogMS41OyBtYXJnaW4tYm90dG9tOiAyMHB4O1wiPlxuICAgIDxoND5CaXR0ZSBlcnNldHplbiBTaWUgZGVuIFRleHQ6PC9oND5cbiAgICA8IS0tIEVpbmdhYmVmZWxkIC0tPlxuICAgIDxkaXYgc3R5bGU9XCJkaXNwbGF5OiBmbGV4OyBhbGlnbi1pdGVtczogY2VudGVyO1wiPlxuICAgICAgPGlucHV0XG4gICAgICAgIHR5cGU9XCJ0ZXh0XCJcbiAgICAgICAgcGxhY2Vob2xkZXI9XCIke3BsYWNlaG9sZGVyfVwiXG4gICAgICAgIHN0eWxlPVwicGFkZGluZzogNXB4OyBmb250LXNpemU6IDE0cHg7IGJvcmRlcjogMXB4IHNvbGlkICNjY2M7IGJvcmRlci1yYWRpdXM6IDRweDsgd2lkdGg6ICR7d2lkdGh9OyBmb250LWZhbWlseTogJHtmb250RmFtaWx5fTsgY29sb3I6ICR7Y29sb3J9O1wiXG4gICAgICAgIG9uSW5wdXQ9JHsoZSkgPT4ge1xuICAgICAgICAgIGVudGVyZWRUZXh0ID0gZS50YXJnZXQudmFsdWU7XG4gICAgICAgICAgcm9vdC52YWx1ZSA9IGVudGVyZWRUZXh0O1xuICAgICAgICAgIHJvb3QuZGlzcGF0Y2hFdmVudChuZXcgQ3VzdG9tRXZlbnQoXCJpbnB1dFwiKSk7XG4gICAgICAgICAgdXBkYXRlRmVlZGJhY2soKTtcbiAgICAgICAgfX1cbiAgICAgIC8+XG4gICAgICA8IS0tIEZlZWRiYWNrIC0tPlxuICAgICAgPGRpdiBpZD1cImZlZWRiYWNrXCIgc3R5bGU9XCJmb250LXdlaWdodDogYm9sZDsgZm9udC1zaXplOiAxNHB4OyBtYXJnaW4tbGVmdDogMTBweDsgdGV4dC1hbGlnbjogbGVmdDsgd2hpdGUtc3BhY2U6IG5vd3JhcDsgY29sb3I6IGluaGVyaXQ7XCI+PC9kaXY+XG4gICAgPC9kaXY+XG4gIDwvZGl2PmA7XG5cbi8vIEZ1bmt0aW9uIHp1ciBBa3R1YWxpc2llcnVuZyBkZXMgRmVlZGJhY2tzXG4gIGZ1bmN0aW9uIHVwZGF0ZUZlZWRiYWNrKCkge1xuICAgIGNvbnN0IGZlZWRiYWNrRWxlbWVudCA9IHJvb3QucXVlcnlTZWxlY3RvcihcIiNmZWVkYmFja1wiKTtcbiAgICBpZiAoZW50ZXJlZFRleHQudHJpbSgpID09PSBjb3JyZWN0VGV4dC50cmltKCkpIHtcbiAgICAgIGZlZWRiYWNrRWxlbWVudC50ZXh0Q29udGVudCA9IFwi4pyFXCI7XG4gICAgICBmZWVkYmFja0VsZW1lbnQuc3R5bGUuY29sb3IgPSBcImdyZWVuXCI7XG4gICAgfSBlbHNlIGlmIChlbnRlcmVkVGV4dC50cmltKCkgPT09IFwiXCIpIHtcbiAgICAgIGZlZWRiYWNrRWxlbWVudC50ZXh0Q29udGVudCA9IFwiXCI7IFxuICAgIH0gZWxzZSB7XG4gICAgICBmZWVkYmFja0VsZW1lbnQudGV4dENvbnRlbnQgPSBcIvCflLRcIjtcbiAgICAgIGZlZWRiYWNrRWxlbWVudC5zdHlsZS5jb2xvciA9IFwicmVkXCI7XG4gICAgfVxuICB9XG5cbiAgcm9vdC52YWx1ZSA9IG51bGw7IFxuICByZXR1cm4gcm9vdDtcbn1cblxuXG5mdW5jdGlvbiBzaW5nbGVDaG9pY2VJbnB1dCh7IG9wdGlvbnMsIGNvcnJlY3RJbmRleCB9KSB7XG4gIGxldCBzZWxlY3RlZEFuc3dlciA9IG51bGw7XG5cbiAgY29uc3Qgcm9vdCA9IGh0bC5odG1sYDxkaXYgc3R5bGU9XCJmb250LXNpemU6IEhVR0U7IGxpbmUtaGVpZ2h0OiAxLjU7IG1hcmdpbi1ib3R0b206IDBweDtcIj5cbiAgICA8IS0tIEFudHdvcnRlbiAtLT5cbiAgICA8ZGl2IHN0eWxlPVwiZGlzcGxheTogZ3JpZDsgcm93LWdhcDogMTJweDtcIj5cbiAgICAgICR7b3B0aW9ucy5tYXAoXG4gICAgICAgIChvcHRpb24sIGluZGV4KSA9PlxuICAgICAgICAgIGh0bC5odG1sYDxkaXYgc3R5bGU9XCJkaXNwbGF5OiBmbGV4OyBhbGlnbi1pdGVtczogY2VudGVyO1wiPlxuICAgICAgICAgICAgPCEtLSBSYWRpb2J1dHRvbiB1bmQgT3B0aW9uIC0tPlxuICAgICAgICAgICAgPGxhYmVsIHN0eWxlPVwiZGlzcGxheTogZmxleDsgYWxpZ24taXRlbXM6IGNlbnRlcjsgcGFkZGluZy1sZWZ0OiA0cHQ7IGZvbnQtd2VpZ2h0OiBub3JtYWw7XCI+XG4gICAgICAgICAgICAgIDxpbnB1dFxuICAgICAgICAgICAgICAgIHR5cGU9XCJyYWRpb1wiXG4gICAgICAgICAgICAgICAgbmFtZT1cInNpbmdsZUNob2ljZVwiXG4gICAgICAgICAgICAgICAgdmFsdWU9JHtpbmRleH1cbiAgICAgICAgICAgICAgICBzdHlsZT1cIm1hcmdpbi1yaWdodDogMTBweDtcIlxuICAgICAgICAgICAgICAgIG9uQ2hhbmdlPSR7KCkgPT4ge1xuICAgICAgICAgICAgICAgICAgc2VsZWN0ZWRBbnN3ZXIgPSBpbmRleDtcbiAgICAgICAgICAgICAgICAgIHJvb3QudmFsdWUgPSBzZWxlY3RlZEFuc3dlcjtcbiAgICAgICAgICAgICAgICAgIHJvb3QuZGlzcGF0Y2hFdmVudChuZXcgQ3VzdG9tRXZlbnQoXCJpbnB1dFwiKSk7XG4gICAgICAgICAgICAgICAgICB1cGRhdGVGZWVkYmFjaygpO1xuICAgICAgICAgICAgICAgIH19XG4gICAgICAgICAgICAgIC8+XG4gICAgICAgICAgICAgIDxzcGFuPiR7b3B0aW9ufTwvc3Bhbj5cbiAgICAgICAgICAgIDwvbGFiZWw+XG4gICAgICAgICAgICA8IS0tIEZlZWRiYWNrIC0tPlxuICAgICAgICAgICAgPGRpdiBpZD1cImZlZWRiYWNrLSR7aW5kZXh9XCIgc3R5bGU9XCJmb250LXdlaWdodDogYm9sZDsgZm9udC1zaXplOiAxNHB4OyBtYXJnaW4tbGVmdDogMTBweDsgdGV4dC1hbGlnbjogbGVmdDsgd2hpdGUtc3BhY2U6IG5vd3JhcDsgY29sb3I6IGluaGVyaXQ7XCI+PC9kaXY+XG4gICAgICAgICAgPC9kaXY+YFxuICAgICAgKX1cbiAgICA8L2Rpdj5cbiAgPC9kaXY+YDtcblxuLy8gRnVua3Rpb24genVyIEFrdHVhbGlzaWVydW5nIGRlcyBGZWVkYmFja3NcbiAgZnVuY3Rpb24gdXBkYXRlRmVlZGJhY2soKSB7XG4gICAgb3B0aW9ucy5mb3JFYWNoKChfLCBpbmRleCkgPT4ge1xuICAgICAgY29uc3QgZmVlZGJhY2tFbGVtZW50ID0gcm9vdC5xdWVyeVNlbGVjdG9yKGAjZmVlZGJhY2stJHtpbmRleH1gKTtcbiAgICAgIGlmIChzZWxlY3RlZEFuc3dlciA9PT0gaW5kZXgpIHtcbiAgICAgICAgZmVlZGJhY2tFbGVtZW50LnRleHRDb250ZW50ID1cbiAgICAgICAgICBpbmRleCA9PT0gY29ycmVjdEluZGV4ID8gXCLinIVcIiA6IFwi8J+UtFwiO1xuICAgICAgICBmZWVkYmFja0VsZW1lbnQuc3R5bGUuY29sb3IgPSBpbmRleCA9PT0gY29ycmVjdEluZGV4ID8gXCJncmVlblwiIDogXCJyZWRcIjtcbiAgICAgIH0gZWxzZSB7XG4gICAgICAgIGZlZWRiYWNrRWxlbWVudC50ZXh0Q29udGVudCA9IFwiXCI7IC8vIEzDtnNjaHQgRmVlZGJhY2sgZsO8ciBuaWNodCBhdXNnZXfDpGhsdGUgT3B0aW9uZW5cbiAgICAgIH1cbiAgICB9KTtcbiAgfVxuXG4gIHJvb3QudmFsdWUgPSBudWxsO1xuICByZXR1cm4gcm9vdDtcbn1cblxuXG5mdW5jdGlvbiBxdWl6SW5wdXQoeyBxdWVzdGlvbnMsIG9wdGlvbnN9KSB7XG4gIGxldCBhbnN3ZXJzID0gcXVlc3Rpb25zLm1hcCgoKSA9PiBudWxsKTtcbiAgbGV0IHJvb3QgPSBodGwuaHRtbGA8ZGl2XG4gICAgICBzdHlsZT1cIlxuICAgICAgICBkaXNwbGF5OiBncmlkO1xuICAgICAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IDEwJSAxMCUgNzAlIDEwJTtcIlxuICAgID5cbiAgICAgICR7b3B0aW9ucy5tYXAoXG4gICAgICAgIChvcHQpID0+IGh0bC5odG1sYDxkaXYgc3R5bGU9XCJmb250LXdlaWdodDogYm9sZDsgZm9udC1zaXplOiBIVUdFXCI+JHtvcHR9PC9kaXY+YFxuICAgICAgKX1cbiAgICAgIDxkaXYgc3R5bGU9XCJmb250LXdlaWdodDogYm9sZFwiPlN0YXRlbWVudDwvZGl2PlxuICAgICAgPGRpdiBzdHlsZT1cImZvbnQtd2VpZ2h0OiBib2xkXCI+PC9kaXY+XG4gICAgICAke0FycmF5LmZyb20ocXVlc3Rpb25zLmVudHJpZXMoKSwgKFtpLCBbcXVlc3Rpb24sIGNvcnJlY3RdXSkgPT5cbiAgICAgICAgcXVpeklucHV0Um93KHtcbiAgICAgICAgICBxdWVzdGlvbixcbiAgICAgICAgICBvcHRpb25zLFxuICAgICAgICAgIGNvcnJlY3QsXG4gICAgICAgICAgb25DaGFuZ2U6IChuZXdBbnN3ZXIpID0+IHtcbiAgICAgICAgICAgIGFuc3dlcnNbaV0gPSBuZXdBbnN3ZXI7XG4gICAgICAgICAgICByb290LnZhbHVlID0gYW5zd2VycztcbiAgICAgICAgICAgIHJvb3QuZGlzcGF0Y2hFdmVudChuZXcgQ3VzdG9tRXZlbnQoXCJpbnB1dFwiKSk7XG4gICAgICAgICAgfVxuICAgICAgICB9KVxuICAgICAgKX1cbiAgICA8L2Rpdj5gO1xuICByb290LnZhbHVlID0gYW5zd2VycztcbiAgcmV0dXJuIHJvb3Q7XG59XG5cbmZ1bmN0aW9uIHF1aXpJbnB1dFJvdyh7XG4gIHF1ZXN0aW9uLFxuICBvcHRpb25zLFxuICBjb3JyZWN0LFxuICBvbkNoYW5nZSA9ICgpID0+IHt9XG59KSB7XG4gIGxldCByb290ID0gaHRsLmh0bWxgPGRpdj5gO1xuXG4gIGZ1bmN0aW9uIHNldEFuc3dlcihhbnN3ZXIsIGluaXRpYWwgPSBmYWxzZSkge1xuICAgIG1vcnBoKFxuICAgICAgcm9vdCxcbiAgICAgIGh0bC5odG1sYDxkaXYgc3R5bGU9XCJkaXNwbGF5OiBjb250ZW50c1wiPiBcbiAgICAgIDxmb3JtIHN0eWxlPVwiZGlzcGxheTogY29udGVudHNcIj5cbiAgICAgICAgJHtvcHRpb25zLm1hcChcbiAgICAgICAgICAob3B0KSA9PlxuICAgICAgICAgICAgaHRsLmh0bWxgPGxhYmVsPiZlbXNwOzwvbGFiZWw+IFxuICAgICAgICAgICAgPGlucHV0ICBcbiAgICAgICAgICAgICAgbmFtZT0ke3F1ZXN0aW9ufSAmZW1zcDtcbiAgICAgICAgICAgICAgdHlwZT1cInJhZGlvXCJcbiAgICAgICAgICAgICAgdmFsdWU9XCIke29wdH1cIlxuICAgICAgICAgICAgICBjaGVja2VkPSR7b3B0ID09PSBhbnN3ZXJ9XG4gICAgICAgICAgICAgIG9uQ2hhbmdlPSR7KCkgPT4gc2V0QW5zd2VyKG9wdCl9XG4gICAgICAgICAgICA+XG4gICAgICAgICAgICA8L2lucHV0PmBcbiAgICAgICAgKX1cbiAgICAgIDwvZm9ybT5cbiAgICAgIDxkaXY+JHtxdWVzdGlvbn08L2Rpdj5cbiAgICAgIDxkaXY+ICZlbXNwOyAke1xuICAgICAgIGFuc3dlciA9PT0gbnVsbCA/IFwiXCIgOiBhbnN3ZXIgPT09IGNvcnJlY3QgPyBcIuKchVwiIDogXCLwn5S0XCJcbiAgICAgIH08L2Rpdj5cbiAgICA8L2Rpdj5gXG4gICAgKTtcblxuICAgIHJvb3QudmFsdWUgPSBhbnN3ZXI7XG4gICAgaWYgKCFpbml0aWFsKSB7XG4gICAgICByb290LmRpc3BhdGNoRXZlbnQobmV3IEN1c3RvbUV2ZW50KFwiaW5wdXRcIikpO1xuICAgICAgb25DaGFuZ2UoYW5zd2VyKTtcbiAgICB9XG4gIH1cblxuICBzZXRBbnN3ZXIobnVsbCwgdHJ1ZSk7XG4gIHJldHVybiByb290O1xufVxuXG5tb3JwaCA9IHJlcXVpcmUoXCJodHRwczovL2J1bmRsZS5ydW4vbmFub21vcnBoQDUuNC4yXCIpXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJcbk1DX3dpbmRvd3NfMSA9IFtcbiAgICBbXCJUaGUgU291cmNlIHdpbmRvdyBpcyB1c2VkIHRvIHdyaXRlIGFuZCBzYXZlIFIgY29kZS5cIiwgXCJUcnVlXCJdLFxuICAgIFtcIkkgY2FuIG9ubHkgd3JpdGUgY29kZSBpbiB0aGUgU291cmNlIHdpbmRvdy5cIiwgXCJGYWxzZVwiXSxcbiAgICBbXCJQYWNrYWdlcyBhcmUgaW5zdGFsbGVkIGluIHRoZSBFbnZpcm9ubWVudCB3aW5kb3cuXCIsIFwiRmFsc2VcIl0sXG4gICAgW1wiVGhlIENvbnNvbGUgYXV0b21hdGljYWxseSBzYXZlcyB5b3VyIGNvZGUgcGVybWFuZW50bHkuXCIsIFwiRmFsc2VcIl1cbl1cblxudmlld29mIGFuc3dlcnNfd2luZG93c18xID0gcXVpeklucHV0KHtcbiAgcXVlc3Rpb25zOiBNQ193aW5kb3dzXzEsXG4gIG9wdGlvbnM6IFtcIlRydWVcIiwgXCJGYWxzZVwiXVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMyIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlxuTUNfcHJvamVjdHNfbWl4ID0gW1xuICAgIFtcIk9wZW5pbmcgYW4gLlJwcm9qIGZpbGUgYXV0b21hdGljYWxseSBzZXRzIHRoZSBjb3JyZWN0IHdvcmtpbmcgZGlyZWN0b3J5LlwiLCBcIlRydWVcIl0sXG4gICAgW1wiUiBwcm9qZWN0cyB3b3JrIHdpdGggcmVsYXRpdmUgaW5zdGVhZCBvZiBhYnNvbHV0ZSBwYXRocy5cIiwgXCJUcnVlXCJdLFxuICAgIFtcIllvdSBjYW4gaGF2ZSBtdWx0aXBsZSBSIHByb2plY3RzIG9uIHlvdXIgY29tcHV0ZXIuXCIsIFwiVHJ1ZVwiXSxcbiAgICBbXCJZb3Ugc2hvdWxkIGF2b2lkIHVzaW5nIHNldHdkKCkgd2hlbiB3b3JraW5nIGluc2lkZSBhbiBSIHByb2plY3QuXCIsIFwiVHJ1ZVwiXVxuXVxuXG52aWV3b2YgYW5zd2Vyc19wcm9qZWN0c19taXggPSBxdWl6SW5wdXQoe1xuICBxdWVzdGlvbnM6IE1DX3Byb2plY3RzX21peCxcbiAgb3B0aW9uczogW1wiVHJ1ZVwiLCBcIkZhbHNlXCJdXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdhbnN3ZXJzX3dpbmRvd3NfMScpIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdhbnN3ZXJzX3Byb2plY3RzX21peCcpIn1dfQ==
+</script><script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../..";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
