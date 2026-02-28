@@ -36,11 +36,11 @@ Want a more “hacky” look and feel like a coding pro? Go to *Tools → Appear
 In the options menu, you can also customize the editor—for example, you can enable **rainbow parentheses** via *Tools → Global Options → Code → Display*. This highlights matching parentheses in the same color, which can make code easier to read.
 :::
 
-### 1.1 Source: Write your own code
+## 2. Source: Write your own code
 
 In the Source window, you write the code that tells R what task to perform.
 
-**Write code**
+### 2.1 Write code
 
 Let’s start with a simple example. Suppose you want R to print the word `"hello"`.\
 First, we create an **object** called *word* and assign the value `"hello"` to it.
@@ -54,7 +54,6 @@ word <- "hello"
 *Image: "Source"*
 
 ![](files/images/1_source.jpg){fig-alt="Overview of the source panel in RStudio"}
-
 R allows you to add comments to your code. This is helpful when you return to your script later—especially once your code becomes longer.
 
 Comments are created using a hashtag `#`. Everything after `#` is ignored by R and treated as a note for humans only (so not run as code)
@@ -72,7 +71,7 @@ If you add four hashtags before a heading `####`, RStudio creates a section head
 
 ![](files/images/1_structure.jpg){fig-alt="Structuring code in RStudio"}
 
-**Execute Code**
+### 2.2 Execute Code
 
 Next, we want to run (execute) our code.
 
@@ -98,7 +97,7 @@ Some commands take longer to run. If you notice an error while code is executing
 
 Alternatively, use *Session → Interrupt R*.
 
-**Save Code**
+### 2.3 Save Code
 
 One major advantage of R is that analyses are reproducible—as long as you save your code. When you reopen RStudio, you can simply run the script again to reproduce your results.
 
@@ -110,7 +109,7 @@ To save your code:
 
 ![](files/images/1_save.jpg){fig-alt="Saving code in RStudio"}
 
-### 1.2 Console: Print results
+## 3. Console: Print results
 
 The results of executed code appear in the **Console**, the second main window in RStudio. The Console shows both the commands you run and the output produced by R.
 
@@ -128,7 +127,7 @@ word
 
 ![](files/images/1_console.jpg){fig-alt="Console panel in RStudio"}
 
-### 1.3 Environment: Overview of objects
+## 4. Environment: Overview of objects
 
 The third window is the **Environment**. It shows all objects that currently exist in your R session—right now, that’s just the object *word*. As you create more objects (datasets, variables, results, etc.), this list will grow.
 
@@ -147,7 +146,7 @@ View(word)
 
 ![](files/images/1_view.jpg){fig-alt="Viewing data in RStudio"} 
 
-### 1.4 Plots/Help/Packages: Do everything else
+## 5. Plots/Help/Packages: Do everything else
 
 Lastly, the standard RStudio interface includes a fourth window (depending on your chosen layout). In many setups, this panel contains tabs such as Files, Plots, Packages, and Help. We’ll cover these in more detail later. For now, it’s enough to know that this window is used, for example, to view plots and other output, browse files, and manage packages (including checking which packages are currently loaded).
 

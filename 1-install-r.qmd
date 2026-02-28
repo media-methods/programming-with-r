@@ -50,7 +50,7 @@ If you already have R Studio on your computer, simply make sure to update it to 
 
 ## 3. Why should I learn R?
 
-There are several reasons why I recommend learning **R** (and similar programming languages like Python) instead of menu-based programs such as SPSS.
+There are several reasons why I recommend learning R (and similar programming languages like Python) instead of menu-based programs such as SPSS.
 
 1.  **R is free.** Unlike many other statistical programs, you don’t have to buy it or depend on a university license—which often expires once you leave.
 
