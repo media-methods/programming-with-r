@@ -14,7 +14,7 @@ After working through Tutorial 2, you'll...
 
 RStudio is a graphical interface (like an app) that makes it easier to work with R. It usually contains **four main windows (panels)**, each with a different purpose:
 
--   **Source (Script Editor):** Write and save your code. *Important:* After installing R/RStudio, you may not see this window right away. To open it, click *File → New File → R Script*.
+-   **Source (Script Editor):** Write and save your code. **Important**: After installing R/RStudio, you may not see this window right away. To open it, click *File → New File → R Script*.
 
 -   **Console:** Run code. This is where commands are executed and results are shown.
 
@@ -26,7 +26,7 @@ RStudio is a graphical interface (like an app) that makes it easier to work with
 
 ![](files/images/1_overview.jpg){fig-alt="Overview of panels in RStudio"}
 
-Your layout may look slightly different (panels can be arranged differently, and labels may vary). The four-panel setup shown here works well for many people, but feel free to adjust it.
+Your layout may look slightly different. The four-panel setup shown here works well for many people, but feel free to adjust it.
 
 To change the layout, go to *Tools → Global Options → Pane Layout*.
 
@@ -56,7 +56,7 @@ In R, you would use then use the Source window to do this:
 
 ### 2.2 Comment code
 
-R allows you to add comments to your code. This is helpful when you return to your script later—especially once your code becomes longer and you may have forgotten what specific code elements do.
+R allows you to add comments to your code. This is helpful when you return to your script later, especially once your code becomes longer and you may have forgotten what specific code elements do.
 
 Comments are created using a hashtag `#`. Everything after `#` **is ignored by R** and treated as a note for humans only (so not run as code). In the following, everything after the hashtag is purely a "mental note" to yourself:
 
@@ -65,7 +65,7 @@ Comments are created using a hashtag `#`. Everything after `#` **is ignored by R
 word <- "hello"
 ```
 
-You can also use hashtags to structure your script into sections—similar to headings in a Word document. If you add four hashtags before a heading `####`, RStudio creates a section header that helps you navigate through your script. This is especially useful for long files.
+You can also use hashtags to structure your script into sections - similar to headings in a Word document. If you add four hashtags before a heading `####`, RStudio creates a section header that helps you navigate through your script. This is especially useful for long files.
 
 ![](files/images/1_structure.jpg){fig-alt="Structuring code in RStudio"}
 
@@ -93,7 +93,7 @@ Usually, I recommend waiting rather than quickly interrupting R.
 
 ### 2.4 Save Code
 
-One major advantage of R is that analyses are reproducible—**as long as you save your code**. When you reopen RStudio, you can simply run the script again to reproduce your results.
+One major advantage of R is that analyses are reproducible, **as long as you save your code**. When you reopen RStudio, you can simply run the script again to reproduce your results.
 
 To save your code:
 
@@ -124,7 +124,7 @@ word
 
 Another important window is the **Environment**. It shows all objects that currently exist in your R session—right now, that’s just the object *word*. As you create more objects (datasets, variables, results, etc.), this list will grow.
 
-If you have worked with SPSS before, you can think of the Environment as a kind of *overview* of what is currently loaded. The key difference is that R can keep **many different objects at the same time**—for example, several datasets, models, or tables—so you can switch between them easily.
+If you have worked with SPSS before, you can think of the Environment as a kind of *overview* of what is currently loaded. The key difference is that R can keep **many different objects at the same time**(e.g., datasets, models, or tables), so you can switch between them easily.
 
 *Image: Window "Environment"*
 
@@ -142,7 +142,7 @@ View(word)
 
 ## 5. Plots/Help/Packages: Do everything else
 
-Lastly, the standard RStudio interface includes a final important window. In many setups, this panel contains tabs such as "Files", "Plots", "Packages", and "Help". We’ll cover these in more detail later. For now, it’s enough to know that this window is used, for example, to view plots and other output, browse files, and manage additional functions in so-called packages (including checking which packages are currently loaded).
+Lastly, the standard RStudio interface includes a final important window. In many setups, this panel contains tabs such as "Files", "Plots", "Packages", and "Help". We’ll cover these in more detail later. For now, it’s enough to know that this window is used, for example, to view plots and other output, browse files, and manage additional functions in so-called packages.
 
 *Image: Window "Files/Plots/Packages"*
 
@@ -150,7 +150,7 @@ Lastly, the standard RStudio interface includes a final important window. In man
 
 ## 6. Working with R projects
 
-In this class, we will work with R projects. An **R project** is a feature offered in RStudio: Basically, it creates a dedicated folder to organize and manage files, scripts, and data for a specific analysis (for a longer explanation, see [here](https://www.r-bloggers.com/2020/01/rstudio-projects-and-working-directories-a-beginners-guide/). You should create a R project for this class and always use this R project.
+In this class, we will work with R projects. An **R project** is a feature offered in RStudio: Basically, it creates a dedicated folder to organize and manage files, scripts, and data for a specific analysis (for a longer explanation, see [here](https://www.r-bloggers.com/2020/01/rstudio-projects-and-working-directories-a-beginners-guide/)). You should create a R project for this class and always use this R project.
 
 When you open the `.Rproj` file in RStudio, RStudio treats that folder as your **project home**. All data will be stored in this folder as a so-called root directory. This helps you keep everything in one place.
 
@@ -166,10 +166,9 @@ Use a project whenever files belong together, for example:
 
 ### 6.2 Why are R projects so useful?
 
--   No more “file not found”: Your project folder becomes the default location, so loading files is simpler.
--   Cleaner workflow: You naturally separate *data*, *scripts*, and *outputs* instead of mixing everything. This helps knowing what to find where.
--   Reproducible work: If you reopen the project later, you can rerun your code and reproduce your results - especially if you also create virtual environment with packages like `renv`.
--   Collaboration-friendly: A shared project structure makes it easier for others to run your code on their computer.
+-  *No more “file not found”*: Your project folder becomes the default location, so loading files is simpler.
+-   *Cleaner workflow*: You naturally separate data, scripts, and outputs instead of mixing everything. This helps knowing what to find where.
+-   *Reproducible work*: If you reopen the project later, you can rerun your code and reproduce your results - especially if you also create virtual environment with packages like `renv`.
 
 ### 6.3 How to set up a R project for this class
 
@@ -241,7 +240,7 @@ Perfect - we are ready to get into the workflow of R now!
 ::: {.callout-tip collapse="true"}
 ## Smart Hack 1: Feel like a coding pro
 
-Want a more “hacky” look and feel like a coding pro? 
+Want a more “hacky” look and feel like a coding pro?
 
 -   Go to *Tools → Appearance → Editor theme* and try a dark theme like **Chaos**.
 
@@ -250,21 +249,20 @@ Want a more “hacky” look and feel like a coding pro?
 
 ::: {.callout-tip collapse="true"}
 ## Smart Hack 2: ⌨️ RStudio shortcuts
+
 RStudio has many keyboard shortcuts that speed up coding (running code, formatting, navigating, etc.). You don’t need to memorize them—RStudio shows you the full list.
 
-- **Find all shortcuts:** *Tools* → *Keyboard Shortcuts Help*  
-- **Search quickly:** Use the search box to look up actions (e.g., “comment”, “format”).
-- **Change shortcuts:** *Tools* → *Modify Keyboard Shortcuts…* (useful if you prefer different keys)
+-   **Find all shortcuts:** *Tools* → *Keyboard Shortcuts Help*\
+-   **Search quickly:** Use the search box to look up actions (e.g., “comment”, “format”).
+-   **Change shortcuts:** *Tools* → *Modify Keyboard Shortcuts…* (useful if you prefer different keys)
 
 A few high-impact ones to start with:
 
-- **Run current line/selection:** `Ctrl + Enter` (Windows/Linux) / `Cmd + Enter` (Mac)
-- **Comment/uncomment selection:** `Ctrl + Shift + C` / `Cmd + Shift + C`
+-   **Run current line/selection:** `Ctrl + Enter` (Windows/Linux) / `Cmd + Enter` (Mac)
+-   **Comment/uncomment selection:** `Ctrl + Shift + C` / `Cmd + Shift + C`
 
 ![](files/images/2_shortcut.jpg){fig-alt="Interrupting code in RStudio"}
-
 :::
-
 
 ## 🎲 Quiz
 

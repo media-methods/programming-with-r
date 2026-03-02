@@ -7,10 +7,9 @@ title: "3 Workflow in R"
 
 After working through Tutorial 3, you'll be able to...
 
--   describe the basic workflow in RStudio (script → objects → functions → output)
--   explain what objects and functions are and use them in simple examples
--   explain what packages are and apply them by installing, loading, and using a package
--   apply these skills to create a simple R analysis for your own dataset
+-   describe and apply the basic workflow in RStudio
+-   explain what objects and functions are and use them
+-   explain what packages are and use them
 :::
 
 ## 1. Basic workflow in R
@@ -21,7 +20,6 @@ The basic workflow in R looks like this:
 
 -   [ ] Open the RStudio project
 -   [ ] Check that the project is located in the correct folder and contains *data*, *scripts*, and *output* subfolders
--   [ ] If necessary, open the script for the tutorial (download via [Materials](81-materials.qmd)). **Note**: No script for tutorial 3!
 
 **📦 Packages**
 
@@ -36,7 +34,7 @@ The basic workflow in R looks like this:
 
 **💾 Saving everything**
 
--   [ ] Save your code (and any edited data files, if applicable)
+-   [ ] Save your code (and any outputs, if necessary)
 
 Check your set-up. Are you ready to go? 🚀
 
@@ -103,7 +101,6 @@ Even assigning values with `<-` can be understood as part of R’s functional lo
 Functions in R use inputs called **arguments** (e.g., the variable you want to "give" a function for transformation or analysis).
 
 **Argument order**
-
 Many functions expect arguments in a specific order. If you provide arguments without naming them, R assumes you are following this predefined order.
 
 General structure:
@@ -127,7 +124,6 @@ round(x = 3.1413, digits = 2)
 ```
 
 **Optional arguments**
-
 Many functions also contain **optional arguments**. These arguments already have **default values**, meaning you only need to specify them if you want to change the default behavior.
 
 For example, this works exactly the same as the code above:
@@ -473,3 +469,4 @@ You still have questions? The following tutorials & papers can help you with tha
 -   ["wegweisR" by M. Haim, Video 1](https://youtu.be/p6f4oq08z48)
 -   ["R Cookbook" by Long et al., Tutorial 1](https://rc2e.com/)
 -   ["Tutorial 2 - Wissen macht R" by B. Fretwurst](https://ikmz.pages.uzh.ch/Wissen-macht-R/01-Basics.html)
+:::::::

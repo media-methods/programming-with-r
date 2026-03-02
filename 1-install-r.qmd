@@ -19,7 +19,7 @@ After working through Tutorial 1, you'll...
 
 R is the programming language we'll use to import, edit, and analyze data. R Studio is a desktop application with a graphical interface that facilitates programming with R. Basically, R Studio makes coding with R much easier!
 
-In programming, R Studio is called an "integrated development environment (IDE). There are other interfaces or IDEs (e.g., Positron, Visual Studio Code), but we will stick with R Studio for now.
+In programming, R Studio is called an "integrated development environment" (IDE). There are other interfaces or IDEs (e.g., Positron, Visual Studio Code), but we will stick with R Studio for now.
 
 ## 2. How do I install R and R Studio?
 
@@ -58,13 +58,13 @@ If you already have R Studio on your computer, simply make sure to update it to 
 
 There are several reasons why I recommend learning R (and similar programming languages like Python) instead of menu-based programs such as SPSS.
 
-1.  **R is free.** Unlike many other statistical programs, you don’t have to buy it or depend on a university license—which often expires once you leave.
+1.  **R is free.** Unlike many other statistical programs, you don’t have to buy it or depend on a university license which often expires once you leave.
 
-2.  **R is open source.** That means the source code (the “blueprint” of the software) is publicly available. On top of that, R has **thousands of add-on packages**—extra tools that provide specialized functions for particular tasks. Most of these packages are available through **CRAN** (the Comprehensive R Archive Network), and you can install them whenever you need them.
+2.  **R is open source.** That means the source code (the “blueprint” of the software) is publicly available. On top of that, R has **thousands of add-on packages** - extra tools that provide specialized functions for particular tasks. Most of these packages are available through **CRAN** (the Comprehensive R Archive Network) and you can install them whenever you need them.
 
 3.  **R is flexible.** You can work with many different types of data and choose from a huge range of functions to import, clean, visualize, and analyze it. And if a function you need doesn’t exist yet, you can often **write your own** (or adapt code someone else has shared).
 
-4.  **Programming is a valuable job skill.** Knowing R (or Python) can strengthen your applications in areas like academia, market research, data science, and data journalism—because many employers expect applicants to be comfortable working with code.
+4.  **Programming is a valuable job skill.** Knowing R (or Python) can strengthen your applications in areas like academia, market research, data science, and data journalism as many employers expect applicants to be comfortable working with code.
 
 ## 4. What should I know about learning R?
 
@@ -80,15 +80,15 @@ That’s normal. Once you understand the basics, things start to click. That’s
 
 Many students experience a similar learning curve:
 
--   **Frustration phase:** Errors, syntax issues, and unfamiliar concepts make progress feel slow. This stage is normal—you may want to break your keyboard and scream.
--   **Breakthrough:** Core ideas start to make sense. Some setbacks still happen, and you might forget things you thought you already knew.
--   **Confidence:** Tasks get faster, and learning new tools becomes easier. Even if you hit a problem you can’t solve right away, you know you will—it may just take some time. You’ve got it now.
+-   **Frustration phase:** Errors, syntax issues, and unfamiliar concepts make progress feel slow. This stage is normal. You may want to break your keyboard and scream.
+-   **Breakthrough:** Core ideas start to make sense. Some setbacks still happen and you occasionally still forget things you thought you already knew.
+-   **Confidence:** Tasks get faster and learning new tools becomes easier. Even if you hit a problem you can’t solve right away, you know you will — it may just take some time. You’ve got it now!
 
 ### Many ways to do the same thing in R {.unlisted}
 
-R is a full programming language. Wo with it you can analyze data, create graphics, automate repetitive tasks, and use thousands of add-on packages for specialized methods. That flexibility is a big advantage, but it can feel confusing at first: There are many different ways to solve the same problem in R.
+R is a full programming language. with R, you can analyze data, create graphics, automate repetitive tasks, and use thousands of add-on packages for specialized methods. That flexibility is a big advantage, but it can feel confusing at first: There are many different ways to solve the same problem in R.
 
-You might see two solutions in different tutorials that look completely different but produce the same result - and that’s normal. In this course, we have one goal: make the code work and understand what it’s doing, even if it isn’t the shortest or “prettiest” solution yet. It doesn't matter which solution you choose - as long as it it correct.
+You might see solutions in different tutorials that look completely different but produce the same result - that’s normal. In this course, we have one goal: make the code work and understand what it’s doing, even if it isn’t the shortest or “prettiest” solution yet. It doesn't matter which solution you choose - as long as it it correct.
 
 Once that feels comfortable, we’ll improve our workflow step by step: cleaner code, fewer steps, and more reusable solutions.
 
