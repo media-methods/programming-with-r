@@ -216,7 +216,7 @@ data_woj |>
 ::: {.callout-note icon="false"}
 ## 🎲 Question 1
 
-**Which of the following statements about the pipe `|>` are correct?**
+**Which of the following statements are correct?**
 
 ```{ojs}
 //| echo: false
@@ -224,9 +224,9 @@ data_woj |>
 MC_datatypes_1 = [
   ["Numeric data can be used directly for mathematical calculations.", "True"],
   ["Character values are recognized without quotation marks.", "False"],
-  ["`TRUE` and `FALSE` belong to the logical data type.", "True"],
-  ["`NA` represents a missing value.", "True"],
-  ["`c(\"1\", \"2\")` is stored as numeric data.", "False"]
+  ["TRUE and FALSE belong to the logical data type.", "True"],
+  ["NA represents a missing value.", "True"],
+  ["c("1", "2")` is stored as numeric data.", "False"]
 ]
 
 viewof answers_datatypes_1 = quizInput({
@@ -239,16 +239,16 @@ viewof answers_datatypes_1 = quizInput({
 ::: {.callout-note icon="false"}
 ## 🎲 Question 2
 
-**Which of the following statements about the tidyverse are correct?**
+**Which of the following statements about missing data are correct?**
 
 ```{ojs}
 //| echo: false
 
 MC_missing_1 = [
   ["I do not need to check for missing values - R can handle this automatically", "False"],
-  ["`is.na()` checks whether values are missing.", "True"],
-  ["`sum(is.na(x))` counts how many missing values exist.", "True"],
-  ["Setting `na.rm = TRUE` tells R to ignore missing values in calculations.", "True"]
+  ["is.na() checks whether values are missing.", "True"],
+  ["sum(is.na(x)) counts how many missing values exist.", "True"],
+  ["Setting na.rm = TRUE tells R to ignore missing values in calculations.", "True"]
 ]
 
 viewof answers_missing_1 = quizInput({
@@ -261,7 +261,7 @@ viewof answers_missing_1 = quizInput({
 ::: {.callout-note icon="false"}
 ## 🎲 Question 3
 
-**You want to transform set all values in `ethics_1` coded as "3" to "NA". Type in the correct command!**
+**You want to set all values in `ethics_1` coded as "3" to "NA". Type in the correct command!**
 
 ```{ojs}
 //| echo: false
@@ -269,7 +269,7 @@ viewof answers_missing_1 = quizInput({
 TRT_6_1 = [
   `data_woj |>
         mutate(ethics_1 = {{input}}(work_experience, 3))`,
-  "Command",
+  "Code",
   "na_if",
   "monospace",
   "#000000"

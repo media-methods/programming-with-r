@@ -36,6 +36,7 @@ book:
        - 6-data-types.qmd
       # - 7-visuals.qmd
       # - 8-data-management.qmd
+       - imprint.qmd
   
     - part: 80-appendix.qmd
       chapters:
