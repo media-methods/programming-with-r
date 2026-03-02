@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.57">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="author" content="Valerie Hase">
-
-<title>🔷 FAQ Class/exam – Programming with R for Social Scientists</title>
+<title>🔷 FAQ R – Programming with R for Social Scientists</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,8 +18,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
-
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
@@ -31,7 +61,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./85-faq-r.html" rel="prev">
+<link href="./82-forum.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -40,8 +70,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -67,36 +96,26 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-
-
-<link rel="stylesheet" href="files/www/custom.css">
+}</script><link rel="stylesheet" href="files/www/custom.css">
 <link rel="stylesheet" href="ache-refresh">
 </head>
-
 <body class="nav-sidebar floating no-chapter-nav fullcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./80-appendix.html">Appendix</a></li><li class="breadcrumb-item"><a href="./86-faq-class.html"><span class="chapter-title">🔷 FAQ Class/exam</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./80-appendix.html">Appendix</a></li><li class="breadcrumb-item"><a href="./83-faq-r.html"><span class="chapter-title">🔷 FAQ R</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Programming with R for Social Scientists</a> 
         <div class="sidebar-tools-main">
@@ -111,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Welcome</span></a>
   </div>
@@ -124,8 +143,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./1-install-r.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1 Install R/R Studio</span></a>
   </div>
@@ -145,8 +164,13 @@ ul.task-list li input[type="checkbox"] {
   <a href="./4-coding-style.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">4 Good coding practice</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./5-the-tidyverse.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">5 The tidyverse</span></a>
+  </div>
+</li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./80-appendix.html" class="sidebar-item-text sidebar-link">
@@ -155,51 +179,32 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./81-materials.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">🔷 Materials</span></a>
+  <a href="./81-glossary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">🔷 Glossary</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./82-coding-style.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">🔷 Coding style</span></a>
+  <a href="./82-forum.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">🔷 Github Discussion forum</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./83-glossary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">🔷 Glossary</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./84-forum.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">🔷 Github Discussion forum</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./85-faq-r.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">🔷 FAQ R</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./86-faq-class.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">🔷 FAQ Class/exam</span></a>
+  <a href="./83-faq-r.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">🔷 FAQ R</span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./80-appendix.html">Appendix</a></li><li class="breadcrumb-item"><a href="./86-faq-class.html"><span class="chapter-title">🔷 FAQ Class/exam</span></a></li></ol></nav>
-<div class="quarto-title">
-<h1 class="title"><span class="chapter-title">🔷 FAQ Class/exam</span></h1>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./80-appendix.html">Appendix</a></li><li class="breadcrumb-item"><a href="./83-faq-r.html"><span class="chapter-title">🔷 FAQ R</span></a></li></ol></nav><div class="quarto-title">
+<h1 class="title"><span class="chapter-title">🔷 FAQ R</span></h1>
 </div>
 
 
@@ -213,36 +218,40 @@ ul.task-list li input[type="checkbox"] {
   
 
 
-</header>
+</header><section id="question-1-r-cannot-find-a-package" class="level2"><h2 class="anchored" data-anchor-id="question-1-r-cannot-find-a-package">Question 1: R cannot find a package</h2>
+<p>When running this command…</p>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>I get this error: “<em>Error in library(tidyverse) : there is no package called ‘tidyverse’“</em></p>
+<p><strong>Solution:</strong> This simply means that the <code>tidyverse</code> package is not installed yet on your computer. In R, installing (done <em>once</em>) and loading a package (done <em>every time</em> you re-open R) are two different steps.</p>
+<div class="cell">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#first (one!)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"tidyverse"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">#second (every time you open R!)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="question-2-my-computer-is-stuck-on-a-pipe" class="level2"><h2 class="anchored" data-anchor-id="question-2-my-computer-is-stuck-on-a-pipe">Question 2: My computer is stuck on a pipe</h2>
+<p>When running this command…</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>data <span class="sc">|&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(country) <span class="sc">|&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>… my computer does not react anymore. It seems that the code is running forever. My console also seems weird as it still shows the code and not an error:</p>
+<p><img src="files/images/faq_pipe.jpg" class="img-fluid"></p>
+<p><strong>Solution:</strong> The problem is simply that the pipe is unfinished. Your code end with a pipe operator <code>|&gt;</code>, so R is still “waiting” for the next command it should apply.</p>
+<p>A pipe <code>|&gt;</code> should never be the last thing on a line unless another command follows on the next line. Interrupt R by pressing <code>|&gt;</code>.</p>
+<div class="cell">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co">#first (one!)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"tidyverse"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co">#second (every time you open R!)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 
 
-<p><span id="sec-86-faq-class"></span></p>
-<section id="do-i-need-to-bring-my-own-laptop-to-class" class="level3">
-<h3 class="anchored" data-anchor-id="do-i-need-to-bring-my-own-laptop-to-class">Do I need to bring my own laptop to class?</h3>
-<p>YES</p>
-</section>
-<section id="how-will-i-be-evaluated" class="level3">
-<h3 class="anchored" data-anchor-id="how-will-i-be-evaluated">How will I be evaluated?</h3>
-<p>XXX</p>
-</section>
-<section id="how-can-i-sign-up-for-the-exam" class="level3">
-<h3 class="anchored" data-anchor-id="how-can-i-sign-up-for-the-exam">How can I sign up for the exam?</h3>
-<p>Mit der Buchung des Moduls sind Sie gleichzeitig auch für den Leistungsnachweis angemeldet. Sie müssen die Prüfung nicht separat buchen.</p>
-</section>
-<section id="how-is-the-exam-structured" class="level3">
-<h3 class="anchored" data-anchor-id="how-is-the-exam-structured">How is the exam structured?</h3>
-<p>In der Prüfung kann prinzipiell alles drankommen, was in der Vorlesung gelehrt wurde, auf der Seite der Begleiterin steht (mit Ausnahme der gekennzeichneten IYI-Zusätze für Interessierte) und was auf den Folien steht (grosse Überschneidung mit der Begleiterin). Desweiteren sind die Antworten in unserem Forum zu berücksichtigen – wobei wir die wichtigsten Q&amp;A auch immer nochmal auf die Seite der Begleiterin packen.</p>
-</section>
-<section id="i-am-a-bit-afraid-of-programming-and-statistics.-what-do-i-do" class="level3">
-<h3 class="anchored" data-anchor-id="i-am-a-bit-afraid-of-programming-and-statistics.-what-do-i-do">I am a bit afraid of programming and statistics. What do I do?</h3>
-<p>Wenn Sie in die Vorlesung und die Übung gehen und sich mit den LEF, der Begleiterin und der Zusammenfassung vorbereiten, werden Sie sehr sicher bestehen. Es gibt immer eine gewisse Durchfallquote, aber das sind in der Regel Studierende, die es mit minimaler Vorbereitung einfach mal versuchen.</p>
-<p>Wenn Sie grosse Probleme haben, suchen Sie sich bald eine Lerngruppe und fragen Sie in unserem Forum, ob Ihnen ein:e Tutor:in nochmal helfen kann.</p>
-
-
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -661,19 +670,16 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="./85-faq-r.html" class="pagination-link" aria-label="🔷 FAQ R">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">🔷 FAQ R</span></span>
+</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="./82-forum.html" class="pagination-link" aria-label="🔷 Github Discussion forum">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">🔷 Github Discussion forum</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
       &nbsp;
     </div>   
@@ -685,8 +691,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-
-
 
 
 </body></html>

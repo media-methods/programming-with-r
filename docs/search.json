@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Programming with R for Social Scientists",
     "section": "",
-    "text": "Welcome! 👋 What Is This Compendium For?\nAcross several tutorials, we will help you build practical computational skills:\nAll course materials (code, etc.) are available here",
+    "text": "Welcome! 👋 What Is This Compendium For?\nAcross several tutorials, we will help you build practical computational skills:",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Welcome</span>"
     ]
@@ -403,82 +403,6 @@
     ]
   },
   {
-    "objectID": "81-materials.html",
-    "href": "81-materials.html",
-    "title": "🔷 Materials",
-    "section": "",
-    "text": "Data sets\nempty for now\n\n\nR Code\nempty for now",
-    "crumbs": [
-      "Appendix",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>🔷 Materials</span>"
-    ]
-  },
-  {
-    "objectID": "82-coding-style.html",
-    "href": "82-coding-style.html",
-    "title": "🔷 Coding style",
-    "section": "",
-    "text": "Recommendations for good coding style\ntbd",
-    "crumbs": [
-      "Appendix",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>🔷 Coding style</span>"
-    ]
-  },
-  {
-    "objectID": "83-glossary.html",
-    "href": "83-glossary.html",
-    "title": "🔷 Glossary",
-    "section": "",
-    "text": "R Function\nDefinition\n\n\n\n? and help()\nHelp you to get more info on a specific function\n\n\narrange()\narrange data in descending or ascending order\n\n\ncase_when()\ntransform existing variables based on multiple conditions\n\n\nfilter()\nfilter specific observations, often based on conditions\n\n\nif_else()\ntransform existing variables based on two conditions\n\n\ninstall.packages()\nInstalls packages on your machine - only has to be run once\n\n\nlibrary()\nLoads existing packages - has to be run everytime you reopen R Studio\n\n\nmutate()\ncreate new variables\n\n\nsave.image\nSaves your working directory\n\n\nselect()\nselect specific variables\n\n\n|&gt;\nthe pipe, pushes data (left) through the pipe for transformation (right)",
-    "crumbs": [
-      "Appendix",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>🔷 Glossary</span>"
-    ]
-  },
-  {
-    "objectID": "84-forum.html",
-    "href": "84-forum.html",
-    "title": "🔷 Github Discussion forum",
-    "section": "",
-    "text": "GitHub Discussion Forum\nYou can ask questions, report issues, or participate in discussions on GitHub:\n👉 https://github.com/media-methods/programming-with-r/discussions\n\n\n\nGitHub Forum",
-    "crumbs": [
-      "Appendix",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>🔷 Github Discussion forum</span>"
-    ]
-  },
-  {
-    "objectID": "85-faq-r.html",
-    "href": "85-faq-r.html",
-    "title": "🔷 FAQ R",
-    "section": "",
-    "text": "How do I set my working directory?\n\nsetwd()\n\nI get this error…\nSolution:\nThis is it!\n\nsetwd(right)",
-    "crumbs": [
-      "Appendix",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>🔷 FAQ R</span>"
-    ]
-  },
-  {
-    "objectID": "86-faq-class.html",
-    "href": "86-faq-class.html",
-    "title": "🔷 FAQ Class/exam",
-    "section": "",
-    "text": "Do I need to bring my own laptop to class?\nYES\n\n\nHow will I be evaluated?\nXXX\n\n\nHow can I sign up for the exam?\nMit der Buchung des Moduls sind Sie gleichzeitig auch für den Leistungsnachweis angemeldet. Sie müssen die Prüfung nicht separat buchen.\n\n\nHow is the exam structured?\nIn der Prüfung kann prinzipiell alles drankommen, was in der Vorlesung gelehrt wurde, auf der Seite der Begleiterin steht (mit Ausnahme der gekennzeichneten IYI-Zusätze für Interessierte) und was auf den Folien steht (grosse Überschneidung mit der Begleiterin). Desweiteren sind die Antworten in unserem Forum zu berücksichtigen – wobei wir die wichtigsten Q&A auch immer nochmal auf die Seite der Begleiterin packen.\n\n\nI am a bit afraid of programming and statistics. What do I do?\nWenn Sie in die Vorlesung und die Übung gehen und sich mit den LEF, der Begleiterin und der Zusammenfassung vorbereiten, werden Sie sehr sicher bestehen. Es gibt immer eine gewisse Durchfallquote, aber das sind in der Regel Studierende, die es mit minimaler Vorbereitung einfach mal versuchen.\nWenn Sie grosse Probleme haben, suchen Sie sich bald eine Lerngruppe und fragen Sie in unserem Forum, ob Ihnen ein:e Tutor:in nochmal helfen kann.",
-    "crumbs": [
-      "Appendix",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>🔷 FAQ Class/exam</span>"
-    ]
-  },
-  {
-    "objectID": "80-appendix.html",
-    "href": "80-appendix.html",
-    "title": "Appendix",
-    "section": "",
-    "text": "This is an overview of additional material we provide:\n\nIn Materials, you can download all necessary data and code.\nIn Coding style, we provide best practice guidelines for coding.\nIn Glossary, you can get a useful overview of important functions.\nIn the GitHub forum, you can discuss questions with others.\nIn FAQ R, we provide an overview of common R question.\nIn FAQ Class/exam, we provide an overview of common questions about the class/exam.",
-    "crumbs": [
-      "Appendix"
-    ]
-  },
-  {
     "objectID": "5-the-tidyverse.html",
     "href": "5-the-tidyverse.html",
     "title": "5 The tidyverse",
@@ -564,6 +488,60 @@
     "crumbs": [
       "R Basics",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>5 The tidyverse</span>"
+    ]
+  },
+  {
+    "objectID": "81-glossary.html",
+    "href": "81-glossary.html",
+    "title": "🔷 Glossary",
+    "section": "",
+    "text": "R Function\nDefinition\n\n\n\n? and help()\nHelp you to get more info on a specific function\n\n\narrange()\narrange data in descending or ascending order\n\n\ncase_when()\ntransform existing variables based on multiple conditions\n\n\nfilter()\nfilter specific observations, often based on conditions\n\n\nhead()\nshow first rows of a dataset\n\n\nif_else()\ntransform existing variables based on two conditions\n\n\ninstall.packages()\nInstalls packages on your machine - only has to be run once\n\n\nlibrary()\nLoads existing packages - has to be run everytime you reopen R Studio\n\n\nmutate()\ncreate new variables\n\n\nsave.image\nSaves your working directory\n\n\nselect()\nselect specific variables\n\n\n|&gt;\nthe pipe, pushes data (left) through the pipe for transformation (right)",
+    "crumbs": [
+      "Appendix",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>🔷 Glossary</span>"
+    ]
+  },
+  {
+    "objectID": "82-forum.html",
+    "href": "82-forum.html",
+    "title": "🔷 Github Discussion forum",
+    "section": "",
+    "text": "GitHub Discussion Forum\nYou can ask questions, report issues, or participate in discussions on GitHub:\n👉 https://github.com/media-methods/programming-with-r/discussions\n\n\n\nGitHub Forum",
+    "crumbs": [
+      "Appendix",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>🔷 Github Discussion forum</span>"
+    ]
+  },
+  {
+    "objectID": "83-faq-r.html",
+    "href": "83-faq-r.html",
+    "title": "🔷 FAQ R",
+    "section": "",
+    "text": "Question 1: R cannot find a package\nWhen running this command…\nlibrary(tidyverse)\nI get this error: “Error in library(tidyverse) : there is no package called ‘tidyverse’“\nSolution: This simply means that the tidyverse package is not installed yet on your computer. In R, installing (done once) and loading a package (done every time you re-open R) are two different steps.\n#first (one!)\ninstall.packages(\"tidyverse\")\n\n#second (every time you open R!)\nlibrary(tidyverse)",
+    "crumbs": [
+      "Appendix",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>🔷 FAQ R</span>"
+    ]
+  },
+  {
+    "objectID": "83-faq-r.html#question-2-my-computer-is-stuck-on-a-pipe",
+    "href": "83-faq-r.html#question-2-my-computer-is-stuck-on-a-pipe",
+    "title": "🔷 FAQ R",
+    "section": "Question 2: My computer is stuck on a pipe",
+    "text": "Question 2: My computer is stuck on a pipe\nWhen running this command…\n\ndata |&gt;\n  select(country) |&gt;\n\n… my computer does not react anymore. It seems that the code is running forever. My console also seems weird as it still shows the code and not an error:\n\nSolution: The problem is simply that the pipe is unfinished. Your code end with a pipe operator |&gt;, so R is still “waiting” for the next command it should apply.\nA pipe |&gt; should never be the last thing on a line unless another command follows on the next line. Interrupt R by pressing |&gt;.\n\n#first (one!)\ninstall.packages(\"tidyverse\")\n\n#second (every time you open R!)\nlibrary(tidyverse)",
+    "crumbs": [
+      "Appendix",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>🔷 FAQ R</span>"
+    ]
+  },
+  {
+    "objectID": "80-appendix.html",
+    "href": "80-appendix.html",
+    "title": "Appendix",
+    "section": "",
+    "text": "This is an overview of additional material we provide:\n\nIn Glossary, you can get a useful overview of important functions.\nIn the GitHub forum, you can discuss questions with others.\nIn FAQ R, we provide an overview of common R question.",
+    "crumbs": [
+      "Appendix"
     ]
   }
 ]

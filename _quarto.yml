@@ -39,12 +39,9 @@ book:
   
     - part: 80-appendix.qmd
       chapters:
-       - 81-materials.qmd
-       - 82-coding-style.qmd
-       - 83-glossary.qmd
-       - 84-forum.qmd
-       - 85-faq-r.qmd
-       - 86-faq-class.qmd
+       - 81-glossary.qmd
+       - 82-forum.qmd
+       - 83-faq-r.qmd
     
 format:
   html:

@@ -10,3 +10,4 @@ arrange();arrange data in descending or ascending order
 mutate();create new variables
 case_when();transform existing variables based on multiple conditions
 if_else();transform existing variables based on two conditions
+head();show first rows of a dataset

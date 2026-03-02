@@ -8,14 +8,9 @@ format:
 
 This is an overview of additional material we provide:
 
--   In [Materials](81-materials.qmd), you can download all necessary data and code.
+-   In [Glossary](81-glossary.qmd), you can get a useful overview of important functions.
 
--   In [Coding style](82-coding-style.qmd), we provide best practice guidelines for coding.
+-   In the [GitHub forum](82-forum.qmd), you can discuss questions with others.
 
--   In [Glossary](83-glossary.qmd), you can get a useful overview of important functions.
+-   In [FAQ R](83-faq-r.qmd), we provide an overview of common R question.
 
--   In the [GitHub forum](84-forum.qmd), you can discuss questions with others.
-
--   In [FAQ R](85-faq-r.qmd), we provide an overview of common R question.
-
--   In [FAQ Class/exam](86-faq-class.qmd), we provide an overview of common questions about the class/exam.
