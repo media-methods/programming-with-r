@@ -36,13 +36,14 @@ book:
        - 6-data-types.qmd
       # - 7-visuals.qmd
       # - 8-data-management.qmd
-       - imprint.qmd
-  
+
     - part: 80-appendix.qmd
       chapters:
        - 81-glossary.qmd
        - 82-forum.qmd
        - 83-faq-r.qmd
+       
+    - imprint.qmd
     
 format:
   html:
