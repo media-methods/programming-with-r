@@ -3,3 +3,10 @@ install.packages();Installs packages on your machine - only has to be run once
 library();Loads existing packages - has to be run everytime you reopen R Studio
 ? and help();Help you to get more info on a specific function
 save.image;Saves your working directory
+|>;the pipe, pushes data (left) through the pipe for transformation (right)
+select();select specific variables
+filter();filter specific observations, often based on conditions
+arrange();arrange data in descending or ascending order
+mutate();create new variables
+case_when();transform existing variables based on multiple conditions
+if_else();transform existing variables based on two conditions

@@ -34,16 +34,6 @@ To change the layout, go to *Tools → Global Options → Pane Layout*.
 
 ![](files/images/1_change.jpg){fig-alt="Changing the layout in RStudio" width="483"}
 
-::: callout-tip
-## Smart Hack
-
-Want a more “hacky” look and feel like a coding pro? 🤓
-
--   Go to *Tools → Appearance → Editor theme* and try a dark theme like **Chaos**.
-
--   Enable **rainbow parentheses** via *Tools → Global Options → Code → Display*. This highlights matching parentheses in the same color, which can make code easier to read.
-:::
-
 ## 2. Source: Write your own code
 
 In the Source window, you write the code that tells R what task to perform.
@@ -98,6 +88,8 @@ R will execute exactly the selected lines and create the object word. If no code
 Some commands take longer to run. If you notice an error while code is executing, you can stop it manually using the **Stop** button in the *Console* (visible only while R is running). Alternatively, use *Session → Interrupt R*.
 
 ![](files/images/1_interrupt.jpg){fig-alt="Interrupting code in RStudio"}
+
+Usually, I recommend waiting rather than quickly interrupting R.
 
 ### 2.4 Save Code
 
@@ -174,10 +166,10 @@ Use a project whenever files belong together, for example:
 
 ### 6.2 Why are R projects so useful?
 
--   **No more “file not found”:** Your project folder becomes the default location, so loading files is simpler.
--   **Cleaner workflow:** You naturally separate *data*, *scripts*, and *outputs* instead of mixing everything. This helps knowing what to find where.
--   **Reproducible work:** If you reopen the project later, you can rerun your code and reproduce your results - especially if you also create virtual environment with packages like `renv`.
--   **Collaboration-friendly:** A shared project structure makes it easier for others to run your code on their computer.
+-   No more “file not found”: Your project folder becomes the default location, so loading files is simpler.
+-   Cleaner workflow: You naturally separate *data*, *scripts*, and *outputs* instead of mixing everything. This helps knowing what to find where.
+-   Reproducible work: If you reopen the project later, you can rerun your code and reproduce your results - especially if you also create virtual environment with packages like `renv`.
+-   Collaboration-friendly: A shared project structure makes it easier for others to run your code on their computer.
 
 ### 6.3 How to set up a R project for this class
 
@@ -243,6 +235,36 @@ Perfect - we are ready to get into the workflow of R now!
 -   **Window "Console"**: used to return results of executed code
 -   **Window "Environment"**: used to inspect objects on which to use functions
 -   **Window "Files/Plots/Packages etc."**: used for additional functions, for instance visualizations/searching for help/activating or updating packages
+
+## 🤓 Smart Hacks
+
+::: {.callout-tip collapse="true"}
+## Smart Hack 1: Feel like a coding pro
+
+Want a more “hacky” look and feel like a coding pro? 
+
+-   Go to *Tools → Appearance → Editor theme* and try a dark theme like **Chaos**.
+
+-   Enable **rainbow parentheses** via *Tools → Global Options → Code → Display*. This highlights matching parentheses in the same color, which can make code easier to read.
+:::
+
+::: {.callout-tip collapse="true"}
+## Smart Hack 2: ⌨️ RStudio shortcuts
+RStudio has many keyboard shortcuts that speed up coding (running code, formatting, navigating, etc.). You don’t need to memorize them—RStudio shows you the full list.
+
+- **Find all shortcuts:** *Tools* → *Keyboard Shortcuts Help*  
+- **Search quickly:** Use the search box to look up actions (e.g., “comment”, “format”).
+- **Change shortcuts:** *Tools* → *Modify Keyboard Shortcuts…* (useful if you prefer different keys)
+
+A few high-impact ones to start with:
+
+- **Run current line/selection:** `Ctrl + Enter` (Windows/Linux) / `Cmd + Enter` (Mac)
+- **Comment/uncomment selection:** `Ctrl + Shift + C` / `Cmd + Shift + C`
+
+![](files/images/2_shortcut.jpg){fig-alt="Interrupting code in RStudio"}
+
+:::
+
 
 ## 🎲 Quiz
 

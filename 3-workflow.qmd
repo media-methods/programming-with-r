@@ -1,15 +1,16 @@
 ---
 title: "3 Workflow in R"
 ---
+
 ::: callout-note
 ## 🎯 Learning goals
 
 After working through Tutorial 3, you'll be able to...
 
-- describe the basic workflow in RStudio (script → objects → functions → output)
-- explain what objects and functions are and use them in simple examples
-- explain what packages are and apply them by installing, loading, and using a package
-- apply these skills to create a simple R analysis for your own dataset
+-   describe the basic workflow in RStudio (script → objects → functions → output)
+-   explain what objects and functions are and use them in simple examples
+-   explain what packages are and apply them by installing, loading, and using a package
+-   apply these skills to create a simple R analysis for your own dataset
 :::
 
 ## 1. Basic workflow in R
@@ -18,24 +19,24 @@ The basic workflow in R looks like this:
 
 **🖥️ Setup**
 
-- [ ] Open the RStudio project
-- [ ] Check that the project is located in the correct folder and contains *data*, *scripts*, and *output* subfolders
-- [ ] If necessary, open the script for the tutorial (download via [Materials](81-materials.qmd)). **Note**: No script for tutorial 3!
+-   [ ] Open the RStudio project
+-   [ ] Check that the project is located in the correct folder and contains *data*, *scripts*, and *output* subfolders
+-   [ ] If necessary, open the script for the tutorial (download via [Materials](81-materials.qmd)). **Note**: No script for tutorial 3!
 
 **📦 Packages**
 
-- [ ] Install the required packages (if needed)
-- [ ] Load the required packages using `library()`
+-   [ ] Install the required packages (if needed)
+-   [ ] Load the required packages using `library()`
 
 **🔎 Analysis**
 
-- [ ] Import or create your data
-- [ ] Run the analysis
-- [ ] Create outputs (e.g., tables, plots, or saved files)
+-   [ ] Import or create your data
+-   [ ] Run the analysis
+-   [ ] Create outputs (e.g., tables, plots, or saved files)
 
 **💾 Saving everything**
 
-- [ ] Save your code (and any edited data files, if applicable)
+-   [ ] Save your code (and any edited data files, if applicable)
 
 Check your set-up. Are you ready to go? 🚀
 
@@ -47,8 +48,8 @@ R is an **object- and function-oriented programming language**.
 
 Chambers (2014, p. 4) summarizes this idea nicely:
 
-- Everything that exists is an **object**.
-- Everything that happens is a **function call**.
+-   Everything that exists is an **object**.
+-   Everything that happens is a **function call**.
 
 These two principles explain most of what you will do in R.
 
@@ -58,11 +59,11 @@ In R, we store information inside **objects** so that we can work with it later.
 
 An object can contain, for example:
 
-- a number  
-- a word or text  
-- multiple values  
-- a dataset  
-- results from an analysis  
+-   a number\
+-   a word or text\
+-   multiple values\
+-   a dataset\
+-   results from an analysis
 
 We create objects by **assigning** a value to a name using the assignment operator `<-`.
 
@@ -78,9 +79,9 @@ The second key idea is that almost everything in R happens through **functions**
 
 A function:
 
-- takes an input,
-- performs an operation,
-- returns an output.
+-   takes an input,
+-   performs an operation,
+-   returns an output.
 
 General structure:
 
@@ -90,14 +91,14 @@ function_name(input)
 
 For example, functions can:
 
-- calculate,
-- transform data,
-- create plots.
+-   calculate,
+-   transform data,
+-   create plots.
 
 Even assigning values with `<-` can be understood as part of R’s functional logic. Learning R therefore largely means learning **which functions to use and how to combine them**.
 
 ::: {.callout-tip collapse="true"}
-## Smart Hack: Argument order and optional arguments
+## More on functions: Argument order and optional arguments
 
 Functions in R use inputs called **arguments** (e.g., the variable you want to "give" a function for transformation or analysis).
 
@@ -106,11 +107,13 @@ Functions in R use inputs called **arguments** (e.g., the variable you want to "
 Many functions expect arguments in a specific order. If you provide arguments without naming them, R assumes you are following this predefined order.
 
 General structure:
+
 ```{r,function-3,eval = FALSE, echo = TRUE}
 function_name(argument1, argument2, argument3)
 ```
 
 For example, the function `round()` rounds numbers:
+
 ```{r,function-4,eval = TRUE, echo = TRUE}
 round(3.1413, 2)
 ```
@@ -128,6 +131,7 @@ round(x = 3.1413, digits = 2)
 Many functions also contain **optional arguments**. These arguments already have **default values**, meaning you only need to specify them if you want to change the default behavior.
 
 For example, this works exactly the same as the code above:
+
 ```{r,function-5,eval = FALSE, echo = TRUE}
 round(3.1413)
 ```
@@ -137,16 +141,15 @@ By default, `round()` uses digits = 0, so the result is rounded to a whole numbe
 ```{r,function-6,eval = FALSE, echo = TRUE}
 round(3.1413, 3)
 ```
-
 :::
 
 ### 2.3 Take-Away and Example
 
 To recap:
 
-- data and results are stored as **objects**
-- all operations are performed using **functions**
-- analysis consists of applying functions to objects step by step
+-   data and results are stored as **objects**
+-   all operations are performed using **functions**
+-   analysis consists of applying functions to objects step by step
 
 Fortunately, R already provides many predefined functions, so you usually **use existing functions** rather than writing your own from scratch.
 
@@ -159,15 +162,15 @@ word
 
 What happens here?
 
-1. R takes the existing object *word* as input.
-2. The function `paste0()` combines it with new text.
-3. The result replaces the old object *word*.
+1.  R takes the existing object *word* as input.
+2.  The function `paste0()` combines it with new text.
+3.  The result replaces the old object *word*.
 
 This process — applying functions to objects and saving the result — is the basic workflow of programming in R.
 
 ## 3. Packages
 
-R already comes with many built-in functions (called **Base R**).  
+R already comes with many built-in functions (called **Base R**).
 
 However, for many tasks — such as data visualization, web scraping, or advanced data management — we need additional tools.
 
@@ -203,21 +206,8 @@ library("tidyverse")
 
 👉 **Important distinction**
 
-- `install.packages()` → done once
-- `library()` → done every time you start R
-
-::: {.callout-tip collapse="true"}
-## Smart Hack: Using `::` to call functions
-
-Once a package is loaded, its functions can be used directly. Alternatively, you can call a specific function without loading the entire package using the `::` operator. For example, you may want to use a **single function** from a package without loading the whole package with `library()`.
-
-Here, we use the `select()` function from the `dplyr()` package even without loading the package first.
-```{r, use, eval = FALSE, echo = TRUE}
-dplyr::select()
-```
-
-This approach is useful when you only need one function or multiple packages contain functions with the same name.
-:::
+-   `install.packages()` → done once
+-   `library()` → done every time you start R
 
 ### 3.3 Getting help and information about packages
 
@@ -225,14 +215,14 @@ After installing and loading a package, you may want to learn what it can do.
 
 Packages usually include:
 
-- Help files for individual functions
-- a reference manual (list of all functions)
-- vignettes (long-form tutorials written by the package authors)
+-   Help files for individual functions
+-   a reference manual (list of all functions)
+-   vignettes (long-form tutorials written by the package authors)
 
 Helpful commands in R:
 
-- `help(package = "tidyverse")` — overview of a package  
-- `?select` — help page for a function
+-   `help(package = "tidyverse")` — overview of a package\
+-   `?select` — help page for a function
 
 You can also visit the package’s CRAN page (e.g., search *CRAN tidyverse* in Google). There you will find descriptions, documentation, and tutorials explaining how the package is used.
 
@@ -246,11 +236,11 @@ If you did not understand something in a tutorial or just want me to repeat some
 
 When something breaks and I am not around to help:
 
-1. Check your code and object names carefully.
-2. Read the error message.
-3. R’s built-in help system (`help` and `?`)
-4. Search online with good keywords
-5. Ask for help in a reproducible way (code + error + context), for example in our [GitHub discussion forum](https://github.com/media-methods/programming-with-r/discussions)
+1.  Check your code and object names carefully.
+2.  Read the error message.
+3.  R’s built-in help system (`help` and `?`)
+4.  Search online with good keywords
+5.  Ask for help in a reproducible way (code + error + context), for example in our [GitHub discussion forum](https://github.com/media-methods/programming-with-r/discussions).
 
 ### 4.1 Use R’s built-in help system
 
@@ -269,15 +259,15 @@ Similarly, you can check for help for a specific function. Let's assume I am not
 
 Error messages often look annoying, but they usually contain useful clues:
 
-- which function failed
-- where it failed
-- what R expected vs. what it got
+-   which function failed
+-   where it failed
+-   what R expected vs. what it got
 
 A good habit is to:
 
-- read the full message
-- identify the function name mentioned
-- copy the message when asking for help
+-   read the full message
+-   identify the function name mentioned
+-   copy the message when asking for help
 
 ### 4.3 Search for help online (smart Googling)
 
@@ -285,15 +275,15 @@ For some questions, using the `help()` function won't cut it. In this case, **Go
 
 Good sources for R help:
 
-- [Stack Overflow](https://stackoverflow.com/questions/tagged/r)
-- [StackExchange](https://stats.stackexchange.com/?tags=r)
-- [RSeek](https://rseek.org)
-- ChatGPT
+-   [Stack Overflow](https://stackoverflow.com/questions/tagged/r)
+-   [StackExchange](https://stats.stackexchange.com/?tags=r)
+-   [RSeek](https://rseek.org)
+-   ChatGPT
 
-::: {.callout-warning}
-## ⚠️ Critical: Do NOT use ChatGPT before Session 4
+::: callout-warning
+## ⚠️ Critical: Do NOT use ChatGPT before Session 6
 
-Do **not** use ChatGPT before Session 4.
+Do **not** use ChatGPT before Session 6, that is, after we have finished repeating the basics.
 
 If you rely on ChatGPT while you are still learning the basics, you will not build the foundational skills you need — and I can be very direct about the consequence: **you will fail the exam**.
 
@@ -301,20 +291,19 @@ ChatGPT is **not allowed** in the exam. The exam requires that you can write and
 
 Until Session 4, you must learn by:
 
-- working through the tutorial material step by step,
-- using the built-in help system (help, ?),
-- reading error messages carefully,
-- asking me or your peers when you’re stuck.
-
+-   working through the tutorial material step by step,
+-   using the built-in help system (help, ?),
+-   reading error messages carefully,
+-   asking me or your peers when you’re stuck.
 :::
 
 ***Use good search terms***
 
 Include at least:
 
-- the function name
-- the exact (or partial) error message
-- the term “R” (so results are for the right programming language)
+-   the function name
+-   the exact (or partial) error message
+-   the term “R” (so results are for the right programming language)
 
 ***Don't trust every result you get***
 
@@ -328,12 +317,14 @@ This is a bad help request: "*If I try to set my working directory, I get an err
 
 A good help request includes:
 
-- the exact code you ran
-- the exact error message
-- your operating system (Windows/Mac/Linux)
-- ideally your session information, with `sessionInfo()`
+-   the exact code you ran
+-   the exact error message
+-   your operating system (Windows/Mac/Linux)
+-   ideally your session information, with `sessionInfo()`
 
-Example of a better request: "*I am using Windows. I ran this code: setwd(C:\Users\Admin\Documents). R returns: Error: unexpected input in setwd(C:\. What am I doing wrong?*"
+Example of a better request: "*I am using Windows. I ran this code: setwd(C:*\Users\Admin\Documents). R returns: Error: unexpected input in setwd(C:. What am I doing wrong?"
+
+I recommend [this book chapter](https://r4ds.hadley.nz/workflow-help.html) by Wickham et al for a detailed discussion.
 
 ## 5. Save code & results
 
@@ -347,14 +338,12 @@ That only works if you actually save your scripts.
 
 To save code, you have two options. Remember to save your scripts in the folder *scripts*:
 
-- Use the menu option *File → Save As* …  
-  Important: scripts should be saved with the file ending .R
+-   Use the menu option *File → Save As* …\
+    Important: scripts should be saved with the file ending .R
 
-- Click the Save button in the Source pane and save your script, for example as MyCode.R
+-   Click the Save button in the Source pane and save your script, for example as MyCode.R
 
-![](files/images/3_save.jpg){fig-alt="Saving code in R"}
-
-### 5.2 Save your results
+![](files/images/3_save.jpg){fig-alt="Saving code in R"} \### 5.2 Save your results
 
 You have successfully executed all commands and now want R to save your results/working environment? Saving your results is especially useful if it takes some time to have R run through the code and reproduce results - in this case, you only need to save results once and can then load them for the next session.
 
@@ -376,12 +365,42 @@ save.image("output/results/tutorial3.RDATA")
 -   **Help**: The thing everyone working with R needs. It's normal to run into errors when working with R - don't get frustrated too easily. Commands: `?`, `help()`
 -   **Save code & results**: You should save your code/results from time to time to be able to replicate analyses. Commands: `save.image`
 
+## 🤓 Smart Hacks
+
+::: {.callout-tip collapse="true"}
+## Smart Hack 1: Using `::` to call functions
+
+Once a package is loaded, its functions can be used directly. Alternatively, you can call a specific function without loading the entire package using the `::` operator. For example, you may want to use a **single function** from a package without loading the whole package with `library()`.
+
+Here, we use the `select()` function from the `dplyr()` package even without loading the package first.
+
+```{r, use, eval = FALSE, echo = TRUE}
+dplyr::select()
+```
+
+This approach is useful when you only need one function or multiple packages contain functions with the same name.
+:::
+
+::: {.callout-tip collapse="true"}
+## Smart Hack 2: 🧾 Cheatsheets
+
+Cheat sheets are one-page summaries of the most important functions and patterns in R (e.g., `dplyr`, `ggplot2`, etc.). They’re great when you *roughly* know what you want to do but don’t remember the exact command.
+
+Where to find them:
+
+-   **In RStudio:** *Help* → *Cheatsheets* (opens a list you can download as PDFs)
+
+**Example of a Cheatsheet**
+
+![](files/images/3_cheatsheet.jpg){fig-alt="Using Cheatsheets in R"}
+:::
+
 ## 🎲 Quiz
 
-:::: {.content-visible when-format="html"}
+::::::: {.content-visible when-format="html"}
 {{< include "files/www/quiz_script.qmd" >}}
 
-::: {.callout-note icon=false}
+::: {.callout-note icon="false"}
 ## 🎲 Question 1
 
 **Which of the following statements about functions and objects are correct?**
@@ -404,8 +423,7 @@ viewof answers_objects_functions_1 = quizInput({
 ```
 :::
 
-
-::: {.callout-note icon=false}
+::: {.callout-note icon="false"}
 ## 🎲 Question 2
 
 **Which of the following statements about packages are correct?**
@@ -426,7 +444,7 @@ viewof answers_packages_1 = quizInput({
 ```
 :::
 
-::: {.callout-note icon=false}
+::: {.callout-note icon="false"}
 ## 🎲 Question 3
 
 **We want to get the mean value of "age". Try to run the following code. It will throw an error message. Post in [this GitHub forum](https://github.com/media-methods/programming-with-r/discussions/3) to ask for help. Think about making your problem reproducible!**
@@ -437,7 +455,7 @@ mean(age)
 ```
 :::
 
-::: {.callout-note icon=false}
+::: {.callout-note icon="false"}
 ## 🎲 Question 4
 
 **Run the following code. Why does it not create an object called "days" in the Environment pane**?

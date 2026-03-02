@@ -91,14 +91,6 @@ In this course:
 -   ✅ Use **snake_case** for your own objects and variables.
 -   👀 Learn to **recognize** other styles when reading existing R code.
 
-::: {.callout-tip collapse="true"}
-## Smart Hack: Using the `styler` package
-
-Install the [styler package](https://styler.r-lib.org/index.html) by Kirill Müller and colleagues. If you then click on Addins at the top of your R Studio and select, for example, "*Style active file*". The package automatically formats spacing, indentation, and layout according to tidyverse style conventions.
-
-![](files/images/4_styler.jpg){fig-alt="Styling code with the styler package"}
-:::
-
 ### 2.3 Add spaces around operators
 
 Spaces make code easier to scan visually. Compare the following codes:
@@ -122,12 +114,30 @@ Comments explain *why* you are doing something. Good comments help future-you un
 mean(age, na.rm = TRUE)
 ```
 
+## 💡 Take-Aways
+
+-   **Base R vs. tidyverse**: Two common ways of writing R code. Base R works “out of the box” after installing R; the tidyverse is a set of additional packages with a consistent workflow especially for beginners
+-   **Good coding style**: Includes clear object names, consistent naming (e.g., snake style), adding spaces around operators, and adding comments to your code 
+
+
+## 🤓 Smart Hacks
+
+::: {.callout-tip collapse="true"}
+## Smart Hack 1: Using the `styler` package
+
+Install the [styler package](https://styler.r-lib.org/index.html) by Kirill Müller and colleagues. If you then click on Addins at the top of your R Studio and select, for example, "*Style active file*". The package automatically formats spacing, indentation, and layout according to tidyverse style conventions.
+
+![](files/images/4_styler.jpg){fig-alt="Styling code with the styler package"}
+:::
+
+
 ## 🎲 Quiz
 
 ::::: {.content-visible when-format="html"}
 {{< include "files/www/quiz_script.qmd" >}}
 
 ::: {.callout-note icon="false"}
+
 ## 🎲 Question 1
 
 **Why does the following code produce an error? (Try running it)**

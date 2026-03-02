@@ -29,7 +29,13 @@ book:
        - 2-overview.qmd
        - 3-workflow.qmd
        - 4-coding-style.qmd
-      # - 5-data.qmd
+       - 5-the-tidyverse.qmd
+
+    #- part: Handling data in R
+      #chapters:
+      # - 6-data-types.qmd
+      # - 7-visuals.qmd
+      # - 8-data-management.qmd
   
     - part: 80-appendix.qmd
       chapters:
