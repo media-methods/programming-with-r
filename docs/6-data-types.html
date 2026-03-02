@@ -61,7 +61,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./imprint.html" rel="next">
+<link href="./80-appendix.html" rel="next">
 <link href="./5-the-tidyverse.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -99,7 +99,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script><script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script><link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 <link rel="stylesheet" href="files/www/custom.css">
-<link rel="stylesheet" href="ache-refresh">
 </head>
 <body class="nav-sidebar floating">
 
@@ -187,11 +186,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <a href="./6-data-types.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">6 Data types in R</span></a>
   </div>
 </li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./imprint.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Legal Notice / Contact</span></a>
-  </div>
-</li>
       </ul>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -216,6 +210,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./83-faq-r.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">🔷 FAQ R</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./imprint.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Legal Notice / Contact</span></a>
   </div>
 </li>
       </ul>
@@ -352,8 +351,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"1"</span>, <span class="st">"2"</span>, <span class="st">"3"</span><span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
-<pre><code>Warning in mean.default(c("1", "2", "3")): Argument ist weder numerisch noch
-boolesch: gebe NA zurück</code></pre>
+<pre><code>Warning in mean.default(c("1", "2", "3")): argument is not numeric or logical:
+returning NA</code></pre>
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] NA</code></pre>
@@ -910,7 +909,7 @@ Smart Hack 1: Using <code><a href="https://dplyr.tidyverse.org/reference/across.
 <span id="cb34-249"><a href="#cb34-249"></a>  <span class="op">[</span><span class="st">"Character values are recognized without quotation marks."</span><span class="op">,</span> <span class="st">"False"</span><span class="op">],</span></span>
 <span id="cb34-250"><a href="#cb34-250"></a>  <span class="op">[</span><span class="st">"TRUE and FALSE belong to the logical data type."</span><span class="op">,</span> <span class="st">"True"</span><span class="op">],</span></span>
 <span id="cb34-251"><a href="#cb34-251"></a>  <span class="op">[</span><span class="st">"NA represents a missing value."</span><span class="op">,</span> <span class="st">"True"</span><span class="op">],</span></span>
-<span id="cb34-252"><a href="#cb34-252"></a>  <span class="op">[</span><span class="st">"c("</span><span class="dv">1</span><span class="st">", "</span><span class="dv">2</span><span class="st">")` is stored as numeric data."</span><span class="op">,</span> <span class="st">"False"</span><span class="op">]</span></span>
+<span id="cb34-252"><a href="#cb34-252"></a>  <span class="op">[</span><span class="st">"c("</span><span class="dv">1</span><span class="st">", "</span><span class="dv">2</span><span class="st">") is stored as numeric data."</span><span class="op">,</span> <span class="st">"False"</span><span class="op">]</span></span>
 <span id="cb34-253"><a href="#cb34-253"></a><span class="op">]</span></span>
 <span id="cb34-254"><a href="#cb34-254"></a></span>
 <span id="cb34-255"><a href="#cb34-255"></a>viewof answers_datatypes_1 <span class="op">=</span> <span class="fu">quizInput</span><span class="op">({</span></span>
@@ -1485,8 +1484,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./imprint.html" class="pagination-link" aria-label="Legal Notice / Contact">
-        <span class="nav-page-text"><span class="chapter-title">Legal Notice / Contact</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./80-appendix.html" class="pagination-link" aria-label="Appendix">
+        <span class="nav-page-text">Appendix</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
