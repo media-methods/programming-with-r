@@ -226,7 +226,7 @@ MC_datatypes_1 = [
   ["Character values are recognized without quotation marks.", "False"],
   ["TRUE and FALSE belong to the logical data type.", "True"],
   ["NA represents a missing value.", "True"],
-  ["c("1", "2") is stored as numeric data.", "False"]
+  ["c(\"1\", \"2\") is stored as numeric data.", "False"]
 ]
 
 viewof answers_datatypes_1 = quizInput({
