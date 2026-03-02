@@ -1,121 +1,325 @@
 ---
-title: "1 Install R/R Studio"
+title: "6 Data types in R"
 ---
 
 ::: callout-note
 ## 🎯 Learning goals
 
-After working through Tutorial 2, you'll be able to...
+After working through Tutorial 6, you'll be able to...
 
--   **apply** data import and export to get data into and out of R
+-   explain and correctly apply types of data in R (e.g. numeric, character, NA) 
+-   explain and correctly apply objects in R (scalars, vectors, data frames, etc.)
 :::
 
-## Import data (potentially)
+## 1. Types of data in R
 
-Oftentimes, you may want to import data that you saved outside of R into R. This is not always necessary, but I will quickly show you how this works.
+Data types describe **values**. In R, we will most often encounter the following types of data:
 
-### Read in external files
+| Data type | Description | Example |
+|---|---|---|
+| numeric | numbers used for calculations | `c(1, 2, 3)` |
+| character | text strings | `c("Green", "Yellow", "Blue")` |
+| factor | categorical variable with specific levels | `education = factor(education, levels = c("low", "medium", "high"))` |
+| logical | logical values | `TRUE`, `FALSE` |
+| NA | missing value | `NA` |
 
-Here, we'll use the Excel file *"data_fictional_survey.csv"* (via *Moodle/Data for R*).
+You can check a variable’s type using `class()`.
+```{r,type-1, eval = TRUE, echo = TRUE}
+c(1, 2, 3) |>
+  class()
 
-One of the most frequently encountered external data types you'll have to get into R are comma-separated values files, or short, CSV files. You may know CSV files from Excel - oftentimes, such data consists of observations (in rows) and variables (in columns). Values are separated by a *separator* (oftentimes a comma or a semicolon, depending on your data).
-
-**Information on the data set**
-
-The data set consists of data that is completely made up - a survey with 20 fictional students in a fictional seminar. We only use this data here so you can understand how to import data.
-
--   Each row contains the answer for a single student.
--   Each column contains all values given by students for a single variable.
-
-The variables included here are:
-
--   **name**: the name of each student
--   **age**: the age of each student (in years)
--   **date**: the date on which each student was surveyed (in YYYY-MM-DD)
--   **outlet**: the type of media outlet each student's mainly uses to get information
--   **outlet_use**: the time each student uses this media outlet daily (in hours)
--   **outlet_trust**: how much each student trusts this media outlet (from 1 = not at all to 5 = very much)
-
-We'll read in the file with `read.csv()`. Here, we specify where to find the data file with the argument `x` as well as that the first row contains variable names with the argument `header = TRUE`.
-
-```{r,tut4bdata, eval = TRUE, echo = FALSE}
-survey <- read.csv2("H:/Lehre/WS2023_24/R Tutorials/Github/data/data_fictional_survey.csv", header = TRUE)
+c("Green", "Yellow", "Blue") |>
+  class()
+```
+Why do different data types matter? Many statistical functions require numeric input. Try, for example, to calculate mean of the following numbers:
+```{r,text_form4, eval = TRUE, echo = TRUE}
+c("1", "2", "3") |>
+  mean()
+```
+R will throw you an error message. Why? Because the values are stored as character strings, not as numeric values.
+```{r,text_form5, eval = TRUE, echo = TRUE}
+c(1, 2, 3) |>
+  mean()
 ```
 
-```{r,tut4bdata2, eval = FALSE, echo = TRUE}
-survey <- read.csv2("data_fictional_survey.csv")
+### 1.1 Making character data explicit
+
+Character data requires quotations marks `"` to be recognized as such. See the difference here:
+
+```{r,type-2, eval = TRUE, echo = TRUE}
+c(1, 2, 3) |>
+  class()
+
+c("1", "2", "3") |>
+  class()
 ```
 
-What does this command do? Let's see:
+### 1.2 Missing values 
 
-```{r,csv3, eval = FALSE, echo = TRUE}
-?read.csv2
+Missing values are stored as `NA`. You should always check whether values are missing (and of course, why). 
+
+Let's check an example: We will again use the `WoJ` dataset. It contains a quantitative survey of N = 1,200 journalists from five countries, collected via the World of Journalism study. The data is provided via the [`tidycomm`](https://cran.r-project.org/web/packages/tidycomm/index.html) package developed by Unkel et al.
+
+First, we retrieve the data and save it as an object named `data_woj`. Next, we count how many missing values exist in the variable `work_experience`. For this, we use three functions:
+
+- `summarise()`: reduces a dataset to a summary by computing statistics (for example counts or averages).
+- `sum()`: adds values together. When used with logical values (`TRUE` / `FALSE`), it counts how many `TRUE` values exist - in this case, how many values are missing.
+- `is.na()`: checks whether values are missing and returns `TRUE` for missing values and `FALSE` otherwise.
+```{r,na, eval = TRUE, echo = TRUE, warning=F, message=F}
+library(tidyverse)
+library(tidycomm)
+
+data_woj <- tidycomm::WoJ
+data_woj |>
+  summarise(n_missing = sum(is.na(work_experience)))
 ```
 
-*Image: Help for the read.csv2 function*
-
-![](H:/Lehre/WS2024_25/R%20Tutorials/Github/images/Tut4_help2.JPG)
-
-The `read.csv2()` function is part of the *utils* package. To read in CSV files, two different functions exist:
-
--   `read.csv()` reads in CSV files where values are comma separated
--   `read.csv2()` reads in CSV files where values are semicolon separated
-
-Other than that, both functions work the same way and consist of the same arguments:
-
--   `file`: Here, you need to identify the name of the CSV files that should be read in (including the file extension, here .csv). The file should be located in your working directory, otherwise R will not be able to identify it: `file = "data_fictional_survey.csv"`
--   `header`: This argument specifies whether or not the first row of the CSV file contains the name of variables. It is automatically set to true - thus, if our data wouldn't contain the name of each variable in its first row, we would need to set this argument to `FALSE`. In our case, we could either ignore this argument (since it is automatically set to `TRUE`) or actively set it to `TRUE`. Both leads to the same result.
-
-**Important**: R differentiates between **necessary** (marked in red) and **obligatory** (marked in green) arguments.
-
-Arguments where no default value is given (i.e., those without a *=*) are necessary. That means you **have** to specify it once you call the function by passing respective values to the function. For instance, you cannot read in a CSV file without specifying the argument `file` - R would not even know which file to read in in that case.
-
-However, arguments were are default value is given **can be ignored**. If you do not specify values for these arguments yourself, R will simply take the default value. For instance, the `read.csv2()` function will automatically use the first row of a CSV file as column names, unless you actively set the argument *header* to `FALSE`.
-
-Another important thing to know is that you can specify arguments in functions in two ways:
-
--   explicitly by name, for instance by setting \`file\* equal to *data_fictional_survey.csv*
--   implicitly by order, for instance by passing *data_fictional_survey.csv* as the first argument to the `read.csv2()` function
-
-In fact, the following two commands will give the exact same results:
-
-```{r,csv1a, eval = FALSE, echo = TRUE}
-survey <- read.csv2(file = "data_fictional_survey.csv")
+Most tidyverse functions allow handling missing values explicitly, using the `na.rm()` argument: Set it to `TRUE` if missing values (`na`) should be ignored (`rm`).
+```{r,na-2, eval = TRUE, echo = TRUE, warning=F}
+data_woj |>
+  summarise(mean = mean(work_experience, na.rm = TRUE))
+```
+Now, imagine that you want to set specific values to `NA`. For example, we may want to set the value `Freelancer` in `employment` to missing. For this, we can use `mutate`, which we already know from previous tutorials, and `na_if()`:
+```{r,na-3, eval = TRUE, echo = TRUE, warning=F}
+# Original data
+data_woj |>
+  head()
+```
+```{r,na-4, eval = TRUE, echo = TRUE, warning=F}
+# Redefine missing values
+data_woj |>
+  mutate(employment = na_if(employment, "Freelancer")) |>
+  head()
 ```
 
-```{r,csv2a, eval = FALSE, echo = TRUE}
-survey <- read.csv2("data_fictional_survey.csv")
+## 2. Types of objects in R
+
+Great, now you know all about types of data. While data types describe **values**, object types describe **how values are stored**.
+
+As promised, this tutorial will also teach you about different types of objects:
+
+| Object | Description | Example |
+|---|---|---|
+| scalar | single value | `3` |
+| vector | multiple values of same type | `c(1, 2)` |
+| tibble/data frame | collection of vectors | `WoJ` |
+| list | collection of different objects | `list(number = c(1,2), text = "word")` |
+| functions | a command that is to be computed | `select()` |
+
+### 2.1 Scalar
+
+The "smallest" type of data you will encounter are scalars.
+
+> **Scalars are objects consisting of a single value - for example, a letter, a word, a sentence, a number, etc.**
+
+You've already seen what a scalar looks like - remember when we started with R? Here, we defined an object `word` which only consisted of the word "hello".
+
+```{r,scalar1, eval = TRUE, echo = TRUE}
+word <- "hello"
+word
+```
+Technically, scalars are vectors of length 1.
+
+### 2.2 Vector
+
+The next type of data you should know are vectors: Vectors contain multiple values of the same type. In tidyverse thinking:
+
+> **Each column in a tibble is a vector.**
+
+A vector can only have one underlying type (e.g., numeric or character).
+
+In principle, you can often (but not always) compare vectors with variables in data sets: They contain values for all observations in your data set (with all of these values being of the same data type).
+
+An example would be the numbers from 1 to 20 that we worked with before. Now, it becomes apparent what the `c()` stands for - it specifies the vector format.
+
+We define the object `numbers` to consist of the a vector `c()` which contains the values 1 to 20.
+
+```{r,vector1, eval = TRUE, echo = TRUE}
+numbers <- 1:20
+numbers
 ```
 
-### Load existing working spaces
+### 2.3 Tibble/Data frame
 
-If you saved results in a previous session, you can now also easily import them in a new session via the `load()` command, you can import working spaces into a new R session.
+We already know tibbles:
 
-Here, we'll use the working space that includes the survey data from above. Download the file "working-space-tutorial2.RDATA" (via *Moodle/Data for R*).
+> **A tibble (or a data frame) combines several vectors of equal length.**
 
-To see that this actually work, delete all objects in your current working environment. By specifying an empty lists of objects, `ls()`, as the element to be deleted via `rm()`, all objects get deleted:
+Our `data_woj` data set from `tidycomm` is an example for this:
 
-```{r,erase3, eval = FALSE, echo = TRUE}
-rm(list = ls())
+```{r,visualize_dataframe, eval = TRUE, echo = TRUE}
+data_woj
 ```
 
-Your working environment should now be empty.
+For a nice example for comparing scalars, vectors, and other data types check out this example [here](https://bookdown.org/ndphillips/YaRrr/what-are-matrices-and-dataframes.html).
 
-Using the `load()` function, import "working-space-tutorial2.RDATA" into R.
-
-```{r,load, eval = FALSE, echo = TRUE}
-load("working-space-tutorial2.RDATA")
+In R, we can access variables inside tibbles with the dollar sign `$`:
+```{r, dollar, eval = FALSE, echo = TRUE}
+data_woj$country
 ```
-## 💡 Take Aways {.unnumbered}
 
--   **Import data from working directory**: Plenty of commands and packages for doing this - e.g., `read.csv()`. To load an existing workspace, use `load()`
+We can manually inspect the whole data frame using `View()`:
+```{r, viewing, eval = FALSE, echo = TRUE}
+View(data_woj)
+```
 
-## 📌 Test your knowledge {.unnumbered}
+### 2.4 Lists
 
-### Task 3.1 {.unnumbered}
+Finally lists:
 
-Create a subfolder called "data" in your current working environment. Download the text file *"data_halloween.txt"* (via *Moodle/Data for R*). Save the text file in the subfolder and try to load it into R as an object called `data_halloween`.
+> **Lists can store different object types of different lengths together.**
 
-### Task 3.2 {.unnumbered}
+As discussed, tibbles can include vectors consisting of different types of data (for instance, character and numeric vectors) but always of the same length.
 
-In this subfolder called "data", try to write out the file you just created called `data_halloween` as a .csv file. You may have to google for the right command.
+In some cases, lists offer a more flexible way of saving very different objects within *one* object (i.e., the list). 
+
+Let's check this example for a list:
+```{r,list, eval = FALSE, echo = TRUE}
+list(data = data_woj,
+     numbers = c(1,2,3),
+     text = "example")
+```
+
+As you see, the object includes three elements:
+
+-   the first element `$data` is the tibble `data_woj`
+-   the second element `$numbers` is the numeric vector `numbers`
+-   the third element `$text` is the character scalar `text`
+
+## 💡 Take Aways
+
+-   **Types of data**: describe what values are (numeric, character, factor, logical). 
+-   **Types of objects**: describe how values are organized (vectors, tibbles, lists).
+
+## 🤓 Smart Hacks
+
+::: {.callout-tip collapse="true"}
+## Smart Hack 1: Using `across()` to repeat operations over columns
+When working with tibbles, you often want to apply the same operation to multiple variables at once. Instead of repeating the same command, you can use `across()`.
+
+`across()` allows you to apply one function (or several functions) to multiple
+columns simultaneously.
+
+Suppose we want to transform all character variables to uppercase. We can do this like so:
+```{r,hack, eval = TRUE, echo = TRUE}
+data_woj |>
+  mutate(across(where(is.character), toupper)) |>
+  head()
+```
+:::
+
+## 🎲 Quiz
+
+:::::: {.content-visible when-format="html"}
+{{< include "files/www/quiz_script.qmd" >}}
+
+::: {.callout-note icon="false"}
+## 🎲 Question 1
+
+**Which of the following statements about the pipe `|>` are correct?**
+
+```{ojs}
+//| echo: false
+
+MC_datatypes_1 = [
+  ["Numeric data can be used directly for mathematical calculations.", "True"],
+  ["Character values are recognized without quotation marks.", "False"],
+  ["`TRUE` and `FALSE` belong to the logical data type.", "True"],
+  ["`NA` represents a missing value.", "True"],
+  ["`c(\"1\", \"2\")` is stored as numeric data.", "False"]
+]
+
+viewof answers_datatypes_1 = quizInput({
+  questions: MC_datatypes_1,
+  options: ["True", "False"]
+})
+```
+:::
+
+::: {.callout-note icon="false"}
+## 🎲 Question 2
+
+**Which of the following statements about the tidyverse are correct?**
+
+```{ojs}
+//| echo: false
+
+MC_missing_1 = [
+  ["I do not need to check for missing values - R can handle this automatically", "False"],
+  ["`is.na()` checks whether values are missing.", "True"],
+  ["`sum(is.na(x))` counts how many missing values exist.", "True"],
+  ["Setting `na.rm = TRUE` tells R to ignore missing values in calculations.", "True"]
+]
+
+viewof answers_missing_1 = quizInput({
+  questions: MC_missing_1,
+  options: ["True", "False"]
+})
+```
+:::
+
+::: {.callout-note icon="false"}
+## 🎲 Question 3
+
+**You want to transform set all values in `ethics_1` coded as "3" to "NA". Type in the correct command!**
+
+```{ojs}
+//| echo: false
+
+TRT_6_1 = [
+  `data_woj |>
+        mutate(ethics_1 = {{input}}(work_experience, 3))`,
+  "Command",
+  "na_if",
+  "monospace",
+  "#000000"
+];
+
+viewof answer_TRT_6_1 = textReplacementWithText({
+  text: TRT_6_1[0],
+  placeholder: TRT_6_1[1],
+  correctText: TRT_6_1[2],
+  fontFamily: TRT_6_1[3],
+  color: TRT_6_1[4]
+});
+```
+:::
+
+## 📚 More tutorials on this
+
+You still have questions? The following tutorials & papers can help you with that:
+
+-   [Objekte und Syntax by M. Wettstein - OLAT course for UZH students](https://lms.uzh.ch/auth/RepositoryEntry/16703095365/CourseNode/100872608858095)
+-   [SICSS Boot Camp by C. Bail, Video 2](https://sicss.io/boot_camp#install)
+-   [YaRrr! The Pirate's Guide to R by N.D.Phillips, Tutorial 4, 5, 7 und 8](https://bookdown.org/ndphillips/YaRrr/scalersvectors.html)
+-   [Computational Methods in der politischen Kommunikationsforschung by J. Unkel, Tutorial 2](https://bookdown.org/joone/ComputationalMethods/objekte-und-datenstrukturen.html)
+-   [R Cookbook by Long et al., Tutorial 5](https://rc2e.com/datastructures)
+
+## 📌 Test your knowledge
+
+### Task 1 (Easy🔥)
+
+Use the `WoJ` data. Find out how many variables describe journalistic trust!
+
+### Task 2 (Medium🔥🔥)
+
+Create a tibble that contains the following data (N = 2,000 observations):
+
+-   The variable `fruit`, a character vector that includes the word `banana` and `apple` in repetition (i.e., `banana`, `fruit`, `banana`, `fruit`, etc.)
+-   The variable `rating`, a numeric vector including ratings from 1 to 5, in a randomized order. (**Tip**: You need to figure out how you can randomize numbers!)
+-   The variable `label_rating`, a factor including levels for each rating (matching the number in `rating`): `1 = very good`, `2 = good`, `3 = average`, `4 = bad`, and `5 = very bad`.
+
+*How many journalists fulfill these criteria?*
+
+### Task 3 (Hard🔥🔥🔥)
+
+Using the full `WoJ` data, save the data as `woj_transformed` and:
+
+-   create a new variable "ethics_cat" that takes on the value "high" if a journalists scores a 5 for any of the variables `ethics_1`, `ethics_2`, `ethics_3`, or `ethics_4` and "low" otherwise.
+-   reduce the data set to journalists not working as freelancers (see variable `employment`).
+
+*What is the mean amount of years, according to the variable `work_experience`, journalists in `woj_transformed` have worked?*
+
+*From which country is the journalist with the most years of work experience?*
+::::::
+

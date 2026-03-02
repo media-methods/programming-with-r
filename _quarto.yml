@@ -31,9 +31,9 @@ book:
        - 4-coding-style.qmd
        - 5-the-tidyverse.qmd
 
-    #- part: Handling data in R
-      #chapters:
-      # - 6-data-types.qmd
+    - part: Handling data in R
+      chapters:
+       - 6-data-types.qmd
       # - 7-visuals.qmd
       # - 8-data-management.qmd
   

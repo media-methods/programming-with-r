@@ -11,3 +11,9 @@ mutate();create new variables
 case_when();transform existing variables based on multiple conditions
 if_else();transform existing variables based on two conditions
 head();show first rows of a dataset
+class();Check what type of data an object contains
+summarise();Creates summary statistics for a dataset
+sum();Creates sums for a variable
+is.na();For every value in a variable, checks whether it contains missing data (TRUE) or not (FALSE)
+View();Command to open and manually inspect data in the viewer
+across();apply the same function to several variables
