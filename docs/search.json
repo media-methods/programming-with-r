@@ -495,7 +495,7 @@
     "href": "6-data-types.html",
     "title": "6 Data types in R",
     "section": "",
-    "text": "1. Types of data in R\nData types describe values. In R, we will most often encounter the following types of data:\nYou can check a variable’s type using class().\nc(1, 2, 3) |&gt;\n  class()\n\n[1] \"numeric\"\n\nc(\"Green\", \"Yellow\", \"Blue\") |&gt;\n  class()\n\n[1] \"character\"\nWhy do different data types matter? Many statistical functions require numeric input. Try, for example, to calculate mean of the following numbers:\nc(\"1\", \"2\", \"3\") |&gt;\n  mean()\n\nWarning in mean.default(c(\"1\", \"2\", \"3\")): argument is not numeric or logical:\nreturning NA\n\n\n[1] NA\nR will throw you an error message. Why? Because the values are stored as character strings, not as numeric values.\nc(1, 2, 3) |&gt;\n  mean()\n\n[1] 2",
+    "text": "1. Types of data in R\nData types describe values. In R, we will most often encounter the following types of data:\nYou can check a variable’s type using class().\nc(1, 2, 3) |&gt;\n  class()\n\n[1] \"numeric\"\n\nc(\"Green\", \"Yellow\", \"Blue\") |&gt;\n  class()\n\n[1] \"character\"\nWhy do different data types matter? Many statistical functions require numeric input. Try, for example, to calculate mean of the following numbers:\nc(\"1\", \"2\", \"3\") |&gt;\n  mean()\n\nWarning in mean.default(c(\"1\", \"2\", \"3\")): Argument ist weder numerisch noch\nboolesch: gebe NA zurück\n\n\n[1] NA\nR will throw you an error message. Why? Because the values are stored as character strings, not as numeric values.\nc(1, 2, 3) |&gt;\n  mean()\n\n[1] 2",
     "crumbs": [
       "Handling data in R",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>6 Data types in R</span>"
