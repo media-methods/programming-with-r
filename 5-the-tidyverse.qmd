@@ -24,7 +24,9 @@ The tidyverse includes packages for common tasks:
 -   `purrr`: functional programming helpers (iterate safely and clearly)
 -   `ggplot2`: plotting with the grammar of graphics
 
-![](files/images/5_tidyverse.jpg){fig-alt="Overview of the tidyverse"} To install and load the core tidyverse packages:
+![](files/images/5_tidyverse.jpg){fig-alt="Overview of the tidyverse"} 
+
+To install and load the core tidyverse packages:
 
 ```{r inst-tidyverse, eval=FALSE, echo=TRUE}
 install.packages("tidyverse")
@@ -147,7 +149,7 @@ Among the most important `dplyr` functions we will use in this class are:
 -   `select()`: choose columns (variables) by name
 -   `filter()`: keep rows (observations) that match conditions
 -   `arrange()`: sort rows in ascending or descending order
--   `mutate()`: create new columns or overwrite existing ones, for example using `case_when()`
+-   `mutate()`: create new columns or overwrite existing ones, for example using `if_else()` and `case_when()`
 
 ### 2.1 Select variables
 
@@ -414,9 +416,9 @@ Use the `WoJ` data. Find out how many variables describe journalistic trust!
 
 Using the same data, reduce the data set to journalists who...
 
-- live in Austria
-- are employed full-time or part-time
-- have high trust in the government (values 4 or 5)
+-   live in Austria
+-   are employed full-time or part-time
+-   have high trust in the government (values 4 or 5)
 
 *How many journalists fulfill these criteria?*
 
@@ -424,9 +426,10 @@ Using the same data, reduce the data set to journalists who...
 
 Using the full `WoJ` data, save the data as `woj_transformed` and:
 
-- create a new variable "ethics_cat" that takes on the value "high" if a journalists scores a 5 for any of the variables `ethics_1`, `ethics_2`, `ethics_3`, or `ethics_4` and "low" otherwise.
-- reduce the data set to journalists not working as freelancers (see variable `employment`).
+-   create a new variable "ethics_cat" that takes on the value "high" if a journalists scores a 5 for any of the variables `ethics_1`, `ethics_2`, `ethics_3`, or `ethics_4` and "low" otherwise.
+-   reduce the data set to journalists not working as freelancers (see variable `employment`).
 
 *What is the mean amount of years, according to the variable `work_experience`, journalists in `woj_transformed` have worked?*
 
 *From which country is the journalist with the most years of work experience?*
+::::::

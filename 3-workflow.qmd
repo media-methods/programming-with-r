@@ -101,6 +101,7 @@ Even assigning values with `<-` can be understood as part of R’s functional lo
 Functions in R use inputs called **arguments** (e.g., the variable you want to "give" a function for transformation or analysis).
 
 **Argument order**
+
 Many functions expect arguments in a specific order. If you provide arguments without naming them, R assumes you are following this predefined order.
 
 General structure:
@@ -124,15 +125,16 @@ round(x = 3.1413, digits = 2)
 ```
 
 **Optional arguments**
+
 Many functions also contain **optional arguments**. These arguments already have **default values**, meaning you only need to specify them if you want to change the default behavior.
 
 For example, this works exactly the same as the code above:
 
-```{r,function-5,eval = FALSE, echo = TRUE}
+```{r,function-5,eval = TRUE, echo = TRUE}
 round(3.1413)
 ```
 
-By default, `round()` uses digits = 0, so the result is rounded to a whole number. If you want a different behavior, you provide the optional argument:
+By default, `round()` uses digits = 0, so the result is rounded to a whole number. If you want a different behavior, you have to provide the optional argument:
 
 ```{r,function-6,eval = FALSE, echo = TRUE}
 round(3.1413, 3)
@@ -174,7 +176,7 @@ However, for many tasks — such as data visualization, web scraping, or advance
 
 You can think of packages as *toolboxes*: each package provides tools designed for a specific purpose.
 
-In the spirit of open science, anyone can develop and publish R packages, and the source code is openly available. This allows researchers and developers worldwide to share methods and improve existing tools.
+In the spirit of open science, anyone can develop and publish R packages. Their source code is openly available. This allows researchers and developers worldwide to share methods and improve existing tools.
 
 A complete list of available R packages can be found on [CRAN](https://cran.r-project.org/web/packages) (the *Comprehensive R Archive Network*).
 
@@ -232,11 +234,12 @@ If you did not understand something in a tutorial or just want me to repeat some
 
 When something breaks and I am not around to help:
 
-1.  Check your code and object names carefully.
-2.  Read the error message.
-3.  R’s built-in help system (`help` and `?`)
-4.  Search online with good keywords
-5.  Ask for help in a reproducible way (code + error + context), for example in our [GitHub discussion forum](https://github.com/media-methods/programming-with-r/discussions).
+- Check your code and object names carefully.
+- Read the error message.
+- R’s built-in help system (`help` and `?`)
+- Search online with good keywords
+- Check our [FAQ R](83-faq-r.qmd), where we provide an overview of common R question.
+- If you have spent 15 minutes on the problem and could not solve it using these resources: Ask for help in a reproducible way (code + error + context), for example in our [GitHub discussion forum](https://github.com/media-methods/programming-with-r/discussions).
 
 ### 4.1 Use R’s built-in help system
 
@@ -251,9 +254,9 @@ Similarly, you can check for help for a specific function. Let's assume I am not
 
 ![](files/images/3_help.jpg){fig-alt="Help function RStudio"}
 
-### 4.2 Read error messages (look scary but are helpful!)
+### 4.2 Read error messages
 
-Error messages often look annoying, but they usually contain useful clues:
+Error messages often look scary, but they usually contain useful clues:
 
 -   which function failed
 -   where it failed
@@ -277,15 +280,15 @@ Good sources for R help:
 -   ChatGPT
 
 ::: callout-warning
-## ⚠️ Critical: Do NOT use ChatGPT before Session 6
+## ⚠️ Critical: Do NOT use ChatGPT before the hackathon
 
-Do **not** use ChatGPT before Session 6, that is, after we have finished repeating the basics.
+Do **not** use ChatGPT before the hackathon in one of the later session.
 
 If you rely on ChatGPT while you are still learning the basics, you will not build the foundational skills you need — and I can be very direct about the consequence: **you will fail the exam**.
 
 ChatGPT is **not allowed** in the exam. The exam requires that you can write and debug basic R code **on your own**. If you skip that learning phase now, you will be lost later and you will not be able to keep up with the course.
 
-Until Session 4, you must learn by:
+Until the hackathon, you must learn by:
 
 -   working through the tutorial material step by step,
 -   using the built-in help system (help, ?),
@@ -318,7 +321,7 @@ A good help request includes:
 -   your operating system (Windows/Mac/Linux)
 -   ideally your session information, with `sessionInfo()`
 
-Example of a better request: "*I am using Windows. I ran this code: setwd(C:*\Users\Admin\Documents). R returns: Error: unexpected input in setwd(C:. What am I doing wrong?"
+Example of a better request: "*I am using Windows. I ran this code: "setwd(Documents)". R returns: Error: unexpected input in setwd(). What am I doing wrong?"*
 
 I recommend [this book chapter](https://r4ds.hadley.nz/workflow-help.html) by Wickham et al for a detailed discussion.
 
@@ -339,7 +342,9 @@ To save code, you have two options. Remember to save your scripts in the folder 
 
 -   Click the Save button in the Source pane and save your script, for example as MyCode.R
 
-![](files/images/3_save.jpg){fig-alt="Saving code in R"} \### 5.2 Save your results
+![](files/images/3_save.jpg){fig-alt="Saving code in R"} 
+
+### 5.2 Save your results
 
 You have successfully executed all commands and now want R to save your results/working environment? Saving your results is especially useful if it takes some time to have R run through the code and reproduce results - in this case, you only need to save results once and can then load them for the next session.
 
