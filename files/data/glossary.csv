@@ -1,8 +1,8 @@
 ﻿R-Function;Definition
-install.packages();Installs packages on your machine - only has to be run once
-library();Loads existing packages - has to be run everytime you reopen R Studio
-? and help();Help you to get more info on a specific function
-save.image;Saves your working directory
+install.packages();installs packages on your machine - only has to be run once
+library();loads existing packages - has to be run everytime you reopen R Studio
+? and help();help you to get more info on a specific function
+save.image;daves your working directory
 |>;the pipe, pushes data (left) through the pipe for transformation (right)
 select();select specific variables
 filter();filter specific observations, often based on conditions
@@ -11,9 +11,10 @@ mutate();create new variables
 case_when();transform existing variables based on multiple conditions
 if_else();transform existing variables based on two conditions
 head();show first rows of a dataset
-class();Check what type of data an object contains
-summarise();Creates summary statistics for a dataset
-sum();Creates sums for a variable
-is.na();For every value in a variable, checks whether it contains missing data (TRUE) or not (FALSE)
-View();Command to open and manually inspect data in the viewer
+class();check what type of data an object contains
+summarise();creates summary statistics for a dataset
+sum();creates sums for a variable
+is.na();for every value in a variable, checks whether it contains missing data (TRUE) or not (FALSE)
+View();command to open and manually inspect data in the viewer
 across();apply the same function to several variables
+na_if();transform specific values to NA
