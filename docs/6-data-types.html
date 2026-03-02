@@ -1020,23 +1020,24 @@ Smart Hack 1: Using <code><a href="https://dplyr.tidyverse.org/reference/across.
 <li><a href="https://rc2e.com/datastructures">R Cookbook by Long et al., Tutorial 5</a></li>
 </ul></section><section id="test-your-knowledge" class="level2"><h2 class="anchored" data-anchor-id="test-your-knowledge">📌 Test your knowledge</h2>
 <section id="task-1-easy" class="level3"><h3 class="anchored" data-anchor-id="task-1-easy">Task 1 (Easy🔥)</h3>
-<p>Use the <code>WoJ</code> data. Find out how many variables describe journalistic trust!</p>
-</section><section id="task-2-medium" class="level3"><h3 class="anchored" data-anchor-id="task-2-medium">Task 2 (Medium🔥🔥)</h3>
-<p>Create a tibble that contains the following data (N = 2,000 observations):</p>
+<p>Use the <code>WoJ</code> data. Save it as <code>data_woj</code>. Check the data type of the following variables:</p>
 <ul>
-<li>The variable <code>fruit</code>, a character vector that includes the word <code>banana</code> and <code>apple</code> in repetition (i.e., <code>banana</code>, <code>fruit</code>, <code>banana</code>, <code>fruit</code>, etc.)</li>
-<li>The variable <code>rating</code>, a numeric vector including ratings from 1 to 5, in a randomized order. (<strong>Tip</strong>: You need to figure out how you can randomize numbers!)</li>
-<li>The variable <code>label_rating</code>, a factor including levels for each rating (matching the number in <code>rating</code>): <code>1 = very good</code>, <code>2 = good</code>, <code>3 = average</code>, <code>4 = bad</code>, and <code>5 = very bad</code>.</li>
-</ul>
-<p><em>How many journalists fulfill these criteria?</em></p>
-</section><section id="task-3-hard" class="level3"><h3 class="anchored" data-anchor-id="task-3-hard">Task 3 (Hard🔥🔥🔥)</h3>
-<p>Using the full <code>WoJ</code> data, save the data as <code>woj_transformed</code> and:</p>
+<li><code>country</code></li>
+<li><code>employment</code></li>
+</ul></section><section id="task-2-medium" class="level3"><h3 class="anchored" data-anchor-id="task-2-medium">Task 2 (Medium🔥🔥)</h3>
+<p>Using <code>data_woj</code>:</p>
 <ul>
-<li>create a new variable “ethics_cat” that takes on the value “high” if a journalists scores a 5 for any of the variables <code>ethics_1</code>, <code>ethics_2</code>, <code>ethics_3</code>, or <code>ethics_4</code> and “low” otherwise.</li>
-<li>reduce the data set to journalists not working as freelancers (see variable <code>employment</code>).</li>
+<li>Count how many missing values exist in <code>work_experience</code>.</li>
+<li>Replace all values coded as more than 15 in <code>work_experience</code> with NA.</li>
+<li>Save the modified dataset as <code>data_woj_clean</code>.</li>
+</ul></section><section id="task-3-hard" class="level3"><h3 class="anchored" data-anchor-id="task-3-hard">Task 3 (Hard🔥🔥🔥)</h3>
+<p>Using <code>data_woj</code> (not the cleaned data set). This tasks contains several commands you do not yet know!</p>
+<ul>
+<li>Group the data by country.</li>
+<li>For all numeric variables, calculate the mean and the number of missing values.</li>
+<li>Save the result as <code>country_summary</code>.</li>
+<li>For the country with the highest mean in <code>trust_parliament</code>, plot the average trust score!</li>
 </ul>
-<p><em>What is the mean amount of years, according to the variable <code>work_experience</code>, journalists in <code>woj_transformed</code> have worked?</em></p>
-<p><em>From which country is the journalist with the most years of work experience?</em></p>
 
 
 </section></section></main><!-- /main --><script type="ojs-module-contents">

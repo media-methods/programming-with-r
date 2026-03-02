@@ -299,27 +299,25 @@ You still have questions? The following tutorials & papers can help you with tha
 
 ### Task 1 (Easy🔥)
 
-Use the `WoJ` data. Find out how many variables describe journalistic trust!
+Use the `WoJ` data. Save it as `data_woj`. Check the data type of the following variables:
+
+- `country`
+- `employment`
 
 ### Task 2 (Medium🔥🔥)
 
-Create a tibble that contains the following data (N = 2,000 observations):
+Using `data_woj`:
 
--   The variable `fruit`, a character vector that includes the word `banana` and `apple` in repetition (i.e., `banana`, `fruit`, `banana`, `fruit`, etc.)
--   The variable `rating`, a numeric vector including ratings from 1 to 5, in a randomized order. (**Tip**: You need to figure out how you can randomize numbers!)
--   The variable `label_rating`, a factor including levels for each rating (matching the number in `rating`): `1 = very good`, `2 = good`, `3 = average`, `4 = bad`, and `5 = very bad`.
-
-*How many journalists fulfill these criteria?*
+- Count how many missing values exist in `work_experience`.
+- Replace all values coded as more than 15 in `work_experience` with NA.
+- Save the modified dataset as `data_woj_clean`.
 
 ### Task 3 (Hard🔥🔥🔥)
 
-Using the full `WoJ` data, save the data as `woj_transformed` and:
+Using `data_woj` (not the cleaned data set). This tasks contains several commands you do not yet know!
 
--   create a new variable "ethics_cat" that takes on the value "high" if a journalists scores a 5 for any of the variables `ethics_1`, `ethics_2`, `ethics_3`, or `ethics_4` and "low" otherwise.
--   reduce the data set to journalists not working as freelancers (see variable `employment`).
-
-*What is the mean amount of years, according to the variable `work_experience`, journalists in `woj_transformed` have worked?*
-
-*From which country is the journalist with the most years of work experience?*
-::::::
+- Group the data by country.
+- For all numeric variables, calculate the mean and the number of missing values.
+- Save the result as `country_summary`.
+- For the country with the highest mean in `trust_parliament`, plot the average trust score!
 

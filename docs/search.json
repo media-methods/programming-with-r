@@ -491,60 +491,6 @@
     ]
   },
   {
-    "objectID": "81-glossary.html",
-    "href": "81-glossary.html",
-    "title": "🔷 Glossary",
-    "section": "",
-    "text": "R Function\nDefinition\n\n\n\n? and help()\nHelp you to get more info on a specific function\n\n\narrange()\narrange data in descending or ascending order\n\n\ncase_when()\ntransform existing variables based on multiple conditions\n\n\nfilter()\nfilter specific observations, often based on conditions\n\n\nhead()\nshow first rows of a dataset\n\n\nif_else()\ntransform existing variables based on two conditions\n\n\ninstall.packages()\nInstalls packages on your machine - only has to be run once\n\n\nlibrary()\nLoads existing packages - has to be run everytime you reopen R Studio\n\n\nmutate()\ncreate new variables\n\n\nsave.image\nSaves your working directory\n\n\nselect()\nselect specific variables\n\n\n|&gt;\nthe pipe, pushes data (left) through the pipe for transformation (right)",
-    "crumbs": [
-      "Appendix",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>🔷 Glossary</span>"
-    ]
-  },
-  {
-    "objectID": "82-forum.html",
-    "href": "82-forum.html",
-    "title": "🔷 Github Discussion forum",
-    "section": "",
-    "text": "GitHub Discussion Forum\nYou can ask questions, report issues, or participate in discussions on GitHub:\n👉 https://github.com/media-methods/programming-with-r/discussions\n\n\n\nGitHub Forum",
-    "crumbs": [
-      "Appendix",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>🔷 Github Discussion forum</span>"
-    ]
-  },
-  {
-    "objectID": "83-faq-r.html",
-    "href": "83-faq-r.html",
-    "title": "🔷 FAQ R",
-    "section": "",
-    "text": "Question 1: R cannot find a package\nWhen running this command…\nlibrary(tidyverse)\nI get this error: “Error in library(tidyverse) : there is no package called ‘tidyverse’“\nSolution: This simply means that the tidyverse package is not installed yet on your computer. In R, installing (done once) and loading a package (done every time you re-open R) are two different steps.\n#first (one!)\ninstall.packages(\"tidyverse\")\n\n#second (every time you open R!)\nlibrary(tidyverse)",
-    "crumbs": [
-      "Appendix",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>🔷 FAQ R</span>"
-    ]
-  },
-  {
-    "objectID": "83-faq-r.html#question-2-my-computer-is-stuck-on-a-pipe",
-    "href": "83-faq-r.html#question-2-my-computer-is-stuck-on-a-pipe",
-    "title": "🔷 FAQ R",
-    "section": "Question 2: My computer is stuck on a pipe",
-    "text": "Question 2: My computer is stuck on a pipe\nWhen running this command…\n\ndata |&gt;\n  select(country) |&gt;\n\n… my computer does not react anymore. It seems that the code is running forever. My console also seems weird as it still shows the code and not an error:\n\nSolution: The problem is simply that the pipe is unfinished. Your code end with a pipe operator |&gt;, so R is still “waiting” for the next command it should apply.\nA pipe |&gt; should never be the last thing on a line unless another command follows on the next line. Interrupt R by pressing |&gt;.\n\n#first (one!)\ninstall.packages(\"tidyverse\")\n\n#second (every time you open R!)\nlibrary(tidyverse)",
-    "crumbs": [
-      "Appendix",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>🔷 FAQ R</span>"
-    ]
-  },
-  {
-    "objectID": "80-appendix.html",
-    "href": "80-appendix.html",
-    "title": "Appendix",
-    "section": "",
-    "text": "This is an overview of additional material we provide:\n\nIn Glossary, you can get a useful overview of important functions.\nIn the GitHub forum, you can discuss questions with others.\nIn FAQ R, we provide an overview of common R question.",
-    "crumbs": [
-      "Appendix"
-    ]
-  },
-  {
     "objectID": "6-data-types.html",
     "href": "6-data-types.html",
     "title": "6 Data types in R",
@@ -626,10 +572,64 @@
     "href": "6-data-types.html#test-your-knowledge",
     "title": "6 Data types in R",
     "section": "📌 Test your knowledge",
-    "text": "📌 Test your knowledge\nTask 1 (Easy🔥)\nUse the WoJ data. Find out how many variables describe journalistic trust!\nTask 2 (Medium🔥🔥)\nCreate a tibble that contains the following data (N = 2,000 observations):\n\nThe variable fruit, a character vector that includes the word banana and apple in repetition (i.e., banana, fruit, banana, fruit, etc.)\nThe variable rating, a numeric vector including ratings from 1 to 5, in a randomized order. (Tip: You need to figure out how you can randomize numbers!)\nThe variable label_rating, a factor including levels for each rating (matching the number in rating): 1 = very good, 2 = good, 3 = average, 4 = bad, and 5 = very bad.\n\nHow many journalists fulfill these criteria?\nTask 3 (Hard🔥🔥🔥)\nUsing the full WoJ data, save the data as woj_transformed and:\n\ncreate a new variable “ethics_cat” that takes on the value “high” if a journalists scores a 5 for any of the variables ethics_1, ethics_2, ethics_3, or ethics_4 and “low” otherwise.\nreduce the data set to journalists not working as freelancers (see variable employment).\n\nWhat is the mean amount of years, according to the variable work_experience, journalists in woj_transformed have worked?\nFrom which country is the journalist with the most years of work experience?",
+    "text": "📌 Test your knowledge\nTask 1 (Easy🔥)\nUse the WoJ data. Save it as data_woj. Check the data type of the following variables:\n\ncountry\nemployment\nTask 2 (Medium🔥🔥)\nUsing data_woj:\n\nCount how many missing values exist in work_experience.\nReplace all values coded as more than 15 in work_experience with NA.\nSave the modified dataset as data_woj_clean.\nTask 3 (Hard🔥🔥🔥)\nUsing data_woj (not the cleaned data set). This tasks contains several commands you do not yet know!\n\nGroup the data by country.\nFor all numeric variables, calculate the mean and the number of missing values.\nSave the result as country_summary.\nFor the country with the highest mean in trust_parliament, plot the average trust score!",
     "crumbs": [
       "Handling data in R",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>6 Data types in R</span>"
+    ]
+  },
+  {
+    "objectID": "81-glossary.html",
+    "href": "81-glossary.html",
+    "title": "🔷 Glossary",
+    "section": "",
+    "text": "R Function\nDefinition\n\n\n\n? and help()\nHelp you to get more info on a specific function\n\n\nView()\nCommand to open and manually inspect data in the viewer\n\n\nacross()\napply the same function to several variables\n\n\narrange()\narrange data in descending or ascending order\n\n\ncase_when()\ntransform existing variables based on multiple conditions\n\n\nclass()\nCheck what type of data an object contains\n\n\nfilter()\nfilter specific observations, often based on conditions\n\n\nhead()\nshow first rows of a dataset\n\n\nif_else()\ntransform existing variables based on two conditions\n\n\ninstall.packages()\nInstalls packages on your machine - only has to be run once\n\n\nis.na()\nFor every value in a variable, checks whether it contains missing data (TRUE) or not (FALSE)\n\n\nlibrary()\nLoads existing packages - has to be run everytime you reopen R Studio\n\n\nmutate()\ncreate new variables\n\n\nsave.image\nSaves your working directory\n\n\nselect()\nselect specific variables\n\n\nsum()\nCreates sums for a variable\n\n\nsummarise()\nCreates summary statistics for a dataset\n\n\n|&gt;\nthe pipe, pushes data (left) through the pipe for transformation (right)",
+    "crumbs": [
+      "Appendix",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>🔷 Glossary</span>"
+    ]
+  },
+  {
+    "objectID": "82-forum.html",
+    "href": "82-forum.html",
+    "title": "🔷 Github Discussion forum",
+    "section": "",
+    "text": "GitHub Discussion Forum\nYou can ask questions, report issues, or participate in discussions on GitHub:\n👉 https://github.com/media-methods/programming-with-r/discussions\n\n\n\nGitHub Forum",
+    "crumbs": [
+      "Appendix",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>🔷 Github Discussion forum</span>"
+    ]
+  },
+  {
+    "objectID": "83-faq-r.html",
+    "href": "83-faq-r.html",
+    "title": "🔷 FAQ R",
+    "section": "",
+    "text": "Question 1: R cannot find a package\nWhen running this command…\nlibrary(tidyverse)\nI get this error: “Error in library(tidyverse) : there is no package called ‘tidyverse’“\nSolution: This simply means that the tidyverse package is not installed yet on your computer. In R, installing (done once) and loading a package (done every time you re-open R) are two different steps.\n#first (one!)\ninstall.packages(\"tidyverse\")\n\n#second (every time you open R!)\nlibrary(tidyverse)",
+    "crumbs": [
+      "Appendix",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>🔷 FAQ R</span>"
+    ]
+  },
+  {
+    "objectID": "83-faq-r.html#question-2-my-computer-is-stuck-on-a-pipe",
+    "href": "83-faq-r.html#question-2-my-computer-is-stuck-on-a-pipe",
+    "title": "🔷 FAQ R",
+    "section": "Question 2: My computer is stuck on a pipe",
+    "text": "Question 2: My computer is stuck on a pipe\nWhen running this command…\n\ndata |&gt;\n  select(country) |&gt;\n\n… my computer does not react anymore. It seems that the code is running forever. My console also seems weird as it still shows the code and not an error:\n\nSolution: The problem is simply that the pipe is unfinished. Your code end with a pipe operator |&gt;, so R is still “waiting” for the next command it should apply.\nA pipe |&gt; should never be the last thing on a line unless another command follows on the next line. Interrupt R by pressing |&gt;.\n\n#first (one!)\ninstall.packages(\"tidyverse\")\n\n#second (every time you open R!)\nlibrary(tidyverse)",
+    "crumbs": [
+      "Appendix",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>🔷 FAQ R</span>"
+    ]
+  },
+  {
+    "objectID": "80-appendix.html",
+    "href": "80-appendix.html",
+    "title": "Appendix",
+    "section": "",
+    "text": "This is an overview of additional material we provide:\n\nIn Glossary, you can get a useful overview of important functions.\nIn the GitHub forum, you can discuss questions with others.\nIn FAQ R, we provide an overview of common R question.",
+    "crumbs": [
+      "Appendix"
     ]
   }
 ]

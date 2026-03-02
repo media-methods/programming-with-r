@@ -140,13 +140,29 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="./80-appendix.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Appendix</span></a>
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Handling data in R</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./6-data-types.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">6 Data types in R</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./80-appendix.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Appendix</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./81-glossary.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">🔷 Glossary</span></a>
@@ -187,23 +203,23 @@ ul.task-list li input[type="checkbox"] {
 
 </header><div class="cell">
 <div class="cell-output-display">
-<div id="ewbnqqubyq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ewbnqqubyq table {
+<div id="zjdhahddcx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#zjdhahddcx table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ewbnqqubyq thead, #ewbnqqubyq tbody, #ewbnqqubyq tfoot, #ewbnqqubyq tr, #ewbnqqubyq td, #ewbnqqubyq th {
+#zjdhahddcx thead, #zjdhahddcx tbody, #zjdhahddcx tfoot, #zjdhahddcx tr, #zjdhahddcx td, #zjdhahddcx th {
   border-style: none;
 }
 
-#ewbnqqubyq p {
+#zjdhahddcx p {
   margin: 0;
   padding: 0;
 }
 
-#ewbnqqubyq .gt_table {
+#zjdhahddcx .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -229,12 +245,12 @@ ul.task-list li input[type="checkbox"] {
   border-left-color: #D3D3D3;
 }
 
-#ewbnqqubyq .gt_caption {
+#zjdhahddcx .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ewbnqqubyq .gt_title {
+#zjdhahddcx .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -246,7 +262,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-width: 0;
 }
 
-#ewbnqqubyq .gt_subtitle {
+#zjdhahddcx .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -258,7 +274,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-width: 0;
 }
 
-#ewbnqqubyq .gt_heading {
+#zjdhahddcx .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -270,13 +286,13 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#ewbnqqubyq .gt_bottom_border {
+#zjdhahddcx .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ewbnqqubyq .gt_col_headings {
+#zjdhahddcx .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -291,7 +307,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#ewbnqqubyq .gt_col_heading {
+#zjdhahddcx .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -311,7 +327,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#ewbnqqubyq .gt_column_spanner_outer {
+#zjdhahddcx .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -323,15 +339,15 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 4px;
 }
 
-#ewbnqqubyq .gt_column_spanner_outer:first-child {
+#zjdhahddcx .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ewbnqqubyq .gt_column_spanner_outer:last-child {
+#zjdhahddcx .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ewbnqqubyq .gt_column_spanner {
+#zjdhahddcx .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -343,11 +359,11 @@ ul.task-list li input[type="checkbox"] {
   width: 100%;
 }
 
-#ewbnqqubyq .gt_spanner_row {
+#zjdhahddcx .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ewbnqqubyq .gt_group_heading {
+#zjdhahddcx .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -373,7 +389,7 @@ ul.task-list li input[type="checkbox"] {
   text-align: left;
 }
 
-#ewbnqqubyq .gt_empty_group_heading {
+#zjdhahddcx .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -388,15 +404,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 
-#ewbnqqubyq .gt_from_md > :first-child {
+#zjdhahddcx .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ewbnqqubyq .gt_from_md > :last-child {
+#zjdhahddcx .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ewbnqqubyq .gt_row {
+#zjdhahddcx .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -415,7 +431,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#ewbnqqubyq .gt_stub {
+#zjdhahddcx .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -428,7 +444,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#ewbnqqubyq .gt_stub_row_group {
+#zjdhahddcx .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -442,15 +458,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: top;
 }
 
-#ewbnqqubyq .gt_row_group_first td {
+#zjdhahddcx .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ewbnqqubyq .gt_row_group_first th {
+#zjdhahddcx .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ewbnqqubyq .gt_summary_row {
+#zjdhahddcx .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -460,16 +476,16 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#ewbnqqubyq .gt_first_summary_row {
+#zjdhahddcx .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ewbnqqubyq .gt_first_summary_row.thick {
+#zjdhahddcx .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ewbnqqubyq .gt_last_summary_row {
+#zjdhahddcx .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -479,7 +495,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#ewbnqqubyq .gt_grand_summary_row {
+#zjdhahddcx .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -489,7 +505,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#ewbnqqubyq .gt_first_grand_summary_row {
+#zjdhahddcx .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -499,7 +515,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-color: #D3D3D3;
 }
 
-#ewbnqqubyq .gt_last_grand_summary_row_top {
+#zjdhahddcx .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -509,11 +525,11 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#ewbnqqubyq .gt_striped {
+#zjdhahddcx .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ewbnqqubyq .gt_table_body {
+#zjdhahddcx .gt_table_body {
   border-top-style: solid;
   border-top-width: 1px;
   border-top-color: #E6E6E6;
@@ -522,7 +538,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#ewbnqqubyq .gt_footnotes {
+#zjdhahddcx .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -536,7 +552,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#ewbnqqubyq .gt_footnote {
+#zjdhahddcx .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -545,7 +561,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#ewbnqqubyq .gt_sourcenotes {
+#zjdhahddcx .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -559,7 +575,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#ewbnqqubyq .gt_sourcenote {
+#zjdhahddcx .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -567,72 +583,72 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#ewbnqqubyq .gt_left {
+#zjdhahddcx .gt_left {
   text-align: left;
 }
 
-#ewbnqqubyq .gt_center {
+#zjdhahddcx .gt_center {
   text-align: center;
 }
 
-#ewbnqqubyq .gt_right {
+#zjdhahddcx .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ewbnqqubyq .gt_font_normal {
+#zjdhahddcx .gt_font_normal {
   font-weight: normal;
 }
 
-#ewbnqqubyq .gt_font_bold {
+#zjdhahddcx .gt_font_bold {
   font-weight: bold;
 }
 
-#ewbnqqubyq .gt_font_italic {
+#zjdhahddcx .gt_font_italic {
   font-style: italic;
 }
 
-#ewbnqqubyq .gt_super {
+#zjdhahddcx .gt_super {
   font-size: 65%;
 }
 
-#ewbnqqubyq .gt_footnote_marks {
+#zjdhahddcx .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ewbnqqubyq .gt_asterisk {
+#zjdhahddcx .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ewbnqqubyq .gt_indent_1 {
+#zjdhahddcx .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ewbnqqubyq .gt_indent_2 {
+#zjdhahddcx .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ewbnqqubyq .gt_indent_3 {
+#zjdhahddcx .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ewbnqqubyq .gt_indent_4 {
+#zjdhahddcx .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ewbnqqubyq .gt_indent_5 {
+#zjdhahddcx .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ewbnqqubyq .katex-display {
+#zjdhahddcx .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ewbnqqubyq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#zjdhahddcx div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -651,6 +667,14 @@ ul.task-list li input[type="checkbox"] {
 <td class="gt_row gt_left" headers="definition">Help you to get more info on a specific function</td>
 </tr>
 <tr class="even">
+<td class="gt_row gt_left gt_striped" headers="r_function" style="font-family: monospace; font-size: 14px; background-color: #FFFFFF">View()</td>
+<td class="gt_row gt_left gt_striped" headers="definition">Command to open and manually inspect data in the viewer</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="r_function" style="font-family: monospace; font-size: 14px; background-color: #FFFFFF">across()</td>
+<td class="gt_row gt_left" headers="definition">apply the same function to several variables</td>
+</tr>
+<tr class="even">
 <td class="gt_row gt_left gt_striped" headers="r_function" style="font-family: monospace; font-size: 14px; background-color: #FFFFFF">arrange()</td>
 <td class="gt_row gt_left gt_striped" headers="definition">arrange data in descending or ascending order</td>
 </tr>
@@ -659,20 +683,28 @@ ul.task-list li input[type="checkbox"] {
 <td class="gt_row gt_left" headers="definition">transform existing variables based on multiple conditions</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left gt_striped" headers="r_function" style="font-family: monospace; font-size: 14px; background-color: #FFFFFF">filter()</td>
-<td class="gt_row gt_left gt_striped" headers="definition">filter specific observations, often based on conditions</td>
+<td class="gt_row gt_left gt_striped" headers="r_function" style="font-family: monospace; font-size: 14px; background-color: #FFFFFF">class()</td>
+<td class="gt_row gt_left gt_striped" headers="definition">Check what type of data an object contains</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="r_function" style="font-family: monospace; font-size: 14px; background-color: #FFFFFF">head()</td>
-<td class="gt_row gt_left" headers="definition">show first rows of a dataset</td>
+<td class="gt_row gt_left" headers="r_function" style="font-family: monospace; font-size: 14px; background-color: #FFFFFF">filter()</td>
+<td class="gt_row gt_left" headers="definition">filter specific observations, often based on conditions</td>
 </tr>
 <tr class="even">
-<td class="gt_row gt_left gt_striped" headers="r_function" style="font-family: monospace; font-size: 14px; background-color: #FFFFFF">if_else()</td>
-<td class="gt_row gt_left gt_striped" headers="definition">transform existing variables based on two conditions</td>
+<td class="gt_row gt_left gt_striped" headers="r_function" style="font-family: monospace; font-size: 14px; background-color: #FFFFFF">head()</td>
+<td class="gt_row gt_left gt_striped" headers="definition">show first rows of a dataset</td>
 </tr>
 <tr class="odd">
-<td class="gt_row gt_left" headers="r_function" style="font-family: monospace; font-size: 14px; background-color: #FFFFFF">install.packages()</td>
-<td class="gt_row gt_left" headers="definition">Installs packages on your machine - only has to be run once</td>
+<td class="gt_row gt_left" headers="r_function" style="font-family: monospace; font-size: 14px; background-color: #FFFFFF">if_else()</td>
+<td class="gt_row gt_left" headers="definition">transform existing variables based on two conditions</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="r_function" style="font-family: monospace; font-size: 14px; background-color: #FFFFFF">install.packages()</td>
+<td class="gt_row gt_left gt_striped" headers="definition">Installs packages on your machine - only has to be run once</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="r_function" style="font-family: monospace; font-size: 14px; background-color: #FFFFFF">is.na()</td>
+<td class="gt_row gt_left" headers="definition">For every value in a variable, checks whether it contains missing data (TRUE) or not (FALSE)</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left gt_striped" headers="r_function" style="font-family: monospace; font-size: 14px; background-color: #FFFFFF">library()</td>
@@ -689,6 +721,14 @@ ul.task-list li input[type="checkbox"] {
 <tr class="odd">
 <td class="gt_row gt_left" headers="r_function" style="font-family: monospace; font-size: 14px; background-color: #FFFFFF">select()</td>
 <td class="gt_row gt_left" headers="definition">select specific variables</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left gt_striped" headers="r_function" style="font-family: monospace; font-size: 14px; background-color: #FFFFFF">sum()</td>
+<td class="gt_row gt_left gt_striped" headers="definition">Creates sums for a variable</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="r_function" style="font-family: monospace; font-size: 14px; background-color: #FFFFFF">summarise()</td>
+<td class="gt_row gt_left" headers="definition">Creates summary statistics for a dataset</td>
 </tr>
 <tr class="even">
 <td class="gt_row gt_left gt_striped" headers="r_function" style="font-family: monospace; font-size: 14px; background-color: #FFFFFF">|&gt;</td>
