@@ -42,7 +42,9 @@ book:
        - 81-glossary.qmd
        - 82-forum.qmd
        - 83-faq-r.qmd
-       - imprint.qmd
+      
+    
+    - imprint.qmd
     
 format:
   html:

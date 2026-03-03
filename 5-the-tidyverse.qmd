@@ -24,7 +24,7 @@ The tidyverse includes packages for common tasks:
 -   `purrr`: functional programming helpers (iterate safely and clearly)
 -   `ggplot2`: plotting with the grammar of graphics
 
-![](files/images/5_tidyverse.jpg){fig-alt="Overview of the tidyverse"} 
+![](files/images/5_tidyverse.jpg){fig-alt="Overview of the tidyverse"}
 
 To install and load the core tidyverse packages:
 
@@ -414,7 +414,7 @@ Use the `WoJ` data. Find out how many variables describe journalistic trust!
 
 ### Task 2 (Medium🔥🔥)
 
-Using the same data, reduce the data set to journalists who...
+Use the `WoJ` data. Reduce the data set to journalists who...
 
 -   live in Austria
 -   are employed full-time or part-time
@@ -424,10 +424,11 @@ Using the same data, reduce the data set to journalists who...
 
 ### Task 3 (Hard🔥🔥🔥)
 
-Using the full `WoJ` data, save the data as `woj_transformed` and:
+Use the `WoJ` data
 
 -   create a new variable "ethics_cat" that takes on the value "high" if a journalists scores a 5 for any of the variables `ethics_1`, `ethics_2`, `ethics_3`, or `ethics_4` and "low" otherwise.
 -   reduce the data set to journalists not working as freelancers (see variable `employment`).
+-  Save the transformed data as `woj_transformed` and:
 
 *What is the mean amount of years, according to the variable `work_experience`, journalists in `woj_transformed` have worked?*
 

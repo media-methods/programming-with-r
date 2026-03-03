@@ -1,5 +1,5 @@
 ---
-title: "6 Data types in R"
+title: "6 Data types"
 ---
 
 ::: callout-note
@@ -7,7 +7,7 @@ title: "6 Data types in R"
 
 After working through Tutorial 6, you'll be able to...
 
--   explain and correctly apply types of data in R (e.g. numeric, character, NA) 
+-   explain and correctly apply types of data in R (e.g. numeric, character, NA)
 -   explain and correctly apply objects in R (scalars, vectors, data frames, etc.)
 :::
 
@@ -16,7 +16,7 @@ After working through Tutorial 6, you'll be able to...
 Data types describe **values**. In R, we will most often encounter the following types of data:
 
 | Data type | Description | Example |
-|---|---|---|
+|------------------------|------------------------|------------------------|
 | numeric | numbers used for calculations | `c(1, 2, 3)` |
 | character | text strings | `c("Green", "Yellow", "Blue")` |
 | factor | categorical variable with specific levels | `education = factor(education, levels = c("low", "medium", "high"))` |
@@ -24,6 +24,7 @@ Data types describe **values**. In R, we will most often encounter the following
 | NA | missing value | `NA` |
 
 You can check a variable’s type using `class()`.
+
 ```{r,type-1, eval = TRUE, echo = TRUE}
 c(1, 2, 3) |>
   class()
@@ -31,12 +32,16 @@ c(1, 2, 3) |>
 c("Green", "Yellow", "Blue") |>
   class()
 ```
+
 Why do different data types matter? Many statistical functions require numeric input. Try, for example, to calculate mean of the following numbers:
+
 ```{r,text_form4, eval = TRUE, echo = TRUE}
 c("1", "2", "3") |>
   mean()
 ```
+
 R will throw you an error message. Why? Because the values are stored as character strings, not as numeric values.
+
 ```{r,text_form5, eval = TRUE, echo = TRUE}
 c(1, 2, 3) |>
   mean()
@@ -54,17 +59,18 @@ c("1", "2", "3") |>
   class()
 ```
 
-### 1.2 Missing values 
+### 1.2 Missing values
 
-Missing values are stored as `NA`. You should always check whether values are missing (and of course, why). 
+Missing values are stored as `NA`. You should always check whether values are missing (and of course, why).
 
 Let's check an example: We will again use the `WoJ` dataset. It contains a quantitative survey of N = 1,200 journalists from five countries, collected via the World of Journalism study. The data is provided via the [`tidycomm`](https://cran.r-project.org/web/packages/tidycomm/index.html) package developed by Unkel et al.
 
 First, we retrieve the data and save it as an object named `data_woj`. Next, we count how many missing values exist in the variable `work_experience`. For this, we use three functions:
 
-- `summarise()`: reduces a dataset to a summary by computing statistics (for example counts or averages).
-- `sum()`: adds values together. When used with logical values (`TRUE` / `FALSE`), it counts how many `TRUE` values exist - in this case, how many values are missing.
-- `is.na()`: checks whether values are missing and returns `TRUE` for missing values and `FALSE` otherwise.
+-   `summarise()`: reduces a dataset to a summary by computing statistics (for example counts or averages).
+-   `sum()`: adds values together. When used with logical values (`TRUE` / `FALSE`), it counts how many `TRUE` values exist - in this case, how many values are missing.
+-   `is.na()`: checks whether values are missing and returns `TRUE` for missing values and `FALSE` otherwise.
+
 ```{r,na, eval = TRUE, echo = TRUE, warning=F, message=F}
 library(tidyverse)
 library(tidycomm)
@@ -75,16 +81,20 @@ data_woj |>
 ```
 
 Most tidyverse functions allow handling missing values explicitly, using the `na.rm()` argument: Set it to `TRUE` if missing values (`na`) should be ignored (`rm`).
+
 ```{r,na-2, eval = TRUE, echo = TRUE, warning=F}
 data_woj |>
   summarise(mean = mean(work_experience, na.rm = TRUE))
 ```
+
 Now, imagine that you want to set specific values to `NA`. For example, we may want to set the value `Freelancer` in `employment` to missing. For this, we can use `mutate`, which we already know from previous tutorials, and `na_if()`:
+
 ```{r,na-3, eval = TRUE, echo = TRUE, warning=F}
 # Original data
 data_woj |>
   head()
 ```
+
 ```{r,na-4, eval = TRUE, echo = TRUE, warning=F}
 # Redefine missing values
 data_woj |>
@@ -99,7 +109,7 @@ Great, now you know all about types of data. While data types describe **values*
 As promised, this tutorial will also teach you about different types of objects:
 
 | Object | Description | Example |
-|---|---|---|
+|------------------------|------------------------|------------------------|
 | scalar | single value | `3` |
 | vector | multiple values of same type | `c(1, 2)` |
 | tibble/data frame | collection of vectors | `WoJ` |
@@ -118,6 +128,7 @@ You've already seen what a scalar looks like - remember when we started with R? 
 word <- "hello"
 word
 ```
+
 Technically, scalars are vectors of length 1.
 
 ### 2.2 Vector
@@ -154,11 +165,13 @@ data_woj
 For a nice example for comparing scalars, vectors, and other data types check out this example [here](https://bookdown.org/ndphillips/YaRrr/what-are-matrices-and-dataframes.html).
 
 In R, we can access variables inside tibbles with the dollar sign `$`:
+
 ```{r, dollar, eval = FALSE, echo = TRUE}
 data_woj$country
 ```
 
 We can manually inspect the whole data frame using `View()`:
+
 ```{r, viewing, eval = FALSE, echo = TRUE}
 View(data_woj)
 ```
@@ -171,9 +184,10 @@ Finally lists:
 
 As discussed, tibbles can include vectors consisting of different types of data (for instance, character and numeric vectors) but always of the same length.
 
-In some cases, lists offer a more flexible way of saving very different objects within *one* object (i.e., the list). 
+In some cases, lists offer a more flexible way of saving very different objects within *one* object (i.e., the list).
 
 Let's check this example for a list:
+
 ```{r,list, eval = FALSE, echo = TRUE}
 list(data = data_woj,
      numbers = c(1,2,3),
@@ -188,19 +202,20 @@ As you see, the object includes three elements:
 
 ## 💡 Take Aways
 
--   **Types of data**: describe what values are (numeric, character, factor, logical). 
+-   **Types of data**: describe what values are (numeric, character, factor, logical).
 -   **Types of objects**: describe how values are organized (vectors, tibbles, lists).
 
 ## 🤓 Smart Hacks
 
 ::: {.callout-tip collapse="true"}
 ## Smart Hack 1: Using `across()` to repeat operations over columns
+
 When working with tibbles, you often want to apply the same operation to multiple variables at once. Instead of repeating the same command, you can use `across()`.
 
-`across()` allows you to apply one function (or several functions) to multiple
-columns simultaneously.
+`across()` allows you to apply one function (or several functions) to multiple columns simultaneously.
 
 Suppose we want to transform all character variables to uppercase. We can do this like so:
+
 ```{r,hack, eval = TRUE, echo = TRUE}
 data_woj |>
   mutate(across(where(is.character), toupper)) |>
@@ -301,23 +316,22 @@ You still have questions? The following tutorials & papers can help you with tha
 
 Use the `WoJ` data. Save it as `data_woj`. Check the data type of the following variables:
 
-- `country`
-- `employment`
+-   `country`
+-   `employment`
 
 ### Task 2 (Medium🔥🔥)
 
-Using `data_woj`:
+Using `data_woj`...
 
-- Count how many missing values exist in `work_experience`.
-- Replace all values coded as more than 15 in `work_experience` with NA.
-- Save the modified dataset as `data_woj_clean`.
+-   Count how many missing values exist in `work_experience`.
+-   Replace all values coded as more than 15 in `work_experience` with NA.
+-   Save the modified dataset as `data_woj_clean`.
 
 ### Task 3 (Hard🔥🔥🔥)
 
-Using `data_woj` (not the cleaned data set). This tasks contains several commands you do not yet know!
+This tasks contains several commands you do not yet know! Use `data_woj` (not the cleaned data set) and ...
 
-- Group the data by country.
-- For all numeric variables, calculate the mean and the number of missing values.
-- Save the result as `country_summary`.
-- For the country with the highest mean in `trust_parliament`, plot the average trust score!
-
+-   Group the data by country.
+-   For all numeric variables, calculate the mean and the number of missing values.
+-   Save the result as `country_summary`.
+-   For the country with the highest mean in `trust_parliament`, plot the average trust score!
