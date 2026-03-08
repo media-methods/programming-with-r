@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.57">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="author" content="Valerie Hase">
-
 <title>3 Workflow in R – Programming with R for Social Scientists</title>
 <style>
 code{white-space: pre-wrap;}
@@ -57,7 +54,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 </style>
 
-
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
@@ -75,8 +71,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -102,21 +97,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-<script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
-<link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
-
-
+}</script><script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script><link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 <link rel="stylesheet" href="files/www/custom.css">
 <link rel="stylesheet" href="ache-refresh">
 </head>
-
 <body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
@@ -127,13 +115,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Programming with R for Social Scientists</a> 
         <div class="sidebar-tools-main">
@@ -148,7 +132,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Welcome</span></a>
   </div>
@@ -161,8 +145,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./1-install-r.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1 Install R/R Studio</span></a>
   </div>
@@ -188,7 +172,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
@@ -197,14 +181,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./6-data-types.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">6 Data types</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./7-visuals.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">7 Creating visuals with ggplot</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./8-data-management.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">8 Data management in R</span></a>
+  </div>
+</li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./80-appendix.html" class="sidebar-item-text sidebar-link">
@@ -213,8 +207,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./81-glossary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">🔷 Glossary</span></a>
   </div>
@@ -230,58 +224,60 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./imprint.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Legal Notice / Contact</span></a>
   </div>
 </li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Content</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Content</h2>
    
   <ul>
-  <li><a href="#basic-workflow-in-r" id="toc-basic-workflow-in-r" class="nav-link active" data-scroll-target="#basic-workflow-in-r">1. Basic workflow in R</a></li>
-  <li><a href="#object--and-function-oriented-programming" id="toc-object--and-function-oriented-programming" class="nav-link" data-scroll-target="#object--and-function-oriented-programming">2. Object- and function-oriented programming</a>
+<li><a href="#basic-workflow-in-r" id="toc-basic-workflow-in-r" class="nav-link active" data-scroll-target="#basic-workflow-in-r">1. Basic workflow in R</a></li>
+  <li>
+<a href="#object--and-function-oriented-programming" id="toc-object--and-function-oriented-programming" class="nav-link" data-scroll-target="#object--and-function-oriented-programming">2. Object- and function-oriented programming</a>
   <ul class="collapse">
-  <li><a href="#objects-storing-information" id="toc-objects-storing-information" class="nav-link" data-scroll-target="#objects-storing-information">2.1 Objects: storing information</a></li>
+<li><a href="#objects-storing-information" id="toc-objects-storing-information" class="nav-link" data-scroll-target="#objects-storing-information">2.1 Objects: storing information</a></li>
   <li><a href="#functions-doing-something-with-objects" id="toc-functions-doing-something-with-objects" class="nav-link" data-scroll-target="#functions-doing-something-with-objects">2.2 Functions: doing something with objects</a></li>
   <li><a href="#take-away-and-example" id="toc-take-away-and-example" class="nav-link" data-scroll-target="#take-away-and-example">2.3 Take-Away and Example</a></li>
-  </ul></li>
-  <li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">3. Packages</a>
+  </ul>
+</li>
+  <li>
+<a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">3. Packages</a>
   <ul class="collapse">
-  <li><a href="#install-packages" id="toc-install-packages" class="nav-link" data-scroll-target="#install-packages">3.1 Install packages</a></li>
+<li><a href="#install-packages" id="toc-install-packages" class="nav-link" data-scroll-target="#install-packages">3.1 Install packages</a></li>
   <li><a href="#load-packages" id="toc-load-packages" class="nav-link" data-scroll-target="#load-packages">3.2 Load packages</a></li>
   <li><a href="#getting-help-and-information-about-packages" id="toc-getting-help-and-information-about-packages" class="nav-link" data-scroll-target="#getting-help-and-information-about-packages">3.3 Getting help and information about packages</a></li>
-  </ul></li>
-  <li><a href="#how-to-not-ask-for-help-featuring-chatgpt" id="toc-how-to-not-ask-for-help-featuring-chatgpt" class="nav-link" data-scroll-target="#how-to-not-ask-for-help-featuring-chatgpt">4. How to (not) ask for help (featuring ChatGPT)</a>
+  </ul>
+</li>
+  <li>
+<a href="#how-to-not-ask-for-help-featuring-chatgpt" id="toc-how-to-not-ask-for-help-featuring-chatgpt" class="nav-link" data-scroll-target="#how-to-not-ask-for-help-featuring-chatgpt">4. How to (not) ask for help (featuring ChatGPT)</a>
   <ul class="collapse">
-  <li><a href="#use-rs-built-in-help-system" id="toc-use-rs-built-in-help-system" class="nav-link" data-scroll-target="#use-rs-built-in-help-system">4.1 Use R’s built-in help system</a></li>
+<li><a href="#use-rs-built-in-help-system" id="toc-use-rs-built-in-help-system" class="nav-link" data-scroll-target="#use-rs-built-in-help-system">4.1 Use R’s built-in help system</a></li>
   <li><a href="#read-error-messages" id="toc-read-error-messages" class="nav-link" data-scroll-target="#read-error-messages">4.2 Read error messages</a></li>
   <li><a href="#search-for-help-online-smart-googling" id="toc-search-for-help-online-smart-googling" class="nav-link" data-scroll-target="#search-for-help-online-smart-googling">4.3 Search for help online (smart Googling)</a></li>
-  </ul></li>
-  <li><a href="#save-code-results" id="toc-save-code-results" class="nav-link" data-scroll-target="#save-code-results">5. Save code &amp; results</a>
+  </ul>
+</li>
+  <li>
+<a href="#save-code-results" id="toc-save-code-results" class="nav-link" data-scroll-target="#save-code-results">5. Save code &amp; results</a>
   <ul class="collapse">
-  <li><a href="#save-your-code" id="toc-save-your-code" class="nav-link" data-scroll-target="#save-your-code">5.1 Save your code</a></li>
+<li><a href="#save-your-code" id="toc-save-your-code" class="nav-link" data-scroll-target="#save-your-code">5.1 Save your code</a></li>
   <li><a href="#save-your-results" id="toc-save-your-results" class="nav-link" data-scroll-target="#save-your-results">5.2 Save your results</a></li>
-  </ul></li>
+  </ul>
+</li>
   <li><a href="#take-aways" id="toc-take-aways" class="nav-link" data-scroll-target="#take-aways">💡 Take-Aways</a></li>
   <li><a href="#smart-hacks" id="toc-smart-hacks" class="nav-link" data-scroll-target="#smart-hacks">🤓 Smart Hacks</a></li>
   <li><a href="#quiz" id="toc-quiz" class="nav-link" data-scroll-target="#quiz">🎲 Quiz</a></li>
   <li><a href="#more-tutorials-on-this" id="toc-more-tutorials-on-this" class="nav-link" data-scroll-target="#more-tutorials-on-this">📚 More tutorials on this</a></li>
-  </ul>
-</nav>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./1-install-r.html">R Basics</a></li><li class="breadcrumb-item"><a href="./3-workflow.html"><span class="chapter-title">3 Workflow in R</span></a></li></ol></nav>
-<div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./1-install-r.html">R Basics</a></li><li class="breadcrumb-item"><a href="./3-workflow.html"><span class="chapter-title">3 Workflow in R</span></a></li></ol></nav><div class="quarto-title">
 <h1 class="title"><span class="chapter-title">3 Workflow in R</span></h1>
 </div>
 
@@ -296,10 +292,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 
 
-</header>
-
-
-<div class="callout callout-style-default callout-note callout-titled">
+</header><div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -317,8 +310,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </div>
 </div>
-<section id="basic-workflow-in-r" class="level2">
-<h2 class="anchored" data-anchor-id="basic-workflow-in-r">1. Basic workflow in R</h2>
+<section id="basic-workflow-in-r" class="level2"><h2 class="anchored" data-anchor-id="basic-workflow-in-r">1. Basic workflow in R</h2>
 <p>The basic workflow in R looks like this:</p>
 <p><strong>🖥️ Setup</strong></p>
 <ul class="task-list">
@@ -328,7 +320,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><strong>📦 Packages</strong></p>
 <ul class="task-list">
 <li><label><input type="checkbox">Install the required packages (if needed)</label></li>
-<li><label><input type="checkbox">Load the required packages using <code>library()</code></label></li>
+<li><label><input type="checkbox">Load the required packages using <code><a href="https://rdrr.io/r/base/library.html">library()</a></code></label></li>
 </ul>
 <p><strong>🔎 Analysis</strong></p>
 <ul class="task-list">
@@ -341,9 +333,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><label><input type="checkbox">Save your code (and any outputs, if necessary)</label></li>
 </ul>
 <p>Check your set-up. Are you ready to go? 🚀</p>
-</section>
-<section id="object--and-function-oriented-programming" class="level2">
-<h2 class="anchored" data-anchor-id="object--and-function-oriented-programming">2. Object- and function-oriented programming</h2>
+</section><section id="object--and-function-oriented-programming" class="level2"><h2 class="anchored" data-anchor-id="object--and-function-oriented-programming">2. Object- and function-oriented programming</h2>
 <p>Before we start working with data, it is important to understand a core idea behind R:</p>
 <p>R is an <strong>object- and function-oriented programming language</strong>.</p>
 <p>Chambers (2014, p.&nbsp;4) summarizes this idea nicely:</p>
@@ -352,8 +342,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Everything that happens is a <strong>function call</strong>.</li>
 </ul>
 <p>These two principles explain most of what you will do in R.</p>
-<section id="objects-storing-information" class="level3">
-<h3 class="anchored" data-anchor-id="objects-storing-information">2.1 Objects: storing information</h3>
+<section id="objects-storing-information" class="level3"><h3 class="anchored" data-anchor-id="objects-storing-information">2.1 Objects: storing information</h3>
 <p>In R, we store information inside <strong>objects</strong> so that we can work with it later.</p>
 <p>An object can contain, for example:</p>
 <ul>
@@ -369,12 +358,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>We create objects by <strong>assigning</strong> a value to a name using the assignment operator <code>&lt;-</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>word <span class="ot">&lt;-</span> <span class="st">"hello"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">word</span> <span class="op">&lt;-</span> <span class="st">"hello"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This command creates an object called <em>word</em> and stores the text <code>"hello"</code> inside it.</p>
-</section>
-<section id="functions-doing-something-with-objects" class="level3">
-<h3 class="anchored" data-anchor-id="functions-doing-something-with-objects">2.2 Functions: doing something with objects</h3>
+</section><section id="functions-doing-something-with-objects" class="level3"><h3 class="anchored" data-anchor-id="functions-doing-something-with-objects">2.2 Functions: doing something with objects</h3>
 <p>The second key idea is that almost everything in R happens through <strong>functions</strong>.</p>
 <p>A function:</p>
 <ul>
@@ -384,7 +371,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>General structure:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">function_name</span>(input)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">function_name</span><span class="op">(</span><span class="va">input</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>For example, functions can:</p>
 <ul>
@@ -410,11 +397,11 @@ More on functions: Argument order and optional arguments
 <p>Many functions expect arguments in a specific order. If you provide arguments without naming them, R assumes you are following this predefined order.</p>
 <p>General structure:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">function_name</span>(argument1, argument2, argument3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">function_name</span><span class="op">(</span><span class="va">argument1</span>, <span class="va">argument2</span>, <span class="va">argument3</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>For example, the function <code>round()</code> rounds numbers:</p>
+<p>For example, the function <code><a href="https://rdrr.io/r/base/Round.html">round()</a></code> rounds numbers:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fl">3.1413</span>, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fl">3.1413</span>, <span class="fl">2</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3.14</code></pre>
 </div>
@@ -422,7 +409,7 @@ More on functions: Argument order and optional arguments
 <p>The first argument is the number to round; the second argument specifies the number of digits.</p>
 <p>If you change the order without naming arguments, the result may be wrong or produce an error. A safer and clearer approach is to <strong>name arguments explicitly</strong>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="at">x =</span> <span class="fl">3.1413</span>, <span class="at">digits =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">3.1413</span>, digits <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3.14</code></pre>
 </div>
@@ -431,32 +418,32 @@ More on functions: Argument order and optional arguments
 <p>Many functions also contain <strong>optional arguments</strong>. These arguments already have <strong>default values</strong>, meaning you only need to specify them if you want to change the default behavior.</p>
 <p>For example, this works exactly the same as the code above:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fl">3.1413</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fl">3.1413</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3</code></pre>
 </div>
 </div>
-<p>By default, <code>round()</code> uses digits = 0, so the result is rounded to a whole number. If you want a different behavior, you have to provide the optional argument:</p>
+<p>By default, <code><a href="https://rdrr.io/r/base/Round.html">round()</a></code> uses digits = 0, so the result is rounded to a whole number. If you want a different behavior, you have to provide the optional argument:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">round</span>(<span class="fl">3.1413</span>, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="fl">3.1413</span>, <span class="fl">3</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
 </div>
-</section>
-<section id="take-away-and-example" class="level3">
-<h3 class="anchored" data-anchor-id="take-away-and-example">2.3 Take-Away and Example</h3>
+</section><section id="take-away-and-example" class="level3"><h3 class="anchored" data-anchor-id="take-away-and-example">2.3 Take-Away and Example</h3>
 <p>To recap:</p>
 <ul>
-<li>data and results are stored as <strong>objects</strong></li>
-<li>all operations are performed using <strong>functions</strong></li>
+<li>data and results are stored as <strong>objects</strong>
+</li>
+<li>all operations are performed using <strong>functions</strong>
+</li>
 <li>analysis consists of applying functions to objects step by step</li>
 </ul>
 <p>Fortunately, R already provides many predefined functions, so you usually <strong>use existing functions</strong> rather than writing your own from scratch.</p>
-<p>Let’s take an example: Suppose we want to add more text to our object <em>word</em>. We can use the function <code>paste0()</code>, which combines pieces of text.</p>
+<p>Let’s take an example: Suppose we want to add more text to our object <em>word</em>. We can use the function <code><a href="https://rdrr.io/r/base/paste.html">paste0()</a></code>, which combines pieces of text.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>word <span class="ot">&lt;-</span> <span class="fu">paste0</span>(word, <span class="st">" and good morning"</span>)</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>word</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">word</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="va">word</span>, <span class="st">" and good morning"</span><span class="op">)</span></span>
+<span><span class="va">word</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "hello and good morning"</code></pre>
 </div>
@@ -464,14 +451,11 @@ More on functions: Argument order and optional arguments
 <p>What happens here?</p>
 <ol type="1">
 <li>R takes the existing object <em>word</em> as input.</li>
-<li>The function <code>paste0()</code> combines it with new text.</li>
+<li>The function <code><a href="https://rdrr.io/r/base/paste.html">paste0()</a></code> combines it with new text.</li>
 <li>The result replaces the old object <em>word</em>.</li>
 </ol>
 <p>This process — applying functions to objects and saving the result — is the basic workflow of programming in R.</p>
-</section>
-</section>
-<section id="packages" class="level2">
-<h2 class="anchored" data-anchor-id="packages">3. Packages</h2>
+</section></section><section id="packages" class="level2"><h2 class="anchored" data-anchor-id="packages">3. Packages</h2>
 <p>R already comes with many built-in functions (called <strong>Base R</strong>).</p>
 <p>However, for many tasks — such as data visualization, web scraping, or advanced data management — we need additional tools.</p>
 <p>👉 <strong>Packages are collections of functions, data, and documentation that extend the functionality of Base R.</strong></p>
@@ -479,29 +463,25 @@ More on functions: Argument order and optional arguments
 <p>In the spirit of open science, anyone can develop and publish R packages. Their source code is openly available. This allows researchers and developers worldwide to share methods and improve existing tools.</p>
 <p>A complete list of available R packages can be found on <a href="https://cran.r-project.org/web/packages">CRAN</a> (the <em>Comprehensive R Archive Network</em>).</p>
 <p>In this seminar, we’ll for instance use packages like <code>tidyverse</code>, which provides tools for data import, cleaning, transformation, and visualization.</p>
-<section id="install-packages" class="level3">
-<h3 class="anchored" data-anchor-id="install-packages">3.1 Install packages</h3>
+<section id="install-packages" class="level3"><h3 class="anchored" data-anchor-id="install-packages">3.1 Install packages</h3>
 <p>Before you can use a package, you must <strong>install</strong> it on your computer. Installation downloads the package from CRAN and saves it locally.</p>
 <p>For example, to install the <code>tidyverse</code> package, run:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"tidyverse"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>You only need to install a package once per computer (unless you reinstall R or update packages).</p>
-</section>
-<section id="load-packages" class="level3">
-<h3 class="anchored" data-anchor-id="load-packages">3.2 Load packages</h3>
-<p>After installation, you must <strong>load</strong> the package in <strong>every new R session</strong> before using its functions. This is done with the <code>library()</code> function:</p>
+</section><section id="load-packages" class="level3"><h3 class="anchored" data-anchor-id="load-packages">3.2 Load packages</h3>
+<p>After installation, you must <strong>load</strong> the package in <strong>every new R session</strong> before using its functions. This is done with the <code><a href="https://rdrr.io/r/base/library.html">library()</a></code> function:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"tidyverse"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="st"><a href="https://tidyverse.tidyverse.org">"tidyverse"</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>👉 <strong>Important distinction</strong></p>
 <ul>
-<li><code>install.packages()</code> → done once</li>
-<li><code>library()</code> → done every time you start R</li>
-</ul>
-</section>
-<section id="getting-help-and-information-about-packages" class="level3">
-<h3 class="anchored" data-anchor-id="getting-help-and-information-about-packages">3.3 Getting help and information about packages</h3>
+<li>
+<code><a href="https://rdrr.io/r/utils/install.packages.html">install.packages()</a></code> → done once</li>
+<li>
+<code><a href="https://rdrr.io/r/base/library.html">library()</a></code> → done every time you start R</li>
+</ul></section><section id="getting-help-and-information-about-packages" class="level3"><h3 class="anchored" data-anchor-id="getting-help-and-information-about-packages">3.3 Getting help and information about packages</h3>
 <p>After installing and loading a package, you may want to learn what it can do.</p>
 <p>Packages usually include:</p>
 <ul>
@@ -511,15 +491,14 @@ More on functions: Argument order and optional arguments
 </ul>
 <p>Helpful commands in R:</p>
 <ul>
-<li><code>help(package = "tidyverse")</code> — overview of a package<br>
+<li>
+<code><a href="https://tidyverse.tidyverse.org/reference">help(package = "tidyverse")</a></code> — overview of a package<br>
 </li>
-<li><code>?select</code> — help page for a function</li>
+<li>
+<code><a href="https://dplyr.tidyverse.org/reference/select.html">?select</a></code> — help page for a function</li>
 </ul>
 <p>You can also visit the package’s CRAN page (e.g., search <em>CRAN tidyverse</em> in Google). There you will find descriptions, documentation, and tutorials explaining how the package is used.</p>
-</section>
-</section>
-<section id="how-to-not-ask-for-help-featuring-chatgpt" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-not-ask-for-help-featuring-chatgpt">4. How to (not) ask for help (featuring ChatGPT)</h2>
+</section></section><section id="how-to-not-ask-for-help-featuring-chatgpt" class="level2"><h2 class="anchored" data-anchor-id="how-to-not-ask-for-help-featuring-chatgpt">4. How to (not) ask for help (featuring ChatGPT)</h2>
 <p>One thing you can count on in this seminar: <strong>many things won’t work right away</strong>.</p>
 <p>You will forget commands, mix up function names, use the wrong object type, misspell package names, or run into error messages you don’t understand. This happens to everyone — from beginners to people who have used R for years.</p>
 <p>If you did not understand something in a tutorial or just want me to repeat something: Please <em>do</em> ask! The most important thing when learning R is to understand that it is <strong>completely normal to feel lost sometimes</strong>. Don’t worry - it’s highly likely that everyone else feels the same.</p>
@@ -527,23 +506,20 @@ More on functions: Argument order and optional arguments
 <ul>
 <li>Check your code and object names carefully.</li>
 <li>Read the error message.</li>
-<li>R’s built-in help system (<code>help</code> and <code>?</code>)</li>
+<li>R’s built-in help system (<code>help</code> and <code>??</code>)</li>
 <li>Search online with good keywords</li>
 <li>Check our <a href="./83-faq-r.html">FAQ R</a>, where we provide an overview of common R question.</li>
 <li>If you have spent 15 minutes on the problem and could not solve it using these resources: Ask for help in a reproducible way (code + error + context), for example in our <a href="https://github.com/media-methods/programming-with-r/discussions">GitHub discussion forum</a>.</li>
 </ul>
-<section id="use-rs-built-in-help-system" class="level3">
-<h3 class="anchored" data-anchor-id="use-rs-built-in-help-system">4.1 Use R’s built-in help system</h3>
-<p>If you want information about a package, use <code>help()</code> or <code>?</code>. These commands open documentation in the Help pane in RStudio.</p>
+<section id="use-rs-built-in-help-system" class="level3"><h3 class="anchored" data-anchor-id="use-rs-built-in-help-system">4.1 Use R’s built-in help system</h3>
+<p>If you want information about a package, use <code><a href="https://rdrr.io/r/utils/help.html">help()</a></code> or <code>?</code>. These commands open documentation in the Help pane in RStudio.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">help</span>(<span class="at">package =</span> <span class="st">"quanteda"</span>) <span class="co"># Version 1 of asking for help</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>?quanteda <span class="co"># Version 2 of asking for help</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/help.html">help</a></span><span class="op">(</span>package <span class="op">=</span> <span class="st">"quanteda"</span><span class="op">)</span> <span class="co"># Version 1 of asking for help</span></span>
+<span><span class="op">?</span><span class="op">?</span><span class="va">quanteda</span> <span class="co"># Version 2 of asking for help</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Similarly, you can check for help for a specific function. Let’s assume I am not sure what the <code>select()</code> function does in R. I could check this out in R Studio:</p>
+<p>Similarly, you can check for help for a specific function. Let’s assume I am not sure what the <code><a href="https://dplyr.tidyverse.org/reference/select.html">select()</a></code> function does in R. I could check this out in R Studio:</p>
 <p><img src="files/images/3_help.jpg" class="img-fluid" alt="Help function RStudio"></p>
-</section>
-<section id="read-error-messages" class="level3">
-<h3 class="anchored" data-anchor-id="read-error-messages">4.2 Read error messages</h3>
+</section><section id="read-error-messages" class="level3"><h3 class="anchored" data-anchor-id="read-error-messages">4.2 Read error messages</h3>
 <p>Error messages often look scary, but they usually contain useful clues:</p>
 <ul>
 <li>which function failed</li>
@@ -555,11 +531,8 @@ More on functions: Argument order and optional arguments
 <li>read the full message</li>
 <li>identify the function name mentioned</li>
 <li>copy the message when asking for help</li>
-</ul>
-</section>
-<section id="search-for-help-online-smart-googling" class="level3">
-<h3 class="anchored" data-anchor-id="search-for-help-online-smart-googling">4.3 Search for help online (smart Googling)</h3>
-<p>For some questions, using the <code>help()</code> function won’t cut it. In this case, <strong>Google is your new best friend</strong>.</p>
+</ul></section><section id="search-for-help-online-smart-googling" class="level3"><h3 class="anchored" data-anchor-id="search-for-help-online-smart-googling">4.3 Search for help online (smart Googling)</h3>
+<p>For some questions, using the <code><a href="https://rdrr.io/r/utils/help.html">help()</a></code> function won’t cut it. In this case, <strong>Google is your new best friend</strong>.</p>
 <p>Good sources for R help:</p>
 <ul>
 <li><a href="https://stackoverflow.com/questions/tagged/r">Stack Overflow</a></li>
@@ -606,17 +579,14 @@ More on functions: Argument order and optional arguments
 <li>the exact code you ran</li>
 <li>the exact error message</li>
 <li>your operating system (Windows/Mac/Linux)</li>
-<li>ideally your session information, with <code>sessionInfo()</code></li>
+<li>ideally your session information, with <code><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo()</a></code>
+</li>
 </ul>
 <p>Example of a better request: “<em>I am using Windows. I ran this code: “setwd(Documents)”. R returns: Error: unexpected input in setwd(). What am I doing wrong?“</em></p>
 <p>I recommend <a href="https://r4ds.hadley.nz/workflow-help.html">this book chapter</a> by Wickham et al for a detailed discussion.</p>
-</section>
-</section>
-<section id="save-code-results" class="level2">
-<h2 class="anchored" data-anchor-id="save-code-results">5. Save code &amp; results</h2>
+</section></section><section id="save-code-results" class="level2"><h2 class="anchored" data-anchor-id="save-code-results">5. Save code &amp; results</h2>
 <p>Imagine that you have done your analysis. Now, we want to save our results!</p>
-<section id="save-your-code" class="level3">
-<h3 class="anchored" data-anchor-id="save-your-code">5.1 Save your code</h3>
+<section id="save-your-code" class="level3"><h3 class="anchored" data-anchor-id="save-your-code">5.1 Save your code</h3>
 <p>One of the biggest advantages of working in R is <strong>reproducibility</strong>: if you save your code, you (and others) can rerun it later and reproduce the same results.</p>
 <p>That only works if you actually save your scripts.</p>
 <p>To save code, you have two options. Remember to save your scripts in the folder <em>scripts</em>:</p>
@@ -626,33 +596,31 @@ Important: scripts should be saved with the file ending .R</p></li>
 <li><p>Click the Save button in the Source pane and save your script, for example as MyCode.R</p></li>
 </ul>
 <p><img src="files/images/3_save.jpg" class="img-fluid" alt="Saving code in R"></p>
-</section>
-<section id="save-your-results" class="level3">
-<h3 class="anchored" data-anchor-id="save-your-results">5.2 Save your results</h3>
+</section><section id="save-your-results" class="level3"><h3 class="anchored" data-anchor-id="save-your-results">5.2 Save your results</h3>
 <p>You have successfully executed all commands and now want R to save your results/working environment? Saving your results is especially useful if it takes some time to have R run through the code and reproduce results - in this case, you only need to save results once and can then load them for the next session.</p>
 <p>Again, there are several options for saving your results. Remember to save them in the folder <em>output/results</em>:</p>
 <ul>
-<li>Use the <code>save.image()</code>-command:</li>
+<li>Use the <code><a href="https://rdrr.io/r/base/save.html">save.image()</a></code>-command:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">save.image</span>(<span class="st">"output/results/tutorial3.RDATA"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/save.html">save.image</a></span><span class="op">(</span><span class="st">"output/results/tutorial3.RDATA"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>Use the <em>save</em>-button in the <em>environment</em> window and save your results in the correct format, for instance as MyData.RDATA”.</li>
 </ul>
 <p><img src="files/images/3_save2.jpg" class="img-fluid" alt="Saving code in R"></p>
-</section>
-</section>
-<section id="take-aways" class="level2">
-<h2 class="anchored" data-anchor-id="take-aways">💡 Take-Aways</h2>
+</section></section><section id="take-aways" class="level2"><h2 class="anchored" data-anchor-id="take-aways">💡 Take-Aways</h2>
 <ul>
-<li><strong>Packages</strong>: Collections of topic-specific functions that extend the functions implemented in base R. You only need to install them once on your computer - but you have to load packages at the beginning of each session. Otherwise, R will not be able to find related functions. Commands: <code>install.packages()</code>, <code>library()</code></li>
-<li><strong>Help</strong>: The thing everyone working with R needs. It’s normal to run into errors when working with R - don’t get frustrated too easily. Commands: <code>?</code>, <code>help()</code></li>
-<li><strong>Save code &amp; results</strong>: You should save your code/results from time to time to be able to replicate analyses. Commands: <code>save.image</code></li>
-</ul>
-</section>
-<section id="smart-hacks" class="level2">
-<h2 class="anchored" data-anchor-id="smart-hacks">🤓 Smart Hacks</h2>
+<li>
+<strong>Packages</strong>: Collections of topic-specific functions that extend the functions implemented in base R. You only need to install them once on your computer - but you have to load packages at the beginning of each session. Otherwise, R will not be able to find related functions. Commands: <code><a href="https://rdrr.io/r/utils/install.packages.html">install.packages()</a></code>, <code><a href="https://rdrr.io/r/base/library.html">library()</a></code>
+</li>
+<li>
+<strong>Help</strong>: The thing everyone working with R needs. It’s normal to run into errors when working with R - don’t get frustrated too easily. Commands: <code>?</code>, <code><a href="https://rdrr.io/r/utils/help.html">help()</a></code>
+</li>
+<li>
+<strong>Save code &amp; results</strong>: You should save your code/results from time to time to be able to replicate analyses. Commands: <code>save.image</code>
+</li>
+</ul></section><section id="smart-hacks" class="level2"><h2 class="anchored" data-anchor-id="smart-hacks">🤓 Smart Hacks</h2>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -665,10 +633,10 @@ Smart Hack 1: Using <code>::</code> to call functions
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Once a package is loaded, its functions can be used directly. Alternatively, you can call a specific function without loading the entire package using the <code>::</code> operator. For example, you may want to use a <strong>single function</strong> from a package without loading the whole package with <code>library()</code>.</p>
-<p>Here, we use the <code>select()</code> function from the <code>dplyr()</code> package even without loading the package first.</p>
+<p>Once a package is loaded, its functions can be used directly. Alternatively, you can call a specific function without loading the entire package using the <code>::</code> operator. For example, you may want to use a <strong>single function</strong> from a package without loading the whole package with <code><a href="https://rdrr.io/r/base/library.html">library()</a></code>.</p>
+<p>Here, we use the <code><a href="https://dplyr.tidyverse.org/reference/select.html">select()</a></code> function from the <code>dplyr()</code> package even without loading the package first.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>dplyr<span class="sc">::</span><span class="fu">select</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>This approach is useful when you only need one function or multiple packages contain functions with the same name.</p>
 </div>
@@ -689,16 +657,15 @@ Smart Hack 2: 🧾 Cheatsheets
 <p>Cheat sheets are one-page summaries of the most important functions and patterns in R (e.g., <code>dplyr</code>, <code>ggplot2</code>, etc.). They’re great when you <em>roughly</em> know what you want to do but don’t remember the exact command.</p>
 <p>Where to find them:</p>
 <ul>
-<li><strong>In RStudio:</strong> <em>Help</em> → <em>Cheatsheets</em> (opens a list you can download as PDFs)</li>
+<li>
+<strong>In RStudio:</strong> <em>Help</em> → <em>Cheatsheets</em> (opens a list you can download as PDFs)</li>
 </ul>
 <p><strong>Example of a Cheatsheet</strong></p>
 <p><img src="files/images/3_cheatsheet.jpg" class="img-fluid" alt="Using Cheatsheets in R"></p>
 </div>
 </div>
 </div>
-</section>
-<section id="quiz" class="level2">
-<h2 class="anchored" data-anchor-id="quiz">🎲 Quiz</h2>
+</section><section id="quiz" class="level2"><h2 class="anchored" data-anchor-id="quiz">🎲 Quiz</h2>
 <div class="cell">
 <div class="sourceCode cell-code hidden" id="cb18" data-startfrom="412" data-source-offset="-1"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 411;"><span id="cb18-412"><a href="#cb18-412" aria-hidden="true" tabindex="-1"></a>round <span class="op">=</span> (n<span class="op">,</span> places) <span class="kw">=&gt;</span> {</span>
 <span id="cb18-413"><a href="#cb18-413" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="op">!</span>places) <span class="cf">return</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(n)<span class="op">;</span></span>
@@ -1048,8 +1015,8 @@ Smart Hack 2: 🧾 Cheatsheets
 <div class="callout-body-container callout-body">
 <p><strong>We want to get the mean value of “age”. Try to run the following code. It will throw an error message. Post in <a href="https://github.com/media-methods/programming-with-r/discussions/3">this GitHub forum</a> to ask for help. Think about making your problem reproducible!</strong></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>age <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="cn">NA</span>, <span class="dv">0</span>, <span class="dv">3</span>, <span class="dv">6</span>)</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(age)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">age</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">4</span>, <span class="fl">7</span>, <span class="fl">8</span>, <span class="cn">NA</span>, <span class="fl">0</span>, <span class="fl">3</span>, <span class="fl">6</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">age</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -1065,13 +1032,11 @@ Smart Hack 2: 🧾 Cheatsheets
 <div class="callout-body-container callout-body">
 <p><strong>Run the following code. Why does it not create an object called “days” in the Environment pane</strong>?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">c</span>(<span class="st">"Monday"</span>, <span class="st">"Tuesday"</span>, <span class="st">"Wednesday"</span>, <span class="st">"Thursday"</span>, <span class="st">"Friday"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Monday"</span>, <span class="st">"Tuesday"</span>, <span class="st">"Wednesday"</span>, <span class="st">"Thursday"</span>, <span class="st">"Friday"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
-</section>
-<section id="more-tutorials-on-this" class="level2">
-<h2 class="anchored" data-anchor-id="more-tutorials-on-this">📚 More tutorials on this</h2>
+</section><section id="more-tutorials-on-this" class="level2"><h2 class="anchored" data-anchor-id="more-tutorials-on-this">📚 More tutorials on this</h2>
 <p>You still have questions? The following tutorials &amp; papers can help you with that:</p>
 <ul>
 <li><a href="https://r4ds.hadley.nz/">R for Data Science by Wickham et al.</a></li>
@@ -1081,21 +1046,16 @@ Smart Hack 2: 🧾 Cheatsheets
 </ul>
 
 
-</section>
-
-</main> <!-- /main -->
-<script type="ojs-module-contents">
+</section></main><!-- /main --><script type="ojs-module-contents">
 eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Ilxucm91bmQgPSAobiwgcGxhY2VzKSA9PiB7XG4gIGlmICghcGxhY2VzKSByZXR1cm4gTWF0aC5yb3VuZChuKTtcbiAgY29uc3QgZCA9IDEwICoqIHBsYWNlcztcbiAgcmV0dXJuIE1hdGgucm91bmQobiAqIGQpIC8gZDtcbn1cblxuZnVuY3Rpb24gdGV4dFJlcGxhY2VtZW50V2l0aFRleHQoeyB0ZXh0LCBwbGFjZWhvbGRlciwgY29ycmVjdFRleHQsIGZvbnRGYW1pbHkgPSBcIm1vbm9zcGFjZVwiLCBjb2xvciA9IFwiIzAwMDAwMFwiIH0pIHtcbiAgY29uc3QgcGFydHMgPSB0ZXh0LnNwbGl0KC9cXHtcXHtpbnB1dFxcfVxcfS8pOyAvLyBUZWlsdCBkZW4gVGV4dCBhbiBkZW4gRWluZ2FiZXN0ZWxsZW5cblxuICBjb25zdCByb290ID0gaHRsLmh0bWxgPGRpdiBzdHlsZT1cImZvbnQtc2l6ZTogSFVHRTsgbWFyZ2luLXRvcDogLTQwOyBtYXJnaW4tYm90dG9tOiAtNDA7IG1hcmdpbi1sZWZ0OiAtNTBweDsgbGluZS1oZWlnaHQ6IDEuODsgZm9udC1mYW1pbHk6ICR7Zm9udEZhbWlseX07IGNvbG9yOiAke2NvbG9yfTsgd2hpdGUtc3BhY2U6IHByZS13cmFwOyB0ZXh0LWluZGVudDogMDsgZGlzcGxheTogZmxleDsgYWxpZ24taXRlbXM6IGJhc2VsaW5lO1wiPlxuICAgIDxkaXYgc3R5bGU9XCJmbGV4OiAxO1wiPlxuICAgICAgJHtwYXJ0cy5tYXAoKHBhcnQsIGluZGV4KSA9PlxuICAgICAgICBodGwuaHRtbGAke3BhcnR9JHtpbmRleCA8IHBhcnRzLmxlbmd0aCAtIDEgPyBodGwuaHRtbGA8c3BhbiBzdHlsZT1cImRpc3BsYXk6IGlubGluZS1mbGV4OyBhbGlnbi1pdGVtczogYmFzZWxpbmU7XCI+XG4gICAgICAgICAgPGlucHV0IFxuICAgICAgICAgICAgdHlwZT1cInRleHRcIlxuICAgICAgICAgICAgcGxhY2Vob2xkZXI9XCIke3BsYWNlaG9sZGVyfVwiXG4gICAgICAgICAgICBzdHlsZT1cInBhZGRpbmc6IDNweDsgZm9udC1zaXplOiBIVUdFOyBib3JkZXI6IDFweCBzb2xpZCAjY2NjOyBtYXJnaW4tbGVmdDogMHB4OyBib3JkZXItcmFkaXVzOiA0cHg7IHdpZHRoOiBjYWxjKCR7Y29ycmVjdFRleHQubGVuZ3RofWNoICsgMWVtKTsgZm9udC1mYW1pbHk6ICR7Zm9udEZhbWlseX07IGNvbG9yOiAke2NvbG9yfTsgdGV4dC1hbGlnbjogcmlnaHQ7IGJveC1zaXppbmc6IGJvcmRlci1ib3g7IG1hcmdpbi1yaWdodDogMC4yZW07XCJcbiAgICAgICAgICAgIG9uaW5wdXQ9JHsoZSkgPT4ge1xuICAgICAgICAgICAgICBjb25zdCBmZWVkYmFja0VsZW1lbnQgPSByb290LnF1ZXJ5U2VsZWN0b3IoYCNmZWVkYmFjay1maW5hbGApO1xuICAgICAgICAgICAgICBjb25zdCBhbGxJbnB1dHNDb3JyZWN0ID0gQXJyYXkuZnJvbShyb290LnF1ZXJ5U2VsZWN0b3JBbGwoXCJpbnB1dFwiKSkuZXZlcnkoKGlucHV0KSA9PiBpbnB1dC52YWx1ZS50cmltKCkgPT09IGNvcnJlY3RUZXh0LnRyaW0oKSk7XG4gICAgICAgICAgICAgIGlmIChhbGxJbnB1dHNDb3JyZWN0KSB7XG4gICAgICAgICAgICAgICAgZmVlZGJhY2tFbGVtZW50LnRleHRDb250ZW50ID0gXCLinIVcIjtcbiAgICAgICAgICAgICAgICBmZWVkYmFja0VsZW1lbnQuc3R5bGUuY29sb3IgPSBcImdyZWVuXCI7XG4gICAgICAgICAgICAgIH0gZWxzZSB7XG4gICAgICAgICAgICAgICAgZmVlZGJhY2tFbGVtZW50LnRleHRDb250ZW50ID0gXCLwn5S0XCI7XG4gICAgICAgICAgICAgICAgZmVlZGJhY2tFbGVtZW50LnN0eWxlLmNvbG9yID0gXCJyZWRcIjtcbiAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgfX1cbiAgICAgICAgICAvPjwvc3Bhbj5gIDogXCJcIn1gXG4gICAgICApfVxuICAgIDwvZGl2PlxuICAgIDxzcGFuIGlkPVwiZmVlZGJhY2stZmluYWxcIiBzdHlsZT1cImZvbnQtd2VpZ2h0OiBib2xkOyBmb250LXNpemU6IEhVR0U7IG1hcmdpbi1sZWZ0OiAwLjVlbTsgY29sb3I6IGluaGVyaXQ7XCI+PC9zcGFuPlxuICA8L2Rpdj5gO1xuXG4gIHJldHVybiByb290O1xufVxuXG5cblxuZnVuY3Rpb24gdGV4dFJlcGxhY2VtZW50VGFzayh7IHBsYWNlaG9sZGVyLCBjb3JyZWN0VGV4dCwgd2lkdGggPSBcIjMwMHB4XCIsIGZvbnRGYW1pbHkgPSBcIm1vbm9zcGFjZVwiLCBjb2xvciA9IFwiYmxhY2tcIiB9KSB7XG4gIGxldCBlbnRlcmVkVGV4dCA9IFwiXCI7IFxuXG4gIGNvbnN0IHJvb3QgPSBodGwuaHRtbGA8ZGl2IHN0eWxlPVwiZm9udC1zaXplOiAxNHB4OyBsaW5lLWhlaWdodDogMS41OyBtYXJnaW4tYm90dG9tOiAyMHB4O1wiPlxuICAgIDxoND5CaXR0ZSBlcnNldHplbiBTaWUgZGVuIFRleHQ6PC9oND5cbiAgICA8IS0tIEVpbmdhYmVmZWxkIC0tPlxuICAgIDxkaXYgc3R5bGU9XCJkaXNwbGF5OiBmbGV4OyBhbGlnbi1pdGVtczogY2VudGVyO1wiPlxuICAgICAgPGlucHV0XG4gICAgICAgIHR5cGU9XCJ0ZXh0XCJcbiAgICAgICAgcGxhY2Vob2xkZXI9XCIke3BsYWNlaG9sZGVyfVwiXG4gICAgICAgIHN0eWxlPVwicGFkZGluZzogNXB4OyBmb250LXNpemU6IDE0cHg7IGJvcmRlcjogMXB4IHNvbGlkICNjY2M7IGJvcmRlci1yYWRpdXM6IDRweDsgd2lkdGg6ICR7d2lkdGh9OyBmb250LWZhbWlseTogJHtmb250RmFtaWx5fTsgY29sb3I6ICR7Y29sb3J9O1wiXG4gICAgICAgIG9uSW5wdXQ9JHsoZSkgPT4ge1xuICAgICAgICAgIGVudGVyZWRUZXh0ID0gZS50YXJnZXQudmFsdWU7XG4gICAgICAgICAgcm9vdC52YWx1ZSA9IGVudGVyZWRUZXh0O1xuICAgICAgICAgIHJvb3QuZGlzcGF0Y2hFdmVudChuZXcgQ3VzdG9tRXZlbnQoXCJpbnB1dFwiKSk7XG4gICAgICAgICAgdXBkYXRlRmVlZGJhY2soKTtcbiAgICAgICAgfX1cbiAgICAgIC8+XG4gICAgICA8IS0tIEZlZWRiYWNrIC0tPlxuICAgICAgPGRpdiBpZD1cImZlZWRiYWNrXCIgc3R5bGU9XCJmb250LXdlaWdodDogYm9sZDsgZm9udC1zaXplOiAxNHB4OyBtYXJnaW4tbGVmdDogMTBweDsgdGV4dC1hbGlnbjogbGVmdDsgd2hpdGUtc3BhY2U6IG5vd3JhcDsgY29sb3I6IGluaGVyaXQ7XCI+PC9kaXY+XG4gICAgPC9kaXY+XG4gIDwvZGl2PmA7XG5cbi8vIEZ1bmt0aW9uIHp1ciBBa3R1YWxpc2llcnVuZyBkZXMgRmVlZGJhY2tzXG4gIGZ1bmN0aW9uIHVwZGF0ZUZlZWRiYWNrKCkge1xuICAgIGNvbnN0IGZlZWRiYWNrRWxlbWVudCA9IHJvb3QucXVlcnlTZWxlY3RvcihcIiNmZWVkYmFja1wiKTtcbiAgICBpZiAoZW50ZXJlZFRleHQudHJpbSgpID09PSBjb3JyZWN0VGV4dC50cmltKCkpIHtcbiAgICAgIGZlZWRiYWNrRWxlbWVudC50ZXh0Q29udGVudCA9IFwi4pyFXCI7XG4gICAgICBmZWVkYmFja0VsZW1lbnQuc3R5bGUuY29sb3IgPSBcImdyZWVuXCI7XG4gICAgfSBlbHNlIGlmIChlbnRlcmVkVGV4dC50cmltKCkgPT09IFwiXCIpIHtcbiAgICAgIGZlZWRiYWNrRWxlbWVudC50ZXh0Q29udGVudCA9IFwiXCI7IFxuICAgIH0gZWxzZSB7XG4gICAgICBmZWVkYmFja0VsZW1lbnQudGV4dENvbnRlbnQgPSBcIvCflLRcIjtcbiAgICAgIGZlZWRiYWNrRWxlbWVudC5zdHlsZS5jb2xvciA9IFwicmVkXCI7XG4gICAgfVxuICB9XG5cbiAgcm9vdC52YWx1ZSA9IG51bGw7IFxuICByZXR1cm4gcm9vdDtcbn1cblxuXG5mdW5jdGlvbiBzaW5nbGVDaG9pY2VJbnB1dCh7IG9wdGlvbnMsIGNvcnJlY3RJbmRleCB9KSB7XG4gIGxldCBzZWxlY3RlZEFuc3dlciA9IG51bGw7XG5cbiAgY29uc3Qgcm9vdCA9IGh0bC5odG1sYDxkaXYgc3R5bGU9XCJmb250LXNpemU6IEhVR0U7IGxpbmUtaGVpZ2h0OiAxLjU7IG1hcmdpbi1ib3R0b206IDBweDtcIj5cbiAgICA8IS0tIEFudHdvcnRlbiAtLT5cbiAgICA8ZGl2IHN0eWxlPVwiZGlzcGxheTogZ3JpZDsgcm93LWdhcDogMTJweDtcIj5cbiAgICAgICR7b3B0aW9ucy5tYXAoXG4gICAgICAgIChvcHRpb24sIGluZGV4KSA9PlxuICAgICAgICAgIGh0bC5odG1sYDxkaXYgc3R5bGU9XCJkaXNwbGF5OiBmbGV4OyBhbGlnbi1pdGVtczogY2VudGVyO1wiPlxuICAgICAgICAgICAgPCEtLSBSYWRpb2J1dHRvbiB1bmQgT3B0aW9uIC0tPlxuICAgICAgICAgICAgPGxhYmVsIHN0eWxlPVwiZGlzcGxheTogZmxleDsgYWxpZ24taXRlbXM6IGNlbnRlcjsgcGFkZGluZy1sZWZ0OiA0cHQ7IGZvbnQtd2VpZ2h0OiBub3JtYWw7XCI+XG4gICAgICAgICAgICAgIDxpbnB1dFxuICAgICAgICAgICAgICAgIHR5cGU9XCJyYWRpb1wiXG4gICAgICAgICAgICAgICAgbmFtZT1cInNpbmdsZUNob2ljZVwiXG4gICAgICAgICAgICAgICAgdmFsdWU9JHtpbmRleH1cbiAgICAgICAgICAgICAgICBzdHlsZT1cIm1hcmdpbi1yaWdodDogMTBweDtcIlxuICAgICAgICAgICAgICAgIG9uQ2hhbmdlPSR7KCkgPT4ge1xuICAgICAgICAgICAgICAgICAgc2VsZWN0ZWRBbnN3ZXIgPSBpbmRleDtcbiAgICAgICAgICAgICAgICAgIHJvb3QudmFsdWUgPSBzZWxlY3RlZEFuc3dlcjtcbiAgICAgICAgICAgICAgICAgIHJvb3QuZGlzcGF0Y2hFdmVudChuZXcgQ3VzdG9tRXZlbnQoXCJpbnB1dFwiKSk7XG4gICAgICAgICAgICAgICAgICB1cGRhdGVGZWVkYmFjaygpO1xuICAgICAgICAgICAgICAgIH19XG4gICAgICAgICAgICAgIC8+XG4gICAgICAgICAgICAgIDxzcGFuPiR7b3B0aW9ufTwvc3Bhbj5cbiAgICAgICAgICAgIDwvbGFiZWw+XG4gICAgICAgICAgICA8IS0tIEZlZWRiYWNrIC0tPlxuICAgICAgICAgICAgPGRpdiBpZD1cImZlZWRiYWNrLSR7aW5kZXh9XCIgc3R5bGU9XCJmb250LXdlaWdodDogYm9sZDsgZm9udC1zaXplOiAxNHB4OyBtYXJnaW4tbGVmdDogMTBweDsgdGV4dC1hbGlnbjogbGVmdDsgd2hpdGUtc3BhY2U6IG5vd3JhcDsgY29sb3I6IGluaGVyaXQ7XCI+PC9kaXY+XG4gICAgICAgICAgPC9kaXY+YFxuICAgICAgKX1cbiAgICA8L2Rpdj5cbiAgPC9kaXY+YDtcblxuLy8gRnVua3Rpb24genVyIEFrdHVhbGlzaWVydW5nIGRlcyBGZWVkYmFja3NcbiAgZnVuY3Rpb24gdXBkYXRlRmVlZGJhY2soKSB7XG4gICAgb3B0aW9ucy5mb3JFYWNoKChfLCBpbmRleCkgPT4ge1xuICAgICAgY29uc3QgZmVlZGJhY2tFbGVtZW50ID0gcm9vdC5xdWVyeVNlbGVjdG9yKGAjZmVlZGJhY2stJHtpbmRleH1gKTtcbiAgICAgIGlmIChzZWxlY3RlZEFuc3dlciA9PT0gaW5kZXgpIHtcbiAgICAgICAgZmVlZGJhY2tFbGVtZW50LnRleHRDb250ZW50ID1cbiAgICAgICAgICBpbmRleCA9PT0gY29ycmVjdEluZGV4ID8gXCLinIVcIiA6IFwi8J+UtFwiO1xuICAgICAgICBmZWVkYmFja0VsZW1lbnQuc3R5bGUuY29sb3IgPSBpbmRleCA9PT0gY29ycmVjdEluZGV4ID8gXCJncmVlblwiIDogXCJyZWRcIjtcbiAgICAgIH0gZWxzZSB7XG4gICAgICAgIGZlZWRiYWNrRWxlbWVudC50ZXh0Q29udGVudCA9IFwiXCI7IC8vIEzDtnNjaHQgRmVlZGJhY2sgZsO8ciBuaWNodCBhdXNnZXfDpGhsdGUgT3B0aW9uZW5cbiAgICAgIH1cbiAgICB9KTtcbiAgfVxuXG4gIHJvb3QudmFsdWUgPSBudWxsO1xuICByZXR1cm4gcm9vdDtcbn1cblxuXG5mdW5jdGlvbiBxdWl6SW5wdXQoeyBxdWVzdGlvbnMsIG9wdGlvbnN9KSB7XG4gIGxldCBhbnN3ZXJzID0gcXVlc3Rpb25zLm1hcCgoKSA9PiBudWxsKTtcbiAgbGV0IHJvb3QgPSBodGwuaHRtbGA8ZGl2XG4gICAgICBzdHlsZT1cIlxuICAgICAgICBkaXNwbGF5OiBncmlkO1xuICAgICAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IDEwJSAxMCUgNzAlIDEwJTtcIlxuICAgID5cbiAgICAgICR7b3B0aW9ucy5tYXAoXG4gICAgICAgIChvcHQpID0+IGh0bC5odG1sYDxkaXYgc3R5bGU9XCJmb250LXdlaWdodDogYm9sZDsgZm9udC1zaXplOiBIVUdFXCI+JHtvcHR9PC9kaXY+YFxuICAgICAgKX1cbiAgICAgIDxkaXYgc3R5bGU9XCJmb250LXdlaWdodDogYm9sZFwiPlN0YXRlbWVudDwvZGl2PlxuICAgICAgPGRpdiBzdHlsZT1cImZvbnQtd2VpZ2h0OiBib2xkXCI+PC9kaXY+XG4gICAgICAke0FycmF5LmZyb20ocXVlc3Rpb25zLmVudHJpZXMoKSwgKFtpLCBbcXVlc3Rpb24sIGNvcnJlY3RdXSkgPT5cbiAgICAgICAgcXVpeklucHV0Um93KHtcbiAgICAgICAgICBxdWVzdGlvbixcbiAgICAgICAgICBvcHRpb25zLFxuICAgICAgICAgIGNvcnJlY3QsXG4gICAgICAgICAgb25DaGFuZ2U6IChuZXdBbnN3ZXIpID0+IHtcbiAgICAgICAgICAgIGFuc3dlcnNbaV0gPSBuZXdBbnN3ZXI7XG4gICAgICAgICAgICByb290LnZhbHVlID0gYW5zd2VycztcbiAgICAgICAgICAgIHJvb3QuZGlzcGF0Y2hFdmVudChuZXcgQ3VzdG9tRXZlbnQoXCJpbnB1dFwiKSk7XG4gICAgICAgICAgfVxuICAgICAgICB9KVxuICAgICAgKX1cbiAgICA8L2Rpdj5gO1xuICByb290LnZhbHVlID0gYW5zd2VycztcbiAgcmV0dXJuIHJvb3Q7XG59XG5cbmZ1bmN0aW9uIHF1aXpJbnB1dFJvdyh7XG4gIHF1ZXN0aW9uLFxuICBvcHRpb25zLFxuICBjb3JyZWN0LFxuICBvbkNoYW5nZSA9ICgpID0+IHt9XG59KSB7XG4gIGxldCByb290ID0gaHRsLmh0bWxgPGRpdj5gO1xuXG4gIGZ1bmN0aW9uIHNldEFuc3dlcihhbnN3ZXIsIGluaXRpYWwgPSBmYWxzZSkge1xuICAgIG1vcnBoKFxuICAgICAgcm9vdCxcbiAgICAgIGh0bC5odG1sYDxkaXYgc3R5bGU9XCJkaXNwbGF5OiBjb250ZW50c1wiPiBcbiAgICAgIDxmb3JtIHN0eWxlPVwiZGlzcGxheTogY29udGVudHNcIj5cbiAgICAgICAgJHtvcHRpb25zLm1hcChcbiAgICAgICAgICAob3B0KSA9PlxuICAgICAgICAgICAgaHRsLmh0bWxgPGxhYmVsPiZlbXNwOzwvbGFiZWw+IFxuICAgICAgICAgICAgPGlucHV0ICBcbiAgICAgICAgICAgICAgbmFtZT0ke3F1ZXN0aW9ufSAmZW1zcDtcbiAgICAgICAgICAgICAgdHlwZT1cInJhZGlvXCJcbiAgICAgICAgICAgICAgdmFsdWU9XCIke29wdH1cIlxuICAgICAgICAgICAgICBjaGVja2VkPSR7b3B0ID09PSBhbnN3ZXJ9XG4gICAgICAgICAgICAgIG9uQ2hhbmdlPSR7KCkgPT4gc2V0QW5zd2VyKG9wdCl9XG4gICAgICAgICAgICA+XG4gICAgICAgICAgICA8L2lucHV0PmBcbiAgICAgICAgKX1cbiAgICAgIDwvZm9ybT5cbiAgICAgIDxkaXY+JHtxdWVzdGlvbn08L2Rpdj5cbiAgICAgIDxkaXY+ICZlbXNwOyAke1xuICAgICAgIGFuc3dlciA9PT0gbnVsbCA/IFwiXCIgOiBhbnN3ZXIgPT09IGNvcnJlY3QgPyBcIuKchVwiIDogXCLwn5S0XCJcbiAgICAgIH08L2Rpdj5cbiAgICA8L2Rpdj5gXG4gICAgKTtcblxuICAgIHJvb3QudmFsdWUgPSBhbnN3ZXI7XG4gICAgaWYgKCFpbml0aWFsKSB7XG4gICAgICByb290LmRpc3BhdGNoRXZlbnQobmV3IEN1c3RvbUV2ZW50KFwiaW5wdXRcIikpO1xuICAgICAgb25DaGFuZ2UoYW5zd2VyKTtcbiAgICB9XG4gIH1cblxuICBzZXRBbnN3ZXIobnVsbCwgdHJ1ZSk7XG4gIHJldHVybiByb290O1xufVxuXG5tb3JwaCA9IHJlcXVpcmUoXCJodHRwczovL2J1bmRsZS5ydW4vbmFub21vcnBoQDUuNC4yXCIpXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJcbk1DX29iamVjdHNfZnVuY3Rpb25zXzEgPSBbXG4gICAgW1wiSW4gUiwgb2JqZWN0cyBhcmUgdXNlZCB0byBzdG9yZSBpbmZvcm1hdGlvbiBzdWNoIGFzIG51bWJlcnMsIHRleHQsIG9yIGRhdGFzZXRzLlwiLCBcIlRydWVcIl0sXG4gICAgW1wiVGhlIGFzc2lnbm1lbnQgb3BlcmF0b3IgPSBjYW4gYmUgdXNlZCB0byBhc3NpZ24gdmFsdWVzIHRvIG9iamVjdHMuXCIsIFwiVHJ1ZVwiXSxcbiAgICBbXCJBIGZ1bmN0aW9uIHRha2VzIGFuIGlucHV0LCBwZXJmb3JtcyBhbiBvcGVyYXRpb24sIGFuZCByZXR1cm5zIGFuIG91dHB1dC5cIiwgXCJUcnVlXCJdLFxuICAgIFtcIkV2ZXJ5dGhpbmcgdGhhdCBoYXBwZW5zIGluIFIgY2FuIGJlIHVuZGVyc3Rvb2QgYXMgYSBmdW5jdGlvbiBjYWxsLlwiLCBcIlRydWVcIl0sXG4gICAgW1wiTm8gZnVuY3Rpb24gY2FuIGhhdmUgdGhlIHNhbWUgbmFtZSBhcyBhbm90aGVyIGZ1bmN0aW9uIGluIGFub3RoZXIgcGFja2FnZS5cIiwgXCJGYWxzZVwiXVxuXVxuXG52aWV3b2YgYW5zd2Vyc19vYmplY3RzX2Z1bmN0aW9uc18xID0gcXVpeklucHV0KHtcbiAgcXVlc3Rpb25zOiBNQ19vYmplY3RzX2Z1bmN0aW9uc18xLFxuICBvcHRpb25zOiBbXCJUcnVlXCIsIFwiRmFsc2VcIl1cbn0pXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTMiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJcbk1DX3BhY2thZ2VzXzEgPSBbXG4gICAgW1wiUGFja2FnZXMgYXJlIGNvbGxlY3Rpb25zIG9mIGZ1bmN0aW9ucyB0aGF0IGV4dGVuZCBCYXNlIFIuXCIsIFwiVHJ1ZVwiXSxcbiAgICBbXCJJIG5lZWQgdG8gaW5zdGFsbCBhIHBhY2thZ2UgZXZlcnkgdGltZSBJIHN0YXJ0IFIuXCIsIFwiRmFsc2VcIl0sXG4gICAgW1wiQWZ0ZXIgaW5zdGFsbGluZyBhIHBhY2thZ2Ugb25jZSwgSSB1c3VhbGx5IGxvYWQgaXQgdXNpbmcgbGlicmFyeSgpIGluIGVhY2ggc2Vzc2lvbi5cIiwgXCJUcnVlXCJdXG5dXG5cbnZpZXdvZiBhbnN3ZXJzX3BhY2thZ2VzXzEgPSBxdWl6SW5wdXQoe1xuICBxdWVzdGlvbnM6IE1DX3BhY2thZ2VzXzEsXG4gIG9wdGlvbnM6IFtcIlRydWVcIiwgXCJGYWxzZVwiXVxufSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnYW5zd2Vyc19vYmplY3RzX2Z1bmN0aW9uc18xJykifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXRRdWlldCIsInNvdXJjZSI6InNoaW55SW5wdXQoJ2Fuc3dlcnNfcGFja2FnZXNfMScpIn1dfQ==
-</script>
-<script type="module">
+</script><script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
 window._ojs.paths.runtimeToDoc = "../..";
 window._ojs.paths.runtimeToRoot = "../..";
 window._ojs.paths.docToRoot = "";
 window._ojs.selfContained = false;
 window._ojs.runtime.interpretFromScriptTags();
-</script>
-<script id="quarto-html-after-body" type="application/javascript">
+</script><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -1514,9 +1474,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
+</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="./2-overview.html" class="pagination-link" aria-label="2 What to do where in R">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">2 What to do where in R</span></span>
       </a>          
@@ -1528,8 +1486,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
       &nbsp;
     </div>   
@@ -1541,8 +1498,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-
-
 
 
 </body></html>

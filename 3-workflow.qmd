@@ -234,12 +234,12 @@ If you did not understand something in a tutorial or just want me to repeat some
 
 When something breaks and I am not around to help:
 
-- Check your code and object names carefully.
-- Read the error message.
-- R’s built-in help system (`help` and `?`)
-- Search online with good keywords
-- Check our [FAQ R](83-faq-r.qmd), where we provide an overview of common R question.
-- If you have spent 15 minutes on the problem and could not solve it using these resources: Ask for help in a reproducible way (code + error + context), for example in our [GitHub discussion forum](https://github.com/media-methods/programming-with-r/discussions).
+-   Check your code and object names carefully.
+-   Read the error message.
+-   R’s built-in help system (`help` and `??`)
+-   Search online with good keywords
+-   Check our [FAQ R](83-faq-r.qmd), where we provide an overview of common R question.
+-   If you have spent 15 minutes on the problem and could not solve it using these resources: Ask for help in a reproducible way (code + error + context), for example in our [GitHub discussion forum](https://github.com/media-methods/programming-with-r/discussions).
 
 ### 4.1 Use R’s built-in help system
 
@@ -247,7 +247,7 @@ If you want information about a package, use `help()` or `?`. These commands ope
 
 ```{r, activate2, eval = FALSE, echo = TRUE}
 help(package = "quanteda") # Version 1 of asking for help
-?quanteda # Version 2 of asking for help
+??quanteda # Version 2 of asking for help
 ```
 
 Similarly, you can check for help for a specific function. Let's assume I am not sure what the `select()` function does in R. I could check this out in R Studio:
@@ -342,7 +342,7 @@ To save code, you have two options. Remember to save your scripts in the folder 
 
 -   Click the Save button in the Source pane and save your script, for example as MyCode.R
 
-![](files/images/3_save.jpg){fig-alt="Saving code in R"} 
+![](files/images/3_save.jpg){fig-alt="Saving code in R"}
 
 ### 5.2 Save your results
 

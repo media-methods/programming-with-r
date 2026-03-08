@@ -34,8 +34,8 @@ book:
     - part: Handling data in R
       chapters:
        - 6-data-types.qmd
-      # - 7-visuals.qmd
-      # - 8-data-management.qmd
+       - 7-visuals.qmd
+       - 8-data-management.qmd
 
     - part: 80-appendix.qmd
       chapters:
