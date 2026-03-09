@@ -33,7 +33,7 @@ Before doing anything else, install the `ggplot2` package and load it.
 install.packages("ggplot2")
 library("ggplot2")
 ```
-```{r,t8.5, eval = TRUE, echo = FALSE}
+```{r,t8.5, eval = TRUE, echo = FALSE, message=FALSE, warning=FALSE}
 library("ggplot2")
 ```
 
@@ -59,10 +59,6 @@ library(tidyverse)
 
 # loads the WoJ dataset shipped with tidycomm
 data_woj <- tidycomm::WoJ
-
-# we inspect the data
-data_woj |>
-  as_tibble()
 ```
 
 ```{r,ggplot, eval = TRUE, echo = FALSE, message = FALSE}
@@ -75,7 +71,7 @@ data_woj |>
     title = "Distribution of Journalists' Work Experience by Country",
     x = "Work Experience (Years)",
     y = "Density",
-    caption = "Note: The density value shows where the observations are concentrated. Higher parts of the curve mean that many observations occur around that value."
+    caption = "Note: Higher parts of the curve mean that many observations occur around that value."
   ) +
   theme_minimal() +
   theme(legend.position = "none") +
@@ -184,7 +180,7 @@ Here, we want to create a density plot using the `geom_density()` function.
 
 In short, this function plots a density estimate, that is, a smoothed representation of the distribution of a numeric variable. In our case, it helps us see where values of `work_experience` are concentrated and how the distribution differs across countries.
 
-We simply add the graph we want to create, here `geom_density()`, to our function as a new layer using the _+_ sign.
+We simply add the graph we want to create, here `geom_density()`, to our function as a new layer using the `+` sign.
 
 The argument `alpha` controls the transparency of the color used to fill the density curves. The value ranges from 0 (completely transparent) to 1 (completely opaque).
 
@@ -289,7 +285,7 @@ data_woj |>
     title = "Distribution of Journalists' Work Experience by Country",
     x = "Work Experience (Years)",
     y = "Density",
-    caption = "Note: The density value shows where the observations are concentrated. Higher parts of the curve mean that many observations occur around that value."
+    caption = "Note: Higher parts of the curve mean that many observations occur around that value."
   )
 ```
 
@@ -338,7 +334,7 @@ data_woj |>
     title = "Distribution of Journalists' Work Experience by Country",
     x = "Work Experience (Years)",
     y = "Density",
-    caption = "Note: The density value shows where the observations are concentrated. Higher parts of the curve mean that many observations occur around that value."
+    caption = "Note: Higher parts of the curve mean that many observations occur around that value."
   ) +
 
   # NEW: we add the light theme
@@ -367,7 +363,7 @@ data_woj |>
     title = "Distribution of Journalists' Work Experience by Country",
     x = "Work Experience (Years)",
     y = "Density",
-    caption = "Note: The density value shows where the observations are concentrated. Higher parts of the curve mean that many observations occur around that value."
+    caption = "Note: Higher parts of the curve mean that many observations occur around that value."
   ) +
 
   # NEW: we add the minimal theme
@@ -413,7 +409,7 @@ data_woj |>
     title = "Distribution of Journalists' Work Experience by Country",
     x = "Work Experience (Years)",
     y = "Density",
-    caption = "Note: The density value shows where the observations are concentrated. Higher parts of the curve mean that many observations occur around that value."
+    caption = "Note: Higher parts of the curve mean that many observations occur around that value."
   ) +
 
   # we add the minimal theme
@@ -548,7 +544,7 @@ You still have questions? The following tutorials & papers can help you with tha
 
 - Chang, W. R (2026) _R Graphics Codebook. Practical Recipes for Visualizing Data._ [Link](https://r-graphics.org/)
 - Wickham et al. (2021). _ggplot2: elegant graphics for data analysis._ Online, work-in-progress version of the 3rd edition. [Link](https://ggplot2-book.org/)
-- Hehman, E., & Xie, S. Y. (2021). Doing Better Data Visualization. _Advances in Methods and Practices in Psychological Science__. DOI: 10.1177/25152459211045334 [Link](https://doi.org/10.1177/25152459211045334)
+- Hehman, E., & Xie, S. Y. (2021). Doing Better Data Visualization. _Advances in Methods and Practices in Psychological Science_. DOI: 10.1177/25152459211045334 [Link](https://doi.org/10.1177/25152459211045334)
 
 
 ## 📌 Test your knowledge
