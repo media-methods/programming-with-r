@@ -333,10 +333,10 @@ data_woj |>
 //| echo: false
 
 MC_pipe_1 = [
-  ["`|>` passes the result on the left into the first argument of the function on the right.", "True"],
-  ["A pipe should always end on the `|>` symbol.", "False"],  
+  ["|> passes the result on the left into the first argument of the function on the right.", "True"],
+  ["A pipe should always end on the |> symbol.", "False"],  
   ["In a pipeline, you only need to specify the dataset once at the beginning.", "True"],
-  ["`data |> head()` and `head(data)` return different results.", "False"]
+  ["data |> head() and head(data) return different results.", "False"]
 ]
 
 viewof answers_objects_functions_1 = quizInput({
@@ -355,11 +355,11 @@ viewof answers_objects_functions_1 = quizInput({
 //| echo: false
 
 MC_combined_tidyverse_1 = [
-  ["`select()` is used to choose columns (variables).", "True"],
-  ["`filter()` changes the original dataset even if you do not assign the result.", "False"],
-  ["`=` and `==` always mean the same thing in R.", "False"],
-  ["`mutate()` can create a new column or overwrite an existing column.", "True"],
-  ["`select(-country)` removes all rows where country is missing.", "False"]
+  ["select() is used to choose columns (variables).", "True"],
+  ["filter() changes the original dataset even if you do not assign the result.", "False"],
+  ["= and == always mean the same thing in R.", "False"],
+  ["mutate() can create a new column or overwrite an existing column.", "True"],
+  ["select(-country) removes all rows where country is missing.", "False"]
 ]
 
 viewof answers_combined_tidyverse_1 = quizInput({
@@ -412,6 +412,12 @@ You still have questions? The following tutorials & papers can help you with tha
 
 Use the `WoJ` data. Find out how many variables describe journalistic trust!
 
+```{r, task-1, eval = TRUE, echo = TRUE}
+data_woj |>
+  select(contains("trust")) |>
+  ncol()
+```
+
 ### Task 2 (Medium🔥🔥)
 
 Use the `WoJ` data. Reduce the data set to journalists who...
@@ -421,6 +427,13 @@ Use the `WoJ` data. Reduce the data set to journalists who...
 -   have high trust in the government (values 4 or 5)
 
 *How many journalists fulfill these criteria?*
+```{r, task-2, eval = TRUE, echo = TRUE}
+data_woj |>
+  filter(country == "Austria") |>
+  filter(employment %in% c("Full-time", "Part-time")) |>
+  filter(trust_government >= 4) |>
+  nrow()
+```
 
 ### Task 3 (Hard🔥🔥🔥)
 
@@ -428,9 +441,28 @@ Use the `WoJ` data
 
 -   create a new variable "ethics_cat" that takes on the value "high" if a journalists scores a 5 for any of the variables `ethics_1`, `ethics_2`, `ethics_3`, or `ethics_4` and "low" otherwise.
 -   reduce the data set to journalists not working as freelancers (see variable `employment`).
--  Save the transformed data as `woj_transformed` and:
+-   Save the transformed data as `woj_transformed` and:
 
 *What is the mean amount of years, according to the variable `work_experience`, journalists in `woj_transformed` have worked?*
 
 *From which country is the journalist with the most years of work experience?*
+
+```{r, task-3, eval = TRUE, echo = TRUE}
+woj_transformed <- data_woj |>
+  mutate(ethics_cat = case_when(
+           ethics_1 == 5 | ethics_2 == 5 | ethics_3 == 5 |ethics_4 == 5 ~ "high",
+           TRUE ~ "low")) |>
+  filter(employment != "Freelancer") 
+
+# Mean amount of working experience
+mean(woj_transformed$work_experience, na.rm = T)
+```
+
+```{r, task-4, eval = TRUE, echo = TRUE}
+# Country from which journalist with most work experience is
+woj_transformed |>
+  arrange(desc(work_experience)) |>
+  slice(1) |>
+  select(country, work_experience)
+```
 ::::::

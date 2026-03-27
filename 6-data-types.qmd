@@ -319,6 +319,17 @@ Use the `WoJ` data. Save it as `data_woj`. Check the data type of the following 
 -   `country`
 -   `employment`
 
+```{r, task-1, eval = TRUE, echo = TRUE}
+data_woj  |>
+  select(country, employment) |>
+  head()
+
+# or.... 
+
+data_woj |> 
+  summarise(across(c("country", "employment"), class))
+```
+
 ### Task 2 (Medium🔥🔥)
 
 Using `data_woj`...
@@ -326,6 +337,23 @@ Using `data_woj`...
 -   Count how many missing values exist in `work_experience`.
 -   Replace all values coded as more than 15 in `work_experience` with NA.
 -   Save the modified dataset as `data_woj_clean`.
+
+```{r, task-2a, eval = TRUE, echo = TRUE}
+# How many missing values?
+data_woj |>
+  summarise(n_missing = sum(is.na(work_experience)))
+```
+```{r, task-2b, eval = TRUE, echo = TRUE}
+# Replace values above 15 with NA
+data_woj_cleaned <- data_woj |>
+  mutate(work_experience = replace(work_experience,
+                                   work_experience > 15,
+                                   NA)) 
+
+# Check result
+data_woj_cleaned |>
+  select(work_experience)
+```
 
 ### Task 3 (Hard🔥🔥🔥)
 
@@ -335,3 +363,22 @@ This tasks contains several commands you do not yet know! Use `data_woj` (not th
 -   For all numeric variables, calculate the mean and the number of missing values.
 -   Save the result as `country_summary`.
 -   For the country with the highest mean in `trust_parliament`, plot the average trust score!
+
+
+```{r, task-3, eval = TRUE, echo = TRUE}
+country_summary <- data_woj |>
+  group_by(country) |>
+  summarise(across(where(is.numeric), list(mean = ~ mean(.x, na.rm = TRUE),
+                                           n_miss = ~ sum(is.na(.x)))))
+
+# Check the result
+country_summary
+
+# For the country with the highest mean in `trust_parliament`, plot the average trust score!
+country_summary |>
+  filter(trust_parliament_mean == max(trust_parliament_mean)) |>
+  
+  # a very simple plot
+  ggplot(aes(x = country, y = trust_parliament_mean)) +
+  geom_col()
+```
