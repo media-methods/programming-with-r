@@ -18,25 +18,25 @@ Oftentimes, you may want to import data outside of R into R (e.g., an Excel-file
 R provides functions for importing and exporting almost any file format. However, in statistical analysis, **tabular data** has long been the standard structure. In tabular data, information is organized in **rows and columns**: each row typically represents an observation (for example, a survey respondent) and each column represents a variable (for example, age, gender, or income). Columns may contain different **data types**, such as numeric, character (text), or logical values.
 
 Common tabular file formats include:
-  
-- CSV (comma-separated values): `.csv`
-- TSV (tab-separated values): `.tsv`
-- Text files with separators: `.txt`
-- Excel spreadsheets: `.xlsx`
-- SPSS datasets: `.sav`
 
-To import different file formats, the `tidyverse` provides a consistent family of functions. 
+-   CSV (comma-separated values): `.csv`
+-   TSV (tab-separated values): `.tsv`
+-   Text files with separators: `.txt`
+-   Excel spreadsheets: `.xlsx`
+-   SPSS datasets: `.sav`
+
+To import different file formats, the `tidyverse` provides a consistent family of functions.
 
 These functions follow the same naming convention: the prefix `read_` followed by the file format, such as `csv` or `tsv`. For example, `read_csv()` reads comma-separated files, while `read_tsv()` reads tab-separated files.
 
 Examples for related functions include:
-  
-- `read_csv()` for CSV files  
-- `read_tsv()` for tab-separated files  
-- `read_delim()` for custom separators  
-- `read_table()` for general text tables  
 
-In most cases, the `read_` functions only require the **file path** as an argument, written in quotation marks. If the file is located in a subfolder, the folder name is written before the file name, separated by a `/`. The output of the function must then be stored in an object. 
+-   `read_csv()` for CSV files\
+-   `read_tsv()` for tab-separated files\
+-   `read_delim()` for custom separators\
+-   `read_table()` for general text tables
+
+In most cases, the `read_` functions only require the **file path** as an argument, written in quotation marks. If the file is located in a subfolder, the folder name is written before the file name, separated by a `/`. The output of the function must then be stored in an object.
 
 As an example, download the World of Journalism data set provided by the `tidycomm` package here: 📢 [Example data](data/data_woj.csv).
 
@@ -144,9 +144,9 @@ data_woj_new |>
 
 In many social science datasets, several variables measure different aspects of the same concept. For example, multiple survey questions may capture attitudes toward a topic such as ethical concerns. In such cases, it is often useful to combine these variables into a single index.
 
-A common approach is to create a mean index. A **mean index** combines multiple variables that measure the same concept by calculating the mean value across them. 
+A common approach is to create a mean index. A **mean index** combines multiple variables that measure the same concept by calculating the mean value across them.
 
-In `data_woj_new`, the variables `ethics_1` to `ethics_4` measure the degree to which journalists agree with ethical statements. How could we combine these to a mean index? 
+In `data_woj_new`, the variables `ethics_1` to `ethics_4` measure the degree to which journalists agree with ethical statements. How could we combine these to a mean index?
 
 The `tidycomm` package provides convenient functions to create indices directly within a tidyverse workflow. The function `add_index()` calculates an index from a set of variables and adds it to the dataset.
 
@@ -177,8 +177,8 @@ A common measure of reliability is **Cronbach’s α (alpha)**. Higher values in
 
 As a rule of thumb:
 
-- **α > 0.7** is usually considered acceptable
-- **α > 0.8** indicates good reliability
+-   **α \> 0.7** is usually considered acceptable
+-   **α \> 0.8** indicates good reliability
 
 The tidycomm function `get_reliability()` calculates reliability statistics:
 
@@ -200,8 +200,8 @@ In the **US-style format**, columns are separated by **commas** and decimals use
 
 Because of this difference, CSV files do not always load correctly on the first try. The tidyverse therefore provides two functions:
 
-- `read_csv()` for US-style CSV files
-- `read_csv2()` for European-style CSV files
+-   `read_csv()` for US-style CSV files
+-   `read_csv2()` for European-style CSV files
 
 The same distinction applies when saving CSV files. If a file is intended to be opened in a European version of Excel, `write_csv2()` is usually the safer choice. Just try and see what works!
 :::
@@ -218,7 +218,7 @@ The same distinction applies when saving CSV files. If a file is intended to be 
 
 ## 🎲 Quiz
 
-:::::: {.content-visible when-format="html"}
+:::: {.content-visible when-format="html"}
 {{< include "files/www/quiz_script.qmd" >}}
 
 ::: {.callout-note icon="false"}
@@ -242,13 +242,4 @@ viewof answers_data_management_1 = quizInput({
 })
 ```
 :::
-::::::
-
-
-## 📚 More tutorials on this
-
-You still have questions? The following tutorials & papers can help you with that:
-
--   [dplyr cheatsheet](https://rstudio.github.io/cheatsheets/data-transformation.pdf)
--   [R for Data Science by Wickham et al.](https://r4ds.hadley.nz/)
--   ["Wissen macht R" by B. Fretwurst](https://ikmz.pages.uzh.ch/Wissen-macht-R/01-Basics.html)
+::::

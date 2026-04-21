@@ -36,6 +36,12 @@ book:
        - 6-data-types.qmd
        - 7-visuals.qmd
        - 8-data-management.qmd
+       - 9-web-scraping.qmd
+
+   # - part: Data collection in R
+    #  chapters:
+    #   - 9-youtube-api.qmd
+    #   - 10-web-scraping.qmd
 
     - part: 80-appendix.qmd
       chapters:

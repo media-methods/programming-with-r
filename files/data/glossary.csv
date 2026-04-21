@@ -37,3 +37,10 @@ rename();rename variables
 na_if();setting specific values to missing (NA)
 add_index();build mean/sum index from variables
 get_reliability();get internal consistency for an index
+bow();introduce your scraping agent
+scrape();scrape a website
+html_element(), html_elements();extract the first (or all) matching HTML nodes from a scraped website
+html_attr();extract the value from a html attribute
+html_text();extract text from a html node
+chrome_print();take automated screenshots
+taskscheduler_create();schedule automated scraping runs with R

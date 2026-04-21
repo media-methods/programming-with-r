@@ -1,5 +1,5 @@
 ---
-title: "6 Data types"
+title: "6 Data and object types"
 ---
 
 ::: callout-note
