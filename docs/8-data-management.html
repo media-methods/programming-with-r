@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.5.57">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
 <meta name="author" content="Valerie Hase">
-
 <title>8 Data management in R – Programming with R for Social Scientists</title>
 <style>
 code{white-space: pre-wrap;}
@@ -57,7 +54,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 </style>
 
-
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
@@ -75,8 +71,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -102,20 +97,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
-}</script>
-<script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
-<link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
-
-
+}</script><script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script><link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 <link rel="stylesheet" href="files/www/custom.css">
 </head>
-
 <body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
@@ -126,13 +114,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Programming with R for Social Scientists</a> 
         <div class="sidebar-tools-main">
@@ -147,7 +131,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Welcome</span></a>
   </div>
@@ -160,8 +144,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./1-install-r.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1 Install R/R Studio</span></a>
   </div>
@@ -187,7 +171,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
@@ -196,8 +180,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./6-data-types.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">6 Data and object types</span></a>
   </div>
@@ -214,11 +198,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./9-web-scraping.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">10 Web Scraping in R</span></a>
+  <a href="./9-web-scraping.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">9 Web Scraping in R</span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a href="./80-appendix.html" class="sidebar-item-text sidebar-link">
@@ -227,8 +211,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./81-glossary.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">🔷 Glossary</span></a>
   </div>
@@ -244,42 +228,38 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./imprint.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">Legal Notice / Contact</span></a>
   </div>
 </li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Content</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Content</h2>
    
   <ul>
-  <li><a href="#getting-data-into-r" id="toc-getting-data-into-r" class="nav-link active" data-scroll-target="#getting-data-into-r">1. Getting data into R</a></li>
+<li><a href="#getting-data-into-r" id="toc-getting-data-into-r" class="nav-link active" data-scroll-target="#getting-data-into-r">1. Getting data into R</a></li>
   <li><a href="#understanding-data-in-r" id="toc-understanding-data-in-r" class="nav-link" data-scroll-target="#understanding-data-in-r">2. Understanding data in R</a></li>
   <li><a href="#renaming-variables" id="toc-renaming-variables" class="nav-link" data-scroll-target="#renaming-variables">3. Renaming variables</a></li>
-  <li><a href="#transforming-data" id="toc-transforming-data" class="nav-link" data-scroll-target="#transforming-data">4. Transforming data</a>
+  <li>
+<a href="#transforming-data" id="toc-transforming-data" class="nav-link" data-scroll-target="#transforming-data">4. Transforming data</a>
   <ul class="collapse">
-  <li><a href="#handling-missing-values" id="toc-handling-missing-values" class="nav-link" data-scroll-target="#handling-missing-values">4.1 Handling missing values</a></li>
+<li><a href="#handling-missing-values" id="toc-handling-missing-values" class="nav-link" data-scroll-target="#handling-missing-values">4.1 Handling missing values</a></li>
   <li><a href="#recoding-variables" id="toc-recoding-variables" class="nav-link" data-scroll-target="#recoding-variables">4.2 Recoding variables</a></li>
   <li><a href="#building-indices" id="toc-building-indices" class="nav-link" data-scroll-target="#building-indices">4.3 Building indices</a></li>
-  </ul></li>
+  </ul>
+</li>
   <li><a href="#smart-hacks" id="toc-smart-hacks" class="nav-link" data-scroll-target="#smart-hacks">🤓 Smart Hacks</a></li>
   <li><a href="#take-aways" id="toc-take-aways" class="nav-link" data-scroll-target="#take-aways">💡 Take-Aways</a></li>
   <li><a href="#quiz" id="toc-quiz" class="nav-link" data-scroll-target="#quiz">🎲 Quiz</a></li>
-  </ul>
-</nav>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./6-data-types.html">Handling data in R</a></li><li class="breadcrumb-item"><a href="./8-data-management.html"><span class="chapter-title">8 Data management in R</span></a></li></ol></nav>
-<div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./6-data-types.html">Handling data in R</a></li><li class="breadcrumb-item"><a href="./8-data-management.html"><span class="chapter-title">8 Data management in R</span></a></li></ol></nav><div class="quarto-title">
 <h1 class="title"><span class="chapter-title">8 Data management in R</span></h1>
 </div>
 
@@ -294,10 +274,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 
 
-</header>
-
-
-<div class="callout callout-style-default callout-note callout-titled">
+</header><div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -309,50 +286,58 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="callout-body-container callout-body">
 <p>After working through Tutorial 8, you’ll be able to…</p>
 <ul>
-<li><strong>apply</strong> functions for data import and export to get data into and out of R</li>
-<li><strong>apply</strong> functions for data transformation</li>
+<li>
+<strong>apply</strong> functions for data import and export to get data into and out of R</li>
+<li>
+<strong>apply</strong> functions for data transformation</li>
 </ul>
 </div>
 </div>
-<section id="getting-data-into-r" class="level2">
-<h2 class="anchored" data-anchor-id="getting-data-into-r">1. Getting data into R</h2>
+<section id="getting-data-into-r" class="level2"><h2 class="anchored" data-anchor-id="getting-data-into-r">1. Getting data into R</h2>
 <p>Oftentimes, you may want to import data outside of R into R (e.g., an Excel-file, a PDF, an image, etc.)</p>
 <p>R provides functions for importing and exporting almost any file format. However, in statistical analysis, <strong>tabular data</strong> has long been the standard structure. In tabular data, information is organized in <strong>rows and columns</strong>: each row typically represents an observation (for example, a survey respondent) and each column represents a variable (for example, age, gender, or income). Columns may contain different <strong>data types</strong>, such as numeric, character (text), or logical values.</p>
 <p>Common tabular file formats include:</p>
 <ul>
-<li>CSV (comma-separated values): <code>.csv</code></li>
-<li>TSV (tab-separated values): <code>.tsv</code></li>
-<li>Text files with separators: <code>.txt</code></li>
-<li>Excel spreadsheets: <code>.xlsx</code></li>
-<li>SPSS datasets: <code>.sav</code></li>
+<li>CSV (comma-separated values): <code>.csv</code>
+</li>
+<li>TSV (tab-separated values): <code>.tsv</code>
+</li>
+<li>Text files with separators: <code>.txt</code>
+</li>
+<li>Excel spreadsheets: <code>.xlsx</code>
+</li>
+<li>SPSS datasets: <code>.sav</code>
+</li>
 </ul>
 <p>To import different file formats, the <code>tidyverse</code> provides a consistent family of functions.</p>
-<p>These functions follow the same naming convention: the prefix <code>read_</code> followed by the file format, such as <code>csv</code> or <code>tsv</code>. For example, <code>read_csv()</code> reads comma-separated files, while <code>read_tsv()</code> reads tab-separated files.</p>
+<p>These functions follow the same naming convention: the prefix <code>read_</code> followed by the file format, such as <code>csv</code> or <code>tsv</code>. For example, <code><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv()</a></code> reads comma-separated files, while <code><a href="https://readr.tidyverse.org/reference/read_delim.html">read_tsv()</a></code> reads tab-separated files.</p>
 <p>Examples for related functions include:</p>
 <ul>
-<li><code>read_csv()</code> for CSV files<br>
+<li>
+<code><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv()</a></code> for CSV files<br>
 </li>
-<li><code>read_tsv()</code> for tab-separated files<br>
+<li>
+<code><a href="https://readr.tidyverse.org/reference/read_delim.html">read_tsv()</a></code> for tab-separated files<br>
 </li>
-<li><code>read_delim()</code> for custom separators<br>
+<li>
+<code><a href="https://readr.tidyverse.org/reference/read_delim.html">read_delim()</a></code> for custom separators<br>
 </li>
-<li><code>read_table()</code> for general text tables</li>
+<li>
+<code><a href="https://readr.tidyverse.org/reference/read_table.html">read_table()</a></code> for general text tables</li>
 </ul>
 <p>In most cases, the <code>read_</code> functions only require the <strong>file path</strong> as an argument, written in quotation marks. If the file is located in a subfolder, the folder name is written before the file name, separated by a <code>/</code>. The output of the function must then be stored in an object.</p>
 <p>As an example, download the World of Journalism data set provided by the <code>tidycomm</code> package here: 📢 <a href="data/data_woj.csv">Example data</a>.</p>
 <p><strong>Make sure</strong> to store this in the subfolder <strong>data</strong> in your R project. Otherwise, the following commands will not work!</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>data_woj_new <span class="ot">&lt;-</span> <span class="fu">read_csv2</span>(<span class="st">"data/data_woj.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
+<span><span class="va">data_woj_new</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv2</a></span><span class="op">(</span><span class="st">"data/data_woj.csv"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>In this example, <code>"data/data_woj.csv"</code> refers to a file called <code>data_woj.csv</code> that is located inside the folder <code>data</code>. The imported dataset is stored in the object <code>data_woj_new</code>.</p>
-</section>
-<section id="understanding-data-in-r" class="level2">
-<h2 class="anchored" data-anchor-id="understanding-data-in-r">2. Understanding data in R</h2>
+</section><section id="understanding-data-in-r" class="level2"><h2 class="anchored" data-anchor-id="understanding-data-in-r">2. Understanding data in R</h2>
 <p>After loading a dataset into R, the next step is usually to <strong>inspect its structure and contents</strong>. This helps us understand what variables are available, what data types they have, and whether the dataset looks as expected. In the tidyverse workflow, several simple functions help us quickly explore a dataset.</p>
 <p>To display the dataset in the console, we can simply type the object name. If the dataset is large, R will only print the first rows and columns.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>data_woj_new</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">data_woj_new</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1,200 × 15
    country   reach employment temp_contract autonomy_selection autonomy_emphasis
@@ -373,9 +358,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 #   trust_government &lt;dbl&gt;, trust_parties &lt;dbl&gt;, trust_politicians &lt;dbl&gt;</code></pre>
 </div>
 </div>
-<p>Another convenient way to look at the first observations is the function <code>head()</code>, which shows the first six rows of a dataset.</p>
+<p>Another convenient way to look at the first observations is the function <code><a href="https://rdrr.io/r/utils/head.html">head()</a></code>, which shows the first six rows of a dataset.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(data_woj_new)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">data_woj_new</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 15
   country    reach employment temp_contract autonomy_selection autonomy_emphasis
@@ -391,9 +376,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 #   trust_government &lt;dbl&gt;, trust_parties &lt;dbl&gt;, trust_politicians &lt;dbl&gt;</code></pre>
 </div>
 </div>
-<p>To understand the <strong>variables and their data types</strong>, we can use <code>glimpse()</code> from the tidyverse. This function provides a compact overview of the dataset, including variable names, types, and example values.</p>
+<p>To understand the <strong>variables and their data types</strong>, we can use <code><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse()</a></code> from the tidyverse. This function provides a compact overview of the dataset, including variable names, types, and example values.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(data_woj_new)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">data_woj_new</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 1,200
 Columns: 15
@@ -416,32 +401,30 @@ $ trust_politicians  &lt;dbl&gt; 3, 3, 3, 3, 2, 2, 2, 3, 1, 3, 2, 3, 2, 2, 1, 3,
 </div>
 <p>It is often useful to know how many <strong>observations (rows)</strong> and <strong>variables (columns)</strong> the dataset contains.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Rows</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(data_woj_new)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Rows</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">data_woj_new</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1200</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Columns</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ncol</span>(data_woj_new)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Columns</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">ncol</a></span><span class="op">(</span><span class="va">data_woj_new</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 15</code></pre>
 </div>
 </div>
-</section>
-<section id="renaming-variables" class="level2">
-<h2 class="anchored" data-anchor-id="renaming-variables">3. Renaming variables</h2>
+</section><section id="renaming-variables" class="level2"><h2 class="anchored" data-anchor-id="renaming-variables">3. Renaming variables</h2>
 <p>When working with datasets, it is often useful to <strong>rename variables</strong>. Variable names in raw datasets may be unclear or inconsistent. Renaming variables can make the dataset easier to read and work with during analysis.</p>
-<p>In the tidyverse, variables can be renamed using the function <code>rename()</code>. The basic logic is:</p>
+<p>In the tidyverse, variables can be renamed using the function <code><a href="https://dplyr.tidyverse.org/reference/rename.html">rename()</a></code>. The basic logic is:</p>
 <p><code>rename(new_name = old_name)</code></p>
 <p>This means that the new variable name is written on the left and the existing variable name on the right.</p>
 <p>For example, suppose we want to rename the variable <code>country</code> in the dataset <code>data_woj_new</code> with <code>respondent_country</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>data_woj_new <span class="ot">&lt;-</span> data_woj_new <span class="sc">|&gt;</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">respondent_country =</span> country)</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Check result</span></span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>data_woj_new <span class="sc">|&gt;</span></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">data_woj_new</span> <span class="op">&lt;-</span> <span class="va">data_woj_new</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename</a></span><span class="op">(</span>respondent_country <span class="op">=</span> <span class="va">country</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Check result</span></span>
+<span><span class="va">data_woj_new</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 15
   respondent_country reach    employment temp_contract autonomy_selection
@@ -459,39 +442,36 @@ $ trust_politicians  &lt;dbl&gt; 3, 3, 3, 3, 2, 2, 2, 3, 1, 3, 2, 3, 2, 2, 1, 3,
 </div>
 </div>
 <p>The result is assigned back to the dataset <code>data_woj_new</code>, so that the change is stored.</p>
-</section>
-<section id="transforming-data" class="level2">
-<h2 class="anchored" data-anchor-id="transforming-data">4. Transforming data</h2>
-<section id="handling-missing-values" class="level3">
-<h3 class="anchored" data-anchor-id="handling-missing-values">4.1 Handling missing values</h3>
+</section><section id="transforming-data" class="level2"><h2 class="anchored" data-anchor-id="transforming-data">4. Transforming data</h2>
+<section id="handling-missing-values" class="level3"><h3 class="anchored" data-anchor-id="handling-missing-values">4.1 Handling missing values</h3>
 <p><strong>Important</strong>: You have already learned how to define missing values - see Tutorial 6. For repetition, this is how we would set specific values to missing (here the values for “Freelancers”):</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Redefine missing values</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>data_woj_new <span class="ot">&lt;-</span> data_woj_new <span class="sc">|&gt;</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">employment =</span> <span class="fu">na_if</span>(employment, <span class="st">"Freelancer"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Redefine missing values</span></span>
+<span><span class="va">data_woj_new</span> <span class="op">&lt;-</span> <span class="va">data_woj_new</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>employment <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/na_if.html">na_if</a></span><span class="op">(</span><span class="va">employment</span>, <span class="st">"Freelancer"</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="recoding-variables" class="level3">
-<h3 class="anchored" data-anchor-id="recoding-variables">4.2 Recoding variables</h3>
-<p><strong>Important</strong>: You have already learned how to recode variables - see Tutorial 5. For repetition, a tidyverse-style approach for recoding is to combine <code>mutate()</code> with:</p>
+</section><section id="recoding-variables" class="level3"><h3 class="anchored" data-anchor-id="recoding-variables">4.2 Recoding variables</h3>
+<p><strong>Important</strong>: You have already learned how to recode variables - see Tutorial 5. For repetition, a tidyverse-style approach for recoding is to combine <code><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate()</a></code> with:</p>
 <ul>
-<li><code>if_else()</code> for simple two-category recodes</li>
-<li><code>case_when()</code> for multiple conditions/categories</li>
+<li>
+<code><a href="https://dplyr.tidyverse.org/reference/if_else.html">if_else()</a></code> for simple two-category recodes</li>
+<li>
+<code><a href="https://dplyr.tidyverse.org/reference/case_when.html">case_when()</a></code> for multiple conditions/categories</li>
 </ul>
 <p>For example, we can create a new, categorical variable <code>work_experience_cat</code> that describes whether respondents have 5, 10 or more years of work experience. Note that we use the <code>%in%</code> operator to define whether <code>work_experience</code> takes on a specific value (e.g., <code>1:5</code>, meaning 1, 2, 3, 4, or 5). All other values are set to <code>NA</code> (more on this later).</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>data_woj_new <span class="ot">&lt;-</span> data_woj_new <span class="sc">|&gt;</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="at">work_experience_cat =</span> <span class="fu">case_when</span>(</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>      work_experience <span class="sc">%in%</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span> <span class="sc">~</span> <span class="st">"max. 5 years"</span>,</span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>      work_experience <span class="sc">%in%</span> <span class="dv">6</span><span class="sc">:</span><span class="dv">10</span> <span class="sc">~</span> <span class="st">"6 to 10 years"</span>,</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>      work_experience <span class="sc">&gt;</span> <span class="dv">10</span> <span class="sc">~</span> <span class="st">"more than 10 years"</span>,</span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>      <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">NA_character_</span>))</span>
-<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Check result</span></span>
-<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>data_woj_new <span class="sc">|&gt;</span></span>
-<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(work_experience, work_experience_cat) <span class="sc">|&gt;</span></span>
-<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">data_woj_new</span> <span class="op">&lt;-</span> <span class="va">data_woj_new</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
+<span>    work_experience_cat <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/case_when.html">case_when</a></span><span class="op">(</span></span>
+<span>      <span class="va">work_experience</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fl">1</span><span class="op">:</span><span class="fl">5</span> <span class="op">~</span> <span class="st">"max. 5 years"</span>,</span>
+<span>      <span class="va">work_experience</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fl">6</span><span class="op">:</span><span class="fl">10</span> <span class="op">~</span> <span class="st">"6 to 10 years"</span>,</span>
+<span>      <span class="va">work_experience</span> <span class="op">&gt;</span> <span class="fl">10</span> <span class="op">~</span> <span class="st">"more than 10 years"</span>,</span>
+<span>      <span class="cn">TRUE</span> <span class="op">~</span> <span class="cn">NA_character_</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Check result</span></span>
+<span><span class="va">data_woj_new</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">work_experience</span>, <span class="va">work_experience_cat</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 2
   work_experience work_experience_cat
@@ -504,25 +484,23 @@ $ trust_politicians  &lt;dbl&gt; 3, 3, 3, 3, 2, 2, 2, 3, 1, 3, 2, 3, 2, 2, 1, 3,
 6              27 more than 10 years </code></pre>
 </div>
 </div>
-</section>
-<section id="building-indices" class="level3">
-<h3 class="anchored" data-anchor-id="building-indices">4.3 Building indices</h3>
+</section><section id="building-indices" class="level3"><h3 class="anchored" data-anchor-id="building-indices">4.3 Building indices</h3>
 <p>In many social science datasets, several variables measure different aspects of the same concept. For example, multiple survey questions may capture attitudes toward a topic such as ethical concerns. In such cases, it is often useful to combine these variables into a single index.</p>
 <p>A common approach is to create a mean index. A <strong>mean index</strong> combines multiple variables that measure the same concept by calculating the mean value across them.</p>
 <p>In <code>data_woj_new</code>, the variables <code>ethics_1</code> to <code>ethics_4</code> measure the degree to which journalists agree with ethical statements. How could we combine these to a mean index?</p>
-<p>The <code>tidycomm</code> package provides convenient functions to create indices directly within a tidyverse workflow. The function <code>add_index()</code> calculates an index from a set of variables and adds it to the dataset.</p>
+<p>The <code>tidycomm</code> package provides convenient functions to create indices directly within a tidyverse workflow. The function <code><a href="https://joon-e.github.io/tidycomm/reference/add_index.html">add_index()</a></code> calculates an index from a set of variables and adds it to the dataset.</p>
 <p>The basic logic is:</p>
 <p><code>add_index(new_index_name, variable_1, variable_2, variable_3, ...)</code></p>
 <p>For agreement related to ethical statements, a mean index can be created as follows.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"tidycomm"</span>)</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>data_woj_new <span class="ot">&lt;-</span> data_woj_new <span class="sc">|&gt;</span></span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_index</span>(ethical_concerns, ethics_1, ethics_2, ethics_3, ethics_4)</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="co"># check result</span></span>
-<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>data_woj_new <span class="sc">|&gt;</span></span>
-<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">starts_with</span>(<span class="st">"ethic"</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="st"><a href="https://tidycomm.github.io/tidycomm/">"tidycomm"</a></span><span class="op">)</span></span>
+<span><span class="va">data_woj_new</span> <span class="op">&lt;-</span> <span class="va">data_woj_new</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://joon-e.github.io/tidycomm/reference/add_index.html">add_index</a></span><span class="op">(</span><span class="va">ethical_concerns</span>, <span class="va">ethics_1</span>, <span class="va">ethics_2</span>, <span class="va">ethics_3</span>, <span class="va">ethics_4</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># check result</span></span>
+<span><span class="va">data_woj_new</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/starts_with.html">starts_with</a></span><span class="op">(</span><span class="st">"ethic"</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 5
   ethics_1 ethics_2 ethics_3 ethics_4 ethical_concerns
@@ -536,18 +514,20 @@ $ trust_politicians  &lt;dbl&gt; 3, 3, 3, 3, 2, 2, 2, 3, 1, 3, 2, 3, 2, 2, 1, 3,
 </div>
 </div>
 <p>In this example, the variables <code>ethics_1</code> to <code>ethics_4</code> are averaged, and the resulting index is stored in a new variable called <code>ethical_concerns</code>. By assigning the result back to <code>data_woj_new</code>, the index becomes part of the dataset and can be used in further analyses.</p>
-<p>By default, <code>add_index()</code> calculates a mean index. If a sum index is desired instead, the argument <code>type = "sum"</code> can be added.</p>
+<p>By default, <code><a href="https://joon-e.github.io/tidycomm/reference/add_index.html">add_index()</a></code> calculates a mean index. If a sum index is desired instead, the argument <code>type = "sum"</code> can be added.</p>
 <p>Before using this index, it is often useful to check its <strong>reliability</strong>, which refers to the internal consistency of the indicators. In other words, reliability measures how strongly the items in an index are related to each other.</p>
 <p>A common measure of reliability is <strong>Cronbach’s α (alpha)</strong>. Higher values indicate stronger internal consistency among the items.</p>
 <p>As a rule of thumb:</p>
 <ul>
-<li><strong>α &gt; 0.7</strong> is usually considered acceptable</li>
-<li><strong>α &gt; 0.8</strong> indicates good reliability</li>
+<li>
+<strong>α &gt; 0.7</strong> is usually considered acceptable</li>
+<li>
+<strong>α &gt; 0.8</strong> indicates good reliability</li>
 </ul>
-<p>The tidycomm function <code>get_reliability()</code> calculates reliability statistics:</p>
+<p>The tidycomm function <code><a href="https://joon-e.github.io/tidycomm/reference/get_reliability.html">get_reliability()</a></code> calculates reliability statistics:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>data_woj_new <span class="sc">|&gt;</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">get_reliability</span>(ethical_concerns)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">data_woj_new</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://joon-e.github.io/tidycomm/reference/get_reliability.html">get_reliability</a></span><span class="op">(</span><span class="va">ethical_concerns</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 5
   Index            Index_of                              M    SD Cronbachs_Alpha
@@ -556,10 +536,7 @@ $ trust_politicians  &lt;dbl&gt; 3, 3, 3, 3, 2, 2, 2, 3, 1, 3, 2, 3, 2, 2, 1, 3,
 </div>
 </div>
 <p>The output provides Cronbach’s α along with descriptive information about the index and the variables included in it. In this case, we would conclude that the index is not relaible and we should not use it for further analysis.</p>
-</section>
-</section>
-<section id="smart-hacks" class="level2">
-<h2 class="anchored" data-anchor-id="smart-hacks">🤓 Smart Hacks</h2>
+</section></section><section id="smart-hacks" class="level2"><h2 class="anchored" data-anchor-id="smart-hacks">🤓 Smart Hacks</h2>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -576,28 +553,39 @@ Smart Hack: CSV vs.&nbsp;CSV2 ?!
 <p>In the <strong>US-style format</strong>, columns are separated by <strong>commas</strong> and decimals use a <strong>dot</strong>. In many <strong>European formats</strong>, however, decimals use a <strong>comma</strong>, so columns are separated by <strong>semicolons</strong> instead.</p>
 <p>Because of this difference, CSV files do not always load correctly on the first try. The tidyverse therefore provides two functions:</p>
 <ul>
-<li><code>read_csv()</code> for US-style CSV files</li>
-<li><code>read_csv2()</code> for European-style CSV files</li>
+<li>
+<code><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv()</a></code> for US-style CSV files</li>
+<li>
+<code><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv2()</a></code> for European-style CSV files</li>
 </ul>
-<p>The same distinction applies when saving CSV files. If a file is intended to be opened in a European version of Excel, <code>write_csv2()</code> is usually the safer choice. Just try and see what works!</p>
+<p>The same distinction applies when saving CSV files. If a file is intended to be opened in a European version of Excel, <code><a href="https://readr.tidyverse.org/reference/write_delim.html">write_csv2()</a></code> is usually the safer choice. Just try and see what works!</p>
 </div>
 </div>
 </div>
-</section>
-<section id="take-aways" class="level2">
-<h2 class="anchored" data-anchor-id="take-aways">💡 Take-Aways</h2>
+</section><section id="take-aways" class="level2"><h2 class="anchored" data-anchor-id="take-aways">💡 Take-Aways</h2>
 <ul>
-<li><strong>import</strong> tabular data: <code>read_csv()</code>, <code>read_csv2()</code></li>
-<li><strong>inspect</strong> datasets: <code>head()</code>, <code>glimpse()</code>, <code>nrow()</code>, <code>ncol()</code></li>
-<li><strong>rename</strong> variables: <code>rename()</code></li>
-<li><strong>handle</strong> missing values: <code>na_if()</code></li>
-<li><strong>recode</strong> variables: <code>mutate()</code>, <code>if_else()</code>, <code>case_when()</code></li>
-<li><strong>build</strong> indices from multiple items: <code>add_index()</code></li>
-<li><strong>check</strong> index reliability: <code>get_reliability()</code></li>
-</ul>
-</section>
-<section id="quiz" class="level2">
-<h2 class="anchored" data-anchor-id="quiz">🎲 Quiz</h2>
+<li>
+<strong>import</strong> tabular data: <code><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv()</a></code>, <code><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv2()</a></code>
+</li>
+<li>
+<strong>inspect</strong> datasets: <code><a href="https://rdrr.io/r/utils/head.html">head()</a></code>, <code><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse()</a></code>, <code><a href="https://rdrr.io/r/base/nrow.html">nrow()</a></code>, <code><a href="https://rdrr.io/r/base/nrow.html">ncol()</a></code>
+</li>
+<li>
+<strong>rename</strong> variables: <code><a href="https://dplyr.tidyverse.org/reference/rename.html">rename()</a></code>
+</li>
+<li>
+<strong>handle</strong> missing values: <code><a href="https://dplyr.tidyverse.org/reference/na_if.html">na_if()</a></code>
+</li>
+<li>
+<strong>recode</strong> variables: <code><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate()</a></code>, <code><a href="https://dplyr.tidyverse.org/reference/if_else.html">if_else()</a></code>, <code><a href="https://dplyr.tidyverse.org/reference/case_when.html">case_when()</a></code>
+</li>
+<li>
+<strong>build</strong> indices from multiple items: <code><a href="https://joon-e.github.io/tidycomm/reference/add_index.html">add_index()</a></code>
+</li>
+<li>
+<strong>check</strong> index reliability: <code><a href="https://joon-e.github.io/tidycomm/reference/get_reliability.html">get_reliability()</a></code>
+</li>
+</ul></section><section id="quiz" class="level2"><h2 class="anchored" data-anchor-id="quiz">🎲 Quiz</h2>
 <div class="cell">
 <div class="sourceCode cell-code hidden" id="cb21" data-startfrom="232" data-source-offset="-1"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 231;"><span id="cb21-232"><a href="#cb21-232" aria-hidden="true" tabindex="-1"></a>round <span class="op">=</span> (n<span class="op">,</span> places) <span class="kw">=&gt;</span> {</span>
 <span id="cb21-233"><a href="#cb21-233" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="op">!</span>places) <span class="cf">return</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">round</span>(n)<span class="op">;</span></span>
@@ -897,21 +885,16 @@ Smart Hack: CSV vs.&nbsp;CSV2 ?!
 </div>
 
 
-</section>
-
-</main> <!-- /main -->
-<script type="ojs-module-contents">
+</section></main><!-- /main --><script type="ojs-module-contents">
 eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Ilxucm91bmQgPSAobiwgcGxhY2VzKSA9PiB7XG4gIGlmICghcGxhY2VzKSByZXR1cm4gTWF0aC5yb3VuZChuKTtcbiAgY29uc3QgZCA9IDEwICoqIHBsYWNlcztcbiAgcmV0dXJuIE1hdGgucm91bmQobiAqIGQpIC8gZDtcbn1cblxuZnVuY3Rpb24gdGV4dFJlcGxhY2VtZW50V2l0aFRleHQoeyB0ZXh0LCBwbGFjZWhvbGRlciwgY29ycmVjdFRleHQsIGZvbnRGYW1pbHkgPSBcIm1vbm9zcGFjZVwiLCBjb2xvciA9IFwiIzAwMDAwMFwiIH0pIHtcbiAgY29uc3QgcGFydHMgPSB0ZXh0LnNwbGl0KC9cXHtcXHtpbnB1dFxcfVxcfS8pOyAvLyBUZWlsdCBkZW4gVGV4dCBhbiBkZW4gRWluZ2FiZXN0ZWxsZW5cblxuICBjb25zdCByb290ID0gaHRsLmh0bWxgPGRpdiBzdHlsZT1cImZvbnQtc2l6ZTogSFVHRTsgbWFyZ2luLXRvcDogLTQwOyBtYXJnaW4tYm90dG9tOiAtNDA7IG1hcmdpbi1sZWZ0OiAtNTBweDsgbGluZS1oZWlnaHQ6IDEuODsgZm9udC1mYW1pbHk6ICR7Zm9udEZhbWlseX07IGNvbG9yOiAke2NvbG9yfTsgd2hpdGUtc3BhY2U6IHByZS13cmFwOyB0ZXh0LWluZGVudDogMDsgZGlzcGxheTogZmxleDsgYWxpZ24taXRlbXM6IGJhc2VsaW5lO1wiPlxuICAgIDxkaXYgc3R5bGU9XCJmbGV4OiAxO1wiPlxuICAgICAgJHtwYXJ0cy5tYXAoKHBhcnQsIGluZGV4KSA9PlxuICAgICAgICBodGwuaHRtbGAke3BhcnR9JHtpbmRleCA8IHBhcnRzLmxlbmd0aCAtIDEgPyBodGwuaHRtbGA8c3BhbiBzdHlsZT1cImRpc3BsYXk6IGlubGluZS1mbGV4OyBhbGlnbi1pdGVtczogYmFzZWxpbmU7XCI+XG4gICAgICAgICAgPGlucHV0IFxuICAgICAgICAgICAgdHlwZT1cInRleHRcIlxuICAgICAgICAgICAgcGxhY2Vob2xkZXI9XCIke3BsYWNlaG9sZGVyfVwiXG4gICAgICAgICAgICBzdHlsZT1cInBhZGRpbmc6IDNweDsgZm9udC1zaXplOiBIVUdFOyBib3JkZXI6IDFweCBzb2xpZCAjY2NjOyBtYXJnaW4tbGVmdDogMHB4OyBib3JkZXItcmFkaXVzOiA0cHg7IHdpZHRoOiBjYWxjKCR7Y29ycmVjdFRleHQubGVuZ3RofWNoICsgMWVtKTsgZm9udC1mYW1pbHk6ICR7Zm9udEZhbWlseX07IGNvbG9yOiAke2NvbG9yfTsgdGV4dC1hbGlnbjogcmlnaHQ7IGJveC1zaXppbmc6IGJvcmRlci1ib3g7IG1hcmdpbi1yaWdodDogMC4yZW07XCJcbiAgICAgICAgICAgIG9uaW5wdXQ9JHsoZSkgPT4ge1xuICAgICAgICAgICAgICBjb25zdCBmZWVkYmFja0VsZW1lbnQgPSByb290LnF1ZXJ5U2VsZWN0b3IoYCNmZWVkYmFjay1maW5hbGApO1xuICAgICAgICAgICAgICBjb25zdCBhbGxJbnB1dHNDb3JyZWN0ID0gQXJyYXkuZnJvbShyb290LnF1ZXJ5U2VsZWN0b3JBbGwoXCJpbnB1dFwiKSkuZXZlcnkoKGlucHV0KSA9PiBpbnB1dC52YWx1ZS50cmltKCkgPT09IGNvcnJlY3RUZXh0LnRyaW0oKSk7XG4gICAgICAgICAgICAgIGlmIChhbGxJbnB1dHNDb3JyZWN0KSB7XG4gICAgICAgICAgICAgICAgZmVlZGJhY2tFbGVtZW50LnRleHRDb250ZW50ID0gXCLinIVcIjtcbiAgICAgICAgICAgICAgICBmZWVkYmFja0VsZW1lbnQuc3R5bGUuY29sb3IgPSBcImdyZWVuXCI7XG4gICAgICAgICAgICAgIH0gZWxzZSB7XG4gICAgICAgICAgICAgICAgZmVlZGJhY2tFbGVtZW50LnRleHRDb250ZW50ID0gXCLwn5S0XCI7XG4gICAgICAgICAgICAgICAgZmVlZGJhY2tFbGVtZW50LnN0eWxlLmNvbG9yID0gXCJyZWRcIjtcbiAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgfX1cbiAgICAgICAgICAvPjwvc3Bhbj5gIDogXCJcIn1gXG4gICAgICApfVxuICAgIDwvZGl2PlxuICAgIDxzcGFuIGlkPVwiZmVlZGJhY2stZmluYWxcIiBzdHlsZT1cImZvbnQtd2VpZ2h0OiBib2xkOyBmb250LXNpemU6IEhVR0U7IG1hcmdpbi1sZWZ0OiAwLjVlbTsgY29sb3I6IGluaGVyaXQ7XCI+PC9zcGFuPlxuICA8L2Rpdj5gO1xuXG4gIHJldHVybiByb290O1xufVxuXG5cblxuZnVuY3Rpb24gdGV4dFJlcGxhY2VtZW50VGFzayh7IHBsYWNlaG9sZGVyLCBjb3JyZWN0VGV4dCwgd2lkdGggPSBcIjMwMHB4XCIsIGZvbnRGYW1pbHkgPSBcIm1vbm9zcGFjZVwiLCBjb2xvciA9IFwiYmxhY2tcIiB9KSB7XG4gIGxldCBlbnRlcmVkVGV4dCA9IFwiXCI7IFxuXG4gIGNvbnN0IHJvb3QgPSBodGwuaHRtbGA8ZGl2IHN0eWxlPVwiZm9udC1zaXplOiAxNHB4OyBsaW5lLWhlaWdodDogMS41OyBtYXJnaW4tYm90dG9tOiAyMHB4O1wiPlxuICAgIDxoND5CaXR0ZSBlcnNldHplbiBTaWUgZGVuIFRleHQ6PC9oND5cbiAgICA8IS0tIEVpbmdhYmVmZWxkIC0tPlxuICAgIDxkaXYgc3R5bGU9XCJkaXNwbGF5OiBmbGV4OyBhbGlnbi1pdGVtczogY2VudGVyO1wiPlxuICAgICAgPGlucHV0XG4gICAgICAgIHR5cGU9XCJ0ZXh0XCJcbiAgICAgICAgcGxhY2Vob2xkZXI9XCIke3BsYWNlaG9sZGVyfVwiXG4gICAgICAgIHN0eWxlPVwicGFkZGluZzogNXB4OyBmb250LXNpemU6IDE0cHg7IGJvcmRlcjogMXB4IHNvbGlkICNjY2M7IGJvcmRlci1yYWRpdXM6IDRweDsgd2lkdGg6ICR7d2lkdGh9OyBmb250LWZhbWlseTogJHtmb250RmFtaWx5fTsgY29sb3I6ICR7Y29sb3J9O1wiXG4gICAgICAgIG9uSW5wdXQ9JHsoZSkgPT4ge1xuICAgICAgICAgIGVudGVyZWRUZXh0ID0gZS50YXJnZXQudmFsdWU7XG4gICAgICAgICAgcm9vdC52YWx1ZSA9IGVudGVyZWRUZXh0O1xuICAgICAgICAgIHJvb3QuZGlzcGF0Y2hFdmVudChuZXcgQ3VzdG9tRXZlbnQoXCJpbnB1dFwiKSk7XG4gICAgICAgICAgdXBkYXRlRmVlZGJhY2soKTtcbiAgICAgICAgfX1cbiAgICAgIC8+XG4gICAgICA8IS0tIEZlZWRiYWNrIC0tPlxuICAgICAgPGRpdiBpZD1cImZlZWRiYWNrXCIgc3R5bGU9XCJmb250LXdlaWdodDogYm9sZDsgZm9udC1zaXplOiAxNHB4OyBtYXJnaW4tbGVmdDogMTBweDsgdGV4dC1hbGlnbjogbGVmdDsgd2hpdGUtc3BhY2U6IG5vd3JhcDsgY29sb3I6IGluaGVyaXQ7XCI+PC9kaXY+XG4gICAgPC9kaXY+XG4gIDwvZGl2PmA7XG5cbi8vIEZ1bmt0aW9uIHp1ciBBa3R1YWxpc2llcnVuZyBkZXMgRmVlZGJhY2tzXG4gIGZ1bmN0aW9uIHVwZGF0ZUZlZWRiYWNrKCkge1xuICAgIGNvbnN0IGZlZWRiYWNrRWxlbWVudCA9IHJvb3QucXVlcnlTZWxlY3RvcihcIiNmZWVkYmFja1wiKTtcbiAgICBpZiAoZW50ZXJlZFRleHQudHJpbSgpID09PSBjb3JyZWN0VGV4dC50cmltKCkpIHtcbiAgICAgIGZlZWRiYWNrRWxlbWVudC50ZXh0Q29udGVudCA9IFwi4pyFXCI7XG4gICAgICBmZWVkYmFja0VsZW1lbnQuc3R5bGUuY29sb3IgPSBcImdyZWVuXCI7XG4gICAgfSBlbHNlIGlmIChlbnRlcmVkVGV4dC50cmltKCkgPT09IFwiXCIpIHtcbiAgICAgIGZlZWRiYWNrRWxlbWVudC50ZXh0Q29udGVudCA9IFwiXCI7IFxuICAgIH0gZWxzZSB7XG4gICAgICBmZWVkYmFja0VsZW1lbnQudGV4dENvbnRlbnQgPSBcIvCflLRcIjtcbiAgICAgIGZlZWRiYWNrRWxlbWVudC5zdHlsZS5jb2xvciA9IFwicmVkXCI7XG4gICAgfVxuICB9XG5cbiAgcm9vdC52YWx1ZSA9IG51bGw7IFxuICByZXR1cm4gcm9vdDtcbn1cblxuXG5mdW5jdGlvbiBzaW5nbGVDaG9pY2VJbnB1dCh7IG9wdGlvbnMsIGNvcnJlY3RJbmRleCB9KSB7XG4gIGxldCBzZWxlY3RlZEFuc3dlciA9IG51bGw7XG5cbiAgY29uc3Qgcm9vdCA9IGh0bC5odG1sYDxkaXYgc3R5bGU9XCJmb250LXNpemU6IEhVR0U7IGxpbmUtaGVpZ2h0OiAxLjU7IG1hcmdpbi1ib3R0b206IDBweDtcIj5cbiAgICA8IS0tIEFudHdvcnRlbiAtLT5cbiAgICA8ZGl2IHN0eWxlPVwiZGlzcGxheTogZ3JpZDsgcm93LWdhcDogMTJweDtcIj5cbiAgICAgICR7b3B0aW9ucy5tYXAoXG4gICAgICAgIChvcHRpb24sIGluZGV4KSA9PlxuICAgICAgICAgIGh0bC5odG1sYDxkaXYgc3R5bGU9XCJkaXNwbGF5OiBmbGV4OyBhbGlnbi1pdGVtczogY2VudGVyO1wiPlxuICAgICAgICAgICAgPCEtLSBSYWRpb2J1dHRvbiB1bmQgT3B0aW9uIC0tPlxuICAgICAgICAgICAgPGxhYmVsIHN0eWxlPVwiZGlzcGxheTogZmxleDsgYWxpZ24taXRlbXM6IGNlbnRlcjsgcGFkZGluZy1sZWZ0OiA0cHQ7IGZvbnQtd2VpZ2h0OiBub3JtYWw7XCI+XG4gICAgICAgICAgICAgIDxpbnB1dFxuICAgICAgICAgICAgICAgIHR5cGU9XCJyYWRpb1wiXG4gICAgICAgICAgICAgICAgbmFtZT1cInNpbmdsZUNob2ljZVwiXG4gICAgICAgICAgICAgICAgdmFsdWU9JHtpbmRleH1cbiAgICAgICAgICAgICAgICBzdHlsZT1cIm1hcmdpbi1yaWdodDogMTBweDtcIlxuICAgICAgICAgICAgICAgIG9uQ2hhbmdlPSR7KCkgPT4ge1xuICAgICAgICAgICAgICAgICAgc2VsZWN0ZWRBbnN3ZXIgPSBpbmRleDtcbiAgICAgICAgICAgICAgICAgIHJvb3QudmFsdWUgPSBzZWxlY3RlZEFuc3dlcjtcbiAgICAgICAgICAgICAgICAgIHJvb3QuZGlzcGF0Y2hFdmVudChuZXcgQ3VzdG9tRXZlbnQoXCJpbnB1dFwiKSk7XG4gICAgICAgICAgICAgICAgICB1cGRhdGVGZWVkYmFjaygpO1xuICAgICAgICAgICAgICAgIH19XG4gICAgICAgICAgICAgIC8+XG4gICAgICAgICAgICAgIDxzcGFuPiR7b3B0aW9ufTwvc3Bhbj5cbiAgICAgICAgICAgIDwvbGFiZWw+XG4gICAgICAgICAgICA8IS0tIEZlZWRiYWNrIC0tPlxuICAgICAgICAgICAgPGRpdiBpZD1cImZlZWRiYWNrLSR7aW5kZXh9XCIgc3R5bGU9XCJmb250LXdlaWdodDogYm9sZDsgZm9udC1zaXplOiAxNHB4OyBtYXJnaW4tbGVmdDogMTBweDsgdGV4dC1hbGlnbjogbGVmdDsgd2hpdGUtc3BhY2U6IG5vd3JhcDsgY29sb3I6IGluaGVyaXQ7XCI+PC9kaXY+XG4gICAgICAgICAgPC9kaXY+YFxuICAgICAgKX1cbiAgICA8L2Rpdj5cbiAgPC9kaXY+YDtcblxuLy8gRnVua3Rpb24genVyIEFrdHVhbGlzaWVydW5nIGRlcyBGZWVkYmFja3NcbiAgZnVuY3Rpb24gdXBkYXRlRmVlZGJhY2soKSB7XG4gICAgb3B0aW9ucy5mb3JFYWNoKChfLCBpbmRleCkgPT4ge1xuICAgICAgY29uc3QgZmVlZGJhY2tFbGVtZW50ID0gcm9vdC5xdWVyeVNlbGVjdG9yKGAjZmVlZGJhY2stJHtpbmRleH1gKTtcbiAgICAgIGlmIChzZWxlY3RlZEFuc3dlciA9PT0gaW5kZXgpIHtcbiAgICAgICAgZmVlZGJhY2tFbGVtZW50LnRleHRDb250ZW50ID1cbiAgICAgICAgICBpbmRleCA9PT0gY29ycmVjdEluZGV4ID8gXCLinIVcIiA6IFwi8J+UtFwiO1xuICAgICAgICBmZWVkYmFja0VsZW1lbnQuc3R5bGUuY29sb3IgPSBpbmRleCA9PT0gY29ycmVjdEluZGV4ID8gXCJncmVlblwiIDogXCJyZWRcIjtcbiAgICAgIH0gZWxzZSB7XG4gICAgICAgIGZlZWRiYWNrRWxlbWVudC50ZXh0Q29udGVudCA9IFwiXCI7IC8vIEzDtnNjaHQgRmVlZGJhY2sgZsO8ciBuaWNodCBhdXNnZXfDpGhsdGUgT3B0aW9uZW5cbiAgICAgIH1cbiAgICB9KTtcbiAgfVxuXG4gIHJvb3QudmFsdWUgPSBudWxsO1xuICByZXR1cm4gcm9vdDtcbn1cblxuXG5mdW5jdGlvbiBxdWl6SW5wdXQoeyBxdWVzdGlvbnMsIG9wdGlvbnN9KSB7XG4gIGxldCBhbnN3ZXJzID0gcXVlc3Rpb25zLm1hcCgoKSA9PiBudWxsKTtcbiAgbGV0IHJvb3QgPSBodGwuaHRtbGA8ZGl2XG4gICAgICBzdHlsZT1cIlxuICAgICAgICBkaXNwbGF5OiBncmlkO1xuICAgICAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IDEwJSAxMCUgNzAlIDEwJTtcIlxuICAgID5cbiAgICAgICR7b3B0aW9ucy5tYXAoXG4gICAgICAgIChvcHQpID0+IGh0bC5odG1sYDxkaXYgc3R5bGU9XCJmb250LXdlaWdodDogYm9sZDsgZm9udC1zaXplOiBIVUdFXCI+JHtvcHR9PC9kaXY+YFxuICAgICAgKX1cbiAgICAgIDxkaXYgc3R5bGU9XCJmb250LXdlaWdodDogYm9sZFwiPlN0YXRlbWVudDwvZGl2PlxuICAgICAgPGRpdiBzdHlsZT1cImZvbnQtd2VpZ2h0OiBib2xkXCI+PC9kaXY+XG4gICAgICAke0FycmF5LmZyb20ocXVlc3Rpb25zLmVudHJpZXMoKSwgKFtpLCBbcXVlc3Rpb24sIGNvcnJlY3RdXSkgPT5cbiAgICAgICAgcXVpeklucHV0Um93KHtcbiAgICAgICAgICBxdWVzdGlvbixcbiAgICAgICAgICBvcHRpb25zLFxuICAgICAgICAgIGNvcnJlY3QsXG4gICAgICAgICAgb25DaGFuZ2U6IChuZXdBbnN3ZXIpID0+IHtcbiAgICAgICAgICAgIGFuc3dlcnNbaV0gPSBuZXdBbnN3ZXI7XG4gICAgICAgICAgICByb290LnZhbHVlID0gYW5zd2VycztcbiAgICAgICAgICAgIHJvb3QuZGlzcGF0Y2hFdmVudChuZXcgQ3VzdG9tRXZlbnQoXCJpbnB1dFwiKSk7XG4gICAgICAgICAgfVxuICAgICAgICB9KVxuICAgICAgKX1cbiAgICA8L2Rpdj5gO1xuICByb290LnZhbHVlID0gYW5zd2VycztcbiAgcmV0dXJuIHJvb3Q7XG59XG5cbmZ1bmN0aW9uIHF1aXpJbnB1dFJvdyh7XG4gIHF1ZXN0aW9uLFxuICBvcHRpb25zLFxuICBjb3JyZWN0LFxuICBvbkNoYW5nZSA9ICgpID0+IHt9XG59KSB7XG4gIGxldCByb290ID0gaHRsLmh0bWxgPGRpdj5gO1xuXG4gIGZ1bmN0aW9uIHNldEFuc3dlcihhbnN3ZXIsIGluaXRpYWwgPSBmYWxzZSkge1xuICAgIG1vcnBoKFxuICAgICAgcm9vdCxcbiAgICAgIGh0bC5odG1sYDxkaXYgc3R5bGU9XCJkaXNwbGF5OiBjb250ZW50c1wiPiBcbiAgICAgIDxmb3JtIHN0eWxlPVwiZGlzcGxheTogY29udGVudHNcIj5cbiAgICAgICAgJHtvcHRpb25zLm1hcChcbiAgICAgICAgICAob3B0KSA9PlxuICAgICAgICAgICAgaHRsLmh0bWxgPGxhYmVsPiZlbXNwOzwvbGFiZWw+IFxuICAgICAgICAgICAgPGlucHV0ICBcbiAgICAgICAgICAgICAgbmFtZT0ke3F1ZXN0aW9ufSAmZW1zcDtcbiAgICAgICAgICAgICAgdHlwZT1cInJhZGlvXCJcbiAgICAgICAgICAgICAgdmFsdWU9XCIke29wdH1cIlxuICAgICAgICAgICAgICBjaGVja2VkPSR7b3B0ID09PSBhbnN3ZXJ9XG4gICAgICAgICAgICAgIG9uQ2hhbmdlPSR7KCkgPT4gc2V0QW5zd2VyKG9wdCl9XG4gICAgICAgICAgICA+XG4gICAgICAgICAgICA8L2lucHV0PmBcbiAgICAgICAgKX1cbiAgICAgIDwvZm9ybT5cbiAgICAgIDxkaXY+JHtxdWVzdGlvbn08L2Rpdj5cbiAgICAgIDxkaXY+ICZlbXNwOyAke1xuICAgICAgIGFuc3dlciA9PT0gbnVsbCA/IFwiXCIgOiBhbnN3ZXIgPT09IGNvcnJlY3QgPyBcIuKchVwiIDogXCLwn5S0XCJcbiAgICAgIH08L2Rpdj5cbiAgICA8L2Rpdj5gXG4gICAgKTtcblxuICAgIHJvb3QudmFsdWUgPSBhbnN3ZXI7XG4gICAgaWYgKCFpbml0aWFsKSB7XG4gICAgICByb290LmRpc3BhdGNoRXZlbnQobmV3IEN1c3RvbUV2ZW50KFwiaW5wdXRcIikpO1xuICAgICAgb25DaGFuZ2UoYW5zd2VyKTtcbiAgICB9XG4gIH1cblxuICBzZXRBbnN3ZXIobnVsbCwgdHJ1ZSk7XG4gIHJldHVybiByb290O1xufVxuXG5tb3JwaCA9IHJlcXVpcmUoXCJodHRwczovL2J1bmRsZS5ydW4vbmFub21vcnBoQDUuNC4yXCIpXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJcbk1DX2RhdGFfbWFuYWdlbWVudF8xID0gW1xuICBbXCJnbGltcHNlKCkgcHJvdmlkZXMgYW4gb3ZlcnZpZXcgb2YgdmFyaWFibGVzIGFuZCB0aGVpciBkYXRhIHR5cGVzLlwiLCBcIlRydWVcIl0sXG4gIFtcInJlbmFtZShuZXcgPSBvbGQpIHJlbmFtZXMgYSB2YXJpYWJsZSBpbiBhIGRhdGFzZXQuXCIsIFwiVHJ1ZVwiXSxcbiAgW1wiQ3JvbmJhY2jigJlzIM6xIHNob3VsZCBhbHdheXMgYmUgZXhhY3RseSAxIHRvIGNyZWF0ZSBhIGNvbnNpc3RlbnQgaW5kZXguXCIsIFwiRmFsc2VcIl0sXG4gIFtcIm5hX2lmKCkgcmVtb3ZlcyByb3dzIGZyb20gYSBkYXRhc2V0LlwiLCBcIkZhbHNlXCJdXG5dXG5cbnZpZXdvZiBhbnN3ZXJzX2RhdGFfbWFuYWdlbWVudF8xID0gcXVpeklucHV0KHtcbiAgcXVlc3Rpb25zOiBNQ19kYXRhX21hbmFnZW1lbnRfMSxcbiAgb3B0aW9uczogW1wiVHJ1ZVwiLCBcIkZhbHNlXCJdXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0UXVpZXQiLCJzb3VyY2UiOiJzaGlueUlucHV0KCdhbnN3ZXJzX2RhdGFfbWFuYWdlbWVudF8xJykifV19
-</script>
-<script type="module">
+</script><script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
 window._ojs.paths.runtimeToDoc = "../..";
 window._ojs.paths.runtimeToRoot = "../..";
 window._ojs.paths.docToRoot = "";
 window._ojs.selfContained = false;
 window._ojs.runtime.interpretFromScriptTags();
-</script>
-<script id="quarto-html-after-body" type="application/javascript">
+</script><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -1330,22 +1313,19 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
+</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="./7-visuals.html" class="pagination-link" aria-label="7 Creating visuals with ggplot">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">7 Creating visuals with ggplot</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./9-web-scraping.html" class="pagination-link" aria-label="10 Web Scraping in R">
-        <span class="nav-page-text"><span class="chapter-title">10 Web Scraping in R</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./9-web-scraping.html" class="pagination-link" aria-label="9 Web Scraping in R">
+        <span class="nav-page-text"><span class="chapter-title">9 Web Scraping in R</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
       &nbsp;
     </div>   
@@ -1357,8 +1337,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     </div>
   </div>
 </footer>
-
-
 
 
 </body></html>

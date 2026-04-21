@@ -1,5 +1,5 @@
 ---
-title: "10 Web Scraping in R"
+title: "9 Web Scraping in R"
 ---
 
 ::: callout-note
@@ -439,6 +439,7 @@ url |>
   #we only want to read the first block of text
   head(1)
 ```
+
 If you look at the output, you see that this worked (although the text is a bit messy and probably needs some more cleaning).
 
 #### 4.3.4. Example 4: Scrape website links
@@ -577,19 +578,42 @@ knitr::kable(
 ```{ojs}
 //| echo: false
 
-MC_data_management_1 = [
-  ["glimpse() provides an overview of variables and their data types.", "True"],
-  ["rename(new = old) renames a variable in a dataset.", "True"],
-  ["Cronbach’s α should always be exactly 1 to create a consistent index.", "False"],
-  ["na_if() removes rows from a dataset.", "False"]
+MC_scraping_1 = [
+  ["Web scraping refers to automated data extraction from websites.", "True"],
+  ["Ethically speaking, web scraping is always the best approach.", "False"],
+  ["A typical scraping workflow includes identifying a URL, downloading content, and extracting relevant data.", "True"],
+  ["Dynamic content is usually easier to scrape than static HTML.", "False"]
 ]
 
-viewof answers_data_management_1 = quizInput({
-  questions: MC_data_management_1,
+viewof answers_scraping_1 = quizInput({
+  questions: MC_scraping_1,
   options: ["True", "False"]
 })
 ```
 :::
+
+::: {.callout-note icon="false"}
+## 🎲 Question 2
+
+**Which of the following statements about HTMl, CSS, and Java are correct?**
+
+```{ojs}
+//| echo: false
+
+MC_scraping_2 = [
+  ["HTML elements are typically defined by opening and closing tags.", "True"],
+  ["Attributes in HTML provide additional information about elements.", "True"],
+  ["Inline CSS is more efficient than defining styles for classes.", "False"],
+  ["HTML is used to structure the content of websites.", "True"]
+]
+
+viewof answers_scraping_2 = quizInput({
+  questions: MC_scraping_2,
+  options: ["True", "False"]
+})
+```
+:::
+
 ::::
 
 ## 📚 More tutorials on this

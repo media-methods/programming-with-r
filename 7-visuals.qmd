@@ -16,28 +16,33 @@ In this tutorial, we'll work with the [`ggplot2` package](https://cran.r-project
 
 To create visuals, `ggplot2` follows what is called the "Grammar of Graphics". You provide the raw data to R and then build the graph step by step by adding different layers (e.g., colors, labels) to it. This way, you can easily customize visualizations in R.
 
-"A graphic maps the __data__ to the __aesthetic__ attributes (colour, shape, size) of __geometric__ objects (points, lines, bars)." [Wickham et al., 2021, no page; bold words inserted by author](https://ggplot2-book.org/introduction.html)
+"A graphic maps the **data** to the **aesthetic** attributes (colour, shape, size) of **geometric** objects (points, lines, bars)." [Wickham et al., 2021, no page; bold words inserted by author](https://ggplot2-book.org/introduction.html)
 
-This is, indeed, a very brief description of what is possible with `ggplot2`. In short, you __have to__ specify the following three components to create a graph with the `ggplot()` command:
+This is, indeed, a very brief description of what is possible with `ggplot2`. In short, you **have to** specify the following three components to create a graph with the `ggplot()` command:
 
-- __data__, i.e., the data that should be visualized  
-- __aesthetics__, i.e., which data (for instance variables) should be mapped to which visual elements using _aes()_  
-- __geoms__, i.e., the type of graphical representation that should be created  
-However, you __can__ specify many more details, for instance the...
+-   **data**, i.e., the data that should be visualized\
 
-- __scales__ of your graph, for example how the x- and y-axes should be displayed and scaled  
-- __themes__ of your graph, for example by using predefined sets of backgrounds and formatting options  
+-   **aesthetics**, i.e., which data (for instance variables) should be mapped to which visual elements using *aes()*\
+
+-   **geoms**, i.e., the type of graphical representation that should be created\
+    However, you **can** specify many more details, for instance the...
+
+-   **scales** of your graph, for example how the x- and y-axes should be displayed and scaled\
+
+-   **themes** of your graph, for example by using predefined sets of backgrounds and formatting options
 
 Before doing anything else, install the `ggplot2` package and load it.
+
 ```{r,t8.4, eval = FALSE, echo = TRUE}
 install.packages("ggplot2")
 library("ggplot2")
 ```
+
 ```{r,t8.5, eval = TRUE, echo = FALSE, message=FALSE, warning=FALSE}
 library("ggplot2")
 ```
 
-__Important__:
+**Important**:
 
 In this tutorial, I will only introduce the very basics of visualizing data in R.
 
@@ -45,14 +50,14 @@ The goal is for you to become proficient enough to create basic graphs using R (
 
 If you have further questions about visualizing data in R, the following two tutorials/guides are excellent resources:
 
-- Chang, W. (2026). _R Graphics Codebook: Practical Recipes for Visualizing Data._ [Link](https://r-graphics.org/)
-- Wickham, H. et al. (2021). _ggplot2: Elegant Graphics for Data Analysis._ Online work-in-progress version of the 3rd edition. [Link](https://ggplot2-book.org/)
+-   Chang, W. (2026). *R Graphics Codebook: Practical Recipes for Visualizing Data.* [Link](https://r-graphics.org/)
+-   Wickham, H. et al. (2021). *ggplot2: Elegant Graphics for Data Analysis.* Online work-in-progress version of the 3rd edition. [Link](https://ggplot2-book.org/)
 
 ## 2. Let's do it: Recreating a graph!
 
 Our goal for today: We want to reproduce the following graph which visualizes the distribution of journalists’ work experience (in years) for each country, using the `WoJ` dataset.
 
-``` {r woj-load, eval=TRUE, echo=FALSE, warning=FALSE, message=FALSE}
+```{r woj-load, eval=TRUE, echo=FALSE, warning=FALSE, message=FALSE}
 # we load the necessary packages
 library(tidycomm)
 library(tidyverse)
@@ -94,7 +99,7 @@ We will again use the `WoJ` dataset. It contains quantitative survey data from N
 
 First, we retrieve the data and save it as an object named `data_woj`. Make sure to have the `tidycomm` and `tidyverse` packages installed before running this command!
 
-``` {r woj-load-1, eval=TRUE, echo=TRUE, warning=FALSE, message=FALSE}
+```{r woj-load-1, eval=TRUE, echo=TRUE, warning=FALSE, message=FALSE}
 # we load the necessary packages
 library(tidycomm)
 library(tidyverse)
@@ -108,7 +113,7 @@ data_woj |>
   head()
 ```
 
-Now, we need to tell R to use this data. Specifying the data is a __necessary__ part of the `ggplot()` function, meaning that you __have to__ tell R which data to use.
+Now, we need to tell R to use this data. Specifying the data is a **necessary** part of the `ggplot()` function, meaning that you **have to** tell R which data to use.
 
 Here, we want to plot the distribution of journalists' work experience across countries.
 
@@ -116,7 +121,7 @@ We'll start by plotting this data by simply handing the dataset `data_woj` over 
 
 Note that, using the `filter()` command, we first remove all observations with missing values (`NA`s) for `work_experience`, as these cannot be plotted.
 
-``` {r data-gg, eval=TRUE, echo=TRUE, message=FALSE}
+```{r data-gg, eval=TRUE, echo=TRUE, message=FALSE}
 data_woj |>
   
   # we remove missing values for work_experience
@@ -134,20 +139,20 @@ The reason is that we have not yet specified which variables should be visualize
 
 Next, we need to specify the aesthetics component.
 
-This is a __necessary__ component, meaning that you __have to__ tell R which data (for instance variables) should be mapped to which visual elements using `aes()`.
+This is a **necessary** component, meaning that you **have to** tell R which data (for instance variables) should be mapped to which visual elements using `aes()`.
 
 In `aes()`, you can, for instance, pass values to the following arguments:
 
-- `x`: the variable that should be mapped to the x-axis
-- `fill`: the variable that should be used for filling a geometric object with a specific color
+-   `x`: the variable that should be mapped to the x-axis
+-   `fill`: the variable that should be used for filling a geometric object with a specific color
 
 (and many more, but these are the elements we need here).
 
 Let's define the aesthetics for our plot:
 
-- We want the x-axis to show journalists' `work experience` in years. Thus, we set `x = work_experience` in `aes()`.
+-   We want the x-axis to show journalists' `work experience` in years. Thus, we set `x = work_experience` in `aes()`.
 
-- We also want the different countries to be represented by different colors. Thus, we set `fill = country` in `aes()`.
+-   We also want the different countries to be represented by different colors. Thus, we set `fill = country` in `aes()`.
 
 If we run the following command, R now knows which variable should be mapped to the x-axis and which variable should determine the fill color. You can see that R already adjusted the labels on the axes.
 
@@ -161,18 +166,18 @@ data_woj |>
   ggplot(aes(x = work_experience, fill = country))
 ```
 
-However, the graph still does not show the final result yet. The reason is that we have not fully specified the graphical representation. In addition to the data and aesthetics, we still need to define the `geom`, that is, the type of graph that should be created. 
+However, the graph still does not show the final result yet. The reason is that we have not fully specified the graphical representation. In addition to the data and aesthetics, we still need to define the `geom`, that is, the type of graph that should be created.
 
 ## 5. Geoms
 
-Lastly, we need to define the geometric component as the last __necessary__ component: you __have to__ tell R which type of graph should be created.
+Lastly, we need to define the geometric component as the last **necessary** component: you **have to** tell R which type of graph should be created.
 
 You can, for instance, use the following commands to create different graphs (simply type `geom()` in the script, and RStudio will automatically propose many options, including:
 
-- `geom_bar()` to create a bar chart
-- `geom_line()` to create a line graph
-- `geom_point()` to create a scatter plot
-- `geom_boxplot()` to create a box plot
+-   `geom_bar()` to create a bar chart
+-   `geom_line()` to create a line graph
+-   `geom_point()` to create a scatter plot
+-   `geom_boxplot()` to create a box plot
 
 (and many more, but these are the ones we'll cover in Tutorial 7).
 
@@ -201,7 +206,7 @@ data_woj |>
 
 Great: this worked! We have now created the first complete graph for our data.
 
-At this stage, the plot already shows the distribution of journalists' work experience. In the next step, we no longer make __necessary__ decisions (i.e., to create a graph) but __optional ones__, meaning those "only" intended to make the graph nicer. 
+At this stage, the plot already shows the distribution of journalists' work experience. In the next step, we no longer make **necessary** decisions (i.e., to create a graph) but **optional ones**, meaning those "only" intended to make the graph nicer.
 
 Here, we can further improve it by splitting the graph into separate panels for each country and by adding titles and a note.
 
@@ -209,7 +214,7 @@ Here, we can further improve it by splitting the graph into separate panels for 
 
 Next, we want to improve the readability of our graph by creating separate panels for each country.
 
-In `ggplot2`, this can be done using the concept of __faceting__. Faceting means that the data are split according to the values of a variable and displayed in separate subplots.
+In `ggplot2`, this can be done using the concept of **faceting**. Faceting means that the data are split according to the values of a variable and displayed in separate subplots.
 
 This is particularly useful when comparing distributions across groups.
 
@@ -247,21 +252,21 @@ You can titles and labels to make your graph more informative.
 
 For example, you can change:
 
-- the scaling of axes
-- the titles of axes
-- the title of the graph
-- the colors used in the plot
-- captions or notes explaining the graph
+-   the scaling of axes
+-   the titles of axes
+-   the title of the graph
+-   the colors used in the plot
+-   captions or notes explaining the graph
 
-In this tutorial, we will mainly focus on improving the __labels and titles__ of our graph.
+In this tutorial, we will mainly focus on improving the **labels and titles** of our graph.
 
 We will now assign our graph a clear title. We will also change the titles for the x- and y-axes.
 
-You should __always__ assign clear titles to graphs, axes, and legends so readers understand what type of data the graph visualizes and which variables are shown.
+You should **always** assign clear titles to graphs, axes, and legends so readers understand what type of data the graph visualizes and which variables are shown.
 
 We can add a title for the graph and both axes using the `labs()` command.
 
-Here, we assign the graph the `title` _Distribution of Journalists' Work Experience by Country_. We also label the x-axis `x` _Work Experience (Years)_ and the y-axis `y` _Density_.
+Here, we assign the graph the `title` *Distribution of Journalists' Work Experience by Country*. We also label the x-axis `x` *Work Experience (Years)* and the y-axis `y` *Density*.
 
 Finally, we add a short note explaining how the density values should be interpreted using `caption`.
 
@@ -291,26 +296,26 @@ data_woj |>
 
 ## 8. Themes
 
-Another way to improve the appearance of a graph is by adjusting its __theme__.
+Another way to improve the appearance of a graph is by adjusting its **theme**.
 
-Themes control the __visual style__ of a graph. While scales determine how data are displayed (for example axis labels or colors), themes determine the overall formatting of the plot.
+Themes control the **visual style** of a graph. While scales determine how data are displayed (for example axis labels or colors), themes determine the overall formatting of the plot.
 
 With themes, you can change elements such as:
 
-- the background of the graph  
-- grid lines  
-- font size of axis labels and titles  
-- the appearance and position of the legend  
+-   the background of the graph\
+-   grid lines\
+-   font size of axis labels and titles\
+-   the appearance and position of the legend
 
 `ggplot2` already provides several predefined themes that you can easily apply. You can see an overview of available themes [here](https://ggplot2.tidyverse.org/reference/ggtheme.html).
 
 Some commonly used examples are:
 
-- `theme_minimal()` – a clean design with very little visual clutter  
-- `theme_classic()` – a style similar to traditional statistical graphics  
-- `theme_bw()` – a black-and-white theme often used for publications  
+-   `theme_minimal()` – a clean design with very little visual clutter\
+-   `theme_classic()` – a style similar to traditional statistical graphics\
+-   `theme_bw()` – a black-and-white theme often used for publications
 
-If you type `theme_` in your script and wait for RStudio to auto-complete your search, you will see several options. To apply a theme, you simply add it as another layer using the `+` operator. 
+If you type `theme_` in your script and wait for RStudio to auto-complete your search, you will see several options. To apply a theme, you simply add it as another layer using the `+` operator.
 
 For instance, the light theme `theme_light()` creates a plot with a white background and light grid lines, which can make the graph easier to read.
 
@@ -374,14 +379,14 @@ As you can see, changing the theme does not affect the data or the structure of 
 
 ## 9. Colors
 
-Another way to improve the readability of a graph is by adjusting the __colors__ used in the visualization.
+Another way to improve the readability of a graph is by adjusting the **colors** used in the visualization.
 
 Colors can help readers quickly distinguish between groups or categories in the data. In `ggplot2`, colors are usually assigned through the aesthetics we defined earlier.
 
 For example:
 
-- `color` controls the color of lines or points  
-- `fill` controls the interior color of objects such as bars, boxes, or density curves  
+-   `color` controls the color of lines or points\
+-   `fill` controls the interior color of objects such as bars, boxes, or density curves
 
 In our example, we already mapped the variable `country` to the argument `fill` inside `aes()`. This means that `ggplot2` automatically assigns different colors to each country.
 
@@ -487,32 +492,32 @@ ggsave(
 
 The arguments in `ggsave()` mean the following:
 
-- `filename` specifies the name of the file and its format (for example `.jpeg`, `.png`, or `.pdf`). __Important__: We have the file in the subfolder "output/images". This needs to already have been created to work!
-- `plot` specifies which plot object should be saved
-- `width` and `height` define the size of the image (in inches)
-- `dpi` controls the resolution of the image (300 dpi is common for printed documents)
+-   `filename` specifies the name of the file and its format (for example `.jpeg`, `.png`, or `.pdf`). **Important**: We have the file in the subfolder "output/images". This needs to already have been created to work!
+-   `plot` specifies which plot object should be saved
+-   `width` and `height` define the size of the image (in inches)
+-   `dpi` controls the resolution of the image (300 dpi is common for printed documents)
 
 ## 💡 Take-Aways
 
-- __Creating a graph__: `ggplot()`
+-   **Creating a graph**: `ggplot()`
 
-- __Mapping data to visual elements__: `aes(x, y, fill, color, etc.)`
+-   **Mapping data to visual elements**: `aes(x, y, fill, color, etc.)`
 
-- __Choosing the type of graph__: `geom_bar()`, `geom_line()`, `geom_point()`, `geom_boxplot()`, `geom_density()` (for example)
+-   **Choosing the type of graph**: `geom_bar()`, `geom_line()`, `geom_point()`, `geom_boxplot()`, `geom_density()` (for example)
 
-- __Splitting a graph into panels__: `facet_wrap()`
+-   **Splitting a graph into panels**: `facet_wrap()`
 
-- __Adding titles and labels__: `labs()`
+-   **Adding titles and labels**: `labs()`
 
-- __Adjusting scales (e.g., axis labels or colors)__: `scale_*()` such as `scale_fill_manual()`
+-   **Adjusting scales (e.g., axis labels or colors)**: `scale_*()` such as `scale_fill_manual()`
 
-- __Changing the visual style of a graph__: `theme_minimal()`, `theme_classic()`, `theme_light()` (for example)
+-   **Changing the visual style of a graph**: `theme_minimal()`, `theme_classic()`, `theme_light()` (for example)
 
-- __Saving graphs as image files__: `ggsave()`
+-   **Saving graphs as image files**: `ggsave()`
 
 ## 🎲 Quiz
 
-:::::: {.content-visible when-format="html"}
+:::: {.content-visible when-format="html"}
 {{< include "files/www/quiz_script.qmd" >}}
 
 ::: {.callout-note icon="false"}
@@ -536,16 +541,15 @@ viewof answers_ggplot_1 = quizInput({
 })
 ```
 :::
-::::::
+::::
 
 ## 📚 More tutorials on this
 
 You still have questions? The following tutorials & papers can help you with that:
 
-- Chang, W. R (2026) _R Graphics Codebook. Practical Recipes for Visualizing Data._ [Link](https://r-graphics.org/)
-- Wickham et al. (2021). _ggplot2: elegant graphics for data analysis._ Online, work-in-progress version of the 3rd edition. [Link](https://ggplot2-book.org/)
-- Hehman, E., & Xie, S. Y. (2021). Doing Better Data Visualization. _Advances in Methods and Practices in Psychological Science_. DOI: 10.1177/25152459211045334 [Link](https://doi.org/10.1177/25152459211045334)
-
+-   Chang, W. R (2026) *R Graphics Codebook. Practical Recipes for Visualizing Data.* [Link](https://r-graphics.org/)
+-   Wickham et al. (2021). *ggplot2: elegant graphics for data analysis.* Online, work-in-progress version of the 3rd edition. [Link](https://ggplot2-book.org/)
+-   Hehman, E., & Xie, S. Y. (2021). Doing Better Data Visualization. *Advances in Methods and Practices in Psychological Science*. DOI: 10.1177/25152459211045334 [Link](https://doi.org/10.1177/25152459211045334)
 
 ## 📌 Test your knowledge
 
@@ -553,11 +557,13 @@ You still have questions? The following tutorials & papers can help you with tha
 
 Use the existing command to create a graph. In this code, make the following changes:
 
-- Change all density plots to `black` using "black"
-- Change the title to "World of Journalism Study - Work Experience"
-- Change the theme to `theme_bw()`
+-   Change all density plots to `black` using "black"
+-   Change the title to "World of Journalism Study - Work Experience"
+-   Change the theme to `theme_bw()`
 
-```{r task-1, eval=FALSE, echo=TRUE, message=FALSE}
+**Original code**:
+
+```{r task-1, eval=TRUE, echo=TRUE, message=FALSE}
 data_woj |>
   # remove missing values
   filter(!is.na(work_experience)) |>
@@ -582,11 +588,56 @@ data_woj |>
   ))
 ```
 
+**Changed code**:
+
+```{r task-1-solution, eval=TRUE, echo=TRUE, message=FALSE}
+data_woj |>
+  # remove missing values
+  filter(!is.na(work_experience)) |>
+  
+  #change the color here: remove color in aes, add it as "black" to geom_density
+  ggplot(aes(x = work_experience)) +
+  geom_density(color = "black", alpha = 0.6) +
+  facet_wrap(~country) +
+  labs(
+    
+    # change the title here
+    title = "World of Journalism Study - Work Experience",
+    x = "Work Experience (Years)",
+    y = "Density"
+  ) +
+  
+  #change the theme
+  theme_bw()
+```
+
 ### Task 2 (Medium🔥🔥)
 
 From scratch: Create a bar plot that plots the number of respondents per country. It should look like this:
 
 ```{r task-2, eval=TRUE, echo=FALSE, message=FALSE}
+data_woj |>
+  ggplot(aes(x = country, fill = country)) +
+  geom_bar() +
+  labs(
+    title = "Number of Respondents per Country",
+    x = "Country",
+    y = "Number of Respondents"
+  ) +
+  theme_minimal() +
+
+  ## manually define colors ##
+  scale_fill_manual(values = c(
+    "Germany" = "#1b9e77",
+    "Austria" = "#d95f02",
+    "Denmark" = "#7570b3",
+    "UK" = "#e7298a",
+    "USA" = "#66a61e"
+  ))
+```
+
+**Solution**
+```{r task-2-solution, eval=FALSE, echo=TRUE, message=FALSE}
 data_woj |>
   ggplot(aes(x = country, fill = country)) +
   geom_bar() +
@@ -628,6 +679,47 @@ data_woj |>
   # calculate mean agreement per statement
   group_by(statement) |>
   summarise(mean_agreement = mean(agreement)) |>
+  # create the plot
+  ggplot(aes(x = statement, y = mean_agreement, fill = statement)) +
+  geom_col() +
+  labs(
+    title = "Mean Agreement with Ethical Statements",
+    x = "Ethical Statement",
+    y = "Mean Agreement"
+  ) +
+  geom_text(aes(label = round(mean_agreement, 2)), vjust = -0.5) +
+  theme_minimal() +
+
+  # manually define colors
+  scale_fill_manual(values = c(
+    "ethics_1" = "#1b9e77",
+    "ethics_2" = "#d95f02",
+    "ethics_3" = "#7570b3",
+    "ethics_4" = "#e7298a"
+  ))
+```
+
+**Solution:**
+```{r task-3-solution, eval=FALSE, echo=TRUE, message=FALSE}
+data_woj |>
+  
+  # select ethics variables
+  select(ethics_1:ethics_4) |>
+ 
+   # reshape data to long format
+  pivot_longer(
+    cols = everything(),
+    names_to = "statement",
+    values_to = "agreement"
+  ) |>
+  
+  # remove missing values
+  filter(!is.na(agreement)) |>
+  
+  # calculate mean agreement per statement
+  group_by(statement) |>
+  summarise(mean_agreement = mean(agreement)) |>
+ 
   # create the plot
   ggplot(aes(x = statement, y = mean_agreement, fill = statement)) +
   geom_col() +
