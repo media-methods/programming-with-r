@@ -1,15 +1,14 @@
 ---
-title: "9 Web Scraping in R"
+title: "10 Descriptive Analysis in R"
 ---
 
 ::: callout-note
 ## 🎯 Learning goals
 
-After working through Tutorial 9, you'll be able to...
+After working through Tutorial 10, you'll be able to...
 
--   **explain** web scraping, including ethical and legal limitations
--   **explain** the basics of CSS and HTML
--   **apply** functions for web scraping
+-   **understand** basic descriptive statistics (e.g., mean, standard deviation)
+-   **apply** functions for descriptive analysis
 :::
 
 ## 1. What is web scraping?
@@ -361,15 +360,15 @@ Command <- c("html_elements(`element`)",
              "html_elements(`element element`)",
              "html_elements(`.class`)",
              "html_elements(`element.class`)",
-             "html_elements(`element`) |> html_attr(`attribute`)",
-             "html_elements(`element`) |> html_attr(`attribute`)")
+             "html_elements(`element`) `|>` html_attr(`attribute`)",
+             "html_elements(`element`) `|>` html_attr(`attribute`)")
 Example <- c('html_elements(`p`)',
              'html_elements(`div`, `p`)',
              'html_elements(`div` `p`)',
              'html_elements(`.article`)',
              'html_elements(`p.article`)',
-             'html_elements(`a`) |> html_attr(`href`)',
-             'html_elements(`img`) |> html_attr(`src`)')
+             'html_elements(`a`) `|>` html_attr(`href`)',
+             'html_elements(`img`) `|>` html_attr(`src`)')
 Meaning <- c('retrieves all elements `p`',
              'retrieves all elements `div` and `p`',
              'retrieves all elements `p` inside `div`',
@@ -624,111 +623,3 @@ You still have questions? The following tutorials & papers can help you with tha
 -   [Algorithmic thinking in the public interest by Luscombe et al., 2022) 2022](https://link.springer.com/article/10.1007/s11135-021-01164-0).
 -   [Web scraping for research: Legal, ethical, institutional, and scientific considerations by Brown et al., 2026](https://journals.sagepub.com/doi/10.1177/20539517251381686)
 -   [Automated Data Collection with R: A Practical Guide to Web Scraping and Text Mining by S. Munzert, C. Rubba, P. Meißner, & D.Nyhuis](https://onlinelibrary.wiley.com/doi/book/10.1002/9781118834732)
-
-## 📌 Test your knowledge
-
-### Task 1 (Easy🔥)
-
-Use your knowledge about web scraping to scrape content from the [Wikipedia page on web scraping](https://en.wikipedia.org/wiki/Web_scraping). Retrieve the main topics discussed here (see blue circled headings).
-
-*Image: Wikipedia page: Web Scraping*
-
-![](files/images/9_scraping_task1.jpg){fig-alt="Overview of headings on Wikipedia site on web scraping"}
-
-```{r task-1, eval=FALSE, echo=FALSE, message=FALSE}
-session <- bow(url = "https://en.wikipedia.org/wiki/Web_scraping",
-               user_agent = "Teaching project, 
-               Valerie Hase, 
-               Department of Media and Communications,
-               AAU Klagenfurt")
-
-# Check: Can I scrape here?
-session
-
-# Scrape the irl
-url <- scrape(session)
-
-# Identify main topics
-url |>
-  html_elements("h2") |>
-  html_text()
-```
-### Task 2 (Medium🔥🔥)
-
-Now get the **number** of references mentioned in the reference list of this Wikipedia article. At the moment, it is 37 but this may change one you scrape the website.
-```{r task-2, eval=FALSE, echo=FALSE, message=FALSE}
-#  Solution
-url |>
-  html_elements("ol.references li") |>
-  html_text() |>
-  length()
-```
-### Task 3 (Hard🔥🔥🔥)
-
-Now, we want to collect information on the most heated Wikipedia debates!
-
-Write a function that goes to a Wikipedia “Talk” page for a given topic (e.g., debates on the Wikipedia Web Scraping page [here](https://en.wikipedia.org/wiki/Talk:Web_scraping)).
-
-*Image: Wikipedia page: Web Scraping - Talks*
-
-![](files/images/9_scraping_task3.jpg){fig-alt="Overview of open debates on Wikipedia site on web scraping"}
-
-The function should ....
-
-- Count how many discussion any Wikipedia talk page currently has.
-- Save the result (topic, link, number of discussion sections).
-
-The function should be flexible: It should run for any list of pages you give to it.
-
-Using this function, run the function for three Wikipedia articles: Web scraping, Artificial intelligence, Algorithm. The result could/should look something like this (here, I named my function as `scrape_discussion()`:
-```{r task-3, eval=TRUE, echo=FALSE, message=FALSE, results='hide', warning = FALSE}
-library(rvest)
-library(polite)
-library(dplyr)
-
-# Write a function that scrapes each Wikipedia URL
-# and also counts the number of words in each discussion section
-
-scrape_discussion <- function(page) {
-  
-  # Build the unique URL
-  url <- paste0("https://en.wikipedia.org/wiki/Talk:", gsub(" ", "_", page))
-  
-  # Build the unique user agent
-  user_agent <- "Teaching project, Valerie Hase, Department of Media and Communications, AAU Klagenfurt"
-  
-  # Introduce your scraping agent
-  session <- bow(url, user_agent)
-  url_scraped <- scrape(session)
-  
-  # Extract all text from the Talk page body
-  discussion <- url_scraped |>
-    html_elements("h2") |>
-    
-    # substract one, since "Content" heading is not a discussion point
-    length() -1
-  
-  return(tibble(
-    article = page,
-    url = url,
-    discussion = discussion
-  ))
-}
-
-# Run and compare two articles
-results <- bind_rows(
-  scrape_discussion("Web scraping"),
-  scrape_discussion("Artificial intelligence"),
-    scrape_discussion("Algorithm")
-)
-
-results
-```
-
-```{r task-3b, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
-# Run and compare number of discussions on articles
-bind_rows(scrape_discussion("Web scraping"),
-          scrape_discussion("Artificial intelligence"),
-          scrape_discussion("Algorithm"))
-
-```
