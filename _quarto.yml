@@ -37,13 +37,17 @@ book:
        - 7-visuals.qmd
        - 8-data-management.qmd
        - 9-web-scraping.qmd
+
+    - part: Statistics in R
+      chapters:
+       - 10-descriptive-analysis.qmd
+       - 11-inferential-statistics.qmd
        
     - part: 80-appendix.qmd
       chapters:
        - 81-glossary.qmd
        - 82-forum.qmd
-       - 83-faq-r.qmd
-      
+       - 83-faq-r.qmd 
     
     - imprint.qmd
     

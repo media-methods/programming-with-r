@@ -1,0 +1,198 @@
+---
+title: "11 Inferential Statistics in R"
+---
+
+::: callout-note
+## 🎯 Learning goals
+
+After working through Tutorial 11, you'll be able to...
+
+-   **understand** the logic of inferential statistics (e.g., hypotheses, p-values)
+-   **apply** functions for inferential analyses, including correlation, t-test, and chi-square test
+:::
+
+## Inferential statistics
+
+So far, we have used descriptive statistics to summarize our sample — for example, calculating the mean trust in government among journalists. But in most research, we are not just interested in the sample itself. We want to know whether what we observe in the sample also holds for the broader **population**.
+
+This is where **inferential statistics** come in. While descriptive statistics describe your sample, inferential statistics help us make assumptions about whether those findings hold for the population.
+
+In this tutorial, we will cover three inferential tests from the `tidycomm` package:
+
+-   `correlate()`: tests the relationship between two metric variables (Pearson correlation)
+-   `t_test()`: tests whether the mean of a metric variable differs across two groups
+-   `crosstab()`: tests the relationship between two categorical variables (Chi-Square test)
+
+We will once again use the `WoJ` dataset, which contains survey data from *N* = 1,200 journalists across five countries.
+
+```{r woj-load, eval = TRUE, echo = TRUE, warning = FALSE, message = FALSE}
+# we load the necessary packages
+library(tidycomm)
+library(tidyverse)
+
+# loads the WoJ dataset shipped with tidycomm
+data_woj <- tidycomm::WoJ
+
+# we inspect the data
+data_woj |>
+  as_tibble()
+```
+
+## The logic of inferential statistics
+
+Before running any test, it helps to understand the three-step logic behind inferential statistics. **Note**: Since this is a introduction to R class, this is a oversimplified explanation of inferential statistics. Explaining this more (and better) is something we do not have time for in this class - but hopefully at a later time of your studies.
+
+**Step 1: Formulate a hypothesis.** A hypothesis describes an expected relationship between two (or more) variables in the population. Hypotheses are falsifiable — we can test them. They can be directional (e.g., *the more X, the more Y*) or non-directional (e.g., *X and Y are related*).
+
+**Step 2: Test the hypothesis.** We use an inferential test to evaluate the hypothesis using our sample data.
+
+**Step 3: Decide whether the hypothesis is supported.** Based on the test result, we assess whether there is sufficient evidence to (for now) support our hypothesis.
+
+The key metric for this decision is the **p-value**. It tells us how likely our observed data (or something more extreme) would be if there were actually no effect in the population. By convention in our class:
+
+-   If **p \< .05**: we consider the result statistically significant and find (for now) evidence for our hypothesis.
+-   If **p \> .05**: we consider the result not statistically significant and (for now) do not find sufficient evidence for our hypothesis.
+
+## Pearson correlation
+
+A Pearson correlation tests the relationship between two **metric** variables. It tells us both the **direction** and the **strength** of the relationship:
+
+-   A positive correlation coefficient (*r* \> 0) means the two variables increase together.
+-   A negative correlation coefficient (*r* \< 0) means one variable increases as the other decreases.
+
+We use the `correlate()` function from `tidycomm`. Let's test the following hypothesis:
+
+> H1: The more work experience journalists have, the more critical of the government they become.
+
+The variables we need are `work_experience` (metric) and `trust_government` (metric, scale 1–5).
+
+```{r correlation, eval = TRUE, echo = TRUE, warning = FALSE}
+data_woj |>
+  correlate(work_experience, trust_government)
+```
+
+The output gives us several columns to focus on. The column `r` is the Pearson correlation coefficient — here, *r* = -0.07, indicating a small negative relationship: the more work experience journalists have, the slightly less they trust the government. The column `p` gives us the p-value. Since *p* = 0.015 \< .05, the result is statistically significant.
+
+**Reporting**: There was a significant negative correlation between journalists' years of work experience and their trust in the government, *r*(1185) = -.07, *p* \< .05. We find evidence for H1.
+
+## T-test
+
+A t-test tests whether the **mean of a metric variable** differs significantly across **two groups**. It is used when one variable is metric and the other is categorical with exactly two categories.
+
+Key things to look at in the output:
+
+-   **M** and **SD** for each group: descriptive statistics showing the means and standard deviations per group.
+-   **t** and **df**: the test statistic and degrees of freedom.
+-   **p**: the p-value — if p \< .05, the group difference is statistically significant.
+-   **d**: Cohen's d, a measure of effect size.
+-   **Levene_p** and **var_equal**: a check of whether the two groups have equal variance. If `var_equal = TRUE`, this assumption holds; if not, R automatically corrects for it.
+
+We use the `t_test()` function from `tidycomm`. Let's test the following hypothesis:
+
+> H2: The mean work experience of journalists differs across their type of employment (full-time vs. part-time).
+
+```{r ttest, eval = TRUE, echo = TRUE, warning = FALSE}
+data_woj |>
+  t_test(employment, work_experience)
+```
+
+**Reporting**: Journalists with full-time employment had more work experience (*M* = 17.53, *SD* = 10.65) compared to journalists with part-time employment (*M* = 16.95, *SD* = 10.99). However, this difference is not significant, *t*(1015) = 0.572, *p* = 0.568. We reject H2.
+
+## Chi-Square test
+
+A Chi-Square test examines the relationship between **two categorical variables**. Instead of comparing means, it compares counts and percentages across groups to assess whether the distribution of one variable differs systematically across the categories of another.
+
+Key things to look at in the output:
+
+-   **Percentages per group**: descriptive statistics showing how values are distributed across categories.
+-   **Chi-square value** and **df**: the test statistic and degrees of freedom.
+-   **p**: the p-value — if p \< .05, the association between the two variables is statistically significant.
+-   **V**: Cramér's V, a measure of effect size for categorical associations.
+
+We use the `crosstab()` function from `tidycomm`. Let's test the following hypothesis:
+
+> H3: There is a difference in the types of contracts provided to journalists across countries.
+
+```{r chisquare, eval = TRUE, echo = TRUE, warning = FALSE}
+data_woj |>
+  
+  # remove missing values for contract type
+  filter(!is.na(temp_contract)) |>
+  
+  # calculate the chi-square test
+  crosstab(country, temp_contract, percentages = TRUE, chi_square = TRUE)
+```
+
+The output shows the percentage of permanent and temporary contracts for each country. We can see that Denmark has the highest share of temporary contracts (9.3%) compared to the other countries.
+
+**Reporting**: There was a significant association between country and contract type, χ²(4) = 15.95, *p* \< .05, Cramér's V = 0.13. The proportion of temporary contracts varied across countries, with Denmark showing the highest share of temporary employment. We find evidence for H3.
+
+## 🤓 Smart Hacks
+
+::: {.callout-tip collapse="true"}
+## Smart Hack: Automated inferential reporting with the `report` package
+
+Just as we used the [`report`](https://easystats.github.io/report/) package in Tutorial 10 to automatically write up descriptive statistics, we can use it here to generate readable, APA-style summaries of inferential test results. The [`knitr`](https://cran.r-project.org/web/packages/knitr/index.html) package enables us to nicely print the output as a table.
+
+```{r smarthack-report-load, eval = TRUE, echo = TRUE, warning = FALSE, message = FALSE}
+library(report)
+library(knitr)
+```
+
+The `report()` function produces a formatted, human-readable description of your test result. It works with base R test functions (`cor.test()`, `t.test()`) rather than `tidycomm`, but follows the same tidyverse pipe logic. The underlying statistics are identical — only the syntax differs slightly.
+
+Here, we use `with()` to keep the code pipe-friendly. We then convert the output into a nicely formatted table using `as.data.frame()` and `kable()`:
+
+```{r smarthack-report-cor, eval = TRUE, echo = TRUE, warning = FALSE, message = FALSE}
+# correlation: work experience and trust in government
+data_woj |>
+  with(cor.test(work_experience, trust_government)) |>
+  report() |>
+  as.data.frame() |>
+  kable(caption = "Automated inferential reporting: Pearson correlation",
+        digits = 2)
+```
+
+:::
+
+## 💡 Take-Aways
+
+-   **Correlation between metric variables**: `correlate()`
+-   **Testing whether means differ across two groups**: `t_test()`
+-   **Chi-square test for two categorical variables**: `crosstab()` with `chi_square = TRUE`
+
+## 🎲 Quiz
+
+::::: {.content-visible when-format="html"}
+{{< include "files/www/quiz_script.qmd" >}}
+
+::: {.callout-note icon="false"}
+## 🎲 Question 1
+
+**Which of the following statements about inferential statistics are correct?**
+
+```{ojs}
+//| echo: false
+
+MC_infer_2 = [
+  ["A Pearson correlation tests the relationship between two metric variables.", "True"],
+  ["A correlation coefficient of r = 0.07 indicates a strong negative relationship.", "False"],
+  ["A t-test can be used to compare means across more than two groups.", "False"],
+  ["A Chi-Square test compares the means of two variables.", "False"],
+]
+
+viewof answers_infer_2 = quizInput({
+  questions: MC_infer_2,
+  options: ["True", "False"]
+})
+```
+:::
+
+## 📚 More tutorials on this
+
+You still have questions? The following resources can help:
+
+-   [Discovering Statistics Using R by A. Field, J. Miles, & Z. Field](https://profandyfield.com/discoverse/dsur/)
+-   [APA guidelines for reporting statistics](https://apastyle.apa.org/instructional-aids/numbers-statistics-guide.pdf)
+-   [Datenanalyse am Ifkw by L. Kobilke et al.](https://datenanalyse.ifkw.lmu.de/)
+-   [Datenanalyse mit R by M. Scharkow](https://stats.ifp.uni-mainz.de/ba-datenanalyse/deskriptive-statistik.html)
