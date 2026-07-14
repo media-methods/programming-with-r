@@ -588,9 +588,7 @@ data_woj |>
   ))
 ```
 
-**Changed code**:
-
-```{r task-1-solution, eval=TRUE, echo=TRUE, message=FALSE}
+```{r task-1-solution, eval=FALSE, echo=FALSE, message=FALSE}
 data_woj |>
   # remove missing values
   filter(!is.na(work_experience)) |>
@@ -636,8 +634,7 @@ data_woj |>
   ))
 ```
 
-**Solution**
-```{r task-2-solution, eval=FALSE, echo=TRUE, message=FALSE}
+```{r task-2-solution, eval=FALSE, echo=FALSE, message=FALSE}
 data_woj |>
   ggplot(aes(x = country, fill = country)) +
   geom_bar() +
@@ -660,7 +657,7 @@ data_woj |>
 
 ### Task 3 (Hard🔥🔥🔥)
 
-From scratch: Create a bar plot that plots average agreement to ethical statements (`ethics_1`, `ethics_2`, `ethics_3`, `ethics_4`). Add the mean agreement for each statement on top of each bar.
+From scratch: Create a bar plot that plots average agreement to ethical statements (`ethics_1`, `ethics_2`, `ethics_3`, `ethics_4`, for example see below). Add the mean agreement for each statement on top of each bar. It should look like this:
 
 For this task, you are **allowed** to work with ChatGPT!
 
@@ -699,8 +696,7 @@ data_woj |>
   ))
 ```
 
-**Solution:**
-```{r task-3-solution, eval=FALSE, echo=TRUE, message=FALSE}
+```{r task-3-solution, eval=FALSE, echo=FALSE, message=FALSE}
 data_woj |>
   
   # select ethics variables

@@ -99,7 +99,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script><script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script><link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 <link rel="stylesheet" href="files/www/custom.css">
-<link rel="stylesheet" href="ache-refresh">
 </head>
 <body class="nav-sidebar floating">
 
@@ -1124,33 +1123,6 @@ However, you <strong>can</strong> specify many more details, for instance the…
 </div>
 </div>
 </div>
-<p><strong>Changed code</strong>:</p>
-<div class="cell">
-<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">data_woj</span> <span class="op">|&gt;</span></span>
-<span>  <span class="co"># remove missing values</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">work_experience</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  </span>
-<span>  <span class="co">#change the color here: remove color in aes, add it as "black" to geom_density</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">work_experience</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_density.html">geom_density</a></span><span class="op">(</span>color <span class="op">=</span> <span class="st">"black"</span>, alpha <span class="op">=</span> <span class="fl">0.6</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/facet_wrap.html">facet_wrap</a></span><span class="op">(</span><span class="op">~</span><span class="va">country</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span></span>
-<span>    </span>
-<span>    <span class="co"># change the title here</span></span>
-<span>    title <span class="op">=</span> <span class="st">"World of Journalism Study - Work Experience"</span>,</span>
-<span>    x <span class="op">=</span> <span class="st">"Work Experience (Years)"</span>,</span>
-<span>    y <span class="op">=</span> <span class="st">"Density"</span></span>
-<span>  <span class="op">)</span> <span class="op">+</span></span>
-<span>  </span>
-<span>  <span class="co">#change the theme</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_bw</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="7-visuals_files/figure-html/task-1-solution-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
 </section><section id="task-2-medium" class="level3"><h3 class="anchored" data-anchor-id="task-2-medium">Task 2 (Medium🔥🔥)</h3>
 <p>From scratch: Create a bar plot that plots the number of respondents per country. It should look like this:</p>
 <div class="cell">
@@ -1161,29 +1133,8 @@ However, you <strong>can</strong> specify many more details, for instance the…
 </div>
 </div>
 </div>
-<p><strong>Solution</strong></p>
-<div class="cell">
-<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">data_woj</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">country</span>, fill <span class="op">=</span> <span class="va">country</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_bar</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span></span>
-<span>    title <span class="op">=</span> <span class="st">"Number of Respondents per Country"</span>,</span>
-<span>    x <span class="op">=</span> <span class="st">"Country"</span>,</span>
-<span>    y <span class="op">=</span> <span class="st">"Number of Respondents"</span></span>
-<span>  <span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span></span>
-<span>  <span class="co">## manually define colors ##</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_fill_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span></span>
-<span>    <span class="st">"Germany"</span> <span class="op">=</span> <span class="st">"#1b9e77"</span>,</span>
-<span>    <span class="st">"Austria"</span> <span class="op">=</span> <span class="st">"#d95f02"</span>,</span>
-<span>    <span class="st">"Denmark"</span> <span class="op">=</span> <span class="st">"#7570b3"</span>,</span>
-<span>    <span class="st">"UK"</span> <span class="op">=</span> <span class="st">"#e7298a"</span>,</span>
-<span>    <span class="st">"USA"</span> <span class="op">=</span> <span class="st">"#66a61e"</span></span>
-<span>  <span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
 </section><section id="task-3-hard" class="level3"><h3 class="anchored" data-anchor-id="task-3-hard">Task 3 (Hard🔥🔥🔥)</h3>
-<p>From scratch: Create a bar plot that plots average agreement to ethical statements (<code>ethics_1</code>, <code>ethics_2</code>, <code>ethics_3</code>, <code>ethics_4</code>). Add the mean agreement for each statement on top of each bar.</p>
+<p>From scratch: Create a bar plot that plots average agreement to ethical statements (<code>ethics_1</code>, <code>ethics_2</code>, <code>ethics_3</code>, <code>ethics_4</code>, for example see below). Add the mean agreement for each statement on top of each bar. It should look like this:</p>
 <p>For this task, you are <strong>allowed</strong> to work with ChatGPT!</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -1192,46 +1143,6 @@ However, you <strong>can</strong> specify many more details, for instance the…
 </figure>
 </div>
 </div>
-</div>
-<p><strong>Solution:</strong></p>
-<div class="cell">
-<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">data_woj</span> <span class="op">|&gt;</span></span>
-<span>  </span>
-<span>  <span class="co"># select ethics variables</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">ethics_1</span><span class="op">:</span><span class="va">ethics_4</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span> </span>
-<span>   <span class="co"># reshape data to long format</span></span>
-<span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html">pivot_longer</a></span><span class="op">(</span></span>
-<span>    cols <span class="op">=</span> <span class="fu"><a href="https://tidyselect.r-lib.org/reference/everything.html">everything</a></span><span class="op">(</span><span class="op">)</span>,</span>
-<span>    names_to <span class="op">=</span> <span class="st">"statement"</span>,</span>
-<span>    values_to <span class="op">=</span> <span class="st">"agreement"</span></span>
-<span>  <span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  </span>
-<span>  <span class="co"># remove missing values</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">agreement</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  </span>
-<span>  <span class="co"># calculate mean agreement per statement</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">statement</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>mean_agreement <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">agreement</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span> </span>
-<span>  <span class="co"># create the plot</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">statement</span>, y <span class="op">=</span> <span class="va">mean_agreement</span>, fill <span class="op">=</span> <span class="va">statement</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_bar.html">geom_col</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span></span>
-<span>    title <span class="op">=</span> <span class="st">"Mean Agreement with Ethical Statements"</span>,</span>
-<span>    x <span class="op">=</span> <span class="st">"Ethical Statement"</span>,</span>
-<span>    y <span class="op">=</span> <span class="st">"Mean Agreement"</span></span>
-<span>  <span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_text.html">geom_text</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>label <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Round.html">round</a></span><span class="op">(</span><span class="va">mean_agreement</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span>, vjust <span class="op">=</span> <span class="op">-</span><span class="fl">0.5</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span></span>
-<span>  <span class="co"># manually define colors</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/scale_manual.html">scale_fill_manual</a></span><span class="op">(</span>values <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span></span>
-<span>    <span class="st">"ethics_1"</span> <span class="op">=</span> <span class="st">"#1b9e77"</span>,</span>
-<span>    <span class="st">"ethics_2"</span> <span class="op">=</span> <span class="st">"#d95f02"</span>,</span>
-<span>    <span class="st">"ethics_3"</span> <span class="op">=</span> <span class="st">"#7570b3"</span>,</span>
-<span>    <span class="st">"ethics_4"</span> <span class="op">=</span> <span class="st">"#e7298a"</span></span>
-<span>  <span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 

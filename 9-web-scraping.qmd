@@ -635,9 +635,7 @@ Use your knowledge about web scraping to scrape content from the [Wikipedia page
 
 ![](files/images/9_scraping_task1.jpg){fig-alt="Overview of headings on Wikipedia site on web scraping"}
 
-**Solution**:
-
-```{r task-1, eval=TRUE, echo=TRUE, message=FALSE}
+```{r task-1, eval=FALSE, echo=FALSE, message=FALSE}
 session <- bow(url = "https://en.wikipedia.org/wiki/Web_scraping",
                user_agent = "Teaching project, 
                Valerie Hase, 
@@ -659,8 +657,7 @@ url |>
 
 Now get the **number** of references mentioned in the reference list of this Wikipedia article. At the moment, it is 37 but this may change one you scrape the website.
 
-**Solution**:
-```{r task-2, eval=TRUE, echo=TRUE, message=FALSE}
+```{r task-2, eval=FALSE, echo=FALSE, message=FALSE}
 #  Solution
 url |>
   html_elements("ol.references li") |>
@@ -686,8 +683,7 @@ The function should be flexible: It should run for any list of pages you give to
 
 Using this function, run the function for three Wikipedia articles: Web scraping, Artificial intelligence, Algorithm. The result could/should look something like this (here, I named my function as `scrape_discussion()`.
 
-**Solution**:
-```{r task-3, eval=TRUE, echo=TRUE, message=FALSE, warning = FALSE}
+```{r task-3, eval=TRUE, echo=FALSE, message=FALSE, warning = FALSE}
 library(rvest)
 library(polite)
 library(dplyr)
@@ -717,18 +713,14 @@ scrape_discussion <- function(page) {
   return(tibble(
     article = page,
     url = url,
-    discussion = discussion
-  ))
+    
+    #change to zero for sites without discussion
+    discussion = discussion) |>
+      mutate(discussion = replace(discussion,
+                                  discussion < 0,
+                                  0)))
 }
 
-# Run and compare two articles
-results <- bind_rows(
-  scrape_discussion("Web scraping"),
-  scrape_discussion("Artificial intelligence"),
-    scrape_discussion("Algorithm")
-)
-
-results
 ```
 
 ```{r task-3b, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE}
