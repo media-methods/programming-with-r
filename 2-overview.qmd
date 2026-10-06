@@ -67,7 +67,7 @@ word <- "hello"
 
 You can also use hashtags to structure your script into sections - similar to headings in a Word document. If you add four hashtags before a heading `####`, RStudio creates a section header that helps you navigate through your script. This is especially useful for long files.
 
-![](files/images/1_structure.jpg){fig-alt="Structuring code in RStudio"}
+![](files/images/Rstudio_fix.png){fig-alt="Structuring code in RStudio"}
 
 ### 2.3 Execute Code
 
