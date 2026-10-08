@@ -412,7 +412,7 @@ You still have questions? The following tutorials & papers can help you with tha
 
 Use the `WoJ` data. Find out how many variables describe journalistic trust!
 
-```{r, task-1, eval = TRUE, echo = TRUE}
+```{r, task-1, eval = FALSE, echo = FALSE}
 data_woj |>
   select(contains("trust")) |>
   ncol()
@@ -427,7 +427,7 @@ Use the `WoJ` data. Reduce the data set to journalists who...
 -   have high trust in the government (values 4 or 5)
 
 *How many journalists fulfill these criteria?*
-```{r, task-2, eval = TRUE, echo = TRUE}
+```{r, task-2, eval = FALSE, echo = FALSE}
 data_woj |>
   filter(country == "Austria") |>
   filter(employment %in% c("Full-time", "Part-time")) |>
@@ -447,7 +447,7 @@ Use the `WoJ` data
 
 *From which country is the journalist with the most years of work experience?*
 
-```{r, task-3, eval = TRUE, echo = TRUE}
+```{r, task-3, eval = FALSE, echo = FALSE}
 woj_transformed <- data_woj |>
   mutate(ethics_cat = case_when(
            ethics_1 == 5 | ethics_2 == 5 | ethics_3 == 5 |ethics_4 == 5 ~ "high",
@@ -458,7 +458,7 @@ woj_transformed <- data_woj |>
 mean(woj_transformed$work_experience, na.rm = T)
 ```
 
-```{r, task-4, eval = TRUE, echo = TRUE}
+```{r, task-4, eval = FALSE, echo = FALSE}
 # Country from which journalist with most work experience is
 woj_transformed |>
   arrange(desc(work_experience)) |>
