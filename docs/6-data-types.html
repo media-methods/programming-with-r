@@ -1116,6 +1116,32 @@ returning NA</code></pre>
 <li><code>country</code></li>
 <li><code>employment</code></li>
 </ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>data_woj  <span class="sc">|&gt;</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(country, employment) <span class="sc">|&gt;</span></span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 2
+  country     employment
+  &lt;fct&gt;       &lt;chr&gt;     
+1 Germany     Full-time 
+2 Germany     Full-time 
+3 Switzerland Full-time 
+4 Switzerland Part-time 
+5 Austria     Part-time 
+6 Switzerland Freelancer</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co"># or.... </span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>data_woj <span class="sc">|&gt;</span> </span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="fu">across</span>(<span class="fu">c</span>(<span class="st">"country"</span>, <span class="st">"employment"</span>), class))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 2
+  country employment
+  &lt;chr&gt;   &lt;chr&gt;     
+1 factor  character </code></pre>
+</div>
+</div>
 </section>
 <section id="task-2-medium" class="level3">
 <h3 class="anchored" data-anchor-id="task-2-medium">Task 2 (Medium🔥🔥)</h3>
@@ -1125,6 +1151,44 @@ returning NA</code></pre>
 <li>Replace all values coded as more than 15 in <code>work_experience</code> with NA.</li>
 <li>Save the modified dataset as <code>data_woj_clean</code>.</li>
 </ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co"># How many missing values?</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a>data_woj <span class="sc">|&gt;</span></span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n_missing =</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(work_experience)))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+  n_missing
+      &lt;int&gt;
+1        13</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Replace values above 15 with NA</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>data_woj_cleaned <span class="ot">&lt;-</span> data_woj <span class="sc">|&gt;</span></span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">work_experience =</span> <span class="fu">replace</span>(work_experience,</span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>                                   work_experience <span class="sc">&gt;</span> <span class="dv">15</span>,</span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>                                   <span class="cn">NA</span>)) </span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Check result</span></span>
+<span id="cb43-8"><a href="#cb43-8" aria-hidden="true" tabindex="-1"></a>data_woj_cleaned <span class="sc">|&gt;</span></span>
+<span id="cb43-9"><a href="#cb43-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(work_experience)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,200 × 1
+   work_experience
+             &lt;dbl&gt;
+ 1              10
+ 2               7
+ 3               6
+ 4               7
+ 5              15
+ 6              NA
+ 7              NA
+ 8              11
+ 9              NA
+10               4
+# ℹ 1,190 more rows</code></pre>
+</div>
+</div>
 </section>
 <section id="task-3-hard" class="level3">
 <h3 class="anchored" data-anchor-id="task-3-hard">Task 3 (Hard🔥🔥🔥)</h3>
@@ -1135,6 +1199,23 @@ returning NA</code></pre>
 <li>Save the result as <code>country_summary</code>.</li>
 <li>For the country with the highest mean in <code>trust_parliament</code>, plot the average trust score!</li>
 </ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>country_summary <span class="ot">&lt;-</span> data_woj <span class="sc">|&gt;</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(country) <span class="sc">|&gt;</span></span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="fu">across</span>(<span class="fu">where</span>(is.numeric), <span class="fu">list</span>(<span class="at">mean =</span> <span class="sc">~</span> <span class="fu">mean</span>(.x, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a>                                           <span class="at">n_miss =</span> <span class="sc">~</span> <span class="fu">sum</span>(<span class="fu">is.na</span>(.x)))))</span>
+<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-6"><a href="#cb45-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Check the result</span></span>
+<span id="cb45-7"><a href="#cb45-7" aria-hidden="true" tabindex="-1"></a>country_summary</span>
+<span id="cb45-8"><a href="#cb45-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb45-9"><a href="#cb45-9" aria-hidden="true" tabindex="-1"></a><span class="co"># For the country with the highest mean in `trust_parliament`, plot the average trust score!</span></span>
+<span id="cb45-10"><a href="#cb45-10" aria-hidden="true" tabindex="-1"></a>country_summary <span class="sc">|&gt;</span></span>
+<span id="cb45-11"><a href="#cb45-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(trust_parliament_mean <span class="sc">==</span> <span class="fu">max</span>(trust_parliament_mean)) <span class="sc">|&gt;</span></span>
+<span id="cb45-12"><a href="#cb45-12" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb45-13"><a href="#cb45-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># a very simple plot</span></span>
+<span id="cb45-14"><a href="#cb45-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> country, <span class="at">y =</span> trust_parliament_mean)) <span class="sc">+</span></span>
+<span id="cb45-15"><a href="#cb45-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 
 
 </section>

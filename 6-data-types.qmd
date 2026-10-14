@@ -319,7 +319,7 @@ Use the `WoJ` data. Save it as `data_woj`. Check the data type of the following 
 - `country`
 - `employment`
 
-```{r, task-1, eval = FALSE, echo = FALSE}
+```{r, task-1, eval = TRUE, echo = TRUE}
 data_woj  |>
   select(country, employment) |>
   head()
@@ -338,13 +338,13 @@ Using `data_woj`...
 - Replace all values coded as more than 15 in `work_experience` with NA.
 - Save the modified dataset as `data_woj_clean`.
 
-```{r, task-2a, eval = FALSE, echo = FALSE}
+```{r, task-2a, eval = TRUE, echo = TRUE}
 # How many missing values?
 data_woj |>
   summarise(n_missing = sum(is.na(work_experience)))
 ```
 
-```{r, task-2b, eval = FALSE, echo = FALSE}
+```{r, task-2b, eval = TRUE, echo = TRUE}
 # Replace values above 15 with NA
 data_woj_cleaned <- data_woj |>
   mutate(work_experience = replace(work_experience,
@@ -365,7 +365,7 @@ This tasks contains several commands you do not yet know! Use `data_woj` (not th
 - Save the result as `country_summary`.
 - For the country with the highest mean in `trust_parliament`, plot the average trust score!
 
-```{r, task-3, eval = FALSE, echo = FALSE}
+```{r, task-3, eval = FALSE, echo = TRUE}
 country_summary <- data_woj |>
   group_by(country) |>
   summarise(across(where(is.numeric), list(mean = ~ mean(.x, na.rm = TRUE),

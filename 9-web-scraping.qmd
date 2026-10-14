@@ -7,9 +7,9 @@ title: "9 Web Scraping in R"
 
 After working through Tutorial 9, you'll be able to...
 
--   **explain** web scraping, including ethical and legal limitations
--   **explain** the basics of CSS and HTML
--   **apply** functions for web scraping
+- **explain** web scraping, including ethical and legal limitations
+- **explain** the basics of CSS and HTML
+- **apply** functions for web scraping
 :::
 
 ## 1. What is web scraping?
@@ -26,19 +26,19 @@ Since a lot of social media platforms have closed automated access to their data
 
 As a data collection method, web scraping has several advantages:
 
--   It allows us to collect data that may otherwise not be available for research
--   It allows us to collect new (meta) data (e.g., timestamps of content, multi-modal data)
--   It allows us to rely on the structuredness of websites to scale-up data collection
+- It allows us to collect data that may otherwise not be available for research
+- It allows us to collect new (meta) data (e.g., timestamps of content, multi-modal data)
+- It allows us to rely on the structuredness of websites to scale-up data collection
 
 ## 2. Ethical, legal, and technical limitations
 
 While web scraping has some advantages, these go hand in hand with several ethical, legal, and technical limitations. For excellent and far more detailed overviews on all of these points, see this overview article by [Luscombe et al., 2022](https://link.springer.com/article/10.1007/s11135-021-01164-0) and [Brown et al., 2025](https://doi.org/10.1177/20539517251381686). Some of these legal points need to be re-considered based on the DGPR [Borg et al., 2026](https://doi.org/10.1080/13600869.2026.2654231).
 
--   **Ethically**, researchers should ask: *Should I scrape this website?* For example, is this data public or private? Does it contain information by individuals and/or could this information be used to harm specific individuals? Do I need to circumvent blocks build by websites (e.g., logins, paywalls, etc.?) Also, by repeatedly scraping content from a website, could I involuntarily disturb the service of the website (e.g., in what may be considered a [DoS attack](https://de.wikipedia.org/wiki/Denial_of_Service))?
+- **Ethically**, researchers should ask: *Should I scrape this website?* For example, is this data public or private? Does it contain information by individuals and/or could this information be used to harm specific individuals? Do I need to circumvent blocks build by websites (e.g., logins, paywalls, etc.?) Also, by repeatedly scraping content from a website, could I involuntarily disturb the service of the website (e.g., in what may be considered a [DoS attack](https://de.wikipedia.org/wiki/Denial_of_Service))?
 
--   **Legally**, researchers should ask: *Am I allowed to scrape this website?* Whether and to what degree scraping is legal depends, among other contexts, on what and how much content is scraped, who is scraping this content in which country, etc. A good way of addressing both ethical and legal aspects is to follow "rules of good scraping behavior". For example, website hosts often define which elements of their website can be scraped, by whom, and with what speed in their *robots.txt*, something we should respect. For the example of Wikipedia, see their robots.txt [here](https://en.wikipedia.org/robots.txt).
+- **Legally**, researchers should ask: *Am I allowed to scrape this website?* Whether and to what degree scraping is legal depends, among other contexts, on what and how much content is scraped, who is scraping this content in which country, etc. A good way of addressing both ethical and legal aspects is to follow "rules of good scraping behavior". For example, website hosts often define which elements of their website can be scraped, by whom, and with what speed in their *robots.txt*, something we should respect. For the example of Wikipedia, see their robots.txt [here](https://en.wikipedia.org/robots.txt).
 
--   **Technically**, researchers should ask: *Can I scrape this website?* Not all elements of websites could/should be accessed via scraping. For example, dynamic content is harder to scrape; the same accounts for content behind paywalls or user logins. Also, a lot of websites have made it harder to scrape their website due to the increase of Large Language Models (LLMs) scraping the web.
+- **Technically**, researchers should ask: *Can I scrape this website?* Not all elements of websites could/should be accessed via scraping. For example, dynamic content is harder to scrape; the same accounts for content behind paywalls or user logins. Also, a lot of websites have made it harder to scrape their website due to the increase of Large Language Models (LLMs) scraping the web.
 
 ## 3. Source code
 
@@ -60,9 +60,9 @@ Now, let us look at the underlying code (click on the right, then choose "View P
 
 You can see: Websites are simple text documents (ok, the code does not look simple - but we can easily understand parts of it!). When you visit websites, your browser reads the underlying source code (e.g., HTML, CSS, Javascript) to correctly display the website.
 
--   [**HTML**](https://www.w3schools.com/html/html_intro.asp) (Hypertext Markup Language): is a "markup language" that defines the structure of websites. "Markup" means that the code includes additional info besides just the content you want to display. For example, you can use HTML to define the title of your website: you may not only include information on the content of the title, but also where and how it should be displayed.
--   [**CSS**](https://www.w3schools.com/css/css_intro.asp) (Cascading Style Sheets): is a "style sheet" language we use to change the design of websites. For example, you can use CSS to define the color of the title of your website.
--   [**JavaScript**](https://www.w3schools.com/js/js_intro.asp): is a language we also use to change the design/behavior of websites (mostly for dynamic and interactive elements). For example, you can use Javascript to automatically play a video when you hover over the title of your website.
+- [**HTML**](https://www.w3schools.com/html/html_intro.asp) (Hypertext Markup Language): is a "markup language" that defines the structure of websites. "Markup" means that the code includes additional info besides just the content you want to display. For example, you can use HTML to define the title of your website: you may not only include information on the content of the title, but also where and how it should be displayed.
+- [**CSS**](https://www.w3schools.com/css/css_intro.asp) (Cascading Style Sheets): is a "style sheet" language we use to change the design of websites. For example, you can use CSS to define the color of the title of your website.
+- [**JavaScript**](https://www.w3schools.com/js/js_intro.asp): is a language we also use to change the design/behavior of websites (mostly for dynamic and interactive elements). For example, you can use Javascript to automatically play a video when you hover over the title of your website.
 
 In the following, we will focus on understanding the basics of HTML and CSS to learn web scraping.
 
@@ -91,10 +91,10 @@ A typical HTML text may look like this:
 
 What does this mean?
 
--   the [`<html>`](https://www.w3schools.com/tags/tag_html.asp) element is the root element of an HTML website
--   the [`<body>`](https://www.w3schools.com/tags/tag_body.asp) element defines the document's body (where text, images etc. are included)
--   the [`<h1>`](https://www.w3schools.com/tags/tag_hn.asp) element defines a large heading
--   the [`<p>`](https://www.w3schools.com/tags/tag_p.asp) element defines a paragraph
+- the [`<html>`](https://www.w3schools.com/tags/tag_html.asp) element is the root element of an HTML website
+- the [`<body>`](https://www.w3schools.com/tags/tag_body.asp) element defines the document's body (where text, images etc. are included)
+- the [`<h1>`](https://www.w3schools.com/tags/tag_hn.asp) element defines a large heading
+- the [`<p>`](https://www.w3schools.com/tags/tag_p.asp) element defines a paragraph
 
 On a website, the HTML snippet above is rendered to only the following two sentences:
 
@@ -171,9 +171,9 @@ Let's try to change the color of my `h1` heading "My heading". My new *rule* sho
 
 How do I do this?
 
--   I want to change the content included in the heading `h1` element via inline CSS. To do so, I change the [`style`](https://www.w3schools.com/tags/tag_style.asp) attribute *within* the `h1` element.
--   I want to change the color of this element, so I include the property [`color`](https://www.w3schools.com/cssref/pr_text_color.php) within the `style` attribute.
--   I want to change the color of this element to red, so I include the value `red` for the property `color` within the `style` attribute.
+- I want to change the content included in the heading `h1` element via inline CSS. To do so, I change the [`style`](https://www.w3schools.com/tags/tag_style.asp) attribute *within* the `h1` element.
+- I want to change the color of this element, so I include the property [`color`](https://www.w3schools.com/cssref/pr_text_color.php) within the `style` attribute.
+- I want to change the color of this element to red, so I include the value `red` for the property `color` within the `style` attribute.
 
 ```{text,6-scrap-4, eval = FALSE, echo = TRUE}
 <html>
@@ -215,10 +215,10 @@ Instead of inline code, we could also use internal CSS: Here, we define rules no
 
 Let's say, for example, that we only want parts of "Some text I wrote" to be depicted in pink:
 
--   I create a new `class` `.text-pink` for text that should be pink within the `<style>` element. Notice how `<style>` is now defined at the beginning of the document, so not related to a specific element.\
--   For `.text-pink`, I want to define a color, so I include the property `color`.
--   For `.text-pink`, I want to set the color to `pink`, so I include the value `pink` for the property `color`.
--   To mark which words of "Some text I wrote" should be depicted in pink, I can use the [`<span>`](https://www.w3schools.com/tags/tag_span.asp) element. `<span>` is used to mark specific parts of text. I only want the word "text" to be pink, so I include "text" between `<span>` and `</span>`.
+- I create a new `class` `.text-pink` for text that should be pink within the `<style>` element. Notice how `<style>` is now defined at the beginning of the document, so not related to a specific element.\
+- For `.text-pink`, I want to define a color, so I include the property `color`.
+- For `.text-pink`, I want to set the color to `pink`, so I include the value `pink` for the property `color`.
+- To mark which words of "Some text I wrote" should be depicted in pink, I can use the [`<span>`](https://www.w3schools.com/tags/tag_span.asp) element. `<span>` is used to mark specific parts of text. I only want the word "text" to be pink, so I include "text" between `<span>` and `</span>`.
 
 ```{text,6-scrap-5, eval = FALSE, echo = TRUE}
 <html>
@@ -304,14 +304,14 @@ To be sure that we can scrape the website, take a look at Wikipedia's "robots.tx
 
 To download the source code, we download and activate two packages:
 
--   r package `polite` (for more info, see [here](https://cran.r-project.org/web/packages/polite/index.html))
--   r package `rvest` (for more info, see [here](https://cran.r-project.org/web/packages/rvest/index.html))
+- r package `polite` (for more info, see [here](https://cran.r-project.org/web/packages/polite/index.html))
+- r package `rvest` (for more info, see [here](https://cran.r-project.org/web/packages/rvest/index.html))
 
 While `rvest` allows us to scrape and parse content, `polite` assures that we adhere to "good behavior" while doing so. With `polite`, we can...
 
--   tell website owners who we are
--   respect which website content we are (not) allowed to scrape
--   time our scraper so that we do not constantly hit websites with our scraping requests
+- tell website owners who we are
+- respect which website content we are (not) allowed to scrape
+- time our scraper so that we do not constantly hit websites with our scraping requests
 
 ```{r,7-scrap-1, eval = FALSE, echo = TRUE, warning=FALSE,message=FALSE}
 install.packages("rvest")
@@ -387,8 +387,8 @@ knitr::kable(
 
 To find the right selector, you can...
 
--   Inspect: click right on the specific element and choose "Inspect", which will open the underlying source code
--   SelectorGadget: use [SelectorGadget](https://selectorgadget.com) to automatically find the right selectors. To install SelectorGadget, click on this [link](https://selectorgadget.com). Install the Chrome Extension (link at the end of the website, search for "Try our new Chrome Extension"). For a more detailed instruction of how the tool works, see [here](https://rvest.tidyverse.org/articles/selectorgadget.html).
+- Inspect: click right on the specific element and choose "Inspect", which will open the underlying source code
+- SelectorGadget: use [SelectorGadget](https://selectorgadget.com) to automatically find the right selectors. To install SelectorGadget, click on this [link](https://selectorgadget.com). Install the Chrome Extension (link at the end of the website, search for "Try our new Chrome Extension"). For a more detailed instruction of how the tool works, see [here](https://rvest.tidyverse.org/articles/selectorgadget.html).
 
 #### 4.3.1. Example 1: Scrape a website title
 
@@ -446,9 +446,9 @@ If you look at the output, you see that this worked (although the text is a bit 
 
 One last example: Let's say we want to extract all links included in the main text (something also discussed in the context of "crawling", i.e., identifying links to follow on websites to identify further content).
 
--   We know that these links are inside the main text within the element(s) `p`
--   We know that links are usually included within the element `a`
--   We know that links are saved as attributes `href` within `a`
+- We know that these links are inside the main text within the element(s) `p`
+- We know that links are usually included within the element `a`
+- We know that links are saved as attributes `href` within `a`
 
 Combining the `html_elements()` and the `html_attr()` commands, we can now get all links:
 
@@ -510,8 +510,8 @@ chrome_print(input = "https://www.bbc.com",
 
 **HTML**: a “markup language” that defines the structure of websites
 
--   consists of nested **elements** (e.g., `body`, `title`) marked by **tags** (`<>`, `</>`) (for overview lists of elements, see [here](https://www.w3schools.com/tags/ref_byfunc.asp))
--   elements may include **attributes** including additional information (e.g., a link via `href`) (for overview lists of attributes, see [here](https://www.w3schools.com/tags/ref_attributes.asp))
+- consists of nested **elements** (e.g., `body`, `title`) marked by **tags** (`<>`, `</>`) (for overview lists of elements, see [here](https://www.w3schools.com/tags/ref_byfunc.asp))
+- elements may include **attributes** including additional information (e.g., a link via `href`) (for overview lists of attributes, see [here](https://www.w3schools.com/tags/ref_attributes.asp))
 
 As an overview, see the most important types of elements and attributes in HTML (for a full list, see [here](https://www.w3schools.com/tags/ref_byfunc.asp)):
 
@@ -545,25 +545,25 @@ knitr::kable(
 
 **CSS**: a "style sheet” language that defines the design of websites
 
--   consists of **rules** (e.g., this element should be green) specified by selectors and related declaration blocks
+- consists of **rules** (e.g., this element should be green) specified by selectors and related declaration blocks
 
--   rules can be specified for **classes** of elements
+- rules can be specified for **classes** of elements
 
--   **selectors** describe which element should be formatted (e.g., the heading `h1`)
+- **selectors** describe which element should be formatted (e.g., the heading `h1`)
 
--   **declaration blocks** define what property of the selector should be formatted (e.g., its color `color`) and what value should be used (e.g., \`red\`\`)
+- **declaration blocks** define what property of the selector should be formatted (e.g., its color `color`) and what value should be used (e.g., \`red\`\`)
 
 **R Code for scraping**:
 
--   **introduce** your scraping agent: `bow()`
+- **introduce** your scraping agent: `bow()`
 
--   **scrape** website: `scrape()`
+- **scrape** website: `scrape()`
 
--   **parse** content: `hmtl_elements()`, `hmtl_attr()`, `hmtl_text()`
+- **parse** content: `hmtl_elements()`, `hmtl_attr()`, `hmtl_text()`
 
--   **screenshots**: `chrome_print()`
+- **screenshots**: `chrome_print()`
 
--   **automate script execution**: `taskscheduler_create()`
+- **automate script execution**: `taskscheduler_create()`
 
 ## 🎲 Quiz
 
@@ -619,11 +619,11 @@ viewof answers_scraping_2 = quizInput({
 
 You still have questions? The following tutorials & papers can help you with that:
 
--   [HTML Tutorial by W3 School](https://www.w3schools.com/html) as well as [CSS Tutorial by W3 School](https://www.w3schools.com/css)
--   [Webscraping and the Text Analysis Pipeline by T. Gessler](http://theresagessler.eu/eui_cta/slides/session5.pdf)
--   [Algorithmic thinking in the public interest by Luscombe et al., 2022) 2022](https://link.springer.com/article/10.1007/s11135-021-01164-0).
--   [Web scraping for research: Legal, ethical, institutional, and scientific considerations by Brown et al., 2026](https://journals.sagepub.com/doi/10.1177/20539517251381686)
--   [Automated Data Collection with R: A Practical Guide to Web Scraping and Text Mining by S. Munzert, C. Rubba, P. Meißner, & D.Nyhuis](https://onlinelibrary.wiley.com/doi/book/10.1002/9781118834732)
+- [HTML Tutorial by W3 School](https://www.w3schools.com/html) as well as [CSS Tutorial by W3 School](https://www.w3schools.com/css)
+- [Webscraping and the Text Analysis Pipeline by T. Gessler](http://theresagessler.eu/eui_cta/slides/session5.pdf)
+- [Algorithmic thinking in the public interest by Luscombe et al., 2022) 2022](https://link.springer.com/article/10.1007/s11135-021-01164-0).
+- [Web scraping for research: Legal, ethical, institutional, and scientific considerations by Brown et al., 2026](https://journals.sagepub.com/doi/10.1177/20539517251381686)
+- [Automated Data Collection with R: A Practical Guide to Web Scraping and Text Mining by S. Munzert, C. Rubba, P. Meißner, & D.Nyhuis](https://onlinelibrary.wiley.com/doi/book/10.1002/9781118834732)
 
 ## 📌 Test your knowledge
 
@@ -653,6 +653,7 @@ url |>
   html_elements("h2") |>
   html_text()
 ```
+
 ### Task 2 (Medium🔥🔥)
 
 Now get the **number** of references mentioned in the reference list of this Wikipedia article. At the moment, it is 37 but this may change one you scrape the website.
@@ -664,6 +665,7 @@ url |>
   html_text() |>
   length()
 ```
+
 ### Task 3 (Hard🔥🔥🔥)
 
 Now, we want to collect information on the most heated Wikipedia debates!
