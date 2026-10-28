@@ -87,7 +87,7 @@ data_woj |>
     "Austria" = "#d95f02",
     "Denmark" = "#7570b3",
     "UK" = "#e7298a",
-    "USA" = "#66a61e"
+    "Switzerland" = "#66a61e"
   ))
 ```
 
@@ -426,7 +426,7 @@ data_woj |>
     "Austria" = "#d95f02",
     "Denmark" = "#7570b3",
     "UK" = "#e7298a",
-    "USA" = "#66a61e"
+    "Switzerland" = "#66a61e"
   ))
 ```
 
@@ -474,7 +474,7 @@ plot_woj <- data_woj |>
     "Austria" = "#d95f02",
     "Denmark" = "#7570b3",
     "UK" = "#e7298a",
-    "USA" = "#66a61e"
+    "Switzerland" = "#66a61e"
   ))
 ```
 
@@ -584,7 +584,7 @@ data_woj |>
     "Austria" = "#d95f02",
     "Denmark" = "#7570b3",
     "UK" = "#e7298a",
-    "USA" = "#66a61e"
+    "Switzerland" = "#66a61e"
   ))
 ```
 
@@ -630,7 +630,7 @@ data_woj |>
     "Austria" = "#d95f02",
     "Denmark" = "#7570b3",
     "UK" = "#e7298a",
-    "USA" = "#66a61e"
+    "Switzerland" = "#66a61e"
   ))
 ```
 
@@ -651,7 +651,7 @@ data_woj |>
     "Austria" = "#d95f02",
     "Denmark" = "#7570b3",
     "UK" = "#e7298a",
-    "USA" = "#66a61e"
+    "Switzerland" = "#66a61e"
   ))
 ```
 
