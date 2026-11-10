@@ -313,9 +313,22 @@ While `rvest` allows us to scrape and parse content, `polite` assures that we ad
 - respect which website content we are (not) allowed to scrape
 - time our scraper so that we do not constantly hit websites with our scraping requests
 
+To install `polite` we will need to use another package `remotes`, unfortunately polite is no longer in the "Comprehensive R Archive Network" or [CRAN](https://cran.r-project.org/), so installing it with `install.packages` will not work!
+
+```{r,7-scrap-1a, eval = FALSE, echo = TRUE, warning=FALSE,message=FALSE}
+install.packages("remotes")
+
+library("remotes")
+
+#This step downloads the package straight from GitHub Repository
+remotes::install_github("dmi3kno/polite")
+```
+
+Now install `rvest` and activate them both!
+
 ```{r,7-scrap-1, eval = FALSE, echo = TRUE, warning=FALSE,message=FALSE}
 install.packages("rvest")
-install.packages("polite")
+
 library("rvest")
 library("polite")
 ```
@@ -323,6 +336,7 @@ library("polite")
 ```{r,7-scrap-2b, eval = TRUE, echo = FALSE, warning=FALSE, message=FALSE}
 library("rvest")
 library("polite")
+library("remotes")
 ```
 
 Next, we use the `bow()` command `polite` to "introduce" us to the website and see whether we can scrape it:
