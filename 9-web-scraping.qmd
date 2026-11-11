@@ -351,6 +351,19 @@ session <- bow(url = "https://en.wikipedia.org/wiki/Communication_studies",
 session
 ```
 
+
+
+
+::: {.callout-tip collapse="true"}
+### What to do if bow doesn't work?
+Package `rvest` has a function `read_html` that we can use to scrape the the website.
+
+This function doesn't introduce us to the website, so be thoughtful while using it!
+```{r,7-scrap-2a, eval = FALSE, echo = TRUE, warning=FALSE}
+url <- read_html("https://en.wikipedia.org/wiki/Communication_studies")
+```
+:::
+
 When inspecting the result, we can see that we are allowed to scrape this website. However, we should wait for 5 seconds in-between scraping requests.
 
 We now use the `scrape()` command to implement these rules *while* scraping the website:
