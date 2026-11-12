@@ -354,7 +354,7 @@ session
 
 
 
-::: {.callout-tip collapse="true"}
+::: {.callout-note collapse="true"}
 ### What to do if bow doesn't work?
 Package `rvest` has a function `read_html` that we can use to scrape the the website.
 
